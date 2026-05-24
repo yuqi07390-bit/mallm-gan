@@ -1,0 +1,31 @@
+# ===== Core data =====# ===== Core
+openai
+tiktoken
+
+# ===== SDV / baseline models for evaluation =====
+sdv
+sdmetrics
+ctgan
+deepecho
+copulas
+rdt
+
+# ===== Utilities =====
+joblib
+tqdm
+PyYAML
+
+# ===== Jupyter =====
+ipykernel
+notebook
+numpy
+pandas
+
+# ===== Machine learning =====
+scikit-learn
+scipy
+
+xgboost
+flaml
+causalml
+bnlearn

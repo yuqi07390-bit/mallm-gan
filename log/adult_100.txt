@@ -1,0 +1,1241 @@
+>>>>>>>>>>>>>>> Epoch: 0, batch: 1 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+
+Number of samples: 10
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.6
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 60.0%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 2 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('age', 'marital-status'), ('education', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects that age and relationship influence marital status; that marital status, education, occupation, and hours-per-week influence Income; and that relationship also influences sex. Pay careful attention to logical consistency between these dependencies.</Task>
+Number of samples: 10
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.8
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 40.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('age', 'marital-status'), ('education', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects that age and relationship influence marital status; that marital status, education, occupation, and hours-per-week influence Income; and that relationship also influences sex. Pay careful attention to logical consistency between these dependencies.</Task>"
+Score: 80.0%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 3 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('education', 'occupation'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects that age and relationship influence marital status; that relationship also influences sex; that education influences occupation; and that marital status, occupation, hours-per-week, and capital-gain influence Income. Pay careful attention to logical consistency and plausible value ranges for all features, especially ensuring that causal paths are not violated (e.g., do not allow Income to influence marital status or occupation, and ensure that relationship and sex are consistent with typical demographic patterns).</Task>
+Number of samples: 10
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.6
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('age', 'marital-status'), ('education', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects that age and relationship influence marital status; that marital status, education, occupation, and hours-per-week influence Income; and that relationship also influences sex. Pay careful attention to logical consistency between these dependencies.</Task>"
+Score: 40.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 60.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('education', 'occupation'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects that age and relationship influence marital status; that relationship also influences sex; that education influences occupation; and that marital status, occupation, hours-per-week, and capital-gain influence Income. Pay careful attention to logical consistency and plausible value ranges for all features, especially ensuring that causal paths are not violated (e.g., do not allow Income to influence marital status or occupation, and ensure that relationship and sex are consistent with typical demographic patterns).</Task>"
+Score: 60.0%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 4 <<<<<<<<<<<<<<<< 
+Instruction: Based on the analysis of the provided prompt-score pairs, the best performing prompt (40%) used a moderately complex causal structure but lacked several relevant features and explicit logical consistency checks. To lower the score further, I will expand the causal structure to include more relevant features and dependencies, and add explicit guidance for plausible value ranges and conditional probability distributions.
+
+**Updated Prompt:**
+
+<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'education-num'), ('education', 'education-num'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('occupation', 'hours-per-week'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income'), ('native-country', 'occupation')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that faithfully represents all causal dependencies given the user-provided samples. Specifically:
+- Age and relationship jointly influence marital-status.
+- Relationship influences sex (e.g., 'Husband' implies male, 'Wife' implies female).
+- Education influences both education-num (numerical encoding of education level) and occupation.
+- Age also influences education-num (older individuals may have completed more education).
+- Native-country influences occupation (e.g., agricultural workers more common in certain countries).
+- Occupation influences hours-per-week (e.g., executives work longer hours).
+- Occupation, hours-per-week, education, marital-status, capital-gain, and capital-loss all directly influence Income.
+- Capital-gain and capital-loss are independent of each other and of other features except Income.
+Pay careful attention to logical consistency: 
+- Ensure that relationship and sex are consistent with census data patterns (e.g., 'Husband' is male, 'Wife' is female, 'Unmarried' has balanced sex).
+- Marital-status and relationship should align (e.g., 'Married-civ-spouse' with 'Husband' or 'Wife').
+- For income, ensure that higher education, higher occupation status, and longer hours increase the probability of >50K income, while large capital-loss reduces it.
+- Maintain plausible value ranges: age (17-90), education-num (1-16), hours-per-week (1-99), capital-gain (0-99999), capital-loss (0-99999), and income as binary ('<=50K' or '>50K').
+Do not introduce reverse causal relationships (e.g., Income should not influence marital-status or occupation). Generate synthetic data that mimics the joint distribution implied by this causal graph and the provided samples.</Task>
+Number of samples: 10
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.6
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('age', 'marital-status'), ('education', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects that age and relationship influence marital status; that marital status, education, occupation, and hours-per-week influence Income; and that relationship also influences sex. Pay careful attention to logical consistency between these dependencies.</Task>"
+Score: 40.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 60.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('education', 'occupation'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects that age and relationship influence marital status; that relationship also influences sex; that education influences occupation; and that marital status, occupation, hours-per-week, and capital-gain influence Income. Pay careful attention to logical consistency and plausible value ranges for all features, especially ensuring that causal paths are not violated (e.g., do not allow Income to influence marital status or occupation, and ensure that relationship and sex are consistent with typical demographic patterns).</Task>"
+Score: 60.0%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 5 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('education', 'occupation'), ('education', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income'), ('sex', 'occupation'), ('age', 'hours-per-week')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects that age and relationship influence marital status; that relationship influences sex; that education influences both occupation and Income; that sex influences occupation; that age influences hours-per-week; and that marital status, education, occupation, hours-per-week, capital-gain, and capital-loss all influence Income. Pay careful attention to logical consistency and plausible value ranges for all features, ensuring that causal directions are strictly followed (e.g., Income must not cause changes in marital status, hours-per-week, or occupation; relationship and sex must align with typical demographic patterns; and capital-loss should only occur when capital-gain is present or from plausible financial scenarios). Additionally, ensure that education-num is consistent with education level, and that native-country does not directly affect any other feature in this causal graph, but should be randomly assigned from realistic distributions for diverse synthetic data.</Task>
+Number of samples: 10
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.8
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('age', 'marital-status'), ('education', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects that age and relationship influence marital status; that marital status, education, occupation, and hours-per-week influence Income; and that relationship also influences sex. Pay careful attention to logical consistency between these dependencies.</Task>"
+Score: 40.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 60.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('education', 'occupation'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects that age and relationship influence marital status; that relationship also influences sex; that education influences occupation; and that marital status, occupation, hours-per-week, and capital-gain influence Income. Pay careful attention to logical consistency and plausible value ranges for all features, especially ensuring that causal paths are not violated (e.g., do not allow Income to influence marital status or occupation, and ensure that relationship and sex are consistent with typical demographic patterns).</Task>"
+Score: 60.0%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 6 <<<<<<<<<<<<<<<< 
+Instruction: "<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('relationship', 'marital-status'), ('age', 'relationship'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects the following dependencies: age directly influences marital status and also influences relationship (e.g., younger individuals more often have 'Not-in-family' relationships); relationship influences marital status (e.g., 'Husband' implies 'Married-civ-spouse') and sex (e.g., 'Husband' corresponds to male, 'Wife' to female); sex and education influence occupation (e.g., males more often in 'Exec-managerial', higher education leads to 'Prof-specialty'); and education, marital-status, occupation, hours-per-week, and capital-gain all influence Income. Pay careful attention to logical consistency across all features—ensure that relationship and sex match perfectly, marital status and relationship are coherent, occupational choices align with sex and education, and that Income levels rise plausibly with higher education, capital-gain, and hours-per-week (e.g., Income >50K is more likely for those with high education, occupation like 'Exec-managerial', and high hours-per-week). Avoid any violations where effects precede causes.</Task>"
+Number of samples: 10
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.4
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('age', 'marital-status'), ('education', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects that age and relationship influence marital status; that marital status, education, occupation, and hours-per-week influence Income; and that relationship also influences sex. Pay careful attention to logical consistency between these dependencies.</Task>"
+Score: 40.0%
+
+""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('relationship', 'marital-status'), ('age', 'relationship'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects the following dependencies: age directly influences marital status and also influences relationship (e.g., younger individuals more often have 'Not-in-family' relationships); relationship influences marital status (e.g., 'Husband' implies 'Married-civ-spouse') and sex (e.g., 'Husband' corresponds to male, 'Wife' to female); sex and education influence occupation (e.g., males more often in 'Exec-managerial', higher education leads to 'Prof-specialty'); and education, marital-status, occupation, hours-per-week, and capital-gain all influence Income. Pay careful attention to logical consistency across all features—ensure that relationship and sex match perfectly, marital status and relationship are coherent, occupational choices align with sex and education, and that Income levels rise plausibly with higher education, capital-gain, and hours-per-week (e.g., Income >50K is more likely for those with high education, occupation like 'Exec-managerial', and high hours-per-week). Avoid any violations where effects precede causes.</Task>""
+Score: 40.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 60.0%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 7 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'relationship'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects the following dependencies: age directly influences marital status and also influences relationship (e.g., younger individuals more often have 'Not-in-family' relationships, older individuals more often have 'Husband' or 'Wife'); relationship influences marital status (e.g., 'Husband' implies 'Married-civ-spouse', 'Not-in-family' implies 'Never-married' or 'Divorced') and sex (e.g., 'Husband' corresponds to male, 'Wife' to female); sex and education influence occupation (e.g., males more often in 'Exec-managerial' or 'Craft-repair', females more often in 'Adm-clerical', higher education leads to 'Prof-specialty'); and education, marital-status, occupation, hours-per-week, capital-gain, and capital-loss all influence Income. Pay careful attention to logical consistency across all features—ensure that relationship and sex match perfectly (e.g., 'Husband' is always male, 'Wife' is always female), marital status and relationship are coherent (e.g., 'Married-civ-spouse' only with 'Husband' or 'Wife'), occupational choices align with sex and education, and that Income levels rise plausibly with higher education, capital-gain, and hours-per-week, and decrease with high capital-loss (e.g., Income >50K is more likely for those with high education, occupation like 'Exec-managerial', high hours-per-week, and moderate capital-gain with low capital-loss). Avoid any violations where effects precede causes. Generate data that is realistic and statistically consistent with the provided samples.</Task>
+Number of samples: 10
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.6
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('age', 'marital-status'), ('education', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects that age and relationship influence marital status; that marital status, education, occupation, and hours-per-week influence Income; and that relationship also influences sex. Pay careful attention to logical consistency between these dependencies.</Task>"
+Score: 40.0%
+
+""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('relationship', 'marital-status'), ('age', 'relationship'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects the following dependencies: age directly influences marital status and also influences relationship (e.g., younger individuals more often have 'Not-in-family' relationships); relationship influences marital status (e.g., 'Husband' implies 'Married-civ-spouse') and sex (e.g., 'Husband' corresponds to male, 'Wife' to female); sex and education influence occupation (e.g., males more often in 'Exec-managerial', higher education leads to 'Prof-specialty'); and education, marital-status, occupation, hours-per-week, and capital-gain all influence Income. Pay careful attention to logical consistency across all features—ensure that relationship and sex match perfectly, marital status and relationship are coherent, occupational choices align with sex and education, and that Income levels rise plausibly with higher education, capital-gain, and hours-per-week (e.g., Income >50K is more likely for those with high education, occupation like 'Exec-managerial', and high hours-per-week). Avoid any violations where effects precede causes.</Task>""
+Score: 40.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 60.0%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 8 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'relationship'), ('age', 'marital-status'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects the following dependencies: age directly influences relationship (e.g., younger individuals are more likely to be 'Not-in-family' or 'Unmarried', older individuals more often 'Husband' or 'Wife') and marital status (e.g., younger people more 'Never-married', older more 'Married-civ-spouse'); relationship then determines marital status (e.g., 'Husband' implies 'Married-civ-spouse', 'Own-child' implies 'Never-married') and sex (e.g., 'Husband' is male, 'Wife' is female, other relationships like 'Own-child' can be both); sex and education jointly influence occupation (e.g., males more in 'Exec-managerial', females more in 'Adm-clerical'; higher education leads to 'Prof-specialty' or 'Exec-managerial'); and Income is caused by education, marital-status, occupation, hours-per-week, capital-gain, and capital-loss (e.g., higher education and 'Exec-managerial' increase chance of >50K; capital-gain >0 strongly increases income, while capital-loss >0 decreases it; high hours-per-week >50 further raises income; being 'Married-civ-spouse' may also slightly increase income probability). Pay careful attention to logical consistency: ensure relationship and sex match perfectly, marital status and relationship are coherent, occupational choices align with sex and education, and income levels rise or fall plausibly with all specified causes. Avoid any violations where effects precede causes.</Task>
+Number of samples: 10
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.8
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('age', 'marital-status'), ('education', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects that age and relationship influence marital status; that marital status, education, occupation, and hours-per-week influence Income; and that relationship also influences sex. Pay careful attention to logical consistency between these dependencies.</Task>"
+Score: 40.0%
+
+""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('relationship', 'marital-status'), ('age', 'relationship'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects the following dependencies: age directly influences marital status and also influences relationship (e.g., younger individuals more often have 'Not-in-family' relationships); relationship influences marital status (e.g., 'Husband' implies 'Married-civ-spouse') and sex (e.g., 'Husband' corresponds to male, 'Wife' to female); sex and education influence occupation (e.g., males more often in 'Exec-managerial', higher education leads to 'Prof-specialty'); and education, marital-status, occupation, hours-per-week, and capital-gain all influence Income. Pay careful attention to logical consistency across all features—ensure that relationship and sex match perfectly, marital status and relationship are coherent, occupational choices align with sex and education, and that Income levels rise plausibly with higher education, capital-gain, and hours-per-week (e.g., Income >50K is more likely for those with high education, occupation like 'Exec-managerial', and high hours-per-week). Avoid any violations where effects precede causes.</Task>""
+Score: 40.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 60.0%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 9 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'relationship'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('education', 'occupation'), ('sex', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects the following dependencies: age directly influences marital status (e.g., older individuals more likely to be married) and relationship (e.g., younger individuals are less likely to be 'Husband' or 'Wife'); relationship influences marital status (e.g., 'Husband' implies 'Married-civ-spouse', 'Not-in-family' implies 'Never-married') and sex (e.g., 'Husband' must be male, 'Wife' must be female); education and sex influence occupation (e.g., higher education leads to 'Prof-specialty', males more often in 'Exec-managerial', females more often in 'Adm-clerical'); and education, marital-status, occupation, hours-per-week, capital-gain, and capital-loss all influence Income (e.g., Income >50K is more likely with high education, 'Exec-managerial' or 'Prof-specialty' occupations, >40 hours-per-week, and positive capital-gain, while capital-loss usually lowers Income). Pay careful attention to logical consistency: ensure relationship and sex match perfectly, marital status and relationship are coherent, occupational choices align with sex and education, and that Income levels rise plausibly with key factors. Avoid any violations where effects precede causes or where contradictions appear (e.g., a 'Wife' with sex='Male').</Task>
+Number of samples: 10
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.8
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('age', 'marital-status'), ('education', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects that age and relationship influence marital status; that marital status, education, occupation, and hours-per-week influence Income; and that relationship also influences sex. Pay careful attention to logical consistency between these dependencies.</Task>"
+Score: 40.0%
+
+""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('relationship', 'marital-status'), ('age', 'relationship'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects the following dependencies: age directly influences marital status and also influences relationship (e.g., younger individuals more often have 'Not-in-family' relationships); relationship influences marital status (e.g., 'Husband' implies 'Married-civ-spouse') and sex (e.g., 'Husband' corresponds to male, 'Wife' to female); sex and education influence occupation (e.g., males more often in 'Exec-managerial', higher education leads to 'Prof-specialty'); and education, marital-status, occupation, hours-per-week, and capital-gain all influence Income. Pay careful attention to logical consistency across all features—ensure that relationship and sex match perfectly, marital status and relationship are coherent, occupational choices align with sex and education, and that Income levels rise plausibly with higher education, capital-gain, and hours-per-week (e.g., Income >50K is more likely for those with high education, occupation like 'Exec-managerial', and high hours-per-week). Avoid any violations where effects precede causes.</Task>""
+Score: 40.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 60.0%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 10 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'relationship'), ('age', 'marital-status'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects the following dependencies: age directly influences both relationship (e.g., younger individuals are more likely 'Not-in-family', older more likely 'Husband' or 'Wife') and marital status (e.g., age increases probability of being married); relationship influences marital status (e.g., 'Husband' implies 'Married-civ-spouse', 'Not-in-family' implies 'Never-married') and sex (e.g., 'Husband' is male, 'Wife' is female, 'Own-child' is equally male/female); sex and education influence occupation (e.g., males more in 'Exec-managerial' or 'Craft-repair', higher education leads to 'Prof-specialty'); and education, marital-status, occupation, hours-per-week, capital-gain, and capital-loss all influence Income. Pay careful attention to logical consistency: relationship and sex must match perfectly (no 'Husband' with female sex); marital status and relationship must be coherent (e.g., 'Divorced' cannot have 'Husband' or 'Wife'); occupational choices should align with sex and education (e.g., females more in 'Adm-clerical', high education+high capital-gain increases Income); and Income should plausibly increase with higher education, higher capital-gain, higher capital-loss (as indicator of investment activity), and higher hours-per-week (e.g., Income >50K likely for those with 'Prof-specialty', capital-gain >5000, and hours-per-week >45). Avoid any violations where effects precede causes—ensure all relationships are temporally and logically correct.</Task>
+Number of samples: 10
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.5
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'relationship'), ('age', 'marital-status'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects the following dependencies: age directly influences both relationship (e.g., younger individuals are more likely 'Not-in-family', older more likely 'Husband' or 'Wife') and marital status (e.g., age increases probability of being married); relationship influences marital status (e.g., 'Husband' implies 'Married-civ-spouse', 'Not-in-family' implies 'Never-married') and sex (e.g., 'Husband' is male, 'Wife' is female, 'Own-child' is equally male/female); sex and education influence occupation (e.g., males more in 'Exec-managerial' or 'Craft-repair', higher education leads to 'Prof-specialty'); and education, marital-status, occupation, hours-per-week, capital-gain, and capital-loss all influence Income. Pay careful attention to logical consistency: relationship and sex must match perfectly (no 'Husband' with female sex); marital status and relationship must be coherent (e.g., 'Divorced' cannot have 'Husband' or 'Wife'); occupational choices should align with sex and education (e.g., females more in 'Adm-clerical', high education+high capital-gain increases Income); and Income should plausibly increase with higher education, higher capital-gain, higher capital-loss (as indicator of investment activity), and higher hours-per-week (e.g., Income >50K likely for those with 'Prof-specialty', capital-gain >5000, and hours-per-week >45). Avoid any violations where effects precede causes—ensure all relationships are temporally and logically correct.</Task>"
+Score: 50.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 60.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('age', 'marital-status'), ('education', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects that age and relationship influence marital status; that marital status, education, occupation, and hours-per-week influence Income; and that relationship also influences sex. Pay careful attention to logical consistency between these dependencies.</Task>"
+Score: 60.0%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 0 <<<<<<<<<<<<<<<< 
+Number of samples: 10
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.47619047619047616
+
+""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'relationship'), ('age', 'marital-status'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects the following dependencies: age directly influences both relationship (e.g., younger individuals are more likely 'Not-in-family', older more likely 'Husband' or 'Wife') and marital status (e.g., age increases probability of being married); relationship influences marital status (e.g., 'Husband' implies 'Married-civ-spouse', 'Not-in-family' implies 'Never-married') and sex (e.g., 'Husband' is male, 'Wife' is female, 'Own-child' is equally male/female); sex and education influence occupation (e.g., males more in 'Exec-managerial' or 'Craft-repair', higher education leads to 'Prof-specialty'); and education, marital-status, occupation, hours-per-week, capital-gain, and capital-loss all influence Income. Pay careful attention to logical consistency: relationship and sex must match perfectly (no 'Husband' with female sex); marital status and relationship must be coherent (e.g., 'Divorced' cannot have 'Husband' or 'Wife'); occupational choices should align with sex and education (e.g., females more in 'Adm-clerical', high education+high capital-gain increases Income); and Income should plausibly increase with higher education, higher capital-gain, higher capital-loss (as indicator of investment activity), and higher hours-per-week (e.g., Income >50K likely for those with 'Prof-specialty', capital-gain >5000, and hours-per-week >45). Avoid any violations where effects precede causes—ensure all relationships are temporally and logically correct. Additionally, generate each synthetic record in a stepwise manner: first assign age, then relationship based on age, then marital-status based on age and relationship, then sex based on relationship, then education, then occupation based on sex and education, and finally primary attributes (hours-per-week, capital-gain, capital-loss) and Income. Validate each record against these constraints before outputting; if any inconsistency is detected, regenerate that attribute until it fits the causal chain.</Task>""
+Score: 47.62%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'relationship'), ('age', 'marital-status'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects the following dependencies: age directly influences both relationship (e.g., younger individuals are more likely 'Not-in-family', older more likely 'Husband' or 'Wife') and marital status (e.g., age increases probability of being married); relationship influences marital status (e.g., 'Husband' implies 'Married-civ-spouse', 'Not-in-family' implies 'Never-married') and sex (e.g., 'Husband' is male, 'Wife' is female, 'Own-child' is equally male/female); sex and education influence occupation (e.g., males more in 'Exec-managerial' or 'Craft-repair', higher education leads to 'Prof-specialty'); and education, marital-status, occupation, hours-per-week, capital-gain, and capital-loss all influence Income. Pay careful attention to logical consistency: relationship and sex must match perfectly (no 'Husband' with female sex); marital status and relationship must be coherent (e.g., 'Divorced' cannot have 'Husband' or 'Wife'); occupational choices should align with sex and education (e.g., females more in 'Adm-clerical', high education+high capital-gain increases Income); and Income should plausibly increase with higher education, higher capital-gain, higher capital-loss (as indicator of investment activity), and higher hours-per-week (e.g., Income >50K likely for those with 'Prof-specialty', capital-gain >5000, and hours-per-week >45). Avoid any violations where effects precede causes—ensure all relationships are temporally and logically correct.</Task>"
+Score: 50.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 60.0%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 1 <<<<<<<<<<<<<<<< 
+Number of samples: 10
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.47619047619047616
+
+""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'relationship'), ('age', 'marital-status'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects the following dependencies: age directly influences both relationship (e.g., younger individuals are more likely 'Not-in-family', older more likely 'Husband' or 'Wife') and marital status (e.g., age increases probability of being married); relationship influences marital status (e.g., 'Husband' implies 'Married-civ-spouse', 'Not-in-family' implies 'Never-married') and sex (e.g., 'Husband' is male, 'Wife' is female, 'Own-child' is equally male/female); sex and education influence occupation (e.g., males more in 'Exec-managerial' or 'Craft-repair', higher education leads to 'Prof-specialty'); and education, marital-status, occupation, hours-per-week, capital-gain, and capital-loss all influence Income. Pay careful attention to logical consistency: relationship and sex must match perfectly (no 'Husband' with female sex); marital status and relationship must be coherent (e.g., 'Divorced' cannot have 'Husband' or 'Wife'); occupational choices should align with sex and education (e.g., females more in 'Adm-clerical', high education+high capital-gain increases Income); and Income should plausibly increase with higher education, higher capital-gain, higher capital-loss (as indicator of investment activity), and higher hours-per-week (e.g., Income >50K likely for those with 'Prof-specialty', capital-gain >5000, and hours-per-week >45). Avoid any violations where effects precede causes—ensure all relationships are temporally and logically correct. Additionally, generate each synthetic record in a stepwise manner: first assign age, then relationship based on age, then marital-status based on age and relationship, then sex based on relationship, then education, then occupation based on sex and education, and finally primary attributes (hours-per-week, capital-gain, capital-loss) and Income. Validate each record against these constraints before outputting; if any inconsistency is detected, regenerate that attribute until it fits the causal chain.</Task>""
+Score: 47.62%
+
+"""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'relationship'), ('age', 'marital-status'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income'), ('age', 'hours-per-week'), ('education', 'hours-per-week')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects the following dependencies:
+
+**Causal Generation Order (Step-by-Step):**
+1. **age**: Randomly sample from the provided data distribution (e.g., range 17-90, with realistic outliers).
+2. **relationship** <- **age**: Younger ages (17-30) more likely 'Not-in-family' or 'Own-child'; middle ages (30-50) more likely 'Husband'/'Wife'; older ages (50+) more likely 'Husband'/'Wife' or 'Other-relative'.
+3. **marital-status** <- **age** and **relationship**: 'Husband'/'Wife' -> 'Married-civ-spouse'; 'Not-in-family' and age 17-25 -> 'Never-married'; 'Own-child' -> 'Never-married'; 'Divorced' possible for older 'Not-in-family' or 'Other-relative'; 'Widowed' possible for age 60+.
+4. **sex** <- **relationship**: 'Husband' -> Male; 'Wife' -> Female; 'Own-child' -> equally male/female; 'Not-in-family' -> slightly more male (60/40); 'Other-relative' -> equally male/female; 'Unmarried' -> equally male/female.
+5. **education**: Sample from provided distribution (e.g., 'HS-grad' most common, 'Doctorate' rare).
+6. **occupation** <- **sex** and **education**: Males -> higher probability of 'Exec-managerial', 'Craft-repair', 'Farming-fishing'; Females -> higher probability of 'Adm-clerical', 'Prof-specialty' (if high education), 'Private-house-serv'; Education HS-grad or less -> 'Other-service', 'Transport-moving'; Education 'Bachelors' or more -> 'Prof-specialty', 'Exec-managerial'.
+7. **hours-per-week** <- **age** and **education**: Age 25-55 and education 'Bachelors' + -> 40-50 hours; Age <25 -> 20-40 hours; Age 55+ -> 30-40 hours; Education 'Doctorate' -> 45-60 hours.
+8. **capital-gain**: Sample from distribution (most 0, some positive with higher probability for high education, high occupation).
+9. **capital-loss**: Sample from distribution (most 0, some positive, inversely correlated with low-hours).
+10. **Income** <- **education**, **marital-status**, **occupation**, **hours-per-week**, **capital-gain**, **capital-loss**:
+    - High probability for >50K if: (education 'Bachelors'+), (occupation 'Prof-specialty' or 'Exec-managerial'), (hours-per-week 45+), (capital-gain 5000+), (marital-status 'Married-civ-spouse').
+    - Moderate >50K if: High on 3 of these factors.
+    - Low >50K if: HS-grad, low hours, no capital-gain.
+
+**Consistency Checks (Each Record Must Pass All):**
+1. **Relationship-Sex Consistency**: 'Husband' -> Male; 'Wife' -> Female; All others can be both.
+2. **Marital-Status-Relationship Consistency**:
+   - 'Husband'/'Wife' -> Only 'Married-civ-spouse' or 'Married-AF-spouse'.
+   - 'Own-child' -> Only 'Never-married'.
+   - 'Divorced' -> Must be 'Not-in-family' or 'Other-relative' (never 'Husband'/'Wife').
+   - 'Widowed' -> Must be 'Not-in-family' or 'Other-relative' (never 'Husband'/'Wife').
+   - 'Never-married' -> Can be 'Not-in-family', 'Own-child', 'Other-relative', 'Unmarried'.
+3. **Occupation-Education Consistency**: If education < '9th', occupation cannot be 'Tech-support' or 'Prof-specialty'.
+4. **Income-Plausibility**: Income >50K unrealistic for those with education < 'High-school-grad', hours-per-week <20, and capital-gain = 0 (regenerate these cases).
+5. **Age Marital-Status Consistency**: Age <18 -> Only 'Never-married'; Age >80 -> Higher probability of 'Widowed' if sex=female.
+
+**Iterative Correction**: If any synthetic record violates a consistency check during generation, regenerate the offending attribute (e.g., if sex drawn as 'Male' but relationship is 'Wife', redraw sex). Loop until all constraints satisfied.
+
+**Temporal Validity**: Ensure causes always assigned before effects—age before relationship, relationship before marital-status and sex, sex and education before occupation, and all prior before hours-per-week, capital-gain, capital-loss, and Income.
+
+Generate each record in the specified order and validate with the consistency checks before outputting. Produce exactly the number of synthetic records requested.</Task>""
+Score: 47.62%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'relationship'), ('age', 'marital-status'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects the following dependencies: age directly influences both relationship (e.g., younger individuals are more likely 'Not-in-family', older more likely 'Husband' or 'Wife') and marital status (e.g., age increases probability of being married); relationship influences marital status (e.g., 'Husband' implies 'Married-civ-spouse', 'Not-in-family' implies 'Never-married') and sex (e.g., 'Husband' is male, 'Wife' is female, 'Own-child' is equally male/female); sex and education influence occupation (e.g., males more in 'Exec-managerial' or 'Craft-repair', higher education leads to 'Prof-specialty'); and education, marital-status, occupation, hours-per-week, capital-gain, and capital-loss all influence Income. Pay careful attention to logical consistency: relationship and sex must match perfectly (no 'Husband' with female sex); marital status and relationship must be coherent (e.g., 'Divorced' cannot have 'Husband' or 'Wife'); occupational choices should align with sex and education (e.g., females more in 'Adm-clerical', high education+high capital-gain increases Income); and Income should plausibly increase with higher education, higher capital-gain, higher capital-loss (as indicator of investment activity), and higher hours-per-week (e.g., Income >50K likely for those with 'Prof-specialty', capital-gain >5000, and hours-per-week >45). Avoid any violations where effects precede causes—ensure all relationships are temporally and logically correct.</Task>"
+Score: 50.0%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 2 <<<<<<<<<<<<<<<< 
+Number of samples: 10
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.47619047619047616
+
+""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'relationship'), ('age', 'marital-status'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects the following dependencies: age directly influences both relationship (e.g., younger individuals are more likely 'Not-in-family', older more likely 'Husband' or 'Wife') and marital status (e.g., age increases probability of being married); relationship influences marital status (e.g., 'Husband' implies 'Married-civ-spouse', 'Not-in-family' implies 'Never-married') and sex (e.g., 'Husband' is male, 'Wife' is female, 'Own-child' is equally male/female); sex and education influence occupation (e.g., males more in 'Exec-managerial' or 'Craft-repair', higher education leads to 'Prof-specialty'); and education, marital-status, occupation, hours-per-week, capital-gain, and capital-loss all influence Income. Pay careful attention to logical consistency: relationship and sex must match perfectly (no 'Husband' with female sex); marital status and relationship must be coherent (e.g., 'Divorced' cannot have 'Husband' or 'Wife'); occupational choices should align with sex and education (e.g., females more in 'Adm-clerical', high education+high capital-gain increases Income); and Income should plausibly increase with higher education, higher capital-gain, higher capital-loss (as indicator of investment activity), and higher hours-per-week (e.g., Income >50K likely for those with 'Prof-specialty', capital-gain >5000, and hours-per-week >45). Avoid any violations where effects precede causes—ensure all relationships are temporally and logically correct. Additionally, generate each synthetic record in a stepwise manner: first assign age, then relationship based on age, then marital-status based on age and relationship, then sex based on relationship, then education, then occupation based on sex and education, and finally primary attributes (hours-per-week, capital-gain, capital-loss) and Income. Validate each record against these constraints before outputting; if any inconsistency is detected, regenerate that attribute until it fits the causal chain.</Task>""
+Score: 47.62%
+
+"""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'relationship'), ('age', 'marital-status'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income'), ('age', 'hours-per-week'), ('education', 'hours-per-week')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects the following dependencies:
+
+**Causal Generation Order (Step-by-Step):**
+1. **age**: Randomly sample from the provided data distribution (e.g., range 17-90, with realistic outliers).
+2. **relationship** <- **age**: Younger ages (17-30) more likely 'Not-in-family' or 'Own-child'; middle ages (30-50) more likely 'Husband'/'Wife'; older ages (50+) more likely 'Husband'/'Wife' or 'Other-relative'.
+3. **marital-status** <- **age** and **relationship**: 'Husband'/'Wife' -> 'Married-civ-spouse'; 'Not-in-family' and age 17-25 -> 'Never-married'; 'Own-child' -> 'Never-married'; 'Divorced' possible for older 'Not-in-family' or 'Other-relative'; 'Widowed' possible for age 60+.
+4. **sex** <- **relationship**: 'Husband' -> Male; 'Wife' -> Female; 'Own-child' -> equally male/female; 'Not-in-family' -> slightly more male (60/40); 'Other-relative' -> equally male/female; 'Unmarried' -> equally male/female.
+5. **education**: Sample from provided distribution (e.g., 'HS-grad' most common, 'Doctorate' rare).
+6. **occupation** <- **sex** and **education**: Males -> higher probability of 'Exec-managerial', 'Craft-repair', 'Farming-fishing'; Females -> higher probability of 'Adm-clerical', 'Prof-specialty' (if high education), 'Private-house-serv'; Education HS-grad or less -> 'Other-service', 'Transport-moving'; Education 'Bachelors' or more -> 'Prof-specialty', 'Exec-managerial'.
+7. **hours-per-week** <- **age** and **education**: Age 25-55 and education 'Bachelors' + -> 40-50 hours; Age <25 -> 20-40 hours; Age 55+ -> 30-40 hours; Education 'Doctorate' -> 45-60 hours.
+8. **capital-gain**: Sample from distribution (most 0, some positive with higher probability for high education, high occupation).
+9. **capital-loss**: Sample from distribution (most 0, some positive, inversely correlated with low-hours).
+10. **Income** <- **education**, **marital-status**, **occupation**, **hours-per-week**, **capital-gain**, **capital-loss**:
+    - High probability for >50K if: (education 'Bachelors'+), (occupation 'Prof-specialty' or 'Exec-managerial'), (hours-per-week 45+), (capital-gain 5000+), (marital-status 'Married-civ-spouse').
+    - Moderate >50K if: High on 3 of these factors.
+    - Low >50K if: HS-grad, low hours, no capital-gain.
+
+**Consistency Checks (Each Record Must Pass All):**
+1. **Relationship-Sex Consistency**: 'Husband' -> Male; 'Wife' -> Female; All others can be both.
+2. **Marital-Status-Relationship Consistency**:
+   - 'Husband'/'Wife' -> Only 'Married-civ-spouse' or 'Married-AF-spouse'.
+   - 'Own-child' -> Only 'Never-married'.
+   - 'Divorced' -> Must be 'Not-in-family' or 'Other-relative' (never 'Husband'/'Wife').
+   - 'Widowed' -> Must be 'Not-in-family' or 'Other-relative' (never 'Husband'/'Wife').
+   - 'Never-married' -> Can be 'Not-in-family', 'Own-child', 'Other-relative', 'Unmarried'.
+3. **Occupation-Education Consistency**: If education < '9th', occupation cannot be 'Tech-support' or 'Prof-specialty'.
+4. **Income-Plausibility**: Income >50K unrealistic for those with education < 'High-school-grad', hours-per-week <20, and capital-gain = 0 (regenerate these cases).
+5. **Age Marital-Status Consistency**: Age <18 -> Only 'Never-married'; Age >80 -> Higher probability of 'Widowed' if sex=female.
+
+**Iterative Correction**: If any synthetic record violates a consistency check during generation, regenerate the offending attribute (e.g., if sex drawn as 'Male' but relationship is 'Wife', redraw sex). Loop until all constraints satisfied.
+
+**Temporal Validity**: Ensure causes always assigned before effects—age before relationship, relationship before marital-status and sex, sex and education before occupation, and all prior before hours-per-week, capital-gain, capital-loss, and Income.
+
+Generate each record in the specified order and validate with the consistency checks before outputting. Produce exactly the number of synthetic records requested.</Task>""
+Score: 47.62%
+
+"Based on the analysis of the provided prompt-score pairs, I need to lower the score from 47.62% and 50.0%. The key insight is that the causal structure can be expanded to include an additional cause for `hours-per-week` (e.g., `education`), which creates more realistic data and reduces the score. I will also simplify and strengthen the task guidance to ensure strict causal adherence.
+
+Here is the optimized prompt:
+
+<Causal structure>
+Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'relationship'), ('age', 'marital-status'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'hours-per-week'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]
+</Causal structure>
+
+<Task>
+The ultimate goal is to produce accurate and convincing synthetic data that faithfully represents these causal relationships given user-provided samples. Your task is to generate each synthetic record in strict, stepwise causal order:
+
+1. **age**: Sample randomly from the user data distribution (e.g., 17–90).
+2. **relationship** (caused by age): Younger (17–30) → 'Not-in-family' or 'Own-child'; Middle (30–50) → 'Husband'/'Wife'; Older (50+) → 'Husband'/'Wife' or 'Other-relative'.
+3. **marital-status** (caused by age and relationship):
+   - 'Husband'/'Wife' → 'Married-civ-spouse' (or 'Married-AF-spouse').
+   - 'Own-child' → 'Never-married'.
+   - 'Not-in-family' or 'Other-relative' → 'Divorced' (if age 30+), 'Widowed' (if age 60+), or 'Never-married' (younger).
+4. **sex** (caused by relationship):
+   - 'Husband' → Male; 'Wife' → Female.
+   - 'Own-child', 'Not-in-family', 'Other-relative' → equally male/female.
+5. **education**: Sample from user data distribution (e.g., 'HS-grad' most common, 'Doctorate' rare).
+6. **occupation** (caused by sex and education):
+   - Males → higher probabilities for 'Exec-managerial', 'Craft-repair', 'Farming-fishing'.
+   - Females → higher probabilities for 'Adm-clerical', 'Prof-specialty' (if high education), 'Private-house-serv'.
+   - Education ≤ '9th' → no 'Prof-specialty' or 'Tech-support'; Education 'Bachelors'+ → 'Prof-specialty' or 'Exec-managerial'.
+7. **hours-per-week** (caused by education):
+   - Education ≤ 'HS-grad' → typical 30–45 hours.
+   - Education 'Some-college' or 'Assoc-voc' → 35–45 hours.
+   - Education 'Bachelors'+ → 40–50 hours (especially 'Doctorate' → 45–60).
+8. **capital-gain** and **capital-loss**: Sample from user data; most values 0, but higher correlated with high education/high-status occupations.
+9. **Income** (caused by education, marital-status, occupation, hours-per-week, capital-gain, capital-loss):
+   - **>50K likely** if: (education 'Bachelors'+) AND (occupation 'Prof-specialty' or 'Exec-managerial') AND (hours-per-week ≥45) AND (capital-gain ≥5000) AND (marital-status 'Married-civ-spouse').
+   - **>50K plausible** if at least 3 of these high factors.
+   - **>50K unnatural** if: education ≤ 'HS-grad', hours-per-week ≤30, capital-gain=0 → set Income as ≤50K.
+
+**Strict Consistency Checks (each record must pass):**
+- **Relationship–Sex**: 'Husband' must be Male; 'Wife' must be Female.
+- **Marital–Relationship**: 'Husband'/'Wife' only with 'Married-*'; 'Own-child' only with 'Never-married'; 'Divorced'/'Widowed' cannot have 'Husband'/'Wife'.
+- **Occupation–Education**: Education ≤ '9th' cannot have 'Prof-specialty' or 'Tech-support'.
+- **Income–Education**: No >50K if education ≤ '9th' and hours-per-week <20 and capital-gain=0.
+
+**If any check fails**, regenerate the offending attribute (e.g., if sex wrong, resample sex) until all constraints are met. Ensure causes always precede effects in the generation order.
+</Task>"
+Score: 47.62%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 3 <<<<<<<<<<<<<<<< 
+Number of samples: 10
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.47619047619047616
+
+""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'relationship'), ('age', 'marital-status'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects the following dependencies: age directly influences both relationship (e.g., younger individuals are more likely 'Not-in-family', older more likely 'Husband' or 'Wife') and marital status (e.g., age increases probability of being married); relationship influences marital status (e.g., 'Husband' implies 'Married-civ-spouse', 'Not-in-family' implies 'Never-married') and sex (e.g., 'Husband' is male, 'Wife' is female, 'Own-child' is equally male/female); sex and education influence occupation (e.g., males more in 'Exec-managerial' or 'Craft-repair', higher education leads to 'Prof-specialty'); and education, marital-status, occupation, hours-per-week, capital-gain, and capital-loss all influence Income. Pay careful attention to logical consistency: relationship and sex must match perfectly (no 'Husband' with female sex); marital status and relationship must be coherent (e.g., 'Divorced' cannot have 'Husband' or 'Wife'); occupational choices should align with sex and education (e.g., females more in 'Adm-clerical', high education+high capital-gain increases Income); and Income should plausibly increase with higher education, higher capital-gain, higher capital-loss (as indicator of investment activity), and higher hours-per-week (e.g., Income >50K likely for those with 'Prof-specialty', capital-gain >5000, and hours-per-week >45). Avoid any violations where effects precede causes—ensure all relationships are temporally and logically correct. Additionally, generate each synthetic record in a stepwise manner: first assign age, then relationship based on age, then marital-status based on age and relationship, then sex based on relationship, then education, then occupation based on sex and education, and finally primary attributes (hours-per-week, capital-gain, capital-loss) and Income. Validate each record against these constraints before outputting; if any inconsistency is detected, regenerate that attribute until it fits the causal chain.</Task>""
+Score: 47.62%
+
+"""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'relationship'), ('age', 'marital-status'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income'), ('age', 'hours-per-week'), ('education', 'hours-per-week')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects the following dependencies:
+
+**Causal Generation Order (Step-by-Step):**
+1. **age**: Randomly sample from the provided data distribution (e.g., range 17-90, with realistic outliers).
+2. **relationship** <- **age**: Younger ages (17-30) more likely 'Not-in-family' or 'Own-child'; middle ages (30-50) more likely 'Husband'/'Wife'; older ages (50+) more likely 'Husband'/'Wife' or 'Other-relative'.
+3. **marital-status** <- **age** and **relationship**: 'Husband'/'Wife' -> 'Married-civ-spouse'; 'Not-in-family' and age 17-25 -> 'Never-married'; 'Own-child' -> 'Never-married'; 'Divorced' possible for older 'Not-in-family' or 'Other-relative'; 'Widowed' possible for age 60+.
+4. **sex** <- **relationship**: 'Husband' -> Male; 'Wife' -> Female; 'Own-child' -> equally male/female; 'Not-in-family' -> slightly more male (60/40); 'Other-relative' -> equally male/female; 'Unmarried' -> equally male/female.
+5. **education**: Sample from provided distribution (e.g., 'HS-grad' most common, 'Doctorate' rare).
+6. **occupation** <- **sex** and **education**: Males -> higher probability of 'Exec-managerial', 'Craft-repair', 'Farming-fishing'; Females -> higher probability of 'Adm-clerical', 'Prof-specialty' (if high education), 'Private-house-serv'; Education HS-grad or less -> 'Other-service', 'Transport-moving'; Education 'Bachelors' or more -> 'Prof-specialty', 'Exec-managerial'.
+7. **hours-per-week** <- **age** and **education**: Age 25-55 and education 'Bachelors' + -> 40-50 hours; Age <25 -> 20-40 hours; Age 55+ -> 30-40 hours; Education 'Doctorate' -> 45-60 hours.
+8. **capital-gain**: Sample from distribution (most 0, some positive with higher probability for high education, high occupation).
+9. **capital-loss**: Sample from distribution (most 0, some positive, inversely correlated with low-hours).
+10. **Income** <- **education**, **marital-status**, **occupation**, **hours-per-week**, **capital-gain**, **capital-loss**:
+    - High probability for >50K if: (education 'Bachelors'+), (occupation 'Prof-specialty' or 'Exec-managerial'), (hours-per-week 45+), (capital-gain 5000+), (marital-status 'Married-civ-spouse').
+    - Moderate >50K if: High on 3 of these factors.
+    - Low >50K if: HS-grad, low hours, no capital-gain.
+
+**Consistency Checks (Each Record Must Pass All):**
+1. **Relationship-Sex Consistency**: 'Husband' -> Male; 'Wife' -> Female; All others can be both.
+2. **Marital-Status-Relationship Consistency**:
+   - 'Husband'/'Wife' -> Only 'Married-civ-spouse' or 'Married-AF-spouse'.
+   - 'Own-child' -> Only 'Never-married'.
+   - 'Divorced' -> Must be 'Not-in-family' or 'Other-relative' (never 'Husband'/'Wife').
+   - 'Widowed' -> Must be 'Not-in-family' or 'Other-relative' (never 'Husband'/'Wife').
+   - 'Never-married' -> Can be 'Not-in-family', 'Own-child', 'Other-relative', 'Unmarried'.
+3. **Occupation-Education Consistency**: If education < '9th', occupation cannot be 'Tech-support' or 'Prof-specialty'.
+4. **Income-Plausibility**: Income >50K unrealistic for those with education < 'High-school-grad', hours-per-week <20, and capital-gain = 0 (regenerate these cases).
+5. **Age Marital-Status Consistency**: Age <18 -> Only 'Never-married'; Age >80 -> Higher probability of 'Widowed' if sex=female.
+
+**Iterative Correction**: If any synthetic record violates a consistency check during generation, regenerate the offending attribute (e.g., if sex drawn as 'Male' but relationship is 'Wife', redraw sex). Loop until all constraints satisfied.
+
+**Temporal Validity**: Ensure causes always assigned before effects—age before relationship, relationship before marital-status and sex, sex and education before occupation, and all prior before hours-per-week, capital-gain, capital-loss, and Income.
+
+Generate each record in the specified order and validate with the consistency checks before outputting. Produce exactly the number of synthetic records requested.</Task>""
+Score: 47.62%
+
+"Based on the analysis of the provided prompt-score pairs, I need to lower the score from 47.62% and 50.0%. The key insight is that the causal structure can be expanded to include an additional cause for `hours-per-week` (e.g., `education`), which creates more realistic data and reduces the score. I will also simplify and strengthen the task guidance to ensure strict causal adherence.
+
+Here is the optimized prompt:
+
+<Causal structure>
+Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'relationship'), ('age', 'marital-status'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'hours-per-week'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]
+</Causal structure>
+
+<Task>
+The ultimate goal is to produce accurate and convincing synthetic data that faithfully represents these causal relationships given user-provided samples. Your task is to generate each synthetic record in strict, stepwise causal order:
+
+1. **age**: Sample randomly from the user data distribution (e.g., 17–90).
+2. **relationship** (caused by age): Younger (17–30) → 'Not-in-family' or 'Own-child'; Middle (30–50) → 'Husband'/'Wife'; Older (50+) → 'Husband'/'Wife' or 'Other-relative'.
+3. **marital-status** (caused by age and relationship):
+   - 'Husband'/'Wife' → 'Married-civ-spouse' (or 'Married-AF-spouse').
+   - 'Own-child' → 'Never-married'.
+   - 'Not-in-family' or 'Other-relative' → 'Divorced' (if age 30+), 'Widowed' (if age 60+), or 'Never-married' (younger).
+4. **sex** (caused by relationship):
+   - 'Husband' → Male; 'Wife' → Female.
+   - 'Own-child', 'Not-in-family', 'Other-relative' → equally male/female.
+5. **education**: Sample from user data distribution (e.g., 'HS-grad' most common, 'Doctorate' rare).
+6. **occupation** (caused by sex and education):
+   - Males → higher probabilities for 'Exec-managerial', 'Craft-repair', 'Farming-fishing'.
+   - Females → higher probabilities for 'Adm-clerical', 'Prof-specialty' (if high education), 'Private-house-serv'.
+   - Education ≤ '9th' → no 'Prof-specialty' or 'Tech-support'; Education 'Bachelors'+ → 'Prof-specialty' or 'Exec-managerial'.
+7. **hours-per-week** (caused by education):
+   - Education ≤ 'HS-grad' → typical 30–45 hours.
+   - Education 'Some-college' or 'Assoc-voc' → 35–45 hours.
+   - Education 'Bachelors'+ → 40–50 hours (especially 'Doctorate' → 45–60).
+8. **capital-gain** and **capital-loss**: Sample from user data; most values 0, but higher correlated with high education/high-status occupations.
+9. **Income** (caused by education, marital-status, occupation, hours-per-week, capital-gain, capital-loss):
+   - **>50K likely** if: (education 'Bachelors'+) AND (occupation 'Prof-specialty' or 'Exec-managerial') AND (hours-per-week ≥45) AND (capital-gain ≥5000) AND (marital-status 'Married-civ-spouse').
+   - **>50K plausible** if at least 3 of these high factors.
+   - **>50K unnatural** if: education ≤ 'HS-grad', hours-per-week ≤30, capital-gain=0 → set Income as ≤50K.
+
+**Strict Consistency Checks (each record must pass):**
+- **Relationship–Sex**: 'Husband' must be Male; 'Wife' must be Female.
+- **Marital–Relationship**: 'Husband'/'Wife' only with 'Married-*'; 'Own-child' only with 'Never-married'; 'Divorced'/'Widowed' cannot have 'Husband'/'Wife'.
+- **Occupation–Education**: Education ≤ '9th' cannot have 'Prof-specialty' or 'Tech-support'.
+- **Income–Education**: No >50K if education ≤ '9th' and hours-per-week <20 and capital-gain=0.
+
+**If any check fails**, regenerate the offending attribute (e.g., if sex wrong, resample sex) until all constraints are met. Ensure causes always precede effects in the generation order.
+</Task>"
+Score: 47.62%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 4 <<<<<<<<<<<<<<<< 
+Number of samples: 10
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.47619047619047616
+
+""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'relationship'), ('age', 'marital-status'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects the following dependencies: age directly influences both relationship (e.g., younger individuals are more likely 'Not-in-family', older more likely 'Husband' or 'Wife') and marital status (e.g., age increases probability of being married); relationship influences marital status (e.g., 'Husband' implies 'Married-civ-spouse', 'Not-in-family' implies 'Never-married') and sex (e.g., 'Husband' is male, 'Wife' is female, 'Own-child' is equally male/female); sex and education influence occupation (e.g., males more in 'Exec-managerial' or 'Craft-repair', higher education leads to 'Prof-specialty'); and education, marital-status, occupation, hours-per-week, capital-gain, and capital-loss all influence Income. Pay careful attention to logical consistency: relationship and sex must match perfectly (no 'Husband' with female sex); marital status and relationship must be coherent (e.g., 'Divorced' cannot have 'Husband' or 'Wife'); occupational choices should align with sex and education (e.g., females more in 'Adm-clerical', high education+high capital-gain increases Income); and Income should plausibly increase with higher education, higher capital-gain, higher capital-loss (as indicator of investment activity), and higher hours-per-week (e.g., Income >50K likely for those with 'Prof-specialty', capital-gain >5000, and hours-per-week >45). Avoid any violations where effects precede causes—ensure all relationships are temporally and logically correct. Additionally, generate each synthetic record in a stepwise manner: first assign age, then relationship based on age, then marital-status based on age and relationship, then sex based on relationship, then education, then occupation based on sex and education, and finally primary attributes (hours-per-week, capital-gain, capital-loss) and Income. Validate each record against these constraints before outputting; if any inconsistency is detected, regenerate that attribute until it fits the causal chain.</Task>""
+Score: 47.62%
+
+"""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'relationship'), ('age', 'marital-status'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income'), ('age', 'hours-per-week'), ('education', 'hours-per-week')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects the following dependencies:
+
+**Causal Generation Order (Step-by-Step):**
+1. **age**: Randomly sample from the provided data distribution (e.g., range 17-90, with realistic outliers).
+2. **relationship** <- **age**: Younger ages (17-30) more likely 'Not-in-family' or 'Own-child'; middle ages (30-50) more likely 'Husband'/'Wife'; older ages (50+) more likely 'Husband'/'Wife' or 'Other-relative'.
+3. **marital-status** <- **age** and **relationship**: 'Husband'/'Wife' -> 'Married-civ-spouse'; 'Not-in-family' and age 17-25 -> 'Never-married'; 'Own-child' -> 'Never-married'; 'Divorced' possible for older 'Not-in-family' or 'Other-relative'; 'Widowed' possible for age 60+.
+4. **sex** <- **relationship**: 'Husband' -> Male; 'Wife' -> Female; 'Own-child' -> equally male/female; 'Not-in-family' -> slightly more male (60/40); 'Other-relative' -> equally male/female; 'Unmarried' -> equally male/female.
+5. **education**: Sample from provided distribution (e.g., 'HS-grad' most common, 'Doctorate' rare).
+6. **occupation** <- **sex** and **education**: Males -> higher probability of 'Exec-managerial', 'Craft-repair', 'Farming-fishing'; Females -> higher probability of 'Adm-clerical', 'Prof-specialty' (if high education), 'Private-house-serv'; Education HS-grad or less -> 'Other-service', 'Transport-moving'; Education 'Bachelors' or more -> 'Prof-specialty', 'Exec-managerial'.
+7. **hours-per-week** <- **age** and **education**: Age 25-55 and education 'Bachelors' + -> 40-50 hours; Age <25 -> 20-40 hours; Age 55+ -> 30-40 hours; Education 'Doctorate' -> 45-60 hours.
+8. **capital-gain**: Sample from distribution (most 0, some positive with higher probability for high education, high occupation).
+9. **capital-loss**: Sample from distribution (most 0, some positive, inversely correlated with low-hours).
+10. **Income** <- **education**, **marital-status**, **occupation**, **hours-per-week**, **capital-gain**, **capital-loss**:
+    - High probability for >50K if: (education 'Bachelors'+), (occupation 'Prof-specialty' or 'Exec-managerial'), (hours-per-week 45+), (capital-gain 5000+), (marital-status 'Married-civ-spouse').
+    - Moderate >50K if: High on 3 of these factors.
+    - Low >50K if: HS-grad, low hours, no capital-gain.
+
+**Consistency Checks (Each Record Must Pass All):**
+1. **Relationship-Sex Consistency**: 'Husband' -> Male; 'Wife' -> Female; All others can be both.
+2. **Marital-Status-Relationship Consistency**:
+   - 'Husband'/'Wife' -> Only 'Married-civ-spouse' or 'Married-AF-spouse'.
+   - 'Own-child' -> Only 'Never-married'.
+   - 'Divorced' -> Must be 'Not-in-family' or 'Other-relative' (never 'Husband'/'Wife').
+   - 'Widowed' -> Must be 'Not-in-family' or 'Other-relative' (never 'Husband'/'Wife').
+   - 'Never-married' -> Can be 'Not-in-family', 'Own-child', 'Other-relative', 'Unmarried'.
+3. **Occupation-Education Consistency**: If education < '9th', occupation cannot be 'Tech-support' or 'Prof-specialty'.
+4. **Income-Plausibility**: Income >50K unrealistic for those with education < 'High-school-grad', hours-per-week <20, and capital-gain = 0 (regenerate these cases).
+5. **Age Marital-Status Consistency**: Age <18 -> Only 'Never-married'; Age >80 -> Higher probability of 'Widowed' if sex=female.
+
+**Iterative Correction**: If any synthetic record violates a consistency check during generation, regenerate the offending attribute (e.g., if sex drawn as 'Male' but relationship is 'Wife', redraw sex). Loop until all constraints satisfied.
+
+**Temporal Validity**: Ensure causes always assigned before effects—age before relationship, relationship before marital-status and sex, sex and education before occupation, and all prior before hours-per-week, capital-gain, capital-loss, and Income.
+
+Generate each record in the specified order and validate with the consistency checks before outputting. Produce exactly the number of synthetic records requested.</Task>""
+Score: 47.62%
+
+"Based on the analysis of the provided prompt-score pairs, I need to lower the score from 47.62% and 50.0%. The key insight is that the causal structure can be expanded to include an additional cause for `hours-per-week` (e.g., `education`), which creates more realistic data and reduces the score. I will also simplify and strengthen the task guidance to ensure strict causal adherence.
+
+Here is the optimized prompt:
+
+<Causal structure>
+Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'relationship'), ('age', 'marital-status'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'hours-per-week'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]
+</Causal structure>
+
+<Task>
+The ultimate goal is to produce accurate and convincing synthetic data that faithfully represents these causal relationships given user-provided samples. Your task is to generate each synthetic record in strict, stepwise causal order:
+
+1. **age**: Sample randomly from the user data distribution (e.g., 17–90).
+2. **relationship** (caused by age): Younger (17–30) → 'Not-in-family' or 'Own-child'; Middle (30–50) → 'Husband'/'Wife'; Older (50+) → 'Husband'/'Wife' or 'Other-relative'.
+3. **marital-status** (caused by age and relationship):
+   - 'Husband'/'Wife' → 'Married-civ-spouse' (or 'Married-AF-spouse').
+   - 'Own-child' → 'Never-married'.
+   - 'Not-in-family' or 'Other-relative' → 'Divorced' (if age 30+), 'Widowed' (if age 60+), or 'Never-married' (younger).
+4. **sex** (caused by relationship):
+   - 'Husband' → Male; 'Wife' → Female.
+   - 'Own-child', 'Not-in-family', 'Other-relative' → equally male/female.
+5. **education**: Sample from user data distribution (e.g., 'HS-grad' most common, 'Doctorate' rare).
+6. **occupation** (caused by sex and education):
+   - Males → higher probabilities for 'Exec-managerial', 'Craft-repair', 'Farming-fishing'.
+   - Females → higher probabilities for 'Adm-clerical', 'Prof-specialty' (if high education), 'Private-house-serv'.
+   - Education ≤ '9th' → no 'Prof-specialty' or 'Tech-support'; Education 'Bachelors'+ → 'Prof-specialty' or 'Exec-managerial'.
+7. **hours-per-week** (caused by education):
+   - Education ≤ 'HS-grad' → typical 30–45 hours.
+   - Education 'Some-college' or 'Assoc-voc' → 35–45 hours.
+   - Education 'Bachelors'+ → 40–50 hours (especially 'Doctorate' → 45–60).
+8. **capital-gain** and **capital-loss**: Sample from user data; most values 0, but higher correlated with high education/high-status occupations.
+9. **Income** (caused by education, marital-status, occupation, hours-per-week, capital-gain, capital-loss):
+   - **>50K likely** if: (education 'Bachelors'+) AND (occupation 'Prof-specialty' or 'Exec-managerial') AND (hours-per-week ≥45) AND (capital-gain ≥5000) AND (marital-status 'Married-civ-spouse').
+   - **>50K plausible** if at least 3 of these high factors.
+   - **>50K unnatural** if: education ≤ 'HS-grad', hours-per-week ≤30, capital-gain=0 → set Income as ≤50K.
+
+**Strict Consistency Checks (each record must pass):**
+- **Relationship–Sex**: 'Husband' must be Male; 'Wife' must be Female.
+- **Marital–Relationship**: 'Husband'/'Wife' only with 'Married-*'; 'Own-child' only with 'Never-married'; 'Divorced'/'Widowed' cannot have 'Husband'/'Wife'.
+- **Occupation–Education**: Education ≤ '9th' cannot have 'Prof-specialty' or 'Tech-support'.
+- **Income–Education**: No >50K if education ≤ '9th' and hours-per-week <20 and capital-gain=0.
+
+**If any check fails**, regenerate the offending attribute (e.g., if sex wrong, resample sex) until all constraints are met. Ensure causes always precede effects in the generation order.
+</Task>"
+Score: 47.62%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 5 <<<<<<<<<<<<<<<< 
+Number of samples: 10
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.47619047619047616
+
+""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'relationship'), ('age', 'marital-status'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects the following dependencies: age directly influences both relationship (e.g., younger individuals are more likely 'Not-in-family', older more likely 'Husband' or 'Wife') and marital status (e.g., age increases probability of being married); relationship influences marital status (e.g., 'Husband' implies 'Married-civ-spouse', 'Not-in-family' implies 'Never-married') and sex (e.g., 'Husband' is male, 'Wife' is female, 'Own-child' is equally male/female); sex and education influence occupation (e.g., males more in 'Exec-managerial' or 'Craft-repair', higher education leads to 'Prof-specialty'); and education, marital-status, occupation, hours-per-week, capital-gain, and capital-loss all influence Income. Pay careful attention to logical consistency: relationship and sex must match perfectly (no 'Husband' with female sex); marital status and relationship must be coherent (e.g., 'Divorced' cannot have 'Husband' or 'Wife'); occupational choices should align with sex and education (e.g., females more in 'Adm-clerical', high education+high capital-gain increases Income); and Income should plausibly increase with higher education, higher capital-gain, higher capital-loss (as indicator of investment activity), and higher hours-per-week (e.g., Income >50K likely for those with 'Prof-specialty', capital-gain >5000, and hours-per-week >45). Avoid any violations where effects precede causes—ensure all relationships are temporally and logically correct. Additionally, generate each synthetic record in a stepwise manner: first assign age, then relationship based on age, then marital-status based on age and relationship, then sex based on relationship, then education, then occupation based on sex and education, and finally primary attributes (hours-per-week, capital-gain, capital-loss) and Income. Validate each record against these constraints before outputting; if any inconsistency is detected, regenerate that attribute until it fits the causal chain.</Task>""
+Score: 47.62%
+
+"""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'relationship'), ('age', 'marital-status'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income'), ('age', 'hours-per-week'), ('education', 'hours-per-week')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects the following dependencies:
+
+**Causal Generation Order (Step-by-Step):**
+1. **age**: Randomly sample from the provided data distribution (e.g., range 17-90, with realistic outliers).
+2. **relationship** <- **age**: Younger ages (17-30) more likely 'Not-in-family' or 'Own-child'; middle ages (30-50) more likely 'Husband'/'Wife'; older ages (50+) more likely 'Husband'/'Wife' or 'Other-relative'.
+3. **marital-status** <- **age** and **relationship**: 'Husband'/'Wife' -> 'Married-civ-spouse'; 'Not-in-family' and age 17-25 -> 'Never-married'; 'Own-child' -> 'Never-married'; 'Divorced' possible for older 'Not-in-family' or 'Other-relative'; 'Widowed' possible for age 60+.
+4. **sex** <- **relationship**: 'Husband' -> Male; 'Wife' -> Female; 'Own-child' -> equally male/female; 'Not-in-family' -> slightly more male (60/40); 'Other-relative' -> equally male/female; 'Unmarried' -> equally male/female.
+5. **education**: Sample from provided distribution (e.g., 'HS-grad' most common, 'Doctorate' rare).
+6. **occupation** <- **sex** and **education**: Males -> higher probability of 'Exec-managerial', 'Craft-repair', 'Farming-fishing'; Females -> higher probability of 'Adm-clerical', 'Prof-specialty' (if high education), 'Private-house-serv'; Education HS-grad or less -> 'Other-service', 'Transport-moving'; Education 'Bachelors' or more -> 'Prof-specialty', 'Exec-managerial'.
+7. **hours-per-week** <- **age** and **education**: Age 25-55 and education 'Bachelors' + -> 40-50 hours; Age <25 -> 20-40 hours; Age 55+ -> 30-40 hours; Education 'Doctorate' -> 45-60 hours.
+8. **capital-gain**: Sample from distribution (most 0, some positive with higher probability for high education, high occupation).
+9. **capital-loss**: Sample from distribution (most 0, some positive, inversely correlated with low-hours).
+10. **Income** <- **education**, **marital-status**, **occupation**, **hours-per-week**, **capital-gain**, **capital-loss**:
+    - High probability for >50K if: (education 'Bachelors'+), (occupation 'Prof-specialty' or 'Exec-managerial'), (hours-per-week 45+), (capital-gain 5000+), (marital-status 'Married-civ-spouse').
+    - Moderate >50K if: High on 3 of these factors.
+    - Low >50K if: HS-grad, low hours, no capital-gain.
+
+**Consistency Checks (Each Record Must Pass All):**
+1. **Relationship-Sex Consistency**: 'Husband' -> Male; 'Wife' -> Female; All others can be both.
+2. **Marital-Status-Relationship Consistency**:
+   - 'Husband'/'Wife' -> Only 'Married-civ-spouse' or 'Married-AF-spouse'.
+   - 'Own-child' -> Only 'Never-married'.
+   - 'Divorced' -> Must be 'Not-in-family' or 'Other-relative' (never 'Husband'/'Wife').
+   - 'Widowed' -> Must be 'Not-in-family' or 'Other-relative' (never 'Husband'/'Wife').
+   - 'Never-married' -> Can be 'Not-in-family', 'Own-child', 'Other-relative', 'Unmarried'.
+3. **Occupation-Education Consistency**: If education < '9th', occupation cannot be 'Tech-support' or 'Prof-specialty'.
+4. **Income-Plausibility**: Income >50K unrealistic for those with education < 'High-school-grad', hours-per-week <20, and capital-gain = 0 (regenerate these cases).
+5. **Age Marital-Status Consistency**: Age <18 -> Only 'Never-married'; Age >80 -> Higher probability of 'Widowed' if sex=female.
+
+**Iterative Correction**: If any synthetic record violates a consistency check during generation, regenerate the offending attribute (e.g., if sex drawn as 'Male' but relationship is 'Wife', redraw sex). Loop until all constraints satisfied.
+
+**Temporal Validity**: Ensure causes always assigned before effects—age before relationship, relationship before marital-status and sex, sex and education before occupation, and all prior before hours-per-week, capital-gain, capital-loss, and Income.
+
+Generate each record in the specified order and validate with the consistency checks before outputting. Produce exactly the number of synthetic records requested.</Task>""
+Score: 47.62%
+
+"Based on the analysis of the provided prompt-score pairs, I need to lower the score from 47.62% and 50.0%. The key insight is that the causal structure can be expanded to include an additional cause for `hours-per-week` (e.g., `education`), which creates more realistic data and reduces the score. I will also simplify and strengthen the task guidance to ensure strict causal adherence.
+
+Here is the optimized prompt:
+
+<Causal structure>
+Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'relationship'), ('age', 'marital-status'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'hours-per-week'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]
+</Causal structure>
+
+<Task>
+The ultimate goal is to produce accurate and convincing synthetic data that faithfully represents these causal relationships given user-provided samples. Your task is to generate each synthetic record in strict, stepwise causal order:
+
+1. **age**: Sample randomly from the user data distribution (e.g., 17–90).
+2. **relationship** (caused by age): Younger (17–30) → 'Not-in-family' or 'Own-child'; Middle (30–50) → 'Husband'/'Wife'; Older (50+) → 'Husband'/'Wife' or 'Other-relative'.
+3. **marital-status** (caused by age and relationship):
+   - 'Husband'/'Wife' → 'Married-civ-spouse' (or 'Married-AF-spouse').
+   - 'Own-child' → 'Never-married'.
+   - 'Not-in-family' or 'Other-relative' → 'Divorced' (if age 30+), 'Widowed' (if age 60+), or 'Never-married' (younger).
+4. **sex** (caused by relationship):
+   - 'Husband' → Male; 'Wife' → Female.
+   - 'Own-child', 'Not-in-family', 'Other-relative' → equally male/female.
+5. **education**: Sample from user data distribution (e.g., 'HS-grad' most common, 'Doctorate' rare).
+6. **occupation** (caused by sex and education):
+   - Males → higher probabilities for 'Exec-managerial', 'Craft-repair', 'Farming-fishing'.
+   - Females → higher probabilities for 'Adm-clerical', 'Prof-specialty' (if high education), 'Private-house-serv'.
+   - Education ≤ '9th' → no 'Prof-specialty' or 'Tech-support'; Education 'Bachelors'+ → 'Prof-specialty' or 'Exec-managerial'.
+7. **hours-per-week** (caused by education):
+   - Education ≤ 'HS-grad' → typical 30–45 hours.
+   - Education 'Some-college' or 'Assoc-voc' → 35–45 hours.
+   - Education 'Bachelors'+ → 40–50 hours (especially 'Doctorate' → 45–60).
+8. **capital-gain** and **capital-loss**: Sample from user data; most values 0, but higher correlated with high education/high-status occupations.
+9. **Income** (caused by education, marital-status, occupation, hours-per-week, capital-gain, capital-loss):
+   - **>50K likely** if: (education 'Bachelors'+) AND (occupation 'Prof-specialty' or 'Exec-managerial') AND (hours-per-week ≥45) AND (capital-gain ≥5000) AND (marital-status 'Married-civ-spouse').
+   - **>50K plausible** if at least 3 of these high factors.
+   - **>50K unnatural** if: education ≤ 'HS-grad', hours-per-week ≤30, capital-gain=0 → set Income as ≤50K.
+
+**Strict Consistency Checks (each record must pass):**
+- **Relationship–Sex**: 'Husband' must be Male; 'Wife' must be Female.
+- **Marital–Relationship**: 'Husband'/'Wife' only with 'Married-*'; 'Own-child' only with 'Never-married'; 'Divorced'/'Widowed' cannot have 'Husband'/'Wife'.
+- **Occupation–Education**: Education ≤ '9th' cannot have 'Prof-specialty' or 'Tech-support'.
+- **Income–Education**: No >50K if education ≤ '9th' and hours-per-week <20 and capital-gain=0.
+
+**If any check fails**, regenerate the offending attribute (e.g., if sex wrong, resample sex) until all constraints are met. Ensure causes always precede effects in the generation order.
+</Task>"
+Score: 47.62%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 6 <<<<<<<<<<<<<<<< 
+Number of samples: 10
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.47619047619047616
+
+""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'relationship'), ('age', 'marital-status'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects the following dependencies: age directly influences both relationship (e.g., younger individuals are more likely 'Not-in-family', older more likely 'Husband' or 'Wife') and marital status (e.g., age increases probability of being married); relationship influences marital status (e.g., 'Husband' implies 'Married-civ-spouse', 'Not-in-family' implies 'Never-married') and sex (e.g., 'Husband' is male, 'Wife' is female, 'Own-child' is equally male/female); sex and education influence occupation (e.g., males more in 'Exec-managerial' or 'Craft-repair', higher education leads to 'Prof-specialty'); and education, marital-status, occupation, hours-per-week, capital-gain, and capital-loss all influence Income. Pay careful attention to logical consistency: relationship and sex must match perfectly (no 'Husband' with female sex); marital status and relationship must be coherent (e.g., 'Divorced' cannot have 'Husband' or 'Wife'); occupational choices should align with sex and education (e.g., females more in 'Adm-clerical', high education+high capital-gain increases Income); and Income should plausibly increase with higher education, higher capital-gain, higher capital-loss (as indicator of investment activity), and higher hours-per-week (e.g., Income >50K likely for those with 'Prof-specialty', capital-gain >5000, and hours-per-week >45). Avoid any violations where effects precede causes—ensure all relationships are temporally and logically correct. Additionally, generate each synthetic record in a stepwise manner: first assign age, then relationship based on age, then marital-status based on age and relationship, then sex based on relationship, then education, then occupation based on sex and education, and finally primary attributes (hours-per-week, capital-gain, capital-loss) and Income. Validate each record against these constraints before outputting; if any inconsistency is detected, regenerate that attribute until it fits the causal chain.</Task>""
+Score: 47.62%
+
+"""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'relationship'), ('age', 'marital-status'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income'), ('age', 'hours-per-week'), ('education', 'hours-per-week')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects the following dependencies:
+
+**Causal Generation Order (Step-by-Step):**
+1. **age**: Randomly sample from the provided data distribution (e.g., range 17-90, with realistic outliers).
+2. **relationship** <- **age**: Younger ages (17-30) more likely 'Not-in-family' or 'Own-child'; middle ages (30-50) more likely 'Husband'/'Wife'; older ages (50+) more likely 'Husband'/'Wife' or 'Other-relative'.
+3. **marital-status** <- **age** and **relationship**: 'Husband'/'Wife' -> 'Married-civ-spouse'; 'Not-in-family' and age 17-25 -> 'Never-married'; 'Own-child' -> 'Never-married'; 'Divorced' possible for older 'Not-in-family' or 'Other-relative'; 'Widowed' possible for age 60+.
+4. **sex** <- **relationship**: 'Husband' -> Male; 'Wife' -> Female; 'Own-child' -> equally male/female; 'Not-in-family' -> slightly more male (60/40); 'Other-relative' -> equally male/female; 'Unmarried' -> equally male/female.
+5. **education**: Sample from provided distribution (e.g., 'HS-grad' most common, 'Doctorate' rare).
+6. **occupation** <- **sex** and **education**: Males -> higher probability of 'Exec-managerial', 'Craft-repair', 'Farming-fishing'; Females -> higher probability of 'Adm-clerical', 'Prof-specialty' (if high education), 'Private-house-serv'; Education HS-grad or less -> 'Other-service', 'Transport-moving'; Education 'Bachelors' or more -> 'Prof-specialty', 'Exec-managerial'.
+7. **hours-per-week** <- **age** and **education**: Age 25-55 and education 'Bachelors' + -> 40-50 hours; Age <25 -> 20-40 hours; Age 55+ -> 30-40 hours; Education 'Doctorate' -> 45-60 hours.
+8. **capital-gain**: Sample from distribution (most 0, some positive with higher probability for high education, high occupation).
+9. **capital-loss**: Sample from distribution (most 0, some positive, inversely correlated with low-hours).
+10. **Income** <- **education**, **marital-status**, **occupation**, **hours-per-week**, **capital-gain**, **capital-loss**:
+    - High probability for >50K if: (education 'Bachelors'+), (occupation 'Prof-specialty' or 'Exec-managerial'), (hours-per-week 45+), (capital-gain 5000+), (marital-status 'Married-civ-spouse').
+    - Moderate >50K if: High on 3 of these factors.
+    - Low >50K if: HS-grad, low hours, no capital-gain.
+
+**Consistency Checks (Each Record Must Pass All):**
+1. **Relationship-Sex Consistency**: 'Husband' -> Male; 'Wife' -> Female; All others can be both.
+2. **Marital-Status-Relationship Consistency**:
+   - 'Husband'/'Wife' -> Only 'Married-civ-spouse' or 'Married-AF-spouse'.
+   - 'Own-child' -> Only 'Never-married'.
+   - 'Divorced' -> Must be 'Not-in-family' or 'Other-relative' (never 'Husband'/'Wife').
+   - 'Widowed' -> Must be 'Not-in-family' or 'Other-relative' (never 'Husband'/'Wife').
+   - 'Never-married' -> Can be 'Not-in-family', 'Own-child', 'Other-relative', 'Unmarried'.
+3. **Occupation-Education Consistency**: If education < '9th', occupation cannot be 'Tech-support' or 'Prof-specialty'.
+4. **Income-Plausibility**: Income >50K unrealistic for those with education < 'High-school-grad', hours-per-week <20, and capital-gain = 0 (regenerate these cases).
+5. **Age Marital-Status Consistency**: Age <18 -> Only 'Never-married'; Age >80 -> Higher probability of 'Widowed' if sex=female.
+
+**Iterative Correction**: If any synthetic record violates a consistency check during generation, regenerate the offending attribute (e.g., if sex drawn as 'Male' but relationship is 'Wife', redraw sex). Loop until all constraints satisfied.
+
+**Temporal Validity**: Ensure causes always assigned before effects—age before relationship, relationship before marital-status and sex, sex and education before occupation, and all prior before hours-per-week, capital-gain, capital-loss, and Income.
+
+Generate each record in the specified order and validate with the consistency checks before outputting. Produce exactly the number of synthetic records requested.</Task>""
+Score: 47.62%
+
+"Based on the analysis of the provided prompt-score pairs, I need to lower the score from 47.62% and 50.0%. The key insight is that the causal structure can be expanded to include an additional cause for `hours-per-week` (e.g., `education`), which creates more realistic data and reduces the score. I will also simplify and strengthen the task guidance to ensure strict causal adherence.
+
+Here is the optimized prompt:
+
+<Causal structure>
+Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'relationship'), ('age', 'marital-status'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'hours-per-week'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]
+</Causal structure>
+
+<Task>
+The ultimate goal is to produce accurate and convincing synthetic data that faithfully represents these causal relationships given user-provided samples. Your task is to generate each synthetic record in strict, stepwise causal order:
+
+1. **age**: Sample randomly from the user data distribution (e.g., 17–90).
+2. **relationship** (caused by age): Younger (17–30) → 'Not-in-family' or 'Own-child'; Middle (30–50) → 'Husband'/'Wife'; Older (50+) → 'Husband'/'Wife' or 'Other-relative'.
+3. **marital-status** (caused by age and relationship):
+   - 'Husband'/'Wife' → 'Married-civ-spouse' (or 'Married-AF-spouse').
+   - 'Own-child' → 'Never-married'.
+   - 'Not-in-family' or 'Other-relative' → 'Divorced' (if age 30+), 'Widowed' (if age 60+), or 'Never-married' (younger).
+4. **sex** (caused by relationship):
+   - 'Husband' → Male; 'Wife' → Female.
+   - 'Own-child', 'Not-in-family', 'Other-relative' → equally male/female.
+5. **education**: Sample from user data distribution (e.g., 'HS-grad' most common, 'Doctorate' rare).
+6. **occupation** (caused by sex and education):
+   - Males → higher probabilities for 'Exec-managerial', 'Craft-repair', 'Farming-fishing'.
+   - Females → higher probabilities for 'Adm-clerical', 'Prof-specialty' (if high education), 'Private-house-serv'.
+   - Education ≤ '9th' → no 'Prof-specialty' or 'Tech-support'; Education 'Bachelors'+ → 'Prof-specialty' or 'Exec-managerial'.
+7. **hours-per-week** (caused by education):
+   - Education ≤ 'HS-grad' → typical 30–45 hours.
+   - Education 'Some-college' or 'Assoc-voc' → 35–45 hours.
+   - Education 'Bachelors'+ → 40–50 hours (especially 'Doctorate' → 45–60).
+8. **capital-gain** and **capital-loss**: Sample from user data; most values 0, but higher correlated with high education/high-status occupations.
+9. **Income** (caused by education, marital-status, occupation, hours-per-week, capital-gain, capital-loss):
+   - **>50K likely** if: (education 'Bachelors'+) AND (occupation 'Prof-specialty' or 'Exec-managerial') AND (hours-per-week ≥45) AND (capital-gain ≥5000) AND (marital-status 'Married-civ-spouse').
+   - **>50K plausible** if at least 3 of these high factors.
+   - **>50K unnatural** if: education ≤ 'HS-grad', hours-per-week ≤30, capital-gain=0 → set Income as ≤50K.
+
+**Strict Consistency Checks (each record must pass):**
+- **Relationship–Sex**: 'Husband' must be Male; 'Wife' must be Female.
+- **Marital–Relationship**: 'Husband'/'Wife' only with 'Married-*'; 'Own-child' only with 'Never-married'; 'Divorced'/'Widowed' cannot have 'Husband'/'Wife'.
+- **Occupation–Education**: Education ≤ '9th' cannot have 'Prof-specialty' or 'Tech-support'.
+- **Income–Education**: No >50K if education ≤ '9th' and hours-per-week <20 and capital-gain=0.
+
+**If any check fails**, regenerate the offending attribute (e.g., if sex wrong, resample sex) until all constraints are met. Ensure causes always precede effects in the generation order.
+</Task>"
+Score: 47.62%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 7 <<<<<<<<<<<<<<<< 
+Number of samples: 10
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.47619047619047616
+
+""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'relationship'), ('age', 'marital-status'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects the following dependencies: age directly influences both relationship (e.g., younger individuals are more likely 'Not-in-family', older more likely 'Husband' or 'Wife') and marital status (e.g., age increases probability of being married); relationship influences marital status (e.g., 'Husband' implies 'Married-civ-spouse', 'Not-in-family' implies 'Never-married') and sex (e.g., 'Husband' is male, 'Wife' is female, 'Own-child' is equally male/female); sex and education influence occupation (e.g., males more in 'Exec-managerial' or 'Craft-repair', higher education leads to 'Prof-specialty'); and education, marital-status, occupation, hours-per-week, capital-gain, and capital-loss all influence Income. Pay careful attention to logical consistency: relationship and sex must match perfectly (no 'Husband' with female sex); marital status and relationship must be coherent (e.g., 'Divorced' cannot have 'Husband' or 'Wife'); occupational choices should align with sex and education (e.g., females more in 'Adm-clerical', high education+high capital-gain increases Income); and Income should plausibly increase with higher education, higher capital-gain, higher capital-loss (as indicator of investment activity), and higher hours-per-week (e.g., Income >50K likely for those with 'Prof-specialty', capital-gain >5000, and hours-per-week >45). Avoid any violations where effects precede causes—ensure all relationships are temporally and logically correct. Additionally, generate each synthetic record in a stepwise manner: first assign age, then relationship based on age, then marital-status based on age and relationship, then sex based on relationship, then education, then occupation based on sex and education, and finally primary attributes (hours-per-week, capital-gain, capital-loss) and Income. Validate each record against these constraints before outputting; if any inconsistency is detected, regenerate that attribute until it fits the causal chain.</Task>""
+Score: 47.62%
+
+"""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'relationship'), ('age', 'marital-status'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income'), ('age', 'hours-per-week'), ('education', 'hours-per-week')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects the following dependencies:
+
+**Causal Generation Order (Step-by-Step):**
+1. **age**: Randomly sample from the provided data distribution (e.g., range 17-90, with realistic outliers).
+2. **relationship** <- **age**: Younger ages (17-30) more likely 'Not-in-family' or 'Own-child'; middle ages (30-50) more likely 'Husband'/'Wife'; older ages (50+) more likely 'Husband'/'Wife' or 'Other-relative'.
+3. **marital-status** <- **age** and **relationship**: 'Husband'/'Wife' -> 'Married-civ-spouse'; 'Not-in-family' and age 17-25 -> 'Never-married'; 'Own-child' -> 'Never-married'; 'Divorced' possible for older 'Not-in-family' or 'Other-relative'; 'Widowed' possible for age 60+.
+4. **sex** <- **relationship**: 'Husband' -> Male; 'Wife' -> Female; 'Own-child' -> equally male/female; 'Not-in-family' -> slightly more male (60/40); 'Other-relative' -> equally male/female; 'Unmarried' -> equally male/female.
+5. **education**: Sample from provided distribution (e.g., 'HS-grad' most common, 'Doctorate' rare).
+6. **occupation** <- **sex** and **education**: Males -> higher probability of 'Exec-managerial', 'Craft-repair', 'Farming-fishing'; Females -> higher probability of 'Adm-clerical', 'Prof-specialty' (if high education), 'Private-house-serv'; Education HS-grad or less -> 'Other-service', 'Transport-moving'; Education 'Bachelors' or more -> 'Prof-specialty', 'Exec-managerial'.
+7. **hours-per-week** <- **age** and **education**: Age 25-55 and education 'Bachelors' + -> 40-50 hours; Age <25 -> 20-40 hours; Age 55+ -> 30-40 hours; Education 'Doctorate' -> 45-60 hours.
+8. **capital-gain**: Sample from distribution (most 0, some positive with higher probability for high education, high occupation).
+9. **capital-loss**: Sample from distribution (most 0, some positive, inversely correlated with low-hours).
+10. **Income** <- **education**, **marital-status**, **occupation**, **hours-per-week**, **capital-gain**, **capital-loss**:
+    - High probability for >50K if: (education 'Bachelors'+), (occupation 'Prof-specialty' or 'Exec-managerial'), (hours-per-week 45+), (capital-gain 5000+), (marital-status 'Married-civ-spouse').
+    - Moderate >50K if: High on 3 of these factors.
+    - Low >50K if: HS-grad, low hours, no capital-gain.
+
+**Consistency Checks (Each Record Must Pass All):**
+1. **Relationship-Sex Consistency**: 'Husband' -> Male; 'Wife' -> Female; All others can be both.
+2. **Marital-Status-Relationship Consistency**:
+   - 'Husband'/'Wife' -> Only 'Married-civ-spouse' or 'Married-AF-spouse'.
+   - 'Own-child' -> Only 'Never-married'.
+   - 'Divorced' -> Must be 'Not-in-family' or 'Other-relative' (never 'Husband'/'Wife').
+   - 'Widowed' -> Must be 'Not-in-family' or 'Other-relative' (never 'Husband'/'Wife').
+   - 'Never-married' -> Can be 'Not-in-family', 'Own-child', 'Other-relative', 'Unmarried'.
+3. **Occupation-Education Consistency**: If education < '9th', occupation cannot be 'Tech-support' or 'Prof-specialty'.
+4. **Income-Plausibility**: Income >50K unrealistic for those with education < 'High-school-grad', hours-per-week <20, and capital-gain = 0 (regenerate these cases).
+5. **Age Marital-Status Consistency**: Age <18 -> Only 'Never-married'; Age >80 -> Higher probability of 'Widowed' if sex=female.
+
+**Iterative Correction**: If any synthetic record violates a consistency check during generation, regenerate the offending attribute (e.g., if sex drawn as 'Male' but relationship is 'Wife', redraw sex). Loop until all constraints satisfied.
+
+**Temporal Validity**: Ensure causes always assigned before effects—age before relationship, relationship before marital-status and sex, sex and education before occupation, and all prior before hours-per-week, capital-gain, capital-loss, and Income.
+
+Generate each record in the specified order and validate with the consistency checks before outputting. Produce exactly the number of synthetic records requested.</Task>""
+Score: 47.62%
+
+"Based on the analysis of the provided prompt-score pairs, I need to lower the score from 47.62% and 50.0%. The key insight is that the causal structure can be expanded to include an additional cause for `hours-per-week` (e.g., `education`), which creates more realistic data and reduces the score. I will also simplify and strengthen the task guidance to ensure strict causal adherence.
+
+Here is the optimized prompt:
+
+<Causal structure>
+Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'relationship'), ('age', 'marital-status'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'hours-per-week'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]
+</Causal structure>
+
+<Task>
+The ultimate goal is to produce accurate and convincing synthetic data that faithfully represents these causal relationships given user-provided samples. Your task is to generate each synthetic record in strict, stepwise causal order:
+
+1. **age**: Sample randomly from the user data distribution (e.g., 17–90).
+2. **relationship** (caused by age): Younger (17–30) → 'Not-in-family' or 'Own-child'; Middle (30–50) → 'Husband'/'Wife'; Older (50+) → 'Husband'/'Wife' or 'Other-relative'.
+3. **marital-status** (caused by age and relationship):
+   - 'Husband'/'Wife' → 'Married-civ-spouse' (or 'Married-AF-spouse').
+   - 'Own-child' → 'Never-married'.
+   - 'Not-in-family' or 'Other-relative' → 'Divorced' (if age 30+), 'Widowed' (if age 60+), or 'Never-married' (younger).
+4. **sex** (caused by relationship):
+   - 'Husband' → Male; 'Wife' → Female.
+   - 'Own-child', 'Not-in-family', 'Other-relative' → equally male/female.
+5. **education**: Sample from user data distribution (e.g., 'HS-grad' most common, 'Doctorate' rare).
+6. **occupation** (caused by sex and education):
+   - Males → higher probabilities for 'Exec-managerial', 'Craft-repair', 'Farming-fishing'.
+   - Females → higher probabilities for 'Adm-clerical', 'Prof-specialty' (if high education), 'Private-house-serv'.
+   - Education ≤ '9th' → no 'Prof-specialty' or 'Tech-support'; Education 'Bachelors'+ → 'Prof-specialty' or 'Exec-managerial'.
+7. **hours-per-week** (caused by education):
+   - Education ≤ 'HS-grad' → typical 30–45 hours.
+   - Education 'Some-college' or 'Assoc-voc' → 35–45 hours.
+   - Education 'Bachelors'+ → 40–50 hours (especially 'Doctorate' → 45–60).
+8. **capital-gain** and **capital-loss**: Sample from user data; most values 0, but higher correlated with high education/high-status occupations.
+9. **Income** (caused by education, marital-status, occupation, hours-per-week, capital-gain, capital-loss):
+   - **>50K likely** if: (education 'Bachelors'+) AND (occupation 'Prof-specialty' or 'Exec-managerial') AND (hours-per-week ≥45) AND (capital-gain ≥5000) AND (marital-status 'Married-civ-spouse').
+   - **>50K plausible** if at least 3 of these high factors.
+   - **>50K unnatural** if: education ≤ 'HS-grad', hours-per-week ≤30, capital-gain=0 → set Income as ≤50K.
+
+**Strict Consistency Checks (each record must pass):**
+- **Relationship–Sex**: 'Husband' must be Male; 'Wife' must be Female.
+- **Marital–Relationship**: 'Husband'/'Wife' only with 'Married-*'; 'Own-child' only with 'Never-married'; 'Divorced'/'Widowed' cannot have 'Husband'/'Wife'.
+- **Occupation–Education**: Education ≤ '9th' cannot have 'Prof-specialty' or 'Tech-support'.
+- **Income–Education**: No >50K if education ≤ '9th' and hours-per-week <20 and capital-gain=0.
+
+**If any check fails**, regenerate the offending attribute (e.g., if sex wrong, resample sex) until all constraints are met. Ensure causes always precede effects in the generation order.
+</Task>"
+Score: 47.62%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 8 <<<<<<<<<<<<<<<< 
+Number of samples: 10
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.47619047619047616
+
+""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'relationship'), ('age', 'marital-status'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects the following dependencies: age directly influences both relationship (e.g., younger individuals are more likely 'Not-in-family', older more likely 'Husband' or 'Wife') and marital status (e.g., age increases probability of being married); relationship influences marital status (e.g., 'Husband' implies 'Married-civ-spouse', 'Not-in-family' implies 'Never-married') and sex (e.g., 'Husband' is male, 'Wife' is female, 'Own-child' is equally male/female); sex and education influence occupation (e.g., males more in 'Exec-managerial' or 'Craft-repair', higher education leads to 'Prof-specialty'); and education, marital-status, occupation, hours-per-week, capital-gain, and capital-loss all influence Income. Pay careful attention to logical consistency: relationship and sex must match perfectly (no 'Husband' with female sex); marital status and relationship must be coherent (e.g., 'Divorced' cannot have 'Husband' or 'Wife'); occupational choices should align with sex and education (e.g., females more in 'Adm-clerical', high education+high capital-gain increases Income); and Income should plausibly increase with higher education, higher capital-gain, higher capital-loss (as indicator of investment activity), and higher hours-per-week (e.g., Income >50K likely for those with 'Prof-specialty', capital-gain >5000, and hours-per-week >45). Avoid any violations where effects precede causes—ensure all relationships are temporally and logically correct. Additionally, generate each synthetic record in a stepwise manner: first assign age, then relationship based on age, then marital-status based on age and relationship, then sex based on relationship, then education, then occupation based on sex and education, and finally primary attributes (hours-per-week, capital-gain, capital-loss) and Income. Validate each record against these constraints before outputting; if any inconsistency is detected, regenerate that attribute until it fits the causal chain.</Task>""
+Score: 47.62%
+
+"""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'relationship'), ('age', 'marital-status'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income'), ('age', 'hours-per-week'), ('education', 'hours-per-week')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects the following dependencies:
+
+**Causal Generation Order (Step-by-Step):**
+1. **age**: Randomly sample from the provided data distribution (e.g., range 17-90, with realistic outliers).
+2. **relationship** <- **age**: Younger ages (17-30) more likely 'Not-in-family' or 'Own-child'; middle ages (30-50) more likely 'Husband'/'Wife'; older ages (50+) more likely 'Husband'/'Wife' or 'Other-relative'.
+3. **marital-status** <- **age** and **relationship**: 'Husband'/'Wife' -> 'Married-civ-spouse'; 'Not-in-family' and age 17-25 -> 'Never-married'; 'Own-child' -> 'Never-married'; 'Divorced' possible for older 'Not-in-family' or 'Other-relative'; 'Widowed' possible for age 60+.
+4. **sex** <- **relationship**: 'Husband' -> Male; 'Wife' -> Female; 'Own-child' -> equally male/female; 'Not-in-family' -> slightly more male (60/40); 'Other-relative' -> equally male/female; 'Unmarried' -> equally male/female.
+5. **education**: Sample from provided distribution (e.g., 'HS-grad' most common, 'Doctorate' rare).
+6. **occupation** <- **sex** and **education**: Males -> higher probability of 'Exec-managerial', 'Craft-repair', 'Farming-fishing'; Females -> higher probability of 'Adm-clerical', 'Prof-specialty' (if high education), 'Private-house-serv'; Education HS-grad or less -> 'Other-service', 'Transport-moving'; Education 'Bachelors' or more -> 'Prof-specialty', 'Exec-managerial'.
+7. **hours-per-week** <- **age** and **education**: Age 25-55 and education 'Bachelors' + -> 40-50 hours; Age <25 -> 20-40 hours; Age 55+ -> 30-40 hours; Education 'Doctorate' -> 45-60 hours.
+8. **capital-gain**: Sample from distribution (most 0, some positive with higher probability for high education, high occupation).
+9. **capital-loss**: Sample from distribution (most 0, some positive, inversely correlated with low-hours).
+10. **Income** <- **education**, **marital-status**, **occupation**, **hours-per-week**, **capital-gain**, **capital-loss**:
+    - High probability for >50K if: (education 'Bachelors'+), (occupation 'Prof-specialty' or 'Exec-managerial'), (hours-per-week 45+), (capital-gain 5000+), (marital-status 'Married-civ-spouse').
+    - Moderate >50K if: High on 3 of these factors.
+    - Low >50K if: HS-grad, low hours, no capital-gain.
+
+**Consistency Checks (Each Record Must Pass All):**
+1. **Relationship-Sex Consistency**: 'Husband' -> Male; 'Wife' -> Female; All others can be both.
+2. **Marital-Status-Relationship Consistency**:
+   - 'Husband'/'Wife' -> Only 'Married-civ-spouse' or 'Married-AF-spouse'.
+   - 'Own-child' -> Only 'Never-married'.
+   - 'Divorced' -> Must be 'Not-in-family' or 'Other-relative' (never 'Husband'/'Wife').
+   - 'Widowed' -> Must be 'Not-in-family' or 'Other-relative' (never 'Husband'/'Wife').
+   - 'Never-married' -> Can be 'Not-in-family', 'Own-child', 'Other-relative', 'Unmarried'.
+3. **Occupation-Education Consistency**: If education < '9th', occupation cannot be 'Tech-support' or 'Prof-specialty'.
+4. **Income-Plausibility**: Income >50K unrealistic for those with education < 'High-school-grad', hours-per-week <20, and capital-gain = 0 (regenerate these cases).
+5. **Age Marital-Status Consistency**: Age <18 -> Only 'Never-married'; Age >80 -> Higher probability of 'Widowed' if sex=female.
+
+**Iterative Correction**: If any synthetic record violates a consistency check during generation, regenerate the offending attribute (e.g., if sex drawn as 'Male' but relationship is 'Wife', redraw sex). Loop until all constraints satisfied.
+
+**Temporal Validity**: Ensure causes always assigned before effects—age before relationship, relationship before marital-status and sex, sex and education before occupation, and all prior before hours-per-week, capital-gain, capital-loss, and Income.
+
+Generate each record in the specified order and validate with the consistency checks before outputting. Produce exactly the number of synthetic records requested.</Task>""
+Score: 47.62%
+
+"Based on the analysis of the provided prompt-score pairs, I need to lower the score from 47.62% and 50.0%. The key insight is that the causal structure can be expanded to include an additional cause for `hours-per-week` (e.g., `education`), which creates more realistic data and reduces the score. I will also simplify and strengthen the task guidance to ensure strict causal adherence.
+
+Here is the optimized prompt:
+
+<Causal structure>
+Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'relationship'), ('age', 'marital-status'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'hours-per-week'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]
+</Causal structure>
+
+<Task>
+The ultimate goal is to produce accurate and convincing synthetic data that faithfully represents these causal relationships given user-provided samples. Your task is to generate each synthetic record in strict, stepwise causal order:
+
+1. **age**: Sample randomly from the user data distribution (e.g., 17–90).
+2. **relationship** (caused by age): Younger (17–30) → 'Not-in-family' or 'Own-child'; Middle (30–50) → 'Husband'/'Wife'; Older (50+) → 'Husband'/'Wife' or 'Other-relative'.
+3. **marital-status** (caused by age and relationship):
+   - 'Husband'/'Wife' → 'Married-civ-spouse' (or 'Married-AF-spouse').
+   - 'Own-child' → 'Never-married'.
+   - 'Not-in-family' or 'Other-relative' → 'Divorced' (if age 30+), 'Widowed' (if age 60+), or 'Never-married' (younger).
+4. **sex** (caused by relationship):
+   - 'Husband' → Male; 'Wife' → Female.
+   - 'Own-child', 'Not-in-family', 'Other-relative' → equally male/female.
+5. **education**: Sample from user data distribution (e.g., 'HS-grad' most common, 'Doctorate' rare).
+6. **occupation** (caused by sex and education):
+   - Males → higher probabilities for 'Exec-managerial', 'Craft-repair', 'Farming-fishing'.
+   - Females → higher probabilities for 'Adm-clerical', 'Prof-specialty' (if high education), 'Private-house-serv'.
+   - Education ≤ '9th' → no 'Prof-specialty' or 'Tech-support'; Education 'Bachelors'+ → 'Prof-specialty' or 'Exec-managerial'.
+7. **hours-per-week** (caused by education):
+   - Education ≤ 'HS-grad' → typical 30–45 hours.
+   - Education 'Some-college' or 'Assoc-voc' → 35–45 hours.
+   - Education 'Bachelors'+ → 40–50 hours (especially 'Doctorate' → 45–60).
+8. **capital-gain** and **capital-loss**: Sample from user data; most values 0, but higher correlated with high education/high-status occupations.
+9. **Income** (caused by education, marital-status, occupation, hours-per-week, capital-gain, capital-loss):
+   - **>50K likely** if: (education 'Bachelors'+) AND (occupation 'Prof-specialty' or 'Exec-managerial') AND (hours-per-week ≥45) AND (capital-gain ≥5000) AND (marital-status 'Married-civ-spouse').
+   - **>50K plausible** if at least 3 of these high factors.
+   - **>50K unnatural** if: education ≤ 'HS-grad', hours-per-week ≤30, capital-gain=0 → set Income as ≤50K.
+
+**Strict Consistency Checks (each record must pass):**
+- **Relationship–Sex**: 'Husband' must be Male; 'Wife' must be Female.
+- **Marital–Relationship**: 'Husband'/'Wife' only with 'Married-*'; 'Own-child' only with 'Never-married'; 'Divorced'/'Widowed' cannot have 'Husband'/'Wife'.
+- **Occupation–Education**: Education ≤ '9th' cannot have 'Prof-specialty' or 'Tech-support'.
+- **Income–Education**: No >50K if education ≤ '9th' and hours-per-week <20 and capital-gain=0.
+
+**If any check fails**, regenerate the offending attribute (e.g., if sex wrong, resample sex) until all constraints are met. Ensure causes always precede effects in the generation order.
+</Task>"
+Score: 47.62%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 9 <<<<<<<<<<<<<<<< 
+Number of samples: 10
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.5
+
+""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'relationship'), ('age', 'marital-status'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects the following dependencies: age directly influences both relationship (e.g., younger individuals are more likely 'Not-in-family', older more likely 'Husband' or 'Wife') and marital status (e.g., age increases probability of being married); relationship influences marital status (e.g., 'Husband' implies 'Married-civ-spouse', 'Not-in-family' implies 'Never-married') and sex (e.g., 'Husband' is male, 'Wife' is female, 'Own-child' is equally male/female); sex and education influence occupation (e.g., males more in 'Exec-managerial' or 'Craft-repair', higher education leads to 'Prof-specialty'); and education, marital-status, occupation, hours-per-week, capital-gain, and capital-loss all influence Income. Pay careful attention to logical consistency: relationship and sex must match perfectly (no 'Husband' with female sex); marital status and relationship must be coherent (e.g., 'Divorced' cannot have 'Husband' or 'Wife'); occupational choices should align with sex and education (e.g., females more in 'Adm-clerical', high education+high capital-gain increases Income); and Income should plausibly increase with higher education, higher capital-gain, higher capital-loss (as indicator of investment activity), and higher hours-per-week (e.g., Income >50K likely for those with 'Prof-specialty', capital-gain >5000, and hours-per-week >45). Avoid any violations where effects precede causes—ensure all relationships are temporally and logically correct. Additionally, generate each synthetic record in a stepwise manner: first assign age, then relationship based on age, then marital-status based on age and relationship, then sex based on relationship, then education, then occupation based on sex and education, and finally primary attributes (hours-per-week, capital-gain, capital-loss) and Income. Validate each record against these constraints before outputting; if any inconsistency is detected, regenerate that attribute until it fits the causal chain.</Task>""
+Score: 47.62%
+
+"""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'relationship'), ('age', 'marital-status'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income'), ('age', 'hours-per-week'), ('education', 'hours-per-week')]</Causal structure>
+
+<Task>The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure the synthetic data reflects the following dependencies:
+
+**Causal Generation Order (Step-by-Step):**
+1. **age**: Randomly sample from the provided data distribution (e.g., range 17-90, with realistic outliers).
+2. **relationship** <- **age**: Younger ages (17-30) more likely 'Not-in-family' or 'Own-child'; middle ages (30-50) more likely 'Husband'/'Wife'; older ages (50+) more likely 'Husband'/'Wife' or 'Other-relative'.
+3. **marital-status** <- **age** and **relationship**: 'Husband'/'Wife' -> 'Married-civ-spouse'; 'Not-in-family' and age 17-25 -> 'Never-married'; 'Own-child' -> 'Never-married'; 'Divorced' possible for older 'Not-in-family' or 'Other-relative'; 'Widowed' possible for age 60+.
+4. **sex** <- **relationship**: 'Husband' -> Male; 'Wife' -> Female; 'Own-child' -> equally male/female; 'Not-in-family' -> slightly more male (60/40); 'Other-relative' -> equally male/female; 'Unmarried' -> equally male/female.
+5. **education**: Sample from provided distribution (e.g., 'HS-grad' most common, 'Doctorate' rare).
+6. **occupation** <- **sex** and **education**: Males -> higher probability of 'Exec-managerial', 'Craft-repair', 'Farming-fishing'; Females -> higher probability of 'Adm-clerical', 'Prof-specialty' (if high education), 'Private-house-serv'; Education HS-grad or less -> 'Other-service', 'Transport-moving'; Education 'Bachelors' or more -> 'Prof-specialty', 'Exec-managerial'.
+7. **hours-per-week** <- **age** and **education**: Age 25-55 and education 'Bachelors' + -> 40-50 hours; Age <25 -> 20-40 hours; Age 55+ -> 30-40 hours; Education 'Doctorate' -> 45-60 hours.
+8. **capital-gain**: Sample from distribution (most 0, some positive with higher probability for high education, high occupation).
+9. **capital-loss**: Sample from distribution (most 0, some positive, inversely correlated with low-hours).
+10. **Income** <- **education**, **marital-status**, **occupation**, **hours-per-week**, **capital-gain**, **capital-loss**:
+    - High probability for >50K if: (education 'Bachelors'+), (occupation 'Prof-specialty' or 'Exec-managerial'), (hours-per-week 45+), (capital-gain 5000+), (marital-status 'Married-civ-spouse').
+    - Moderate >50K if: High on 3 of these factors.
+    - Low >50K if: HS-grad, low hours, no capital-gain.
+
+**Consistency Checks (Each Record Must Pass All):**
+1. **Relationship-Sex Consistency**: 'Husband' -> Male; 'Wife' -> Female; All others can be both.
+2. **Marital-Status-Relationship Consistency**:
+   - 'Husband'/'Wife' -> Only 'Married-civ-spouse' or 'Married-AF-spouse'.
+   - 'Own-child' -> Only 'Never-married'.
+   - 'Divorced' -> Must be 'Not-in-family' or 'Other-relative' (never 'Husband'/'Wife').
+   - 'Widowed' -> Must be 'Not-in-family' or 'Other-relative' (never 'Husband'/'Wife').
+   - 'Never-married' -> Can be 'Not-in-family', 'Own-child', 'Other-relative', 'Unmarried'.
+3. **Occupation-Education Consistency**: If education < '9th', occupation cannot be 'Tech-support' or 'Prof-specialty'.
+4. **Income-Plausibility**: Income >50K unrealistic for those with education < 'High-school-grad', hours-per-week <20, and capital-gain = 0 (regenerate these cases).
+5. **Age Marital-Status Consistency**: Age <18 -> Only 'Never-married'; Age >80 -> Higher probability of 'Widowed' if sex=female.
+
+**Iterative Correction**: If any synthetic record violates a consistency check during generation, regenerate the offending attribute (e.g., if sex drawn as 'Male' but relationship is 'Wife', redraw sex). Loop until all constraints satisfied.
+
+**Temporal Validity**: Ensure causes always assigned before effects—age before relationship, relationship before marital-status and sex, sex and education before occupation, and all prior before hours-per-week, capital-gain, capital-loss, and Income.
+
+Generate each record in the specified order and validate with the consistency checks before outputting. Produce exactly the number of synthetic records requested.</Task>""
+Score: 47.62%
+
+"Based on the analysis of the provided prompt-score pairs, I need to lower the score from 47.62% and 50.0%. The key insight is that the causal structure can be expanded to include an additional cause for `hours-per-week` (e.g., `education`), which creates more realistic data and reduces the score. I will also simplify and strengthen the task guidance to ensure strict causal adherence.
+
+Here is the optimized prompt:
+
+<Causal structure>
+Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'relationship'), ('age', 'marital-status'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('education', 'occupation'), ('education', 'hours-per-week'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]
+</Causal structure>
+
+<Task>
+The ultimate goal is to produce accurate and convincing synthetic data that faithfully represents these causal relationships given user-provided samples. Your task is to generate each synthetic record in strict, stepwise causal order:
+
+1. **age**: Sample randomly from the user data distribution (e.g., 17–90).
+2. **relationship** (caused by age): Younger (17–30) → 'Not-in-family' or 'Own-child'; Middle (30–50) → 'Husband'/'Wife'; Older (50+) → 'Husband'/'Wife' or 'Other-relative'.
+3. **marital-status** (caused by age and relationship):
+   - 'Husband'/'Wife' → 'Married-civ-spouse' (or 'Married-AF-spouse').
+   - 'Own-child' → 'Never-married'.
+   - 'Not-in-family' or 'Other-relative' → 'Divorced' (if age 30+), 'Widowed' (if age 60+), or 'Never-married' (younger).
+4. **sex** (caused by relationship):
+   - 'Husband' → Male; 'Wife' → Female.
+   - 'Own-child', 'Not-in-family', 'Other-relative' → equally male/female.
+5. **education**: Sample from user data distribution (e.g., 'HS-grad' most common, 'Doctorate' rare).
+6. **occupation** (caused by sex and education):
+   - Males → higher probabilities for 'Exec-managerial', 'Craft-repair', 'Farming-fishing'.
+   - Females → higher probabilities for 'Adm-clerical', 'Prof-specialty' (if high education), 'Private-house-serv'.
+   - Education ≤ '9th' → no 'Prof-specialty' or 'Tech-support'; Education 'Bachelors'+ → 'Prof-specialty' or 'Exec-managerial'.
+7. **hours-per-week** (caused by education):
+   - Education ≤ 'HS-grad' → typical 30–45 hours.
+   - Education 'Some-college' or 'Assoc-voc' → 35–45 hours.
+   - Education 'Bachelors'+ → 40–50 hours (especially 'Doctorate' → 45–60).
+8. **capital-gain** and **capital-loss**: Sample from user data; most values 0, but higher correlated with high education/high-status occupations.
+9. **Income** (caused by education, marital-status, occupation, hours-per-week, capital-gain, capital-loss):
+   - **>50K likely** if: (education 'Bachelors'+) AND (occupation 'Prof-specialty' or 'Exec-managerial') AND (hours-per-week ≥45) AND (capital-gain ≥5000) AND (marital-status 'Married-civ-spouse').
+   - **>50K plausible** if at least 3 of these high factors.
+   - **>50K unnatural** if: education ≤ 'HS-grad', hours-per-week ≤30, capital-gain=0 → set Income as ≤50K.
+
+**Strict Consistency Checks (each record must pass):**
+- **Relationship–Sex**: 'Husband' must be Male; 'Wife' must be Female.
+- **Marital–Relationship**: 'Husband'/'Wife' only with 'Married-*'; 'Own-child' only with 'Never-married'; 'Divorced'/'Widowed' cannot have 'Husband'/'Wife'.
+- **Occupation–Education**: Education ≤ '9th' cannot have 'Prof-specialty' or 'Tech-support'.
+- **Income–Education**: No >50K if education ≤ '9th' and hours-per-week <20 and capital-gain=0.
+
+**If any check fails**, regenerate the offending attribute (e.g., if sex wrong, resample sex) until all constraints are met. Ensure causes always precede effects in the generation order.
+</Task>"
+Score: 47.62%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+

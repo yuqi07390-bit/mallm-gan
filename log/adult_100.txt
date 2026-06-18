@@ -1239,3 +1239,724 @@ Score: 47.62%
 
 Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
 
+>>>>>>>>>>>>>>> Epoch: 0, batch: 1 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.5714285714285714
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 57.14%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 2 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('education', 'Income'), ('age', 'marital-status'), ('hours-per-week', 'Income'), ('sex', 'occupation'), ('education-num', 'hours-per-week')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. When generating synthetic data, ensure that marital-status directly influences Income, relationship influences both marital-status and sex, education, age, and hours-per-week also directly affect Income, age influences marital-status, sex influences occupation, and education-num influences hours-per-week. Maintain realistic statistical dependencies consistent with these causal pathways, and avoid introducing spurious correlations that are not justified by the causal graph. The synthetic data should plausibly reflect the original data distribution while strictly adhering to the stated causal structure.</Task>
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.3
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('education', 'Income'), ('age', 'marital-status'), ('hours-per-week', 'Income'), ('sex', 'occupation'), ('education-num', 'hours-per-week')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. When generating synthetic data, ensure that marital-status directly influences Income, relationship influences both marital-status and sex, education, age, and hours-per-week also directly affect Income, age influences marital-status, sex influences occupation, and education-num influences hours-per-week. Maintain realistic statistical dependencies consistent with these causal pathways, and avoid introducing spurious correlations that are not justified by the causal graph. The synthetic data should plausibly reflect the original data distribution while strictly adhering to the stated causal structure.</Task>"
+Score: 30.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 42.86%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 1 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.6190476190476191
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 61.9%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 2 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('education', 'Income'), ('occupation', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure that the synthetic data respects all direct and indirect causal paths, and that the distributions of variables conditional on their causes are realistic and consistent with the sample data. Pay special attention to how 'age' influences 'marital-status', how 'marital-status' and 'education' and 'occupation' together influence 'Income', and how 'relationship' influences both 'marital-status' and 'sex'.</Task>
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.4
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('education', 'Income'), ('occupation', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure that the synthetic data respects all direct and indirect causal paths, and that the distributions of variables conditional on their causes are realistic and consistent with the sample data. Pay special attention to how 'age' influences 'marital-status', how 'marital-status' and 'education' and 'occupation' together influence 'Income', and how 'relationship' influences both 'marital-status' and 'sex'.</Task>"
+Score: 40.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 61.9%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 1, batch: 1 <<<<<<<<<<<<<<<< 
+Instruction: "<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'income'), ('education', 'occupation'), ('education', 'income'), ('marital-status', 'income'), ('occupation', 'income'), ('relationship', 'marital-status'), ('relationship', 'sex')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure that the synthetic data respects all direct and indirect causal paths, and that the distributions of variables conditional on their causes are realistic and consistent with the sample data. Pay special attention to how 'age' influences both 'marital-status' and 'Income', how 'education' causally affects 'occupation' and then 'Income', how 'marital-status' and 'occupation' each directly impact 'Income', and how 'relationship' influences 'marital-status' and 'sex'. Additionally, ensure the synthetic data reflects realistic age-dependent patterns for marital status and income, and education-dependent occupational choices.</Task>"
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.47619047619047616
+
+""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'income'), ('education', 'occupation'), ('education', 'income'), ('marital-status', 'income'), ('occupation', 'income'), ('relationship', 'marital-status'), ('relationship', 'sex')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure that the synthetic data respects all direct and indirect causal paths, and that the distributions of variables conditional on their causes are realistic and consistent with the sample data. Pay special attention to how 'age' influences both 'marital-status' and 'Income', how 'education' causally affects 'occupation' and then 'Income', how 'marital-status' and 'occupation' each directly impact 'Income', and how 'relationship' influences 'marital-status' and 'sex'. Additionally, ensure the synthetic data reflects realistic age-dependent patterns for marital status and income, and education-dependent occupational choices.</Task>""
+Score: 47.62%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 52.38%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('education', 'Income'), ('occupation', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure that the synthetic data respects all direct and indirect causal paths, and that the distributions of variables conditional on their causes are realistic and consistent with the sample data. Pay special attention to how 'age' influences 'marital-status', how 'marital-status' and 'education' and 'occupation' together influence 'Income', and how 'relationship' influences both 'marital-status' and 'sex'.</Task>"
+Score: 65.0%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 1, batch: 2 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure that the synthetic data respects all direct and indirect causal paths, and that the distributions of variables conditional on their causes are realistic and consistent with the sample data. Pay special attention to how 'age' influences both 'marital-status' and 'Income' (e.g., younger individuals more likely never married, income rises with age then plateaus), how 'education' causally affects 'occupation' (e.g., higher education leads to professional occupations) and then 'Income', how 'sex' influences 'occupation' (e.g., gendered occupational distributions), how 'marital-status' and 'occupation' each directly impact 'Income', and how 'relationship' influences 'marital-status' and 'sex'. Additionally, ensure that the synthetic data reflects realistic interaction effects: for example, the income gap by sex may vary across occupations and marital statuses, and age-dependent patterns for marital status are consistent with population trends. Use the sample data to calibrate conditional probabilities and marginal distributions accurately.</Task>
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.6
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 57.14%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure that the synthetic data respects all direct and indirect causal paths, and that the distributions of variables conditional on their causes are realistic and consistent with the sample data. Pay special attention to how 'age' influences both 'marital-status' and 'Income' (e.g., younger individuals more likely never married, income rises with age then plateaus), how 'education' causally affects 'occupation' (e.g., higher education leads to professional occupations) and then 'Income', how 'sex' influences 'occupation' (e.g., gendered occupational distributions), how 'marital-status' and 'occupation' each directly impact 'Income', and how 'relationship' influences 'marital-status' and 'sex'. Additionally, ensure that the synthetic data reflects realistic interaction effects: for example, the income gap by sex may vary across occupations and marital statuses, and age-dependent patterns for marital status are consistent with population trends. Use the sample data to calibrate conditional probabilities and marginal distributions accurately.</Task>"
+Score: 60.0%
+
+""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'income'), ('education', 'occupation'), ('education', 'income'), ('marital-status', 'income'), ('occupation', 'income'), ('relationship', 'marital-status'), ('relationship', 'sex')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure that the synthetic data respects all direct and indirect causal paths, and that the distributions of variables conditional on their causes are realistic and consistent with the sample data. Pay special attention to how 'age' influences both 'marital-status' and 'Income', how 'education' causally affects 'occupation' and then 'Income', how 'marital-status' and 'occupation' each directly impact 'Income', and how 'relationship' influences 'marital-status' and 'sex'. Additionally, ensure the synthetic data reflects realistic age-dependent patterns for marital status and income, and education-dependent occupational choices.</Task>""
+Score: 61.9%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 2, batch: 1 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('education', 'education-num'), ('education-num', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('sex', 'Income'), ('hours-per-week', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure that the synthetic data respects all direct and indirect causal paths, and that the distributions of variables conditional on their causes are realistic and consistent with the sample data. Pay special attention to the following:
+
+1. **Age** influences both 'marital-status' (e.g., younger individuals more likely never married; older individuals more likely married or widowed) and 'Income' (income rises with age, then plateaus or declines after peak earning years).
+
+2. **Education** causally affects 'occupation' and 'education-num' (education-num is a numerical encoding of education level). 'education-num' directly impacts 'Income' (higher education level leads to higher income), and 'occupation' also directly impacts 'Income' (e.g., professional occupations yield higher income than service jobs). Ensure that the relationship between education, occupation, and income is consistent (e.g., higher education leads to professional occupations, which lead to higher income, but with realistic variability).
+
+3. **Sex** influences both 'occupation' (e.g., gendered occupational distributions, such as men more likely in manufacturing, women more likely in admin) and 'Income' (e.g., persistent income gap by sex, even after controlling for occupation and education). Ensure that the synthetic data reflects realistic interactions: the income gap by sex may vary across occupations and marital statuses, and occupational choices by sex are consistent with population trends from the sample.
+
+4. **Marital-status** directly impacts 'Income' (e.g., married individuals may have higher income on average, possibly due to selection or joint household effects). 'relationship' causally influences 'marital-status' (e.g., being a husband/wife leads to "Married-civ-spouse", while "Not-in-family" leads to "Never-married") and 'sex' (e.g., relationship labels like "Husband" imply male, "Wife" imply female). Ensure that 'relationship' and 'sex' are consistent (e.g., "Husband" only for males, "Wife" only for females) and that marital-status is congruent with the relationship label.
+
+5. **Hours-per-week** directly impacts 'Income' (more hours generally lead to higher earnings, but with diminishing returns for very high hours). Ensure that the hours-income relationship is realistic (e.g., part-time workers have lower income, full-time workers have higher income, and overtime may increase income but not proportionally).
+
+6. **Interaction effects**: The synthetic data should reflect realistic interactions, such as:
+   - The income gap by sex may be larger in some occupations (e.g., management) and smaller in others.
+   - Age-dependent income patterns may vary by education (e.g., college graduates have steeper income growth).
+   - Marital-status income effects may differ by sex and age (e.g., married men have a larger income premium than married women).
+   - Hours-per-week effects on income may interact with occupation (e.g., professionals working long hours may have higher income than manual workers working the same hours).
+
+Use the sample data to calibrate conditional probabilities, marginal distributions, and interaction effects accurately. Ensure that the synthetic data is not only statistically consistent but also plausible and reflective of real-world patterns. Avoid any unrealistic combinations (e.g., a 15-year-old with a PhD, or a person with extreme income for their occupation/hours).</Task>
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.5714285714285714
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure that the synthetic data respects all direct and indirect causal paths, and that the distributions of variables conditional on their causes are realistic and consistent with the sample data. Pay special attention to how 'age' influences both 'marital-status' and 'Income' (e.g., younger individuals more likely never married, income rises with age then plateaus), how 'education' causally affects 'occupation' (e.g., higher education leads to professional occupations) and then 'Income', how 'sex' influences 'occupation' (e.g., gendered occupational distributions), how 'marital-status' and 'occupation' each directly impact 'Income', and how 'relationship' influences 'marital-status' and 'sex'. Additionally, ensure that the synthetic data reflects realistic interaction effects: for example, the income gap by sex may vary across occupations and marital statuses, and age-dependent patterns for marital status are consistent with population trends. Use the sample data to calibrate conditional probabilities and marginal distributions accurately.</Task>"
+Score: 50.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 52.38%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('education', 'Income'), ('occupation', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure that the synthetic data respects all direct and indirect causal paths, and that the distributions of variables conditional on their causes are realistic and consistent with the sample data. Pay special attention to how 'age' influences 'marital-status', how 'marital-status' and 'education' and 'occupation' together influence 'Income', and how 'relationship' influences both 'marital-status' and 'sex'.</Task>"
+Score: 55.0%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 2, batch: 2 <<<<<<<<<<<<<<<< 
+Instruction: "<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('age', 'education-num'), ('education', 'education-num'), ('occupation', 'hours-per-week'), ('hours-per-week', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure that the synthetic data respects all direct and indirect causal paths, and that the distributions of variables conditional on their causes are realistic and consistent with the sample data. Pay special attention to how 'age' influences 'marital-status' (e.g., younger individuals more likely never married) and 'Income' (e.g., income rises with age then plateaus), how 'education' causally affects 'occupation' (e.g., higher education leads to professional occupations) and then 'Income', how 'sex' influences 'occupation' (e.g., gendered occupational distributions), how 'marital-status' and 'occupation' each directly impact 'Income', and how 'relationship' influences 'marital-status' and 'sex'. Additionally, incorporate the role of 'education-num' as a numeric proxy for education influenced by both 'age' and 'education', and model 'hours-per-week' as determined by 'occupation' (e.g., longer hours in some occupations) which in turn affects 'Income'. Ensure that the synthetic data reflects realistic interaction effects: for example, the income gap by sex may vary across occupations, marital statuses, and age groups; age-dependent patterns for marital status are consistent with population trends; and education-num aligns with typical years of schooling across ages. Use the sample data to calibrate conditional probabilities and marginal distributions accurately.</Task>"
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.8
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure that the synthetic data respects all direct and indirect causal paths, and that the distributions of variables conditional on their causes are realistic and consistent with the sample data. Pay special attention to how 'age' influences both 'marital-status' and 'Income' (e.g., younger individuals more likely never married, income rises with age then plateaus), how 'education' causally affects 'occupation' (e.g., higher education leads to professional occupations) and then 'Income', how 'sex' influences 'occupation' (e.g., gendered occupational distributions), how 'marital-status' and 'occupation' each directly impact 'Income', and how 'relationship' influences 'marital-status' and 'sex'. Additionally, ensure that the synthetic data reflects realistic interaction effects: for example, the income gap by sex may vary across occupations and marital statuses, and age-dependent patterns for marital status are consistent with population trends. Use the sample data to calibrate conditional probabilities and marginal distributions accurately.</Task>"
+Score: 30.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('education', 'education-num'), ('education-num', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('sex', 'Income'), ('hours-per-week', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure that the synthetic data respects all direct and indirect causal paths, and that the distributions of variables conditional on their causes are realistic and consistent with the sample data. Pay special attention to the following:
+
+1. **Age** influences both 'marital-status' (e.g., younger individuals more likely never married; older individuals more likely married or widowed) and 'Income' (income rises with age, then plateaus or declines after peak earning years).
+
+2. **Education** causally affects 'occupation' and 'education-num' (education-num is a numerical encoding of education level). 'education-num' directly impacts 'Income' (higher education level leads to higher income), and 'occupation' also directly impacts 'Income' (e.g., professional occupations yield higher income than service jobs). Ensure that the relationship between education, occupation, and income is consistent (e.g., higher education leads to professional occupations, which lead to higher income, but with realistic variability).
+
+3. **Sex** influences both 'occupation' (e.g., gendered occupational distributions, such as men more likely in manufacturing, women more likely in admin) and 'Income' (e.g., persistent income gap by sex, even after controlling for occupation and education). Ensure that the synthetic data reflects realistic interactions: the income gap by sex may vary across occupations and marital statuses, and occupational choices by sex are consistent with population trends from the sample.
+
+4. **Marital-status** directly impacts 'Income' (e.g., married individuals may have higher income on average, possibly due to selection or joint household effects). 'relationship' causally influences 'marital-status' (e.g., being a husband/wife leads to "Married-civ-spouse", while "Not-in-family" leads to "Never-married") and 'sex' (e.g., relationship labels like "Husband" imply male, "Wife" imply female). Ensure that 'relationship' and 'sex' are consistent (e.g., "Husband" only for males, "Wife" only for females) and that marital-status is congruent with the relationship label.
+
+5. **Hours-per-week** directly impacts 'Income' (more hours generally lead to higher earnings, but with diminishing returns for very high hours). Ensure that the hours-income relationship is realistic (e.g., part-time workers have lower income, full-time workers have higher income, and overtime may increase income but not proportionally).
+
+6. **Interaction effects**: The synthetic data should reflect realistic interactions, such as:
+   - The income gap by sex may be larger in some occupations (e.g., management) and smaller in others.
+   - Age-dependent income patterns may vary by education (e.g., college graduates have steeper income growth).
+   - Marital-status income effects may differ by sex and age (e.g., married men have a larger income premium than married women).
+   - Hours-per-week effects on income may interact with occupation (e.g., professionals working long hours may have higher income than manual workers working the same hours).
+
+Use the sample data to calibrate conditional probabilities, marginal distributions, and interaction effects accurately. Ensure that the synthetic data is not only statistically consistent but also plausible and reflective of real-world patterns. Avoid any unrealistic combinations (e.g., a 15-year-old with a PhD, or a person with extreme income for their occupation/hours).</Task>"
+Score: 47.62%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('education', 'Income'), ('occupation', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure that the synthetic data respects all direct and indirect causal paths, and that the distributions of variables conditional on their causes are realistic and consistent with the sample data. Pay special attention to how 'age' influences 'marital-status', how 'marital-status' and 'education' and 'occupation' together influence 'Income', and how 'relationship' influences both 'marital-status' and 'sex'.</Task>"
+Score: 55.0%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 3, batch: 1 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('education', 'education-num'), ('education-num', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('sex', 'Income'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure that the synthetic data respects all direct and indirect causal paths, and that the distributions of variables conditional on their causes are realistic and consistent with the sample data. Pay special attention to the following:
+
+1. **Age** influences both 'marital-status' (e.g., younger individuals more likely never married; older individuals more likely married or widowed) and 'Income' (income rises with age, then plateaus or declines after peak earning years). Ensure age-gradient in marital status and income are consistent with sample trends.
+
+2. **Education** causally affects 'occupation' and 'education-num' (education-num is a numerical encoding of education level). 'education-num' directly impacts 'Income' (higher education level leads to higher income), and 'occupation' also directly impacts 'Income' (e.g., professional occupations yield higher income than service jobs). Ensure that the relationship between education, occupation, and income is consistent (e.g., higher education leads to professional occupations, which lead to higher income, but with realistic variability). Avoid implausible combinations (e.g., high education-num with low-skill occupation).
+
+3. **Sex** influences both 'occupation' (e.g., gendered occupational distributions, such as men more likely in manufacturing, women more likely in admin) and 'Income' (e.g., persistent income gap by sex, even after controlling for occupation and education). Ensure that the synthetic data reflects realistic interactions: the income gap by sex may vary across occupations and marital statuses, and occupational choices by sex are consistent with population trends from the sample.
+
+4. **Marital-status** directly impacts 'Income' (e.g., married individuals may have higher income on average, possibly due to selection or joint household effects). 'relationship' causally influences 'marital-status' (e.g., being a husband/wife leads to "Married-civ-spouse", while "Not-in-family" leads to "Never-married") and 'sex' (e.g., relationship labels like "Husband" imply male, "Wife" imply female). Ensure that 'relationship' and 'sex' are consistent (e.g., "Husband" only for males, "Wife" only for females) and that marital-status is congruent with the relationship label.
+
+5. **Hours-per-week** directly impacts 'Income' (more hours generally lead to higher earnings, but with diminishing returns for very high hours). Ensure that the hours-income relationship is realistic (e.g., part-time workers have lower income, full-time workers have higher income, and overtime may increase income but not proportionally).
+
+6. **Capital-gain and capital-loss** directly impact 'Income' (capital gains increase income, capital losses decrease income). Ensure that these variables are realistically correlated with other variables (e.g., higher capital gains more common among high-income individuals, but not exclusively so). Avoid extreme or unrealistic values (e.g., very large capital gains for low-education, low-occupation individuals).
+
+7. **Interaction effects**: The synthetic data should reflect realistic interactions, such as:
+   - The income gap by sex may be larger in some occupations (e.g., management) and smaller in others.
+   - Age-dependent income patterns may vary by education (e.g., college graduates have steeper income growth).
+   - Marital-status income effects may differ by sex and age (e.g., married men have a larger income premium than married women).
+   - Hours-per-week effects on income may interact with occupation (e.g., professionals working long hours may have higher income than manual workers working the same hours).
+   - Capital gain/loss effects may interact with age and occupation (e.g., older professionals more likely to have capital gains).
+
+Use the sample data to calibrate conditional probabilities, marginal distributions, and interaction effects accurately. Ensure that the synthetic data is not only statistically consistent but also plausible and reflective of real-world patterns. Avoid any unrealistic combinations (e.g., a 15-year-old with a PhD, or a person with extreme income for their occupation/hours, or a ‘Wife’ relationship label assigned to a male sex).</Task>
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.5238095238095238
+
+""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('age', 'education-num'), ('education', 'education-num'), ('occupation', 'hours-per-week'), ('hours-per-week', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure that the synthetic data respects all direct and indirect causal paths, and that the distributions of variables conditional on their causes are realistic and consistent with the sample data. Pay special attention to how 'age' influences 'marital-status' (e.g., younger individuals more likely never married) and 'Income' (e.g., income rises with age then plateaus), how 'education' causally affects 'occupation' (e.g., higher education leads to professional occupations) and then 'Income', how 'sex' influences 'occupation' (e.g., gendered occupational distributions), how 'marital-status' and 'occupation' each directly impact 'Income', and how 'relationship' influences 'marital-status' and 'sex'. Additionally, incorporate the role of 'education-num' as a numeric proxy for education influenced by both 'age' and 'education', and model 'hours-per-week' as determined by 'occupation' (e.g., longer hours in some occupations) which in turn affects 'Income'. Ensure that the synthetic data reflects realistic interaction effects: for example, the income gap by sex may vary across occupations, marital statuses, and age groups; age-dependent patterns for marital status are consistent with population trends; and education-num aligns with typical years of schooling across ages. Use the sample data to calibrate conditional probabilities and marginal distributions accurately.</Task>""
+Score: 20.0%
+
+""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'income'), ('education', 'occupation'), ('education', 'income'), ('marital-status', 'income'), ('occupation', 'income'), ('relationship', 'marital-status'), ('relationship', 'sex')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure that the synthetic data respects all direct and indirect causal paths, and that the distributions of variables conditional on their causes are realistic and consistent with the sample data. Pay special attention to how 'age' influences both 'marital-status' and 'Income', how 'education' causally affects 'occupation' and then 'Income', how 'marital-status' and 'occupation' each directly impact 'Income', and how 'relationship' influences 'marital-status' and 'sex'. Additionally, ensure the synthetic data reflects realistic age-dependent patterns for marital status and income, and education-dependent occupational choices.</Task>""
+Score: 42.86%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 47.62%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 3, batch: 2 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'education-num'), ('age', 'Income'), ('education', 'education-num'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('occupation', 'hours-per-week'), ('hours-per-week', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('sex', 'Income'), ('age', 'hours-per-week'), ('education-num', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure that the synthetic data respects all direct and indirect causal paths, and that the distributions of variables conditional on their causes are realistic and consistent with the sample data. Pay special attention to:
+- 'age' influences 'marital-status' (e.g., younger → never married, older → married/widowed), 'education-num' (life-long learning or generational differences), 'hours-per-week' (older may work less), and 'Income' (peak in middle age).
+- 'education' influences 'education-num' (e.g., higher education → more years), 'occupation' (professional vs. manual jobs), and 'Income' (higher earnings).
+- 'education-num' directly affects 'Income' (years of schooling as a continuous driver of earnings).
+- 'sex' influences 'occupation' (gendered segregation) and 'Income' (gender pay gap, varying by occupation and marital status).
+- 'occupation' influences 'hours-per-week' (e.g., managers work longer) and 'Income' (occupational wage differences).
+- 'hours-per-week' directly affects 'Income' (more hours typically increase earnings).
+- 'marital-status' influences 'Income' (e.g., married may have higher earnings due to spousal support or selection).
+- 'relationship' influences 'marital-status' (e.g., husband → married) and 'sex' (e.g., husband → male, wife → female).
+- Model realistic interaction effects, such as age-dependent income trajectories, sex-based pay gaps that vary by occupation, and marital status effects on hours worked.
+Use the sample data to calibrate conditional probabilities and marginal distributions accurately, ensuring the generated data reflects real-world patterns (e.g., age-specific marital status proportions, occupational distributions by sex and education, income variation by hours). Avoid unrealistic combinations (e.g., young children in high-level professional occupations with high hours).</Task>
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.4
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('education', 'Income'), ('occupation', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure that the synthetic data respects all direct and indirect causal paths, and that the distributions of variables conditional on their causes are realistic and consistent with the sample data. Pay special attention to how 'age' influences 'marital-status', how 'marital-status' and 'education' and 'occupation' together influence 'Income', and how 'relationship' influences both 'marital-status' and 'sex'.</Task>"
+Score: 40.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure that the synthetic data respects all direct and indirect causal paths, and that the distributions of variables conditional on their causes are realistic and consistent with the sample data. Pay special attention to how 'age' influences both 'marital-status' and 'Income' (e.g., younger individuals more likely never married, income rises with age then plateaus), how 'education' causally affects 'occupation' (e.g., higher education leads to professional occupations) and then 'Income', how 'sex' influences 'occupation' (e.g., gendered occupational distributions), how 'marital-status' and 'occupation' each directly impact 'Income', and how 'relationship' influences 'marital-status' and 'sex'. Additionally, ensure that the synthetic data reflects realistic interaction effects: for example, the income gap by sex may vary across occupations and marital statuses, and age-dependent patterns for marital status are consistent with population trends. Use the sample data to calibrate conditional probabilities and marginal distributions accurately.</Task>"
+Score: 40.0%
+
+""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('age', 'education-num'), ('education', 'education-num'), ('occupation', 'hours-per-week'), ('hours-per-week', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure that the synthetic data respects all direct and indirect causal paths, and that the distributions of variables conditional on their causes are realistic and consistent with the sample data. Pay special attention to how 'age' influences 'marital-status' (e.g., younger individuals more likely never married) and 'Income' (e.g., income rises with age then plateaus), how 'education' causally affects 'occupation' (e.g., higher education leads to professional occupations) and then 'Income', how 'sex' influences 'occupation' (e.g., gendered occupational distributions), how 'marital-status' and 'occupation' each directly impact 'Income', and how 'relationship' influences 'marital-status' and 'sex'. Additionally, incorporate the role of 'education-num' as a numeric proxy for education influenced by both 'age' and 'education', and model 'hours-per-week' as determined by 'occupation' (e.g., longer hours in some occupations) which in turn affects 'Income'. Ensure that the synthetic data reflects realistic interaction effects: for example, the income gap by sex may vary across occupations, marital statuses, and age groups; age-dependent patterns for marital status are consistent with population trends; and education-num aligns with typical years of schooling across ages. Use the sample data to calibrate conditional probabilities and marginal distributions accurately.</Task>""
+Score: 40.0%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 4, batch: 1 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('education', 'Income'), ('education', 'education-num'), ('marital-status', 'Income'), ('occupation', 'Income'), ('occupation', 'hours-per-week'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure that the synthetic data respects all direct and indirect causal paths, and that the distributions of variables conditional on their causes are realistic and consistent with the sample data. Pay special attention to the following causal mechanisms:
+
+- **Age** should influence marital-status (e.g., higher age associated with married/widowed, lower age with never-married) and directly affect Income (e.g., income increases with age up to a plateau in middle age, then declines).
+- **Education** causally affects occupation (e.g., advanced degrees lead to professional/managerial roles), Income (higher education leads to higher income), and education-num (numeric years of schooling, with age capturing cohort effects such as older individuals possibly having fewer years).
+- **Occupation** should directly affect hours-per-week (e.g., executives may work longer hours, part-time roles shorter) and Income.
+- **Sex** influences occupation (e.g., sex-based occupational segregation) and hours-per-week (e.g., sex differences in full-time/part-time work).
+- **Relationship** affects marital-status (e.g., "Husband" implies married) and sex (e.g., "Husband" implies male, "Wife" implies female, "Own-child" can be either).
+- **Marital-status** directly affects Income (e.g., married individuals/dual-income households may have higher income).
+- **Hours-per-week** directly affects Income (more hours generally lead to higher income, but with diminishing returns).
+- **Capital-gain** and **capital-loss** directly affect Income (capital gains increase income; capital losses decrease it, though losses may be rare at high levels).
+
+Ensure that the synthetic data reflects realistic interaction effects and conditional distributions: for example, the income gap by sex varies across occupations and age groups; age-dependent marital status patterns match population trends (e.g., younger individuals less likely married); education-num is consistent with typical schooling across ages and education levels; and hours-per-week distributions are occupation-specific. Use the provided sample data to calibrate all conditional probabilities and marginal distributions accurately, avoiding any implausible correlations or inconsistencies.</Task>
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.42857142857142855
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure that the synthetic data respects all direct and indirect causal paths, and that the distributions of variables conditional on their causes are realistic and consistent with the sample data. Pay special attention to how 'age' influences both 'marital-status' and 'Income' (e.g., younger individuals more likely never married, income rises with age then plateaus), how 'education' causally affects 'occupation' (e.g., higher education leads to professional occupations) and then 'Income', how 'sex' influences 'occupation' (e.g., gendered occupational distributions), how 'marital-status' and 'occupation' each directly impact 'Income', and how 'relationship' influences 'marital-status' and 'sex'. Additionally, ensure that the synthetic data reflects realistic interaction effects: for example, the income gap by sex may vary across occupations and marital statuses, and age-dependent patterns for marital status are consistent with population trends. Use the sample data to calibrate conditional probabilities and marginal distributions accurately.</Task>"
+Score: 25.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('education', 'Income'), ('education', 'education-num'), ('marital-status', 'Income'), ('occupation', 'Income'), ('occupation', 'hours-per-week'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure that the synthetic data respects all direct and indirect causal paths, and that the distributions of variables conditional on their causes are realistic and consistent with the sample data. Pay special attention to the following causal mechanisms:
+
+- **Age** should influence marital-status (e.g., higher age associated with married/widowed, lower age with never-married) and directly affect Income (e.g., income increases with age up to a plateau in middle age, then declines).
+- **Education** causally affects occupation (e.g., advanced degrees lead to professional/managerial roles), Income (higher education leads to higher income), and education-num (numeric years of schooling, with age capturing cohort effects such as older individuals possibly having fewer years).
+- **Occupation** should directly affect hours-per-week (e.g., executives may work longer hours, part-time roles shorter) and Income.
+- **Sex** influences occupation (e.g., sex-based occupational segregation) and hours-per-week (e.g., sex differences in full-time/part-time work).
+- **Relationship** affects marital-status (e.g., "Husband" implies married) and sex (e.g., "Husband" implies male, "Wife" implies female, "Own-child" can be either).
+- **Marital-status** directly affects Income (e.g., married individuals/dual-income households may have higher income).
+- **Hours-per-week** directly affects Income (more hours generally lead to higher income, but with diminishing returns).
+- **Capital-gain** and **capital-loss** directly affect Income (capital gains increase income; capital losses decrease it, though losses may be rare at high levels).
+
+Ensure that the synthetic data reflects realistic interaction effects and conditional distributions: for example, the income gap by sex varies across occupations and age groups; age-dependent marital status patterns match population trends (e.g., younger individuals less likely married); education-num is consistent with typical schooling across ages and education levels; and hours-per-week distributions are occupation-specific. Use the provided sample data to calibrate all conditional probabilities and marginal distributions accurately, avoiding any implausible correlations or inconsistencies.</Task>"
+Score: 42.86%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('education', 'education-num'), ('education-num', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('sex', 'Income'), ('hours-per-week', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure that the synthetic data respects all direct and indirect causal paths, and that the distributions of variables conditional on their causes are realistic and consistent with the sample data. Pay special attention to the following:
+
+1. **Age** influences both 'marital-status' (e.g., younger individuals more likely never married; older individuals more likely married or widowed) and 'Income' (income rises with age, then plateaus or declines after peak earning years).
+
+2. **Education** causally affects 'occupation' and 'education-num' (education-num is a numerical encoding of education level). 'education-num' directly impacts 'Income' (higher education level leads to higher income), and 'occupation' also directly impacts 'Income' (e.g., professional occupations yield higher income than service jobs). Ensure that the relationship between education, occupation, and income is consistent (e.g., higher education leads to professional occupations, which lead to higher income, but with realistic variability).
+
+3. **Sex** influences both 'occupation' (e.g., gendered occupational distributions, such as men more likely in manufacturing, women more likely in admin) and 'Income' (e.g., persistent income gap by sex, even after controlling for occupation and education). Ensure that the synthetic data reflects realistic interactions: the income gap by sex may vary across occupations and marital statuses, and occupational choices by sex are consistent with population trends from the sample.
+
+4. **Marital-status** directly impacts 'Income' (e.g., married individuals may have higher income on average, possibly due to selection or joint household effects). 'relationship' causally influences 'marital-status' (e.g., being a husband/wife leads to "Married-civ-spouse", while "Not-in-family" leads to "Never-married") and 'sex' (e.g., relationship labels like "Husband" imply male, "Wife" imply female). Ensure that 'relationship' and 'sex' are consistent (e.g., "Husband" only for males, "Wife" only for females) and that marital-status is congruent with the relationship label.
+
+5. **Hours-per-week** directly impacts 'Income' (more hours generally lead to higher earnings, but with diminishing returns for very high hours). Ensure that the hours-income relationship is realistic (e.g., part-time workers have lower income, full-time workers have higher income, and overtime may increase income but not proportionally).
+
+6. **Interaction effects**: The synthetic data should reflect realistic interactions, such as:
+   - The income gap by sex may be larger in some occupations (e.g., management) and smaller in others.
+   - Age-dependent income patterns may vary by education (e.g., college graduates have steeper income growth).
+   - Marital-status income effects may differ by sex and age (e.g., married men have a larger income premium than married women).
+   - Hours-per-week effects on income may interact with occupation (e.g., professionals working long hours may have higher income than manual workers working the same hours).
+
+Use the sample data to calibrate conditional probabilities, marginal distributions, and interaction effects accurately. Ensure that the synthetic data is not only statistically consistent but also plausible and reflective of real-world patterns. Avoid any unrealistic combinations (e.g., a 15-year-old with a PhD, or a person with extreme income for their occupation/hours).</Task>"
+Score: 47.62%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 4, batch: 2 <<<<<<<<<<<<<<<< 
+Instruction: "<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('education', 'education-num'), ('education-num', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('occupation', 'hours-per-week'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income'), ('native-country', 'occupation'), ('native-country', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure that the synthetic data respects all direct and indirect causal paths, and that the distributions of variables conditional on their causes are realistic and consistent with the sample data. Pay special attention to the following causal mechanisms:
+
+- **Age** should influence marital-status (e.g., younger individuals more likely never-married; older individuals more likely married, widowed, or divorced) and directly affect Income (income rises with age, plateaus in mid-to-late career, then may decline in older age). Ensure age is modeled as a continuous variable with realistic ranges (e.g., 17–90 years) and age-dependent income curves vary by education.
+
+- **Education** causally affects:
+  - **Occupation**: Higher education (e.g., Doctorate, Masters) leads to professional or managerial occupations; lower education (e.g., HS-grad, Some-college) leads to service, labor, or admin roles.
+  - **Education-num**: This numeric encoding (e.g., 1–16 years) must be consistent with the nominal 'education' category (e.g., "Bachelors" maps to 13–14 years); avoid mismatches.
+  - **Income**: Direct effect, such that higher education-num increases income (e.g., college graduate earns more than high-school graduate, even in same occupation).
+  When generating education and education-num, ensure cohort effects: older individuals with the same education label may have slightly lower education-num (e.g., older Bachelors graduates may have 13 years vs. younger having 14 due to updated standards).
+
+- **Occupation** directly affects:
+  - **Hours-per-week**: Occupation-specific typical hours (e.g., Exec-managerial may average 50 hrs/week; Farming-fishing may average 40; Part-time roles in Other-service may average 20). Hours distribution should include variance but avoid extreme outliers unless supported by sample.
+  - **Income**: Direct effect, where professional/managerial occupations yield higher Income than service/labor roles, with realistic ranges (e.g., $10k–$200k+).
+
+- **Sex** influences:
+  - **Occupation**: Gendered distributions (e.g., men more likely in Craft-repair, Machine-op-inspct; women more likely in Adm-clerical, Other-service). This effect should be calibrated to sample proportions.
+  - **Hours-per-week**: Sex differences (e.g., men average more hours than women, partly due to occupational segregation). Ensure conditional on occupation, sex still shows a small residual effect.
+  - **Income**: Direct effect capturing persistent wage gap (e.g., women earn ~85% of men's income within same occupation and hours, after controlling for other factors). This gap should be interaction-aware.
+
+- **Relationship** correctly determines:
+  - **Marital-status**: "Husband" or "Wife" implies "Married-civ-spouse"; "Own-child" implies "Never-married" or less likely other statuses (e.g., child age < 18); "Not-in-family" implies "Never-married" or "Divorced". Ensure no contradictions (e.g., "Husband" with "Never-married").
+  - **Sex**: "Husband" → male, "Wife" → female, "Own-child" → any sex, "Unmarried" or "Not-in-family" → any sex, consistent with sample distributions. This is a deterministic structural constraint.
+
+- **Marital-status** directly affects Income: Married individuals (especially with spouse present) tend to have higher income due to selection or dual-income households; "Separated" or "Widowed" may have lower income. Effect size should be calibrated to sample (e.g., ~5–15% premium for married over never-married).
+
+- **Hours-per-week** directly affects Income: More hours increase income, but with diminishing returns (e.g., overtime beyond 50 hrs may have lower marginal gain). Model as non-linear (e.g., quadratic or piecewise) based on sample. Avoid implausible combinations (e.g., working 10 hrs/week earning $200k and no capital gains).
+
+- **Capital-gain** and **capital-loss** directly affect Income: Capital gains increase income (e.g., $0–99,999+); capital losses decrease income (e.g., $0–4,356). Most samples have zero gains/losses; for positive values, ensure they are realistic (e.g., capital gains > $50k rare and associated with high-income occupations). These variables should be independent of most other causes except Income, and should not be generated inversely (e.g., do not use Income to predict capital gain).
+
+- **Native-country** influences:
+  - **Occupation**: Immigrants may be overrepresented in certain occupations (e.g., "Mexico" → "Farming-fishing" or "Other-service" vs. "United-States" → "Exec-managerial" or "Prof-specialty"). Calibrate using sample proportions.
+  - **Income**: Country of origin may affect income through labor market discrimination or skill transferability (e.g., "Mexico" average income lower than "United-States" even within same occupation and education). This effect should be modest and calibrated.
+
+Ensure that the synthetic data reflects realistic interaction effects and conditional distributions:
+- The income gap by sex varies across occupations (e.g., larger gap in "Sales", smaller in "Prof-specialty") and age groups (wider gap at peak earnings age 45–55).
+- Age-dependent marital status patterns match population trends: e.g., < 30: mostly never-married; 30–50: mostly married; > 65: increased widowed.
+- Hours-per-week interaction with occupation: professional/sales workers may have longer hours but higher hourly pay; manual workers may have limited overtime.
+- Education-num and occupation interaction: high education-num without matching occupation (e.g., PhD in laborer role) should be extremely rare.
+- Capital gain/loss interaction: high capital gains are more common in older age and high-income occupations.
+
+Use the provided sample data to calibrate all conditional probabilities, marginal distributions, and interaction effects accurately. Avoid any implausible combinations (e.g., a 15-year-old with "Doctorate" or income > $200k with < 20 hours/week unless capital gains are enormous). Ensure that all causal paths are respected: variables are generated in topological order (age, education, sex, native-country, relationship → education-num, marital-status, occupation → capital-gain, capital-loss, hours-per-week → Income).</Task>"
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.35
+
+""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('age', 'education-num'), ('education', 'education-num'), ('occupation', 'hours-per-week'), ('hours-per-week', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure that the synthetic data respects all direct and indirect causal paths, and that the distributions of variables conditional on their causes are realistic and consistent with the sample data. Pay special attention to how 'age' influences 'marital-status' (e.g., younger individuals more likely never married) and 'Income' (e.g., income rises with age then plateaus), how 'education' causally affects 'occupation' (e.g., higher education leads to professional occupations) and then 'Income', how 'sex' influences 'occupation' (e.g., gendered occupational distributions), how 'marital-status' and 'occupation' each directly impact 'Income', and how 'relationship' influences 'marital-status' and 'sex'. Additionally, incorporate the role of 'education-num' as a numeric proxy for education influenced by both 'age' and 'education', and model 'hours-per-week' as determined by 'occupation' (e.g., longer hours in some occupations) which in turn affects 'Income'. Ensure that the synthetic data reflects realistic interaction effects: for example, the income gap by sex may vary across occupations, marital statuses, and age groups; age-dependent patterns for marital status are consistent with population trends; and education-num aligns with typical years of schooling across ages. Use the sample data to calibrate conditional probabilities and marginal distributions accurately.</Task>""
+Score: 35.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'education-num'), ('age', 'Income'), ('education', 'education-num'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('occupation', 'hours-per-week'), ('hours-per-week', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('sex', 'Income'), ('age', 'hours-per-week'), ('education-num', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure that the synthetic data respects all direct and indirect causal paths, and that the distributions of variables conditional on their causes are realistic and consistent with the sample data. Pay special attention to:
+- 'age' influences 'marital-status' (e.g., younger → never married, older → married/widowed), 'education-num' (life-long learning or generational differences), 'hours-per-week' (older may work less), and 'Income' (peak in middle age).
+- 'education' influences 'education-num' (e.g., higher education → more years), 'occupation' (professional vs. manual jobs), and 'Income' (higher earnings).
+- 'education-num' directly affects 'Income' (years of schooling as a continuous driver of earnings).
+- 'sex' influences 'occupation' (gendered segregation) and 'Income' (gender pay gap, varying by occupation and marital status).
+- 'occupation' influences 'hours-per-week' (e.g., managers work longer) and 'Income' (occupational wage differences).
+- 'hours-per-week' directly affects 'Income' (more hours typically increase earnings).
+- 'marital-status' influences 'Income' (e.g., married may have higher earnings due to spousal support or selection).
+- 'relationship' influences 'marital-status' (e.g., husband → married) and 'sex' (e.g., husband → male, wife → female).
+- Model realistic interaction effects, such as age-dependent income trajectories, sex-based pay gaps that vary by occupation, and marital status effects on hours worked.
+Use the sample data to calibrate conditional probabilities and marginal distributions accurately, ensuring the generated data reflects real-world patterns (e.g., age-specific marital status proportions, occupational distributions by sex and education, income variation by hours). Avoid unrealistic combinations (e.g., young children in high-level professional occupations with high hours).</Task>"
+Score: 35.0%
+
+""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('education', 'education-num'), ('education-num', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('occupation', 'hours-per-week'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income'), ('native-country', 'occupation'), ('native-country', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure that the synthetic data respects all direct and indirect causal paths, and that the distributions of variables conditional on their causes are realistic and consistent with the sample data. Pay special attention to the following causal mechanisms:
+
+- **Age** should influence marital-status (e.g., younger individuals more likely never-married; older individuals more likely married, widowed, or divorced) and directly affect Income (income rises with age, plateaus in mid-to-late career, then may decline in older age). Ensure age is modeled as a continuous variable with realistic ranges (e.g., 17–90 years) and age-dependent income curves vary by education.
+
+- **Education** causally affects:
+  - **Occupation**: Higher education (e.g., Doctorate, Masters) leads to professional or managerial occupations; lower education (e.g., HS-grad, Some-college) leads to service, labor, or admin roles.
+  - **Education-num**: This numeric encoding (e.g., 1–16 years) must be consistent with the nominal 'education' category (e.g., "Bachelors" maps to 13–14 years); avoid mismatches.
+  - **Income**: Direct effect, such that higher education-num increases income (e.g., college graduate earns more than high-school graduate, even in same occupation).
+  When generating education and education-num, ensure cohort effects: older individuals with the same education label may have slightly lower education-num (e.g., older Bachelors graduates may have 13 years vs. younger having 14 due to updated standards).
+
+- **Occupation** directly affects:
+  - **Hours-per-week**: Occupation-specific typical hours (e.g., Exec-managerial may average 50 hrs/week; Farming-fishing may average 40; Part-time roles in Other-service may average 20). Hours distribution should include variance but avoid extreme outliers unless supported by sample.
+  - **Income**: Direct effect, where professional/managerial occupations yield higher Income than service/labor roles, with realistic ranges (e.g., $10k–$200k+).
+
+- **Sex** influences:
+  - **Occupation**: Gendered distributions (e.g., men more likely in Craft-repair, Machine-op-inspct; women more likely in Adm-clerical, Other-service). This effect should be calibrated to sample proportions.
+  - **Hours-per-week**: Sex differences (e.g., men average more hours than women, partly due to occupational segregation). Ensure conditional on occupation, sex still shows a small residual effect.
+  - **Income**: Direct effect capturing persistent wage gap (e.g., women earn ~85% of men's income within same occupation and hours, after controlling for other factors). This gap should be interaction-aware.
+
+- **Relationship** correctly determines:
+  - **Marital-status**: "Husband" or "Wife" implies "Married-civ-spouse"; "Own-child" implies "Never-married" or less likely other statuses (e.g., child age < 18); "Not-in-family" implies "Never-married" or "Divorced". Ensure no contradictions (e.g., "Husband" with "Never-married").
+  - **Sex**: "Husband" → male, "Wife" → female, "Own-child" → any sex, "Unmarried" or "Not-in-family" → any sex, consistent with sample distributions. This is a deterministic structural constraint.
+
+- **Marital-status** directly affects Income: Married individuals (especially with spouse present) tend to have higher income due to selection or dual-income households; "Separated" or "Widowed" may have lower income. Effect size should be calibrated to sample (e.g., ~5–15% premium for married over never-married).
+
+- **Hours-per-week** directly affects Income: More hours increase income, but with diminishing returns (e.g., overtime beyond 50 hrs may have lower marginal gain). Model as non-linear (e.g., quadratic or piecewise) based on sample. Avoid implausible combinations (e.g., working 10 hrs/week earning $200k and no capital gains).
+
+- **Capital-gain** and **capital-loss** directly affect Income: Capital gains increase income (e.g., $0–99,999+); capital losses decrease income (e.g., $0–4,356). Most samples have zero gains/losses; for positive values, ensure they are realistic (e.g., capital gains > $50k rare and associated with high-income occupations). These variables should be independent of most other causes except Income, and should not be generated inversely (e.g., do not use Income to predict capital gain).
+
+- **Native-country** influences:
+  - **Occupation**: Immigrants may be overrepresented in certain occupations (e.g., "Mexico" → "Farming-fishing" or "Other-service" vs. "United-States" → "Exec-managerial" or "Prof-specialty"). Calibrate using sample proportions.
+  - **Income**: Country of origin may affect income through labor market discrimination or skill transferability (e.g., "Mexico" average income lower than "United-States" even within same occupation and education). This effect should be modest and calibrated.
+
+Ensure that the synthetic data reflects realistic interaction effects and conditional distributions:
+- The income gap by sex varies across occupations (e.g., larger gap in "Sales", smaller in "Prof-specialty") and age groups (wider gap at peak earnings age 45–55).
+- Age-dependent marital status patterns match population trends: e.g., < 30: mostly never-married; 30–50: mostly married; > 65: increased widowed.
+- Hours-per-week interaction with occupation: professional/sales workers may have longer hours but higher hourly pay; manual workers may have limited overtime.
+- Education-num and occupation interaction: high education-num without matching occupation (e.g., PhD in laborer role) should be extremely rare.
+- Capital gain/loss interaction: high capital gains are more common in older age and high-income occupations.
+
+Use the provided sample data to calibrate all conditional probabilities, marginal distributions, and interaction effects accurately. Avoid any implausible combinations (e.g., a 15-year-old with "Doctorate" or income > $200k with < 20 hours/week unless capital gains are enormous). Ensure that all causal paths are respected: variables are generated in topological order (age, education, sex, native-country, relationship → education-num, marital-status, occupation → capital-gain, capital-loss, hours-per-week → Income).</Task>""
+Score: 35.0%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 0 <<<<<<<<<<<<<<<< 
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.48514851485148514
+
+""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('age', 'education-num'), ('education', 'education-num'), ('occupation', 'hours-per-week'), ('hours-per-week', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure that the synthetic data respects all direct and indirect causal paths, and that the distributions of variables conditional on their causes are realistic and consistent with the sample data. Pay special attention to how 'age' influences 'marital-status' (e.g., younger individuals more likely never married) and 'Income' (e.g., income rises with age then plateaus), how 'education' causally affects 'occupation' (e.g., higher education leads to professional occupations) and then 'Income', how 'sex' influences 'occupation' (e.g., gendered occupational distributions), how 'marital-status' and 'occupation' each directly impact 'Income', and how 'relationship' influences 'marital-status' and 'sex'. Additionally, incorporate the role of 'education-num' as a numeric proxy for education influenced by both 'age' and 'education', and model 'hours-per-week' as determined by 'occupation' (e.g., longer hours in some occupations) which in turn affects 'Income'. Ensure that the synthetic data reflects realistic interaction effects: for example, the income gap by sex may vary across occupations, marital statuses, and age groups; age-dependent patterns for marital status are consistent with population trends; and education-num aligns with typical years of schooling across ages. Use the sample data to calibrate conditional probabilities and marginal distributions accurately.</Task>""
+Score: 35.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'education-num'), ('age', 'Income'), ('education', 'education-num'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('occupation', 'hours-per-week'), ('hours-per-week', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('sex', 'Income'), ('age', 'hours-per-week'), ('education-num', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure that the synthetic data respects all direct and indirect causal paths, and that the distributions of variables conditional on their causes are realistic and consistent with the sample data. Pay special attention to:
+- 'age' influences 'marital-status' (e.g., younger → never married, older → married/widowed), 'education-num' (life-long learning or generational differences), 'hours-per-week' (older may work less), and 'Income' (peak in middle age).
+- 'education' influences 'education-num' (e.g., higher education → more years), 'occupation' (professional vs. manual jobs), and 'Income' (higher earnings).
+- 'education-num' directly affects 'Income' (years of schooling as a continuous driver of earnings).
+- 'sex' influences 'occupation' (gendered segregation) and 'Income' (gender pay gap, varying by occupation and marital status).
+- 'occupation' influences 'hours-per-week' (e.g., managers work longer) and 'Income' (occupational wage differences).
+- 'hours-per-week' directly affects 'Income' (more hours typically increase earnings).
+- 'marital-status' influences 'Income' (e.g., married may have higher earnings due to spousal support or selection).
+- 'relationship' influences 'marital-status' (e.g., husband → married) and 'sex' (e.g., husband → male, wife → female).
+- Model realistic interaction effects, such as age-dependent income trajectories, sex-based pay gaps that vary by occupation, and marital status effects on hours worked.
+Use the sample data to calibrate conditional probabilities and marginal distributions accurately, ensuring the generated data reflects real-world patterns (e.g., age-specific marital status proportions, occupational distributions by sex and education, income variation by hours). Avoid unrealistic combinations (e.g., young children in high-level professional occupations with high hours).</Task>"
+Score: 35.0%
+
+""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('education', 'education-num'), ('education-num', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('occupation', 'hours-per-week'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income'), ('native-country', 'occupation'), ('native-country', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure that the synthetic data respects all direct and indirect causal paths, and that the distributions of variables conditional on their causes are realistic and consistent with the sample data. Pay special attention to the following causal mechanisms:
+
+- **Age** should influence marital-status (e.g., younger individuals more likely never-married; older individuals more likely married, widowed, or divorced) and directly affect Income (income rises with age, plateaus in mid-to-late career, then may decline in older age). Ensure age is modeled as a continuous variable with realistic ranges (e.g., 17–90 years) and age-dependent income curves vary by education.
+
+- **Education** causally affects:
+  - **Occupation**: Higher education (e.g., Doctorate, Masters) leads to professional or managerial occupations; lower education (e.g., HS-grad, Some-college) leads to service, labor, or admin roles.
+  - **Education-num**: This numeric encoding (e.g., 1–16 years) must be consistent with the nominal 'education' category (e.g., "Bachelors" maps to 13–14 years); avoid mismatches.
+  - **Income**: Direct effect, such that higher education-num increases income (e.g., college graduate earns more than high-school graduate, even in same occupation).
+  When generating education and education-num, ensure cohort effects: older individuals with the same education label may have slightly lower education-num (e.g., older Bachelors graduates may have 13 years vs. younger having 14 due to updated standards).
+
+- **Occupation** directly affects:
+  - **Hours-per-week**: Occupation-specific typical hours (e.g., Exec-managerial may average 50 hrs/week; Farming-fishing may average 40; Part-time roles in Other-service may average 20). Hours distribution should include variance but avoid extreme outliers unless supported by sample.
+  - **Income**: Direct effect, where professional/managerial occupations yield higher Income than service/labor roles, with realistic ranges (e.g., $10k–$200k+).
+
+- **Sex** influences:
+  - **Occupation**: Gendered distributions (e.g., men more likely in Craft-repair, Machine-op-inspct; women more likely in Adm-clerical, Other-service). This effect should be calibrated to sample proportions.
+  - **Hours-per-week**: Sex differences (e.g., men average more hours than women, partly due to occupational segregation). Ensure conditional on occupation, sex still shows a small residual effect.
+  - **Income**: Direct effect capturing persistent wage gap (e.g., women earn ~85% of men's income within same occupation and hours, after controlling for other factors). This gap should be interaction-aware.
+
+- **Relationship** correctly determines:
+  - **Marital-status**: "Husband" or "Wife" implies "Married-civ-spouse"; "Own-child" implies "Never-married" or less likely other statuses (e.g., child age < 18); "Not-in-family" implies "Never-married" or "Divorced". Ensure no contradictions (e.g., "Husband" with "Never-married").
+  - **Sex**: "Husband" → male, "Wife" → female, "Own-child" → any sex, "Unmarried" or "Not-in-family" → any sex, consistent with sample distributions. This is a deterministic structural constraint.
+
+- **Marital-status** directly affects Income: Married individuals (especially with spouse present) tend to have higher income due to selection or dual-income households; "Separated" or "Widowed" may have lower income. Effect size should be calibrated to sample (e.g., ~5–15% premium for married over never-married).
+
+- **Hours-per-week** directly affects Income: More hours increase income, but with diminishing returns (e.g., overtime beyond 50 hrs may have lower marginal gain). Model as non-linear (e.g., quadratic or piecewise) based on sample. Avoid implausible combinations (e.g., working 10 hrs/week earning $200k and no capital gains).
+
+- **Capital-gain** and **capital-loss** directly affect Income: Capital gains increase income (e.g., $0–99,999+); capital losses decrease income (e.g., $0–4,356). Most samples have zero gains/losses; for positive values, ensure they are realistic (e.g., capital gains > $50k rare and associated with high-income occupations). These variables should be independent of most other causes except Income, and should not be generated inversely (e.g., do not use Income to predict capital gain).
+
+- **Native-country** influences:
+  - **Occupation**: Immigrants may be overrepresented in certain occupations (e.g., "Mexico" → "Farming-fishing" or "Other-service" vs. "United-States" → "Exec-managerial" or "Prof-specialty"). Calibrate using sample proportions.
+  - **Income**: Country of origin may affect income through labor market discrimination or skill transferability (e.g., "Mexico" average income lower than "United-States" even within same occupation and education). This effect should be modest and calibrated.
+
+Ensure that the synthetic data reflects realistic interaction effects and conditional distributions:
+- The income gap by sex varies across occupations (e.g., larger gap in "Sales", smaller in "Prof-specialty") and age groups (wider gap at peak earnings age 45–55).
+- Age-dependent marital status patterns match population trends: e.g., < 30: mostly never-married; 30–50: mostly married; > 65: increased widowed.
+- Hours-per-week interaction with occupation: professional/sales workers may have longer hours but higher hourly pay; manual workers may have limited overtime.
+- Education-num and occupation interaction: high education-num without matching occupation (e.g., PhD in laborer role) should be extremely rare.
+- Capital gain/loss interaction: high capital gains are more common in older age and high-income occupations.
+
+Use the provided sample data to calibrate all conditional probabilities, marginal distributions, and interaction effects accurately. Avoid any implausible combinations (e.g., a 15-year-old with "Doctorate" or income > $200k with < 20 hours/week unless capital gains are enormous). Ensure that all causal paths are respected: variables are generated in topological order (age, education, sex, native-country, relationship → education-num, marital-status, occupation → capital-gain, capital-loss, hours-per-week → Income).</Task>""
+Score: 35.0%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 1 <<<<<<<<<<<<<<<< 
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.48
+
+""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('age', 'education-num'), ('education', 'education-num'), ('occupation', 'hours-per-week'), ('hours-per-week', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure that the synthetic data respects all direct and indirect causal paths, and that the distributions of variables conditional on their causes are realistic and consistent with the sample data. Pay special attention to how 'age' influences 'marital-status' (e.g., younger individuals more likely never married) and 'Income' (e.g., income rises with age then plateaus), how 'education' causally affects 'occupation' (e.g., higher education leads to professional occupations) and then 'Income', how 'sex' influences 'occupation' (e.g., gendered occupational distributions), how 'marital-status' and 'occupation' each directly impact 'Income', and how 'relationship' influences 'marital-status' and 'sex'. Additionally, incorporate the role of 'education-num' as a numeric proxy for education influenced by both 'age' and 'education', and model 'hours-per-week' as determined by 'occupation' (e.g., longer hours in some occupations) which in turn affects 'Income'. Ensure that the synthetic data reflects realistic interaction effects: for example, the income gap by sex may vary across occupations, marital statuses, and age groups; age-dependent patterns for marital status are consistent with population trends; and education-num aligns with typical years of schooling across ages. Use the sample data to calibrate conditional probabilities and marginal distributions accurately.</Task>""
+Score: 35.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'education-num'), ('age', 'Income'), ('education', 'education-num'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('occupation', 'hours-per-week'), ('hours-per-week', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('sex', 'Income'), ('age', 'hours-per-week'), ('education-num', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure that the synthetic data respects all direct and indirect causal paths, and that the distributions of variables conditional on their causes are realistic and consistent with the sample data. Pay special attention to:
+- 'age' influences 'marital-status' (e.g., younger → never married, older → married/widowed), 'education-num' (life-long learning or generational differences), 'hours-per-week' (older may work less), and 'Income' (peak in middle age).
+- 'education' influences 'education-num' (e.g., higher education → more years), 'occupation' (professional vs. manual jobs), and 'Income' (higher earnings).
+- 'education-num' directly affects 'Income' (years of schooling as a continuous driver of earnings).
+- 'sex' influences 'occupation' (gendered segregation) and 'Income' (gender pay gap, varying by occupation and marital status).
+- 'occupation' influences 'hours-per-week' (e.g., managers work longer) and 'Income' (occupational wage differences).
+- 'hours-per-week' directly affects 'Income' (more hours typically increase earnings).
+- 'marital-status' influences 'Income' (e.g., married may have higher earnings due to spousal support or selection).
+- 'relationship' influences 'marital-status' (e.g., husband → married) and 'sex' (e.g., husband → male, wife → female).
+- Model realistic interaction effects, such as age-dependent income trajectories, sex-based pay gaps that vary by occupation, and marital status effects on hours worked.
+Use the sample data to calibrate conditional probabilities and marginal distributions accurately, ensuring the generated data reflects real-world patterns (e.g., age-specific marital status proportions, occupational distributions by sex and education, income variation by hours). Avoid unrealistic combinations (e.g., young children in high-level professional occupations with high hours).</Task>"
+Score: 35.0%
+
+""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('education', 'education-num'), ('education-num', 'Income'), ('marital-status', 'Income'), ('occupation', 'Income'), ('occupation', 'hours-per-week'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('hours-per-week', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income'), ('native-country', 'occupation'), ('native-country', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user provided samples. Ensure that the synthetic data respects all direct and indirect causal paths, and that the distributions of variables conditional on their causes are realistic and consistent with the sample data. Pay special attention to the following causal mechanisms:
+
+- **Age** should influence marital-status (e.g., younger individuals more likely never-married; older individuals more likely married, widowed, or divorced) and directly affect Income (income rises with age, plateaus in mid-to-late career, then may decline in older age). Ensure age is modeled as a continuous variable with realistic ranges (e.g., 17–90 years) and age-dependent income curves vary by education.
+
+- **Education** causally affects:
+  - **Occupation**: Higher education (e.g., Doctorate, Masters) leads to professional or managerial occupations; lower education (e.g., HS-grad, Some-college) leads to service, labor, or admin roles.
+  - **Education-num**: This numeric encoding (e.g., 1–16 years) must be consistent with the nominal 'education' category (e.g., "Bachelors" maps to 13–14 years); avoid mismatches.
+  - **Income**: Direct effect, such that higher education-num increases income (e.g., college graduate earns more than high-school graduate, even in same occupation).
+  When generating education and education-num, ensure cohort effects: older individuals with the same education label may have slightly lower education-num (e.g., older Bachelors graduates may have 13 years vs. younger having 14 due to updated standards).
+
+- **Occupation** directly affects:
+  - **Hours-per-week**: Occupation-specific typical hours (e.g., Exec-managerial may average 50 hrs/week; Farming-fishing may average 40; Part-time roles in Other-service may average 20). Hours distribution should include variance but avoid extreme outliers unless supported by sample.
+  - **Income**: Direct effect, where professional/managerial occupations yield higher Income than service/labor roles, with realistic ranges (e.g., $10k–$200k+).
+
+- **Sex** influences:
+  - **Occupation**: Gendered distributions (e.g., men more likely in Craft-repair, Machine-op-inspct; women more likely in Adm-clerical, Other-service). This effect should be calibrated to sample proportions.
+  - **Hours-per-week**: Sex differences (e.g., men average more hours than women, partly due to occupational segregation). Ensure conditional on occupation, sex still shows a small residual effect.
+  - **Income**: Direct effect capturing persistent wage gap (e.g., women earn ~85% of men's income within same occupation and hours, after controlling for other factors). This gap should be interaction-aware.
+
+- **Relationship** correctly determines:
+  - **Marital-status**: "Husband" or "Wife" implies "Married-civ-spouse"; "Own-child" implies "Never-married" or less likely other statuses (e.g., child age < 18); "Not-in-family" implies "Never-married" or "Divorced". Ensure no contradictions (e.g., "Husband" with "Never-married").
+  - **Sex**: "Husband" → male, "Wife" → female, "Own-child" → any sex, "Unmarried" or "Not-in-family" → any sex, consistent with sample distributions. This is a deterministic structural constraint.
+
+- **Marital-status** directly affects Income: Married individuals (especially with spouse present) tend to have higher income due to selection or dual-income households; "Separated" or "Widowed" may have lower income. Effect size should be calibrated to sample (e.g., ~5–15% premium for married over never-married).
+
+- **Hours-per-week** directly affects Income: More hours increase income, but with diminishing returns (e.g., overtime beyond 50 hrs may have lower marginal gain). Model as non-linear (e.g., quadratic or piecewise) based on sample. Avoid implausible combinations (e.g., working 10 hrs/week earning $200k and no capital gains).
+
+- **Capital-gain** and **capital-loss** directly affect Income: Capital gains increase income (e.g., $0–99,999+); capital losses decrease income (e.g., $0–4,356). Most samples have zero gains/losses; for positive values, ensure they are realistic (e.g., capital gains > $50k rare and associated with high-income occupations). These variables should be independent of most other causes except Income, and should not be generated inversely (e.g., do not use Income to predict capital gain).
+
+- **Native-country** influences:
+  - **Occupation**: Immigrants may be overrepresented in certain occupations (e.g., "Mexico" → "Farming-fishing" or "Other-service" vs. "United-States" → "Exec-managerial" or "Prof-specialty"). Calibrate using sample proportions.
+  - **Income**: Country of origin may affect income through labor market discrimination or skill transferability (e.g., "Mexico" average income lower than "United-States" even within same occupation and education). This effect should be modest and calibrated.
+
+Ensure that the synthetic data reflects realistic interaction effects and conditional distributions:
+- The income gap by sex varies across occupations (e.g., larger gap in "Sales", smaller in "Prof-specialty") and age groups (wider gap at peak earnings age 45–55).
+- Age-dependent marital status patterns match population trends: e.g., < 30: mostly never-married; 30–50: mostly married; > 65: increased widowed.
+- Hours-per-week interaction with occupation: professional/sales workers may have longer hours but higher hourly pay; manual workers may have limited overtime.
+- Education-num and occupation interaction: high education-num without matching occupation (e.g., PhD in laborer role) should be extremely rare.
+- Capital gain/loss interaction: high capital gains are more common in older age and high-income occupations.
+
+Use the provided sample data to calibrate all conditional probabilities, marginal distributions, and interaction effects accurately. Avoid any implausible combinations (e.g., a 15-year-old with "Doctorate" or income > $200k with < 20 hours/week unless capital gains are enormous). Ensure that all causal paths are respected: variables are generated in topological order (age, education, sex, native-country, relationship → education-num, marital-status, occupation → capital-gain, capital-loss, hours-per-week → Income).</Task>""
+Score: 35.0%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+

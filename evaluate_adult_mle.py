@@ -1,12 +1,15 @@
 """Evaluate Adult synthetic data with the MALLM-GAN MLE/F1 protocol.
 
-This script evaluates synthetic Adult CSV files by training fixed downstream
-classifiers on synthetic data and testing them on the held-out real test set.
-It writes both per-run details and sample-size summaries to a result folder.
+This script evaluates synthetic Adult CSV files using the MALLM-GAN MLE/F1
+protocol and the released `adult-glm.ipynb` Adult setup: train downstream
+classifiers on synthetic data and test on a held-out real test set. For
+classification tasks, the paper trains Logistic Regression, Random Forest, SVM,
+and XGBoost classifiers, reports F1, and averages the best score across
+repeated random seeds.
 
-The fixed evaluator scores are the primary protocol. Oracle scores, which pick
-the best evaluator per run, are retained for diagnostics but should not be used
-as the main comparison metric.
+The paper-style metric in this script is `paper_mle_f1`, which is the best F1
+among the downstream classifiers for one synthetic run. Per-classifier scores
+are also retained for diagnostics and ablations.
 
 Example:
     python evaluate_adult_mle.py
@@ -21,8 +24,10 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 from pathlib import Path
 from typing import Any
+import warnings
 
 import numpy as np
 import pandas as pd
@@ -74,7 +79,10 @@ NUMERIC_FEATURES = [
 ]
 
 ALL_COLUMNS = FEATURE_COLUMNS + [TARGET_COLUMN]
-PRIMARY_EVALUATORS = ["Logistic Regression", "Random Forest", "XGB"]
+ADULT_NOTEBOOK_SAMPLE_SIZES = [100, 200, 400, 800]
+PAPER_CLASSIFIERS = ["Logistic Regression", "Random Forest", "SVC", "XGB"]
+EXPECTED_TEST_SIZE = 200
+EXPECTED_RUNS = 5
 
 
 def parse_args() -> argparse.Namespace:
@@ -82,13 +90,53 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--sample-dir", type=Path, default=Path("sample/Adult"))
     parser.add_argument("--synthetic-root", type=Path, default=Path("gen/adult"))
     parser.add_argument("--output-dir", type=Path, default=Path("results/adult_mle_eval"))
-    parser.add_argument("--sample-sizes", type=int, nargs="+", default=[100, 200, 400, 800])
+    parser.add_argument(
+        "--sample-sizes",
+        type=int,
+        nargs="+",
+        default=None,
+        help=(
+            "Sample sizes to evaluate. Defaults to the released adult-glm.ipynb "
+            "sizes that exist in both sample-dir and synthetic-root: "
+            "100 200 400 800."
+        ),
+    )
     parser.add_argument("--test-file", type=Path, default=None)
     parser.add_argument("--seed", type=int, default=1234)
+    parser.set_defaults(require_xgboost=True)
     parser.add_argument(
         "--require-xgboost",
+        dest="require_xgboost",
         action="store_true",
-        help="Fail if xgboost is not installed instead of evaluating without XGB.",
+        help="Fail if xgboost is not installed. This is the paper-style default.",
+    )
+    parser.add_argument(
+        "--allow-missing-xgboost",
+        dest="require_xgboost",
+        action="store_false",
+        help="Evaluate without XGBoost if it is unavailable. This deviates from the paper.",
+    )
+    parser.add_argument(
+        "--expected-test-size",
+        type=int,
+        default=EXPECTED_TEST_SIZE,
+        help="Expected held-out real test size from the paper. Use 0 to disable.",
+    )
+    parser.add_argument(
+        "--expected-runs",
+        type=int,
+        default=EXPECTED_RUNS,
+        help="Expected repeated synthetic runs per sample size from the paper.",
+    )
+    parser.add_argument(
+        "--allow-size-mismatch",
+        action="store_true",
+        help="Allow |Dsyn| to differ from |Dtrain|. This deviates from the paper.",
+    )
+    parser.add_argument(
+        "--strict-paper-protocol",
+        action="store_true",
+        help="Raise errors instead of warnings for paper-protocol mismatches.",
     )
     return parser.parse_args()
 
@@ -166,6 +214,34 @@ def make_models(seed: int, require_xgboost: bool) -> dict[str, Any]:
     return models
 
 
+def warn_or_raise(message: str, strict: bool) -> None:
+    if strict:
+        raise ValueError(message)
+    warnings.warn(message, stacklevel=2)
+
+
+def available_sample_sizes(sample_dir: Path, synthetic_root: Path) -> list[int]:
+    sizes: set[int] = set()
+    for train_file in sample_dir.glob("data*.csv"):
+        suffix = train_file.stem.removeprefix("data")
+        if suffix.isdigit() and (synthetic_root / suffix).exists():
+            sizes.add(int(suffix))
+    return sorted(sizes)
+
+
+def default_sample_sizes(
+    sample_dir: Path,
+    synthetic_root: Path,
+) -> list[int]:
+    available = available_sample_sizes(sample_dir, synthetic_root)
+    notebook_available = [
+        size for size in ADULT_NOTEBOOK_SAMPLE_SIZES if size in set(available)
+    ]
+    if notebook_available:
+        return notebook_available
+    return available
+
+
 def encode_labels(y_train: pd.Series, y_test: pd.Series) -> tuple[np.ndarray, np.ndarray]:
     encoder = LabelEncoder()
     encoder.fit(pd.concat([y_train.astype(str), y_test.astype(str)], ignore_index=True))
@@ -200,7 +276,7 @@ def evaluate_train_on_test(
     return results
 
 
-def oracle_result(model_results: dict[str, dict[str, float]]) -> tuple[str, float]:
+def paper_mle_result(model_results: dict[str, dict[str, float]]) -> tuple[str, float]:
     best_model = max(model_results, key=lambda name: model_results[name]["f1"])
     return best_model, model_results[best_model]["f1"]
 
@@ -220,12 +296,19 @@ def summarize_group(group: pd.DataFrame) -> dict[str, Any]:
     summary: dict[str, Any] = {
         "sample_size": int(group["sample_size"].iloc[0]),
         "n_runs": int(len(group)),
-        "oracle_f1_mean": float(group["oracle_f1"].mean()),
-        "oracle_f1_std": float(group["oracle_f1"].std(ddof=0)),
-        "oracle_f1_min": float(group["oracle_f1"].min()),
-        "oracle_f1_max": float(group["oracle_f1"].max()),
-        "oracle_model_accuracy_mean": float(group["oracle_model_accuracy"].mean()),
-        "oracle_model_accuracy_std": float(group["oracle_model_accuracy"].std(ddof=0)),
+        "paper_mle_f1_mean": float(group["paper_mle_f1"].mean()),
+        "paper_mle_f1_std": float(group["paper_mle_f1"].std(ddof=0)),
+        "paper_mle_f1_standard_error": float(
+            group["paper_mle_f1"].std(ddof=1) / math.sqrt(len(group))
+        )
+        if len(group) > 1
+        else 0.0,
+        "paper_mle_f1_min": float(group["paper_mle_f1"].min()),
+        "paper_mle_f1_max": float(group["paper_mle_f1"].max()),
+        "paper_mle_model_accuracy_mean": float(
+            group["paper_mle_model_accuracy"].mean()
+        ),
+        "paper_mle_model_accuracy_std": float(group["paper_mle_model_accuracy"].std(ddof=0)),
     }
 
     for col in group.columns:
@@ -244,8 +327,26 @@ def main() -> None:
     args = parse_args()
     args.output_dir.mkdir(parents=True, exist_ok=True)
 
+    sample_sizes = args.sample_sizes or default_sample_sizes(
+        args.sample_dir,
+        args.synthetic_root,
+    )
+    if not sample_sizes:
+        raise FileNotFoundError(
+            "No matching Adult sample sizes found in sample-dir and synthetic-root."
+        )
+
     test_path = args.test_file or (args.sample_dir / "data_test.csv")
     raw_test = read_required_csv(test_path)
+    if args.expected_test_size and len(raw_test) != args.expected_test_size:
+        warn_or_raise(
+            (
+                f"Held-out test size is {len(raw_test)}, expected "
+                f"{args.expected_test_size} under the paper protocol."
+            ),
+            args.strict_paper_protocol,
+        )
+
     reference_for_test = raw_test.copy()
     test_df = clean_adult_frame(raw_test, reference_for_test)
 
@@ -253,7 +354,7 @@ def main() -> None:
     detail_records: list[dict[str, Any]] = []
     real_baseline_rows: list[dict[str, Any]] = []
 
-    for sample_size in args.sample_sizes:
+    for sample_size in sample_sizes:
         train_path = args.sample_dir / f"data{sample_size}.csv"
         raw_train = read_required_csv(train_path)
         reference = raw_train.copy()
@@ -265,14 +366,14 @@ def main() -> None:
             seed=args.seed,
             require_xgboost=args.require_xgboost,
         )
-        oracle_model, oracle_f1 = oracle_result(real_results)
+        paper_mle_model, paper_mle_f1 = paper_mle_result(real_results)
         real_baseline_rows.append(
             {
                 "sample_size": sample_size,
                 "train_file": str(train_path),
-                "oracle_model": oracle_model,
-                "oracle_f1": oracle_f1,
-                "oracle_model_accuracy": real_results[oracle_model]["accuracy"],
+                "paper_mle_model": paper_mle_model,
+                "paper_mle_f1": paper_mle_f1,
+                "paper_mle_model_accuracy": real_results[paper_mle_model]["accuracy"],
                 **{
                     f"{model_name}_f1": metrics["f1"]
                     for model_name, metrics in real_results.items()
@@ -284,28 +385,47 @@ def main() -> None:
             }
         )
 
-        for run_index, synthetic_path in enumerate(
-            synthetic_files_for_size(args.synthetic_root, sample_size)
-        ):
+        synthetic_paths = synthetic_files_for_size(args.synthetic_root, sample_size)
+        if args.expected_runs and len(synthetic_paths) != args.expected_runs:
+            warn_or_raise(
+                (
+                    f"Sample size {sample_size} has {len(synthetic_paths)} "
+                    f"synthetic runs, expected {args.expected_runs} under the "
+                    "paper protocol."
+                ),
+                args.strict_paper_protocol,
+            )
+
+        for run_index, synthetic_path in enumerate(synthetic_paths):
             raw_synthetic = read_required_csv(synthetic_path)
             synthetic = clean_adult_frame(raw_synthetic, reference)
+            if not args.allow_size_mismatch and len(synthetic) != len(real_train):
+                warn_or_raise(
+                    (
+                        f"{synthetic_path} has {len(synthetic)} rows but the "
+                        f"matching real training split has {len(real_train)} rows. "
+                        "The paper uses |Dtrain| = |Dsyn|."
+                    ),
+                    args.strict_paper_protocol,
+                )
+
             model_results = evaluate_train_on_test(
                 synthetic,
                 test_df,
                 seed=args.seed + run_index,
                 require_xgboost=args.require_xgboost,
             )
-            oracle_model, oracle_f1 = oracle_result(model_results)
-            oracle_model_accuracy = model_results[oracle_model]["accuracy"]
+            paper_mle_model, paper_mle_f1 = paper_mle_result(model_results)
+            paper_mle_model_accuracy = model_results[paper_mle_model]["accuracy"]
 
             row = {
                 "sample_size": sample_size,
                 "run_index": run_index,
                 "synthetic_file": str(synthetic_path),
                 "n_synthetic": int(len(synthetic)),
-                "oracle_model": oracle_model,
-                "oracle_f1": oracle_f1,
-                "oracle_model_accuracy": oracle_model_accuracy,
+                "paper_mle_model": paper_mle_model,
+                "paper_mle_f1": paper_mle_f1,
+                "paper_mle_model_accuracy": paper_mle_model_accuracy,
             }
             for model_name, metrics in model_results.items():
                 row[f"{model_name}_f1"] = metrics["f1"]
@@ -317,9 +437,9 @@ def main() -> None:
                     "sample_size": sample_size,
                     "synthetic_file": str(synthetic_path),
                     "n_synthetic": int(len(synthetic)),
-                    "oracle_model": oracle_model,
-                    "oracle_f1": oracle_f1,
-                    "oracle_model_accuracy": oracle_model_accuracy,
+                    "paper_mle_model": paper_mle_model,
+                    "paper_mle_f1": paper_mle_f1,
+                    "paper_mle_model_accuracy": paper_mle_model_accuracy,
                     "model_results": model_results,
                 }
             )
@@ -344,22 +464,27 @@ def main() -> None:
         summary_json_path,
         {
             "protocol": (
-                "MLE/F1: train fixed downstream classifiers on synthetic Adult "
-                "data and evaluate weighted F1 on the held-out real test set. "
-                "Fixed evaluator scores are primary; oracle scores select the "
-                "best evaluator per run and are diagnostic only."
+                "Paper-style MLE/F1: train Logistic Regression, Random Forest, "
+                "SVC, and XGBoost classifiers on synthetic Adult data, evaluate "
+                "weighted F1 on the held-out real test set, and average the best "
+                "per-run classifier score across repeated random seeds."
             ),
             "sample_dir": str(args.sample_dir),
             "synthetic_root": str(args.synthetic_root),
             "test_file": str(test_path),
+            "sample_sizes": sample_sizes,
+            "adult_notebook_sample_sizes": ADULT_NOTEBOOK_SAMPLE_SIZES,
+            "expected_test_size": args.expected_test_size,
+            "expected_runs": args.expected_runs,
+            "allow_size_mismatch": args.allow_size_mismatch,
             "cleaning_reference": (
                 "Synthetic and real training rows are cleaned using only the "
                 "matching real training split as the imputation reference. The "
                 "held-out test split is cleaned independently."
             ),
-            "primary_evaluators": [
+            "paper_classifiers": [
                 model_name
-                for model_name in PRIMARY_EVALUATORS
+                for model_name in PAPER_CLASSIFIERS
                 if model_name in make_models(args.seed, args.require_xgboost)
             ],
             "xgboost_available": XGBClassifier is not None,

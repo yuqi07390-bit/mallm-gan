@@ -1,4 +1,4 @@
-sample_size,run_index,synthetic_file,n_synthetic,oracle_model,oracle_f1,oracle_model_accuracy,Logistic Regression_f1,Logistic Regression_accuracy,Random Forest_f1,Random Forest_accuracy,SVC_f1,SVC_accuracy,XGB_f1,XGB_accuracy
+sample_size,run_index,synthetic_file,n_synthetic,paper_mle_model,paper_mle_f1,paper_mle_model_accuracy,Logistic Regression_f1,Logistic Regression_accuracy,Random Forest_f1,Random Forest_accuracy,SVC_f1,SVC_accuracy,XGB_f1,XGB_accuracy
 100,0,gen/adult/100/df_0.csv,100,Random Forest,0.82025143141648,0.825,0.7406892655367231,0.735,0.82025143141648,0.825,0.7491507893304301,0.79,0.7772128216166098,0.775
 100,1,gen/adult/100/df_1.csv,100,Random Forest,0.8319081643375013,0.835,0.747841801214635,0.76,0.8319081643375013,0.835,0.7491507893304301,0.79,0.8199436246062013,0.84
 100,2,gen/adult/100/df_2.csv,100,Random Forest,0.82,0.82,0.721483870967742,0.73,0.82,0.82,0.7491507893304301,0.79,0.7677336517112815,0.795

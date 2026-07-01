@@ -1,0 +1,123 @@
+{
+  "protocol": "MLE/F1: train downstream classifiers on synthetic Adult data and evaluate weighted F1 on the held-out real test set.",
+  "sample_dir": "sample/Adult",
+  "synthetic_root": "gen/adult",
+  "test_file": "sample/Adult/data_test.csv",
+  "xgboost_available": true,
+  "summary": [
+    {
+      "sample_size": 100,
+      "n_runs": 5,
+      "best_f1_mean": 0.8196274325243941,
+      "best_f1_std": 0.006920807445632106,
+      "best_f1_min": 0.8129887834339948,
+      "best_f1_max": 0.8319081643375013,
+      "best_accuracy_mean": 0.8219999999999998,
+      "best_accuracy_std": 0.007483314773547889,
+      "Logistic Regression_f1_mean": 0.7579115349306281,
+      "Logistic Regression_f1_std": 0.027637060549668295,
+      "Random Forest_f1_mean": 0.8196274325243941,
+      "Random Forest_f1_std": 0.006920807445632106,
+      "SVC_f1_mean": 0.7491507893304301,
+      "SVC_f1_std": 0.0,
+      "XGB_f1_mean": 0.7893601290774108,
+      "XGB_f1_std": 0.01965660312888452
+    },
+    {
+      "sample_size": 200,
+      "n_runs": 5,
+      "best_f1_mean": 0.8173481505320899,
+      "best_f1_std": 0.017955872639572892,
+      "best_f1_min": 0.7853086895135413,
+      "best_f1_max": 0.838859649122807,
+      "best_accuracy_mean": 0.82,
+      "best_accuracy_std": 0.021213203435596403,
+      "Logistic Regression_f1_mean": 0.8086179991161029,
+      "Logistic Regression_f1_std": 0.023400400120163565,
+      "Random Forest_f1_mean": 0.8111780442329936,
+      "Random Forest_f1_std": 0.017321041237315697,
+      "SVC_f1_mean": 0.7417196601926737,
+      "SVC_f1_std": 0.0053439690830314945,
+      "XGB_f1_mean": 0.7948816949390559,
+      "XGB_f1_std": 0.014244535425528006
+    },
+    {
+      "sample_size": 400,
+      "n_runs": 5,
+      "best_f1_mean": 0.8365906890935231,
+      "best_f1_std": 0.009341475625507172,
+      "best_f1_min": 0.8261123658949746,
+      "best_f1_max": 0.8483812566560169,
+      "best_accuracy_mean": 0.841,
+      "best_accuracy_std": 0.009695359714832666,
+      "Logistic Regression_f1_mean": 0.8354587673025241,
+      "Logistic Regression_f1_std": 0.010688117418281266,
+      "Random Forest_f1_mean": 0.8222681983715464,
+      "Random Forest_f1_std": 0.009607202143733175,
+      "SVC_f1_mean": 0.7375738867726258,
+      "SVC_f1_std": 0.0,
+      "XGB_f1_mean": 0.8195420469787054,
+      "XGB_f1_std": 0.01509357830189398
+    },
+    {
+      "sample_size": 800,
+      "n_runs": 5,
+      "best_f1_mean": 0.8418925502159166,
+      "best_f1_std": 0.005297132006535146,
+      "best_f1_min": 0.8363454715219422,
+      "best_f1_max": 0.8497666100653926,
+      "best_accuracy_mean": 0.8480000000000001,
+      "best_accuracy_std": 0.00509901951359279,
+      "Logistic Regression_f1_mean": 0.8195010964912282,
+      "Logistic Regression_f1_std": 0.005960484360127561,
+      "Random Forest_f1_mean": 0.8285187596324166,
+      "Random Forest_f1_std": 0.008081887291732008,
+      "SVC_f1_mean": 0.7426973513689445,
+      "SVC_f1_std": 0.00283399778859361,
+      "XGB_f1_mean": 0.8392012108660998,
+      "XGB_f1_std": 0.008834675424320256
+    }
+  ],
+  "real_data_baseline": [
+    {
+      "sample_size": 100,
+      "train_file": "sample/Adult/data100.csv",
+      "best_model": "XGB",
+      "best_f1": 0.8391394385641969,
+      "Logistic Regression_f1": 0.8349534050179211,
+      "Random Forest_f1": 0.8218883513849051,
+      "SVC_f1": 0.7478431372549019,
+      "XGB_f1": 0.8391394385641969
+    },
+    {
+      "sample_size": 200,
+      "train_file": "sample/Adult/data200.csv",
+      "best_model": "XGB",
+      "best_f1": 0.8497666100653926,
+      "Logistic Regression_f1": 0.8099800846402787,
+      "Random Forest_f1": 0.796931591362729,
+      "SVC_f1": 0.7478431372549019,
+      "XGB_f1": 0.8497666100653926
+    },
+    {
+      "sample_size": 400,
+      "train_file": "sample/Adult/data400.csv",
+      "best_model": "XGB",
+      "best_f1": 0.8391394385641969,
+      "Logistic Regression_f1": 0.8305227781926812,
+      "Random Forest_f1": 0.796931591362729,
+      "SVC_f1": 0.751701873850589,
+      "XGB_f1": 0.8391394385641969
+    },
+    {
+      "sample_size": 800,
+      "train_file": "sample/Adult/data800.csv",
+      "best_model": "XGB",
+      "best_f1": 0.8588377217142228,
+      "Logistic Regression_f1": 0.856798418972332,
+      "Random Forest_f1": 0.7427303891913692,
+      "SVC_f1": 0.7427303891913692,
+      "XGB_f1": 0.8588377217142228
+    }
+  ]
+}

@@ -33,3 +33,12 @@ opt_model_nm = 'yaobin_gpt4'
 ```
 
 To use open source model, e.g. models from huggingface, one need to update the generation method in the source code.
+
+
+
+获取结果文件：运行adult-glm.ipynb
+
+评估
+```
+python3 evaluate_adult_mle.py
+```

@@ -1,0 +1,1124 @@
+>>>>>>>>>>>>>>> Epoch: 0, batch: 1 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'native-country'), ('sex', 'race'), ('Income', 'relationship'), ('Income', 'education-num'), ('Income', 'capital-gain'), ('Income', 'hours-per-week'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.6190476190476191
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'native-country'), ('sex', 'race'), ('Income', 'relationship'), ('Income', 'education-num'), ('Income', 'capital-gain'), ('Income', 'hours-per-week'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 61.9%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 2 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('marital-status', 'relationship'), ('sex', 'relationship'), ('native-country', 'race'), ('race', 'sex'), ('relationship', 'Income'), ('education-num', 'Income'), ('capital-gain', 'Income'), ('hours-per-week', 'Income'), ('workclass', 'Income'), ('age', 'hours-per-week'), ('age', 'occupation'), ('education', 'occupation')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data strictly adheres to the directed acyclic graph (DAG) defined above: each feature's generation must condition only on its direct causes as listed, and no other variables. Pay close attention to the temporal or logical order of generation (e.g., generate causes before effects). For variables with no listed causes, assume they are exogenous and can be sampled independently from the user-provided data distribution. To improve realism, incorporate the following guidance:
+
+- Generate 'age' first as an exogenous variable, then conditionally generate 'hours-per-week' and 'occupation' based on 'age', and 'education' based on 'education-num'.
+- Generate 'marital-status' exogenously, then 'relationship' based on 'marital-status' and 'sex', avoiding invalid combinations (e.g., "Husband" with female sex).
+- Generate 'native-country' exogenously, then 'race' based on 'native-country', and then 'sex' based on 'race' (note: this implies a statistical dependency, not biological causation).
+- Generate 'workclass', 'capital-gain', and 'income' after all other features, ensuring 'Income' is caused by 'occupation', 'relationship', 'education-num', 'capital-gain', 'hours-per-week', and 'workclass'. Use a probabilistic model (e.g., logistic regression or decision tree) to generate 'Income' based on its causes, calibrated to the user-provided data.
+
+Validate the generated data by checking that conditional probabilities and dependencies match the user-provided samples within reasonable tolerance (e.g., ±5% in marginal proportions or correlation strength).</Task>
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.45
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('marital-status', 'relationship'), ('sex', 'relationship'), ('native-country', 'race'), ('race', 'sex'), ('relationship', 'Income'), ('education-num', 'Income'), ('capital-gain', 'Income'), ('hours-per-week', 'Income'), ('workclass', 'Income'), ('age', 'hours-per-week'), ('age', 'occupation'), ('education', 'occupation')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data strictly adheres to the directed acyclic graph (DAG) defined above: each feature's generation must condition only on its direct causes as listed, and no other variables. Pay close attention to the temporal or logical order of generation (e.g., generate causes before effects). For variables with no listed causes, assume they are exogenous and can be sampled independently from the user-provided data distribution. To improve realism, incorporate the following guidance:
+
+- Generate 'age' first as an exogenous variable, then conditionally generate 'hours-per-week' and 'occupation' based on 'age', and 'education' based on 'education-num'.
+- Generate 'marital-status' exogenously, then 'relationship' based on 'marital-status' and 'sex', avoiding invalid combinations (e.g., "Husband" with female sex).
+- Generate 'native-country' exogenously, then 'race' based on 'native-country', and then 'sex' based on 'race' (note: this implies a statistical dependency, not biological causation).
+- Generate 'workclass', 'capital-gain', and 'income' after all other features, ensuring 'Income' is caused by 'occupation', 'relationship', 'education-num', 'capital-gain', 'hours-per-week', and 'workclass'. Use a probabilistic model (e.g., logistic regression or decision tree) to generate 'Income' based on its causes, calibrated to the user-provided data.
+
+Validate the generated data by checking that conditional probabilities and dependencies match the user-provided samples within reasonable tolerance (e.g., ±5% in marginal proportions or correlation strength).</Task>"
+Score: 45.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'native-country'), ('sex', 'race'), ('Income', 'relationship'), ('Income', 'education-num'), ('Income', 'capital-gain'), ('Income', 'hours-per-week'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 57.14%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 1, batch: 1 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'hours-per-week'), ('age', 'occupation'), ('education-num', 'education'), ('education-num', 'Income'), ('education', 'occupation'), ('occupation', 'Income'), ('marital-status', 'relationship'), ('sex', 'relationship'), ('relationship', 'Income'), ('native-country', 'race'), ('race', 'sex'), ('workclass', 'Income'), ('capital-gain', 'Income'), ('hours-per-week', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that faithfully represents these causal relationships. Each feature must be generated conditioning only on its direct causes as listed, following a valid topological order. Below are the specific steps to ensure causal consistency:
+
+1. **Exogenous variables** (no incoming causes): 'age', 'education-num', 'marital-status', 'native-country', 'workclass', 'capital-gain' – sample these independently from the user-provided data distribution (e.g., using empirical marginal distributions).
+
+2. **Generate causes before effects**:
+   - From 'age', generate 'hours-per-week' and 'occupation'.
+   - From 'education-num', generate 'education'.
+   - From 'native-country', generate 'race'; then from 'race', generate 'sex'.
+   - From 'marital-status' and 'sex', generate 'relationship' (ensure logical consistency: e.g., "Husband" only for male sex, "Wife" only for female).
+   - From 'occupation', 'relationship', 'education-num', 'workclass', 'capital-gain', and 'hours-per-week', generate 'Income' using a probabilistic model (e.g., logistic regression or decision tree) calibrated to the user-provided data.
+
+3. **Realism checks**: After generation, validate that:
+   - Conditional distributions (e.g., P(Income | occupation, relationship)) match the user-provided samples within ±5% tolerance for marginal proportions.
+   - No invalid combinations exist (e.g., relationship='Husband' with sex='Female').
+   - Time order: all causes are generated before their effects.
+
+Generate synthetic data strictly adhering to this DAG and guidance.</Task>
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.42857142857142855
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'hours-per-week'), ('age', 'occupation'), ('education-num', 'education'), ('education-num', 'Income'), ('education', 'occupation'), ('occupation', 'Income'), ('marital-status', 'relationship'), ('sex', 'relationship'), ('relationship', 'Income'), ('native-country', 'race'), ('race', 'sex'), ('workclass', 'Income'), ('capital-gain', 'Income'), ('hours-per-week', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that faithfully represents these causal relationships. Each feature must be generated conditioning only on its direct causes as listed, following a valid topological order. Below are the specific steps to ensure causal consistency:
+
+1. **Exogenous variables** (no incoming causes): 'age', 'education-num', 'marital-status', 'native-country', 'workclass', 'capital-gain' – sample these independently from the user-provided data distribution (e.g., using empirical marginal distributions).
+
+2. **Generate causes before effects**:
+   - From 'age', generate 'hours-per-week' and 'occupation'.
+   - From 'education-num', generate 'education'.
+   - From 'native-country', generate 'race'; then from 'race', generate 'sex'.
+   - From 'marital-status' and 'sex', generate 'relationship' (ensure logical consistency: e.g., "Husband" only for male sex, "Wife" only for female).
+   - From 'occupation', 'relationship', 'education-num', 'workclass', 'capital-gain', and 'hours-per-week', generate 'Income' using a probabilistic model (e.g., logistic regression or decision tree) calibrated to the user-provided data.
+
+3. **Realism checks**: After generation, validate that:
+   - Conditional distributions (e.g., P(Income | occupation, relationship)) match the user-provided samples within ±5% tolerance for marginal proportions.
+   - No invalid combinations exist (e.g., relationship='Husband' with sex='Female').
+   - Time order: all causes are generated before their effects.
+
+Generate synthetic data strictly adhering to this DAG and guidance.</Task>"
+Score: 42.86%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('marital-status', 'relationship'), ('sex', 'relationship'), ('native-country', 'race'), ('race', 'sex'), ('relationship', 'Income'), ('education-num', 'Income'), ('capital-gain', 'Income'), ('hours-per-week', 'Income'), ('workclass', 'Income'), ('age', 'hours-per-week'), ('age', 'occupation'), ('education', 'occupation')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data strictly adheres to the directed acyclic graph (DAG) defined above: each feature's generation must condition only on its direct causes as listed, and no other variables. Pay close attention to the temporal or logical order of generation (e.g., generate causes before effects). For variables with no listed causes, assume they are exogenous and can be sampled independently from the user-provided data distribution. To improve realism, incorporate the following guidance:
+
+- Generate 'age' first as an exogenous variable, then conditionally generate 'hours-per-week' and 'occupation' based on 'age', and 'education' based on 'education-num'.
+- Generate 'marital-status' exogenously, then 'relationship' based on 'marital-status' and 'sex', avoiding invalid combinations (e.g., "Husband" with female sex).
+- Generate 'native-country' exogenously, then 'race' based on 'native-country', and then 'sex' based on 'race' (note: this implies a statistical dependency, not biological causation).
+- Generate 'workclass', 'capital-gain', and 'income' after all other features, ensuring 'Income' is caused by 'occupation', 'relationship', 'education-num', 'capital-gain', 'hours-per-week', and 'workclass'. Use a probabilistic model (e.g., logistic regression or decision tree) to generate 'Income' based on its causes, calibrated to the user-provided data.
+
+Validate the generated data by checking that conditional probabilities and dependencies match the user-provided samples within reasonable tolerance (e.g., ±5% in marginal proportions or correlation strength).</Task>"
+Score: 45.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'native-country'), ('sex', 'race'), ('Income', 'relationship'), ('Income', 'education-num'), ('Income', 'capital-gain'), ('Income', 'hours-per-week'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 57.14%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 1, batch: 2 <<<<<<<<<<<<<<<< 
+Instruction: "<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'hours-per-week'), ('age', 'occupation'), ('education-num', 'education'), ('education-num', 'Income'), ('education', 'occupation'), ('occupation', 'Income'), ('marital-status', 'relationship'), ('sex', 'relationship'), ('relationship', 'Income'), ('native-country', 'race'), ('race', 'sex'), ('workclass', 'Income'), ('capital-gain', 'Income'), ('hours-per-week', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that faithfully represents these causal relationships. Each feature must be generated conditioning only on its direct causes as listed, following a valid topological order. Below are the specific steps to ensure causal consistency:
+
+1. **Exogenous variables** (no incoming causes): 'age', 'education-num', 'marital-status', 'native-country', 'workclass', 'capital-gain' – sample these independently from the user-provided data distribution (e.g., using empirical marginal distributions).
+
+2. **Generate causes before effects**:
+   - From 'age', generate 'hours-per-week' and 'occupation' using conditional distributions or models (e.g., linear regression for hours-per-week, multinomial logistic regression for occupation) calibrated to the user-provided data.
+   - From 'education-num', generate 'education' using a multinomial logistic model based on education-num values.
+   - From 'native-country', generate 'race'; then from 'race', generate 'sex' – use conditional probability tables from the data to ensure realistic proportions.
+   - From 'marital-status' and 'sex', generate 'relationship' ensuring logical consistency: e.g., "Husband" only for male sex, "Wife" only for female, "Never-married" for single marital status with any sex.
+   - From 'occupation', 'relationship', 'education-num', 'workclass', 'capital-gain', and 'hours-per-week', generate 'Income' using a probabilistic model (e.g., logistic regression) that is trained on the user-provided data and conditioned on these direct causes.
+
+3. **Realism checks**: After generation, validate that:
+   - Conditional distributions (e.g., P(Income | occupation, relationship)) match the user-provided samples within ±5% tolerance for marginal proportions.
+   - No invalid combinations exist (e.g., relationship='Husband' with sex='Female').
+   - Time order: all causes are generated before their effects.
+   - Discrepancies in conditional probabilities should be flagged and corrected by resampling from the appropriate conditional distributions.
+
+Generate synthetic data strictly adhering to this DAG and guidance, ensuring that the data accurately reflects the causal structure and dependencies in the original samples.</Task>"
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.65
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'native-country'), ('sex', 'race'), ('Income', 'relationship'), ('Income', 'education-num'), ('Income', 'capital-gain'), ('Income', 'hours-per-week'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 52.38%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'hours-per-week'), ('age', 'occupation'), ('education-num', 'education'), ('education-num', 'Income'), ('education', 'occupation'), ('occupation', 'Income'), ('marital-status', 'relationship'), ('sex', 'relationship'), ('relationship', 'Income'), ('native-country', 'race'), ('race', 'sex'), ('workclass', 'Income'), ('capital-gain', 'Income'), ('hours-per-week', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that faithfully represents these causal relationships. Each feature must be generated conditioning only on its direct causes as listed, following a valid topological order. Below are the specific steps to ensure causal consistency:
+
+1. **Exogenous variables** (no incoming causes): 'age', 'education-num', 'marital-status', 'native-country', 'workclass', 'capital-gain' – sample these independently from the user-provided data distribution (e.g., using empirical marginal distributions).
+
+2. **Generate causes before effects**:
+   - From 'age', generate 'hours-per-week' and 'occupation'.
+   - From 'education-num', generate 'education'.
+   - From 'native-country', generate 'race'; then from 'race', generate 'sex'.
+   - From 'marital-status' and 'sex', generate 'relationship' (ensure logical consistency: e.g., "Husband" only for male sex, "Wife" only for female).
+   - From 'occupation', 'relationship', 'education-num', 'workclass', 'capital-gain', and 'hours-per-week', generate 'Income' using a probabilistic model (e.g., logistic regression or decision tree) calibrated to the user-provided data.
+
+3. **Realism checks**: After generation, validate that:
+   - Conditional distributions (e.g., P(Income | occupation, relationship)) match the user-provided samples within ±5% tolerance for marginal proportions.
+   - No invalid combinations exist (e.g., relationship='Husband' with sex='Female').
+   - Time order: all causes are generated before their effects.
+
+Generate synthetic data strictly adhering to this DAG and guidance.</Task>"
+Score: 52.38%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('marital-status', 'relationship'), ('sex', 'relationship'), ('native-country', 'race'), ('race', 'sex'), ('relationship', 'Income'), ('education-num', 'Income'), ('capital-gain', 'Income'), ('hours-per-week', 'Income'), ('workclass', 'Income'), ('age', 'hours-per-week'), ('age', 'occupation'), ('education', 'occupation')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data strictly adheres to the directed acyclic graph (DAG) defined above: each feature's generation must condition only on its direct causes as listed, and no other variables. Pay close attention to the temporal or logical order of generation (e.g., generate causes before effects). For variables with no listed causes, assume they are exogenous and can be sampled independently from the user-provided data distribution. To improve realism, incorporate the following guidance:
+
+- Generate 'age' first as an exogenous variable, then conditionally generate 'hours-per-week' and 'occupation' based on 'age', and 'education' based on 'education-num'.
+- Generate 'marital-status' exogenously, then 'relationship' based on 'marital-status' and 'sex', avoiding invalid combinations (e.g., "Husband" with female sex).
+- Generate 'native-country' exogenously, then 'race' based on 'native-country', and then 'sex' based on 'race' (note: this implies a statistical dependency, not biological causation).
+- Generate 'workclass', 'capital-gain', and 'income' after all other features, ensuring 'Income' is caused by 'occupation', 'relationship', 'education-num', 'capital-gain', 'hours-per-week', and 'workclass'. Use a probabilistic model (e.g., logistic regression or decision tree) to generate 'Income' based on its causes, calibrated to the user-provided data.
+
+Validate the generated data by checking that conditional probabilities and dependencies match the user-provided samples within reasonable tolerance (e.g., ±5% in marginal proportions or correlation strength).</Task>"
+Score: 60.0%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 2, batch: 1 <<<<<<<<<<<<<<<< 
+Instruction: Based on the analysis of the prompt-score pairs, the highest score (60.0%) corresponds to a more complex causal structure with additional connections and more detailed task guidance. The lower scores (52.38%) are for simpler structures with less guidance. To lower the score, we need to simplify the causal structure to reduce complexity and incorporate only the most essential, data-driven relationships, while providing concise task guidance that prevents over-engineering.
+
+Updated prompt:
+
+<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('sex', 'relationship'), ('native-country', 'race'), ('race', 'sex'), ('relationship', 'Income'), ('education-num', 'Income'), ('capital-gain', 'Income'), ('hours-per-week', 'Income'), ('workclass', 'Income'), ('age', 'hours-per-week'), ('age', 'occupation'), ('education', 'occupation')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that faithfully represents these causal relationships given the user-provided samples. Generate synthetic data by following this simple rule: for each feature, when generating its value, only condition on its direct causes as listed in the causal structure above. For variables with no incoming causes (age, education-num, marital-status, native-country, workclass, capital-gain), sample them independently from the user-provided data distribution (e.g., using empirical marginal distributions without any dependencies). Ensure that all variables are generated in a valid topological order (causes before effects) to avoid logical inconsistencies. No additional validation or complex modeling is required beyond this basic causal conditioning.</Task>
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.5238095238095238
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('marital-status', 'relationship'), ('sex', 'relationship'), ('native-country', 'race'), ('race', 'sex'), ('relationship', 'Income'), ('education-num', 'Income'), ('capital-gain', 'Income'), ('hours-per-week', 'Income'), ('workclass', 'Income'), ('age', 'hours-per-week'), ('age', 'occupation'), ('education', 'occupation')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data strictly adheres to the directed acyclic graph (DAG) defined above: each feature's generation must condition only on its direct causes as listed, and no other variables. Pay close attention to the temporal or logical order of generation (e.g., generate causes before effects). For variables with no listed causes, assume they are exogenous and can be sampled independently from the user-provided data distribution. To improve realism, incorporate the following guidance:
+
+- Generate 'age' first as an exogenous variable, then conditionally generate 'hours-per-week' and 'occupation' based on 'age', and 'education' based on 'education-num'.
+- Generate 'marital-status' exogenously, then 'relationship' based on 'marital-status' and 'sex', avoiding invalid combinations (e.g., "Husband" with female sex).
+- Generate 'native-country' exogenously, then 'race' based on 'native-country', and then 'sex' based on 'race' (note: this implies a statistical dependency, not biological causation).
+- Generate 'workclass', 'capital-gain', and 'income' after all other features, ensuring 'Income' is caused by 'occupation', 'relationship', 'education-num', 'capital-gain', 'hours-per-week', and 'workclass'. Use a probabilistic model (e.g., logistic regression or decision tree) to generate 'Income' based on its causes, calibrated to the user-provided data.
+
+Validate the generated data by checking that conditional probabilities and dependencies match the user-provided samples within reasonable tolerance (e.g., ±5% in marginal proportions or correlation strength).</Task>"
+Score: 35.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'native-country'), ('sex', 'race'), ('Income', 'relationship'), ('Income', 'education-num'), ('Income', 'capital-gain'), ('Income', 'hours-per-week'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 38.1%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'hours-per-week'), ('age', 'occupation'), ('education-num', 'education'), ('education-num', 'Income'), ('education', 'occupation'), ('occupation', 'Income'), ('marital-status', 'relationship'), ('sex', 'relationship'), ('relationship', 'Income'), ('native-country', 'race'), ('race', 'sex'), ('workclass', 'Income'), ('capital-gain', 'Income'), ('hours-per-week', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that faithfully represents these causal relationships. Each feature must be generated conditioning only on its direct causes as listed, following a valid topological order. Below are the specific steps to ensure causal consistency:
+
+1. **Exogenous variables** (no incoming causes): 'age', 'education-num', 'marital-status', 'native-country', 'workclass', 'capital-gain' – sample these independently from the user-provided data distribution (e.g., using empirical marginal distributions).
+
+2. **Generate causes before effects**:
+   - From 'age', generate 'hours-per-week' and 'occupation'.
+   - From 'education-num', generate 'education'.
+   - From 'native-country', generate 'race'; then from 'race', generate 'sex'.
+   - From 'marital-status' and 'sex', generate 'relationship' (ensure logical consistency: e.g., "Husband" only for male sex, "Wife" only for female).
+   - From 'occupation', 'relationship', 'education-num', 'workclass', 'capital-gain', and 'hours-per-week', generate 'Income' using a probabilistic model (e.g., logistic regression or decision tree) calibrated to the user-provided data.
+
+3. **Realism checks**: After generation, validate that:
+   - Conditional distributions (e.g., P(Income | occupation, relationship)) match the user-provided samples within ±5% tolerance for marginal proportions.
+   - No invalid combinations exist (e.g., relationship='Husband' with sex='Female').
+   - Time order: all causes are generated before their effects.
+
+Generate synthetic data strictly adhering to this DAG and guidance.</Task>"
+Score: 42.86%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 2, batch: 2 <<<<<<<<<<<<<<<< 
+Instruction: Here is the updated prompt, incorporating a refined causal structure and more precise guidance to reduce the score.
+
+---
+
+<Causal structure>
+Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'hours-per-week'), 
+ ('age', 'occupation'), 
+ ('education-num', 'education'), 
+ ('education', 'occupation'),
+ ('education-num', 'Income'),
+ ('marital-status', 'relationship'), 
+ ('sex', 'relationship'), 
+ ('relationship', 'marital-status'),
+ ('relationship', 'Income'), 
+ ('native-country', 'race'), 
+ ('race', 'sex'), 
+ ('workclass', 'Income'), 
+ ('capital-gain', 'Income'), 
+ ('hours-per-week', 'Income'),
+ ('occupation', 'Income')]
+</Causal structure>
+
+<Task>
+The ultimate goal is to produce accurate and convincing synthetic data that strictly adheres to the directed acyclic graph (DAG) defined above. Each feature must be generated conditioning only on its direct causes, following a valid topological order. Below are precise steps to ensure causal consistency:
+
+1. **Exogenous variables** (no incoming causes): 'age', 'education-num', 'marital-status', 'native-country', 'workclass', 'capital-gain'  
+   - Sample these independently from the user-provided data distribution (e.g., using empirical marginal distributions or kernel density estimates for continuous variables).
+
+2. **Generate causes before effects**:
+   - From 'age', generate 'hours-per-week' (use a linear regression with age, then add noise matching the empirical residual distribution) and 'occupation' (use a multinomial logistic regression conditioned on age).
+   - From 'education-num', generate 'education' (use a categorical model mapping education-num to education levels, with a small amount of noise to reflect real-world mismatches).
+   - From 'education', update 'occupation' (condition on both age and education, using a probabilistic decision tree or logistic regression fit on the user data).
+   - From 'native-country', generate 'race' (use a conditional probability table from user data, ensuring rare combinations are smoothed via Laplace correction).
+   - From 'race', generate 'sex' (use a conditional probability table, again with smoothing to avoid impossible values).
+   - From 'marital-status' and 'sex', generate 'relationship' (must enforce logical consistency: e.g., "Husband" only for sex=Male, "Wife" only for sex=Female, "Never-married" only if marital-status=Never-married). If a generated combination violates this, resample until valid.
+   - Add feedback: from 'relationship', generate 'marital-status' (this is a minor correction to reflect that certain relationships imply certain marital statuses; only adjust if the sampled marital-status is inconsistent with the relationship, using a conditional probability table derived from user data; otherwise keep the original).
+   - From 'occupation', 'relationship', 'education-num', 'workclass', 'capital-gain', and 'hours-per-week', generate 'Income' using a probabilistic model (e.g., gradient-boosted decision tree or logistic regression) calibrated to the user-provided data. Use stratified sampling to ensure class balance matches the original data.
+
+3. **Realism checks after generation**:
+   - Validate that conditional distributions (e.g., P(Income | occupation, relationship)) match the user-provided samples within ±2% tolerance for marginal proportions.
+   - Check that no invalid combinations exist (e.g., relationship='Husband' with sex='Female', or marital-status='Never-married' with relationship='Spouse').
+   - For continuous variables (age, hours-per-week, education-num, capital-gain), ensure the synthetic distribution matches the empirical distribution (use Kolmogorov-Smirnov test with p > 0.05).
+   - If any check fails, rerun the generation step for that sample or reject the entire dataset and regenerate.
+
+Generate synthetic data strictly adhering to this DAG and guidance. The generative process must be reproducible and logically consistent.
+</Task>
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.4
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('marital-status', 'relationship'), ('sex', 'relationship'), ('native-country', 'race'), ('race', 'sex'), ('relationship', 'Income'), ('education-num', 'Income'), ('capital-gain', 'Income'), ('hours-per-week', 'Income'), ('workclass', 'Income'), ('age', 'hours-per-week'), ('age', 'occupation'), ('education', 'occupation')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data strictly adheres to the directed acyclic graph (DAG) defined above: each feature's generation must condition only on its direct causes as listed, and no other variables. Pay close attention to the temporal or logical order of generation (e.g., generate causes before effects). For variables with no listed causes, assume they are exogenous and can be sampled independently from the user-provided data distribution. To improve realism, incorporate the following guidance:
+
+- Generate 'age' first as an exogenous variable, then conditionally generate 'hours-per-week' and 'occupation' based on 'age', and 'education' based on 'education-num'.
+- Generate 'marital-status' exogenously, then 'relationship' based on 'marital-status' and 'sex', avoiding invalid combinations (e.g., "Husband" with female sex).
+- Generate 'native-country' exogenously, then 'race' based on 'native-country', and then 'sex' based on 'race' (note: this implies a statistical dependency, not biological causation).
+- Generate 'workclass', 'capital-gain', and 'income' after all other features, ensuring 'Income' is caused by 'occupation', 'relationship', 'education-num', 'capital-gain', 'hours-per-week', and 'workclass'. Use a probabilistic model (e.g., logistic regression or decision tree) to generate 'Income' based on its causes, calibrated to the user-provided data.
+
+Validate the generated data by checking that conditional probabilities and dependencies match the user-provided samples within reasonable tolerance (e.g., ±5% in marginal proportions or correlation strength).</Task>"
+Score: 40.0%
+
+""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'hours-per-week'), ('age', 'occupation'), ('education-num', 'education'), ('education-num', 'Income'), ('education', 'occupation'), ('occupation', 'Income'), ('marital-status', 'relationship'), ('sex', 'relationship'), ('relationship', 'Income'), ('native-country', 'race'), ('race', 'sex'), ('workclass', 'Income'), ('capital-gain', 'Income'), ('hours-per-week', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that faithfully represents these causal relationships. Each feature must be generated conditioning only on its direct causes as listed, following a valid topological order. Below are the specific steps to ensure causal consistency:
+
+1. **Exogenous variables** (no incoming causes): 'age', 'education-num', 'marital-status', 'native-country', 'workclass', 'capital-gain' – sample these independently from the user-provided data distribution (e.g., using empirical marginal distributions).
+
+2. **Generate causes before effects**:
+   - From 'age', generate 'hours-per-week' and 'occupation' using conditional distributions or models (e.g., linear regression for hours-per-week, multinomial logistic regression for occupation) calibrated to the user-provided data.
+   - From 'education-num', generate 'education' using a multinomial logistic model based on education-num values.
+   - From 'native-country', generate 'race'; then from 'race', generate 'sex' – use conditional probability tables from the data to ensure realistic proportions.
+   - From 'marital-status' and 'sex', generate 'relationship' ensuring logical consistency: e.g., "Husband" only for male sex, "Wife" only for female, "Never-married" for single marital status with any sex.
+   - From 'occupation', 'relationship', 'education-num', 'workclass', 'capital-gain', and 'hours-per-week', generate 'Income' using a probabilistic model (e.g., logistic regression) that is trained on the user-provided data and conditioned on these direct causes.
+
+3. **Realism checks**: After generation, validate that:
+   - Conditional distributions (e.g., P(Income | occupation, relationship)) match the user-provided samples within ±5% tolerance for marginal proportions.
+   - No invalid combinations exist (e.g., relationship='Husband' with sex='Female').
+   - Time order: all causes are generated before their effects.
+   - Discrepancies in conditional probabilities should be flagged and corrected by resampling from the appropriate conditional distributions.
+
+Generate synthetic data strictly adhering to this DAG and guidance, ensuring that the data accurately reflects the causal structure and dependencies in the original samples.</Task>""
+Score: 40.0%
+
+"Here is the updated prompt, incorporating a refined causal structure and more precise guidance to reduce the score.
+
+---
+
+<Causal structure>
+Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'hours-per-week'), 
+ ('age', 'occupation'), 
+ ('education-num', 'education'), 
+ ('education', 'occupation'),
+ ('education-num', 'Income'),
+ ('marital-status', 'relationship'), 
+ ('sex', 'relationship'), 
+ ('relationship', 'marital-status'),
+ ('relationship', 'Income'), 
+ ('native-country', 'race'), 
+ ('race', 'sex'), 
+ ('workclass', 'Income'), 
+ ('capital-gain', 'Income'), 
+ ('hours-per-week', 'Income'),
+ ('occupation', 'Income')]
+</Causal structure>
+
+<Task>
+The ultimate goal is to produce accurate and convincing synthetic data that strictly adheres to the directed acyclic graph (DAG) defined above. Each feature must be generated conditioning only on its direct causes, following a valid topological order. Below are precise steps to ensure causal consistency:
+
+1. **Exogenous variables** (no incoming causes): 'age', 'education-num', 'marital-status', 'native-country', 'workclass', 'capital-gain'  
+   - Sample these independently from the user-provided data distribution (e.g., using empirical marginal distributions or kernel density estimates for continuous variables).
+
+2. **Generate causes before effects**:
+   - From 'age', generate 'hours-per-week' (use a linear regression with age, then add noise matching the empirical residual distribution) and 'occupation' (use a multinomial logistic regression conditioned on age).
+   - From 'education-num', generate 'education' (use a categorical model mapping education-num to education levels, with a small amount of noise to reflect real-world mismatches).
+   - From 'education', update 'occupation' (condition on both age and education, using a probabilistic decision tree or logistic regression fit on the user data).
+   - From 'native-country', generate 'race' (use a conditional probability table from user data, ensuring rare combinations are smoothed via Laplace correction).
+   - From 'race', generate 'sex' (use a conditional probability table, again with smoothing to avoid impossible values).
+   - From 'marital-status' and 'sex', generate 'relationship' (must enforce logical consistency: e.g., "Husband" only for sex=Male, "Wife" only for sex=Female, "Never-married" only if marital-status=Never-married). If a generated combination violates this, resample until valid.
+   - Add feedback: from 'relationship', generate 'marital-status' (this is a minor correction to reflect that certain relationships imply certain marital statuses; only adjust if the sampled marital-status is inconsistent with the relationship, using a conditional probability table derived from user data; otherwise keep the original).
+   - From 'occupation', 'relationship', 'education-num', 'workclass', 'capital-gain', and 'hours-per-week', generate 'Income' using a probabilistic model (e.g., gradient-boosted decision tree or logistic regression) calibrated to the user-provided data. Use stratified sampling to ensure class balance matches the original data.
+
+3. **Realism checks after generation**:
+   - Validate that conditional distributions (e.g., P(Income | occupation, relationship)) match the user-provided samples within ±2% tolerance for marginal proportions.
+   - Check that no invalid combinations exist (e.g., relationship='Husband' with sex='Female', or marital-status='Never-married' with relationship='Spouse').
+   - For continuous variables (age, hours-per-week, education-num, capital-gain), ensure the synthetic distribution matches the empirical distribution (use Kolmogorov-Smirnov test with p > 0.05).
+   - If any check fails, rerun the generation step for that sample or reject the entire dataset and regenerate.
+
+Generate synthetic data strictly adhering to this DAG and guidance. The generative process must be reproducible and logically consistent.
+</Task>"
+Score: 40.0%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 3, batch: 1 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>
+Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'hours-per-week'), 
+ ('age', 'occupation'), 
+ ('education-num', 'education'), 
+ ('education', 'occupation'),
+ ('education-num', 'Income'),
+ ('marital-status', 'relationship'), 
+ ('sex', 'relationship'), 
+ ('relationship', 'marital-status'),
+ ('relationship', 'Income'), 
+ ('native-country', 'race'), 
+ ('race', 'sex'), 
+ ('workclass', 'Income'), 
+ ('capital-loss', 'capital-gain'),
+ ('capital-loss', 'Income'),
+ ('hours-per-week', 'Income'),
+ ('occupation', 'Income')]
+</Causal structure>
+
+<Task>
+The ultimate goal is to produce accurate and convincing synthetic data that strictly adheres to the directed acyclic graph (DAG) defined above. Each feature must be generated conditioning only on its direct causes, following a valid topological order. Below are precise steps to ensure causal consistency:
+
+1. **Exogenous variables** (no incoming causes): 'age', 'education-num', 'marital-status', 'native-country', 'workclass', 'capital-loss'  
+   - Sample these independently from the user-provided data distribution (e.g., using empirical marginal distributions or kernel density estimates for continuous variables). For 'capital-loss', sample from the empirical distribution, which may contain many zeros.
+
+2. **Generate causes before effects**:
+   - From 'age', generate 'hours-per-week' using a conditional gamma regression (since hours are positive and right-skewed) with age as the sole predictor, adding noise from the residual distribution of the user data.
+   - From 'age', generate 'occupation' using a multinomial logistic regression conditioned on age, fitted on the user data.
+   - From 'education-num', generate 'education' using a categorical model that maps education-num to education levels, with a small amount of noise (0.5% of samples) to reflect real-world mismatches.
+   - From 'education' and 'age', generate 'occupation' by conditioning on both, using a random forest classifier (with max_depth=5) fitted on user data to capture non-linear interactions.
+   - From 'native-country', generate 'race' using a conditional probability table from user data, with Laplace smoothing (alpha=1) to handle rare combinations, and cap at 5% maximum deviation from empirical proportions.
+   - From 'race', generate 'sex' using a conditional probability table, again with Laplace smoothing and logical constraints: sex must be either Male or Female.
+   - From 'marital-status' and 'sex', generate 'relationship' with strict logical enforcement: 'Husband' only if sex=Male, 'Wife' only if sex=Female, 'Never-married' only if marital-status='Never-married', 'Divorced' or 'Separated' only if marital-status in ('Divorced','Separated'), 'Married-civ-spouse' only if marital-status='Married-civ-spouse', etc. If a generated combination violates this, resample from the exact conditional distribution (not marginal) until valid.
+   - Then, from 'relationship', refine 'marital-status' by correcting any inconsistencies: if relationship='Husband' or 'Wife', force marital-status='Married-civ-spouse'; if relationship='Never-married', force marital-status='Never-married'; if relationship='Divorced', force marital-status='Divorced'; if relationship='Separated', force marital-status='Separated'; otherwise, keep original marital-status. This ensures mutual consistency.
+   - From 'capital-loss', generate 'capital-gain' using a conditional Poisson regression (with log link) because capital-gain is count-like and zero-inflated, fitted on user data with cap at 5% of extreme values to avoid outliers.
+   - From 'capital-loss' and 'capital-gain', add a constraint: capital-loss and capital-gain cannot both be non-zero for the same individual (enforce mutually exclusive). If both are non-zero, resample capital-gain from the conditional distribution given capital-loss=0.
+   - From 'occupation', 'relationship', 'education-num', 'workclass', 'capital-loss', 'capital-gain', and 'hours-per-week', generate 'Income' using a gradient-boosted classifier (e.g., XGBoost with max_depth=3, n_estimators=100) calibrated to predict log-odds of Income >50K. Use Platt scaling to calibrate probabilities and threshold at the empirical prevalence to assign binary Income labels. Ensure that the feature importance in the synthetic generative process mirrors the user data (within 10% relative difference).
+
+3. **Realism checks after generation**:
+   - Validate that conditional distributions (e.g., P(Income | occupation, relationship)) match the user-provided samples within ±1.5% tolerance for marginal proportions (e.g., overall Income proportion within 1.5% of original).
+   - Check that no invalid combinations exist (e.g., relationship='Husband' with sex='Female', or marital-status='Never-married' with relationship='Spouse', or capital-loss>0 and capital-gain>0 for same person).
+   - For continuous variables (age, hours-per-week, education-num), ensure the synthetic distribution matches the empirical distribution using Kolmogorov-Smirnov test with p > 0.10. For capital-loss and capital-gain, ensure zero-inflation proportion matches within 2%.
+   - If any check fails, regenerate the entire dataset (at most 3 attempts). After 3 failures, adjust conditional models by reducing variance (e.g., increasing regularization) and retry.
+   - Optionally, use rejection sampling: generate 10% extra samples and reject those that violate logical or distributional constraints, keeping only valid ones.
+
+Generate synthetic data strictly adhering to this DAG and guidance. The generative process must be reproducible (set random seed=42 for all models) and logically consistent. Output the synthetic data as a comma-separated file with headers matching the original user-provided samples.
+</Task>
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.5714285714285714
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'native-country'), ('sex', 'race'), ('Income', 'relationship'), ('Income', 'education-num'), ('Income', 'capital-gain'), ('Income', 'hours-per-week'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 42.86%
+
+"Here is the updated prompt, incorporating a refined causal structure and more precise guidance to reduce the score.
+
+---
+
+<Causal structure>
+Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'hours-per-week'), 
+ ('age', 'occupation'), 
+ ('education-num', 'education'), 
+ ('education', 'occupation'),
+ ('education-num', 'Income'),
+ ('marital-status', 'relationship'), 
+ ('sex', 'relationship'), 
+ ('relationship', 'marital-status'),
+ ('relationship', 'Income'), 
+ ('native-country', 'race'), 
+ ('race', 'sex'), 
+ ('workclass', 'Income'), 
+ ('capital-gain', 'Income'), 
+ ('hours-per-week', 'Income'),
+ ('occupation', 'Income')]
+</Causal structure>
+
+<Task>
+The ultimate goal is to produce accurate and convincing synthetic data that strictly adheres to the directed acyclic graph (DAG) defined above. Each feature must be generated conditioning only on its direct causes, following a valid topological order. Below are precise steps to ensure causal consistency:
+
+1. **Exogenous variables** (no incoming causes): 'age', 'education-num', 'marital-status', 'native-country', 'workclass', 'capital-gain'  
+   - Sample these independently from the user-provided data distribution (e.g., using empirical marginal distributions or kernel density estimates for continuous variables).
+
+2. **Generate causes before effects**:
+   - From 'age', generate 'hours-per-week' (use a linear regression with age, then add noise matching the empirical residual distribution) and 'occupation' (use a multinomial logistic regression conditioned on age).
+   - From 'education-num', generate 'education' (use a categorical model mapping education-num to education levels, with a small amount of noise to reflect real-world mismatches).
+   - From 'education', update 'occupation' (condition on both age and education, using a probabilistic decision tree or logistic regression fit on the user data).
+   - From 'native-country', generate 'race' (use a conditional probability table from user data, ensuring rare combinations are smoothed via Laplace correction).
+   - From 'race', generate 'sex' (use a conditional probability table, again with smoothing to avoid impossible values).
+   - From 'marital-status' and 'sex', generate 'relationship' (must enforce logical consistency: e.g., "Husband" only for sex=Male, "Wife" only for sex=Female, "Never-married" only if marital-status=Never-married). If a generated combination violates this, resample until valid.
+   - Add feedback: from 'relationship', generate 'marital-status' (this is a minor correction to reflect that certain relationships imply certain marital statuses; only adjust if the sampled marital-status is inconsistent with the relationship, using a conditional probability table derived from user data; otherwise keep the original).
+   - From 'occupation', 'relationship', 'education-num', 'workclass', 'capital-gain', and 'hours-per-week', generate 'Income' using a probabilistic model (e.g., gradient-boosted decision tree or logistic regression) calibrated to the user-provided data. Use stratified sampling to ensure class balance matches the original data.
+
+3. **Realism checks after generation**:
+   - Validate that conditional distributions (e.g., P(Income | occupation, relationship)) match the user-provided samples within ±2% tolerance for marginal proportions.
+   - Check that no invalid combinations exist (e.g., relationship='Husband' with sex='Female', or marital-status='Never-married' with relationship='Spouse').
+   - For continuous variables (age, hours-per-week, education-num, capital-gain), ensure the synthetic distribution matches the empirical distribution (use Kolmogorov-Smirnov test with p > 0.05).
+   - If any check fails, rerun the generation step for that sample or reject the entire dataset and regenerate.
+
+Generate synthetic data strictly adhering to this DAG and guidance. The generative process must be reproducible and logically consistent.
+</Task>"
+Score: 50.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('marital-status', 'relationship'), ('sex', 'relationship'), ('native-country', 'race'), ('race', 'sex'), ('relationship', 'Income'), ('education-num', 'Income'), ('capital-gain', 'Income'), ('hours-per-week', 'Income'), ('workclass', 'Income'), ('age', 'hours-per-week'), ('age', 'occupation'), ('education', 'occupation')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data strictly adheres to the directed acyclic graph (DAG) defined above: each feature's generation must condition only on its direct causes as listed, and no other variables. Pay close attention to the temporal or logical order of generation (e.g., generate causes before effects). For variables with no listed causes, assume they are exogenous and can be sampled independently from the user-provided data distribution. To improve realism, incorporate the following guidance:
+
+- Generate 'age' first as an exogenous variable, then conditionally generate 'hours-per-week' and 'occupation' based on 'age', and 'education' based on 'education-num'.
+- Generate 'marital-status' exogenously, then 'relationship' based on 'marital-status' and 'sex', avoiding invalid combinations (e.g., "Husband" with female sex).
+- Generate 'native-country' exogenously, then 'race' based on 'native-country', and then 'sex' based on 'race' (note: this implies a statistical dependency, not biological causation).
+- Generate 'workclass', 'capital-gain', and 'income' after all other features, ensuring 'Income' is caused by 'occupation', 'relationship', 'education-num', 'capital-gain', 'hours-per-week', and 'workclass'. Use a probabilistic model (e.g., logistic regression or decision tree) to generate 'Income' based on its causes, calibrated to the user-provided data.
+
+Validate the generated data by checking that conditional probabilities and dependencies match the user-provided samples within reasonable tolerance (e.g., ±5% in marginal proportions or correlation strength).</Task>"
+Score: 55.0%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 3, batch: 2 <<<<<<<<<<<<<<<< 
+Instruction: Here is the optimized prompt:
+
+<Causal structure>
+Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'),
+ ('age', 'hours-per-week'),
+ ('education-num', 'education'),
+ ('education', 'occupation'),
+ ('marital-status', 'sex'),
+ ('sex', 'relationship'),
+ ('relationship', 'Income'),
+ ('occupation', 'Income'),
+ ('hours-per-week', 'Income'),
+ ('capital-gain', 'Income'),
+ ('workclass', 'Income'),
+ ('native-country', 'race'),
+ ('race', 'Income'),
+ ('education-num', 'Income')]
+</Causal structure>
+
+<Task>
+The ultimate goal is to produce accurate and convincing synthetic data that strictly adheres to the directed acyclic graph (DAG) defined above. Each feature must be generated conditioning only on its direct causes, following a valid topological order. Below are precise steps to ensure causal consistency:
+
+1. **Exogenous variables** (no incoming causes): 'age', 'education-num', 'marital-status', 'native-country', 'workclass', 'capital-gain'
+   - Sample these independently from the user-provided data distribution (e.g., using empirical marginal distributions or kernel density estimates for continuous variables).
+
+2. **Generate causes before effects**:
+   - From 'age', generate 'occupation' (using a multinomial logistic regression conditioned on age) and 'hours-per-week' (using a linear regression with age, then add noise matching the empirical residual distribution).
+   - From 'education-num', generate 'education' (using a categorical model mapping education-num to education levels, with a small amount of noise to reflect real-world mismatches).
+   - From 'education', update or generate 'occupation' (condition on both age and education, using a probabilistic decision tree or logistic regression fit on the user data).
+   - From 'marital-status', generate 'sex' (use a conditional probability table from user data, ensuring consistency—e.g., if marital-status is "Never-married", sex should be conditioned correctly based on data frequencies; apply Laplace smoothing for rare combinations).
+   - From 'sex', generate 'relationship' (use a conditional probability table, enforcing logical consistency: e.g., "Husband" only for sex=Male, "Wife" only for sex=Female, "Unmarried" only if sex matches data patterns).
+   - From 'native-country', generate 'race' (use a conditional probability table, with Laplace smoothing to avoid zero-probability events).
+   - From 'race', generate 'Income' as a direct cause, along with 'occupation', 'relationship', 'hours-per-week', 'capital-gain', 'workclass', and 'education-num'. Use a probabilistic model (e.g., gradient-boosted decision tree or logistic regression) for 'Income', conditioning on all these direct causes. Calibrate the model to user-provided data and use stratified sampling if needed to match marginal Income distribution.
+
+3. **Realism checks after generation**:
+   - Validate that conditional distributions (e.g., P(Income | occupation, relationship, race)) match the user-provided samples within ±2% tolerance for marginal proportions.
+   - Check that no invalid combinations exist (e.g., relationship='Husband' with sex='Female', or marital-status='Married-civ-spouse' with sex='Male' having relationship='Wife').
+   - For continuous variables (age, hours-per-week, education-num, capital-gain), ensure the synthetic distribution matches the empirical distribution (use Kolmogorov-Smirnov test with p > 0.05).
+   - If any check fails, reject the entire dataset and regenerate from scratch.
+
+Generate synthetic data strictly adhering to this DAG and guidance. The generative process must be reproducible, logically consistent, and produce high-quality data that faithfully represents the user-provided causal structure.
+</Task>
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.35
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'hours-per-week'), ('age', 'occupation'), ('education-num', 'education'), ('education-num', 'Income'), ('education', 'occupation'), ('occupation', 'Income'), ('marital-status', 'relationship'), ('sex', 'relationship'), ('relationship', 'Income'), ('native-country', 'race'), ('race', 'sex'), ('workclass', 'Income'), ('capital-gain', 'Income'), ('hours-per-week', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that faithfully represents these causal relationships. Each feature must be generated conditioning only on its direct causes as listed, following a valid topological order. Below are the specific steps to ensure causal consistency:
+
+1. **Exogenous variables** (no incoming causes): 'age', 'education-num', 'marital-status', 'native-country', 'workclass', 'capital-gain' – sample these independently from the user-provided data distribution (e.g., using empirical marginal distributions).
+
+2. **Generate causes before effects**:
+   - From 'age', generate 'hours-per-week' and 'occupation'.
+   - From 'education-num', generate 'education'.
+   - From 'native-country', generate 'race'; then from 'race', generate 'sex'.
+   - From 'marital-status' and 'sex', generate 'relationship' (ensure logical consistency: e.g., "Husband" only for male sex, "Wife" only for female).
+   - From 'occupation', 'relationship', 'education-num', 'workclass', 'capital-gain', and 'hours-per-week', generate 'Income' using a probabilistic model (e.g., logistic regression or decision tree) calibrated to the user-provided data.
+
+3. **Realism checks**: After generation, validate that:
+   - Conditional distributions (e.g., P(Income | occupation, relationship)) match the user-provided samples within ±5% tolerance for marginal proportions.
+   - No invalid combinations exist (e.g., relationship='Husband' with sex='Female').
+   - Time order: all causes are generated before their effects.
+
+Generate synthetic data strictly adhering to this DAG and guidance.</Task>"
+Score: 33.33%
+
+"Here is the optimized prompt:
+
+<Causal structure>
+Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'),
+ ('age', 'hours-per-week'),
+ ('education-num', 'education'),
+ ('education', 'occupation'),
+ ('marital-status', 'sex'),
+ ('sex', 'relationship'),
+ ('relationship', 'Income'),
+ ('occupation', 'Income'),
+ ('hours-per-week', 'Income'),
+ ('capital-gain', 'Income'),
+ ('workclass', 'Income'),
+ ('native-country', 'race'),
+ ('race', 'Income'),
+ ('education-num', 'Income')]
+</Causal structure>
+
+<Task>
+The ultimate goal is to produce accurate and convincing synthetic data that strictly adheres to the directed acyclic graph (DAG) defined above. Each feature must be generated conditioning only on its direct causes, following a valid topological order. Below are precise steps to ensure causal consistency:
+
+1. **Exogenous variables** (no incoming causes): 'age', 'education-num', 'marital-status', 'native-country', 'workclass', 'capital-gain'
+   - Sample these independently from the user-provided data distribution (e.g., using empirical marginal distributions or kernel density estimates for continuous variables).
+
+2. **Generate causes before effects**:
+   - From 'age', generate 'occupation' (using a multinomial logistic regression conditioned on age) and 'hours-per-week' (using a linear regression with age, then add noise matching the empirical residual distribution).
+   - From 'education-num', generate 'education' (using a categorical model mapping education-num to education levels, with a small amount of noise to reflect real-world mismatches).
+   - From 'education', update or generate 'occupation' (condition on both age and education, using a probabilistic decision tree or logistic regression fit on the user data).
+   - From 'marital-status', generate 'sex' (use a conditional probability table from user data, ensuring consistency—e.g., if marital-status is "Never-married", sex should be conditioned correctly based on data frequencies; apply Laplace smoothing for rare combinations).
+   - From 'sex', generate 'relationship' (use a conditional probability table, enforcing logical consistency: e.g., "Husband" only for sex=Male, "Wife" only for sex=Female, "Unmarried" only if sex matches data patterns).
+   - From 'native-country', generate 'race' (use a conditional probability table, with Laplace smoothing to avoid zero-probability events).
+   - From 'race', generate 'Income' as a direct cause, along with 'occupation', 'relationship', 'hours-per-week', 'capital-gain', 'workclass', and 'education-num'. Use a probabilistic model (e.g., gradient-boosted decision tree or logistic regression) for 'Income', conditioning on all these direct causes. Calibrate the model to user-provided data and use stratified sampling if needed to match marginal Income distribution.
+
+3. **Realism checks after generation**:
+   - Validate that conditional distributions (e.g., P(Income | occupation, relationship, race)) match the user-provided samples within ±2% tolerance for marginal proportions.
+   - Check that no invalid combinations exist (e.g., relationship='Husband' with sex='Female', or marital-status='Married-civ-spouse' with sex='Male' having relationship='Wife').
+   - For continuous variables (age, hours-per-week, education-num, capital-gain), ensure the synthetic distribution matches the empirical distribution (use Kolmogorov-Smirnov test with p > 0.05).
+   - If any check fails, reject the entire dataset and regenerate from scratch.
+
+Generate synthetic data strictly adhering to this DAG and guidance. The generative process must be reproducible, logically consistent, and produce high-quality data that faithfully represents the user-provided causal structure.
+</Task>"
+Score: 35.0%
+
+"Based on the analysis of the prompt-score pairs, the highest score (60.0%) corresponds to a more complex causal structure with additional connections and more detailed task guidance. The lower scores (52.38%) are for simpler structures with less guidance. To lower the score, we need to simplify the causal structure to reduce complexity and incorporate only the most essential, data-driven relationships, while providing concise task guidance that prevents over-engineering.
+
+Updated prompt:
+
+<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('sex', 'relationship'), ('native-country', 'race'), ('race', 'sex'), ('relationship', 'Income'), ('education-num', 'Income'), ('capital-gain', 'Income'), ('hours-per-week', 'Income'), ('workclass', 'Income'), ('age', 'hours-per-week'), ('age', 'occupation'), ('education', 'occupation')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that faithfully represents these causal relationships given the user-provided samples. Generate synthetic data by following this simple rule: for each feature, when generating its value, only condition on its direct causes as listed in the causal structure above. For variables with no incoming causes (age, education-num, marital-status, native-country, workclass, capital-gain), sample them independently from the user-provided data distribution (e.g., using empirical marginal distributions without any dependencies). Ensure that all variables are generated in a valid topological order (causes before effects) to avoid logical inconsistencies. No additional validation or complex modeling is required beyond this basic causal conditioning.</Task>"
+Score: 38.1%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 4, batch: 1 <<<<<<<<<<<<<<<< 
+Instruction: Based on the analysis of the prompt-score pairs, the highest scores (35.0% and 38.1%) correspond to more complex causal structures with additional connections and detailed guidance. The lowest score (33.33%) corresponds to a simpler structure with moderate guidance. To lower the score further, we need to simplify the causal structure to include only the most essential, strongly supported relationships and reduce the task guidance to a bare minimum that prevents over-engineering.
+
+Updated prompt:
+
+<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'hours-per-week'), ('age', 'occupation'), ('education-num', 'education'), ('education', 'occupation'), ('occupation', 'Income'), ('sex', 'relationship'), ('relationship', 'Income'), ('native-country', 'race'), ('race', 'sex'), ('education-num', 'Income')]
+</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that faithfully represents these causal relationships. Generate each feature by conditioning only on its direct causes listed above, following a valid topological order (causes before effects). For features with no incoming causes (age, education-num, marital-status, native-country, workclass, capital-gain), sample them independently from the user-provided empirical marginal distributions. Ensure that the generated data avoids logical inconsistencies (e.g., "Husband" only for male sex, "Wife" only for female). No additional validation or complex modeling is required.</Task>
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.5714285714285714
+
+"Here is the optimized prompt:
+
+<Causal structure>
+Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'),
+ ('age', 'hours-per-week'),
+ ('education-num', 'education'),
+ ('education', 'occupation'),
+ ('marital-status', 'sex'),
+ ('sex', 'relationship'),
+ ('relationship', 'Income'),
+ ('occupation', 'Income'),
+ ('hours-per-week', 'Income'),
+ ('capital-gain', 'Income'),
+ ('workclass', 'Income'),
+ ('native-country', 'race'),
+ ('race', 'Income'),
+ ('education-num', 'Income')]
+</Causal structure>
+
+<Task>
+The ultimate goal is to produce accurate and convincing synthetic data that strictly adheres to the directed acyclic graph (DAG) defined above. Each feature must be generated conditioning only on its direct causes, following a valid topological order. Below are precise steps to ensure causal consistency:
+
+1. **Exogenous variables** (no incoming causes): 'age', 'education-num', 'marital-status', 'native-country', 'workclass', 'capital-gain'
+   - Sample these independently from the user-provided data distribution (e.g., using empirical marginal distributions or kernel density estimates for continuous variables).
+
+2. **Generate causes before effects**:
+   - From 'age', generate 'occupation' (using a multinomial logistic regression conditioned on age) and 'hours-per-week' (using a linear regression with age, then add noise matching the empirical residual distribution).
+   - From 'education-num', generate 'education' (using a categorical model mapping education-num to education levels, with a small amount of noise to reflect real-world mismatches).
+   - From 'education', update or generate 'occupation' (condition on both age and education, using a probabilistic decision tree or logistic regression fit on the user data).
+   - From 'marital-status', generate 'sex' (use a conditional probability table from user data, ensuring consistency—e.g., if marital-status is "Never-married", sex should be conditioned correctly based on data frequencies; apply Laplace smoothing for rare combinations).
+   - From 'sex', generate 'relationship' (use a conditional probability table, enforcing logical consistency: e.g., "Husband" only for sex=Male, "Wife" only for sex=Female, "Unmarried" only if sex matches data patterns).
+   - From 'native-country', generate 'race' (use a conditional probability table, with Laplace smoothing to avoid zero-probability events).
+   - From 'race', generate 'Income' as a direct cause, along with 'occupation', 'relationship', 'hours-per-week', 'capital-gain', 'workclass', and 'education-num'. Use a probabilistic model (e.g., gradient-boosted decision tree or logistic regression) for 'Income', conditioning on all these direct causes. Calibrate the model to user-provided data and use stratified sampling if needed to match marginal Income distribution.
+
+3. **Realism checks after generation**:
+   - Validate that conditional distributions (e.g., P(Income | occupation, relationship, race)) match the user-provided samples within ±2% tolerance for marginal proportions.
+   - Check that no invalid combinations exist (e.g., relationship='Husband' with sex='Female', or marital-status='Married-civ-spouse' with sex='Male' having relationship='Wife').
+   - For continuous variables (age, hours-per-week, education-num, capital-gain), ensure the synthetic distribution matches the empirical distribution (use Kolmogorov-Smirnov test with p > 0.05).
+   - If any check fails, reject the entire dataset and regenerate from scratch.
+
+Generate synthetic data strictly adhering to this DAG and guidance. The generative process must be reproducible, logically consistent, and produce high-quality data that faithfully represents the user-provided causal structure.
+</Task>"
+Score: 35.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'hours-per-week'), ('age', 'occupation'), ('education-num', 'education'), ('education-num', 'Income'), ('education', 'occupation'), ('occupation', 'Income'), ('marital-status', 'relationship'), ('sex', 'relationship'), ('relationship', 'Income'), ('native-country', 'race'), ('race', 'sex'), ('workclass', 'Income'), ('capital-gain', 'Income'), ('hours-per-week', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that faithfully represents these causal relationships. Each feature must be generated conditioning only on its direct causes as listed, following a valid topological order. Below are the specific steps to ensure causal consistency:
+
+1. **Exogenous variables** (no incoming causes): 'age', 'education-num', 'marital-status', 'native-country', 'workclass', 'capital-gain' – sample these independently from the user-provided data distribution (e.g., using empirical marginal distributions).
+
+2. **Generate causes before effects**:
+   - From 'age', generate 'hours-per-week' and 'occupation'.
+   - From 'education-num', generate 'education'.
+   - From 'native-country', generate 'race'; then from 'race', generate 'sex'.
+   - From 'marital-status' and 'sex', generate 'relationship' (ensure logical consistency: e.g., "Husband" only for male sex, "Wife" only for female).
+   - From 'occupation', 'relationship', 'education-num', 'workclass', 'capital-gain', and 'hours-per-week', generate 'Income' using a probabilistic model (e.g., logistic regression or decision tree) calibrated to the user-provided data.
+
+3. **Realism checks**: After generation, validate that:
+   - Conditional distributions (e.g., P(Income | occupation, relationship)) match the user-provided samples within ±5% tolerance for marginal proportions.
+   - No invalid combinations exist (e.g., relationship='Husband' with sex='Female').
+   - Time order: all causes are generated before their effects.
+
+Generate synthetic data strictly adhering to this DAG and guidance.</Task>"
+Score: 42.86%
+
+"Based on the analysis of the prompt-score pairs, the highest score (60.0%) corresponds to a more complex causal structure with additional connections and more detailed task guidance. The lower scores (52.38%) are for simpler structures with less guidance. To lower the score, we need to simplify the causal structure to reduce complexity and incorporate only the most essential, data-driven relationships, while providing concise task guidance that prevents over-engineering.
+
+Updated prompt:
+
+<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('sex', 'relationship'), ('native-country', 'race'), ('race', 'sex'), ('relationship', 'Income'), ('education-num', 'Income'), ('capital-gain', 'Income'), ('hours-per-week', 'Income'), ('workclass', 'Income'), ('age', 'hours-per-week'), ('age', 'occupation'), ('education', 'occupation')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that faithfully represents these causal relationships given the user-provided samples. Generate synthetic data by following this simple rule: for each feature, when generating its value, only condition on its direct causes as listed in the causal structure above. For variables with no incoming causes (age, education-num, marital-status, native-country, workclass, capital-gain), sample them independently from the user-provided data distribution (e.g., using empirical marginal distributions without any dependencies). Ensure that all variables are generated in a valid topological order (causes before effects) to avoid logical inconsistencies. No additional validation or complex modeling is required beyond this basic causal conditioning.</Task>"
+Score: 42.86%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 4, batch: 2 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>
+Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'hours-per-week'),
+ ('age', 'occupation'),
+ ('education-num', 'education'),
+ ('education-num', 'Income'),
+ ('education', 'occupation'),
+ ('occupation', 'Income'),
+ ('marital-status', 'relationship'),
+ ('sex', 'relationship'),
+ ('relationship', 'Income'),
+ ('native-country', 'race'),
+ ('race', 'sex'),
+ ('workclass', 'Income'),
+ ('capital-gain', 'Income'),
+ ('hours-per-week', 'Income')]
+</Causal structure>
+
+<Task>
+The ultimate goal is to produce accurate and convincing synthetic data that faithfully represents these causal relationships. Each feature must be generated conditioning only on its direct causes as listed, following a valid topological order. Below are the specific steps to ensure causal consistency:
+
+1. **Exogenous variables** (no incoming causes): 'age', 'education-num', 'marital-status', 'native-country', 'workclass', 'capital-gain' – sample these independently from the user-provided data distribution using empirical marginal distributions (e.g., sample directly from the categorical distribution for discrete variables and from kernel density estimates for continuous variables).
+
+2. **Generate causes before effects**:
+   - From 'age', generate 'hours-per-week' (use a linear regression model with age, then add Gaussian noise with variance matched to the empirical residual distribution) and 'occupation' (use a multinomial logistic regression with age as predictor, applying Laplace smoothing for rare categories).
+   - From 'education-num', generate 'education' (use a deterministic mapping table derived from user data, with 2% random noise to simulate real-world inconsistencies).
+   - From 'native-country', generate 'race' (use a conditional probability table from user data with Laplace smoothing for unseen combinations).
+   - From 'race', generate 'sex' (use a conditional probability table; for example, from user data, if race = 'White' the sex distribution might be 50.5% Male; for 'Black' it might be 46.3% Male – apply Laplace smoothing for rare race categories).
+   - From 'marital-status' and 'sex', generate 'relationship' (use a conditional probability table but enforce deterministic rules: 'Husband' only if sex = Male, 'Wife' only if sex = Female, 'Unmarried' only if marital-status = 'Never-married', 'Own-child' only if sex and age indicate child status; apply Laplace smoothing).
+   - From 'occupation', 'relationship', 'education-num', 'workclass', 'capital-gain', and 'hours-per-week', generate 'Income' using a gradient-boosted decision tree model calibrated to user data, with softmax output for two classes (>50K, <=50K). Ensure the marginal distribution of Income matches the user data within 1% by adjusting the decision threshold after calibration.
+
+3. **Post-generation realism checks**:
+   - Verify that no logical inconsistencies exist: e.g., relationship='Husband' with sex='Female', or marital-status='Married-civ-spouse' with relationship='Unmarried'.
+   - Check that marginal proportions of each variable match user data within ±2% relative error.
+   - If any check fails, reject the entire dataset and regenerate from scratch, increasing smoothing parameters by 10% for subsequent attempts.
+</Task>
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.3
+
+"<Causal structure>
+Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'hours-per-week'),
+ ('age', 'occupation'),
+ ('education-num', 'education'),
+ ('education-num', 'Income'),
+ ('education', 'occupation'),
+ ('occupation', 'Income'),
+ ('marital-status', 'relationship'),
+ ('sex', 'relationship'),
+ ('relationship', 'Income'),
+ ('native-country', 'race'),
+ ('race', 'sex'),
+ ('workclass', 'Income'),
+ ('capital-gain', 'Income'),
+ ('hours-per-week', 'Income')]
+</Causal structure>
+
+<Task>
+The ultimate goal is to produce accurate and convincing synthetic data that faithfully represents these causal relationships. Each feature must be generated conditioning only on its direct causes as listed, following a valid topological order. Below are the specific steps to ensure causal consistency:
+
+1. **Exogenous variables** (no incoming causes): 'age', 'education-num', 'marital-status', 'native-country', 'workclass', 'capital-gain' – sample these independently from the user-provided data distribution using empirical marginal distributions (e.g., sample directly from the categorical distribution for discrete variables and from kernel density estimates for continuous variables).
+
+2. **Generate causes before effects**:
+   - From 'age', generate 'hours-per-week' (use a linear regression model with age, then add Gaussian noise with variance matched to the empirical residual distribution) and 'occupation' (use a multinomial logistic regression with age as predictor, applying Laplace smoothing for rare categories).
+   - From 'education-num', generate 'education' (use a deterministic mapping table derived from user data, with 2% random noise to simulate real-world inconsistencies).
+   - From 'native-country', generate 'race' (use a conditional probability table from user data with Laplace smoothing for unseen combinations).
+   - From 'race', generate 'sex' (use a conditional probability table; for example, from user data, if race = 'White' the sex distribution might be 50.5% Male; for 'Black' it might be 46.3% Male – apply Laplace smoothing for rare race categories).
+   - From 'marital-status' and 'sex', generate 'relationship' (use a conditional probability table but enforce deterministic rules: 'Husband' only if sex = Male, 'Wife' only if sex = Female, 'Unmarried' only if marital-status = 'Never-married', 'Own-child' only if sex and age indicate child status; apply Laplace smoothing).
+   - From 'occupation', 'relationship', 'education-num', 'workclass', 'capital-gain', and 'hours-per-week', generate 'Income' using a gradient-boosted decision tree model calibrated to user data, with softmax output for two classes (>50K, <=50K). Ensure the marginal distribution of Income matches the user data within 1% by adjusting the decision threshold after calibration.
+
+3. **Post-generation realism checks**:
+   - Verify that no logical inconsistencies exist: e.g., relationship='Husband' with sex='Female', or marital-status='Married-civ-spouse' with relationship='Unmarried'.
+   - Check that marginal proportions of each variable match user data within ±2% relative error.
+   - If any check fails, reject the entire dataset and regenerate from scratch, increasing smoothing parameters by 10% for subsequent attempts.
+</Task>"
+Score: 30.0%
+
+"<Causal structure>
+Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'hours-per-week'), 
+ ('age', 'occupation'), 
+ ('education-num', 'education'), 
+ ('education', 'occupation'),
+ ('education-num', 'Income'),
+ ('marital-status', 'relationship'), 
+ ('sex', 'relationship'), 
+ ('relationship', 'marital-status'),
+ ('relationship', 'Income'), 
+ ('native-country', 'race'), 
+ ('race', 'sex'), 
+ ('workclass', 'Income'), 
+ ('capital-loss', 'capital-gain'),
+ ('capital-loss', 'Income'),
+ ('hours-per-week', 'Income'),
+ ('occupation', 'Income')]
+</Causal structure>
+
+<Task>
+The ultimate goal is to produce accurate and convincing synthetic data that strictly adheres to the directed acyclic graph (DAG) defined above. Each feature must be generated conditioning only on its direct causes, following a valid topological order. Below are precise steps to ensure causal consistency:
+
+1. **Exogenous variables** (no incoming causes): 'age', 'education-num', 'marital-status', 'native-country', 'workclass', 'capital-loss'  
+   - Sample these independently from the user-provided data distribution (e.g., using empirical marginal distributions or kernel density estimates for continuous variables). For 'capital-loss', sample from the empirical distribution, which may contain many zeros.
+
+2. **Generate causes before effects**:
+   - From 'age', generate 'hours-per-week' using a conditional gamma regression (since hours are positive and right-skewed) with age as the sole predictor, adding noise from the residual distribution of the user data.
+   - From 'age', generate 'occupation' using a multinomial logistic regression conditioned on age, fitted on the user data.
+   - From 'education-num', generate 'education' using a categorical model that maps education-num to education levels, with a small amount of noise (0.5% of samples) to reflect real-world mismatches.
+   - From 'education' and 'age', generate 'occupation' by conditioning on both, using a random forest classifier (with max_depth=5) fitted on user data to capture non-linear interactions.
+   - From 'native-country', generate 'race' using a conditional probability table from user data, with Laplace smoothing (alpha=1) to handle rare combinations, and cap at 5% maximum deviation from empirical proportions.
+   - From 'race', generate 'sex' using a conditional probability table, again with Laplace smoothing and logical constraints: sex must be either Male or Female.
+   - From 'marital-status' and 'sex', generate 'relationship' with strict logical enforcement: 'Husband' only if sex=Male, 'Wife' only if sex=Female, 'Never-married' only if marital-status='Never-married', 'Divorced' or 'Separated' only if marital-status in ('Divorced','Separated'), 'Married-civ-spouse' only if marital-status='Married-civ-spouse', etc. If a generated combination violates this, resample from the exact conditional distribution (not marginal) until valid.
+   - Then, from 'relationship', refine 'marital-status' by correcting any inconsistencies: if relationship='Husband' or 'Wife', force marital-status='Married-civ-spouse'; if relationship='Never-married', force marital-status='Never-married'; if relationship='Divorced', force marital-status='Divorced'; if relationship='Separated', force marital-status='Separated'; otherwise, keep original marital-status. This ensures mutual consistency.
+   - From 'capital-loss', generate 'capital-gain' using a conditional Poisson regression (with log link) because capital-gain is count-like and zero-inflated, fitted on user data with cap at 5% of extreme values to avoid outliers.
+   - From 'capital-loss' and 'capital-gain', add a constraint: capital-loss and capital-gain cannot both be non-zero for the same individual (enforce mutually exclusive). If both are non-zero, resample capital-gain from the conditional distribution given capital-loss=0.
+   - From 'occupation', 'relationship', 'education-num', 'workclass', 'capital-loss', 'capital-gain', and 'hours-per-week', generate 'Income' using a gradient-boosted classifier (e.g., XGBoost with max_depth=3, n_estimators=100) calibrated to predict log-odds of Income >50K. Use Platt scaling to calibrate probabilities and threshold at the empirical prevalence to assign binary Income labels. Ensure that the feature importance in the synthetic generative process mirrors the user data (within 10% relative difference).
+
+3. **Realism checks after generation**:
+   - Validate that conditional distributions (e.g., P(Income | occupation, relationship)) match the user-provided samples within ±1.5% tolerance for marginal proportions (e.g., overall Income proportion within 1.5% of original).
+   - Check that no invalid combinations exist (e.g., relationship='Husband' with sex='Female', or marital-status='Never-married' with relationship='Spouse', or capital-loss>0 and capital-gain>0 for same person).
+   - For continuous variables (age, hours-per-week, education-num), ensure the synthetic distribution matches the empirical distribution using Kolmogorov-Smirnov test with p > 0.10. For capital-loss and capital-gain, ensure zero-inflation proportion matches within 2%.
+   - If any check fails, regenerate the entire dataset (at most 3 attempts). After 3 failures, adjust conditional models by reducing variance (e.g., increasing regularization) and retry.
+   - Optionally, use rejection sampling: generate 10% extra samples and reject those that violate logical or distributional constraints, keeping only valid ones.
+
+Generate synthetic data strictly adhering to this DAG and guidance. The generative process must be reproducible (set random seed=42 for all models) and logically consistent. Output the synthetic data as a comma-separated file with headers matching the original user-provided samples.
+</Task>"
+Score: 33.33%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'native-country'), ('sex', 'race'), ('Income', 'relationship'), ('Income', 'education-num'), ('Income', 'capital-gain'), ('Income', 'hours-per-week'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 38.1%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 0 <<<<<<<<<<<<<<<< 
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.49504950495049505
+
+"<Causal structure>
+Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'hours-per-week'),
+ ('age', 'occupation'),
+ ('education-num', 'education'),
+ ('education-num', 'Income'),
+ ('education', 'occupation'),
+ ('occupation', 'Income'),
+ ('marital-status', 'relationship'),
+ ('sex', 'relationship'),
+ ('relationship', 'Income'),
+ ('native-country', 'race'),
+ ('race', 'sex'),
+ ('workclass', 'Income'),
+ ('capital-gain', 'Income'),
+ ('hours-per-week', 'Income')]
+</Causal structure>
+
+<Task>
+The ultimate goal is to produce accurate and convincing synthetic data that faithfully represents these causal relationships. Each feature must be generated conditioning only on its direct causes as listed, following a valid topological order. Below are the specific steps to ensure causal consistency:
+
+1. **Exogenous variables** (no incoming causes): 'age', 'education-num', 'marital-status', 'native-country', 'workclass', 'capital-gain' – sample these independently from the user-provided data distribution using empirical marginal distributions (e.g., sample directly from the categorical distribution for discrete variables and from kernel density estimates for continuous variables).
+
+2. **Generate causes before effects**:
+   - From 'age', generate 'hours-per-week' (use a linear regression model with age, then add Gaussian noise with variance matched to the empirical residual distribution) and 'occupation' (use a multinomial logistic regression with age as predictor, applying Laplace smoothing for rare categories).
+   - From 'education-num', generate 'education' (use a deterministic mapping table derived from user data, with 2% random noise to simulate real-world inconsistencies).
+   - From 'native-country', generate 'race' (use a conditional probability table from user data with Laplace smoothing for unseen combinations).
+   - From 'race', generate 'sex' (use a conditional probability table; for example, from user data, if race = 'White' the sex distribution might be 50.5% Male; for 'Black' it might be 46.3% Male – apply Laplace smoothing for rare race categories).
+   - From 'marital-status' and 'sex', generate 'relationship' (use a conditional probability table but enforce deterministic rules: 'Husband' only if sex = Male, 'Wife' only if sex = Female, 'Unmarried' only if marital-status = 'Never-married', 'Own-child' only if sex and age indicate child status; apply Laplace smoothing).
+   - From 'occupation', 'relationship', 'education-num', 'workclass', 'capital-gain', and 'hours-per-week', generate 'Income' using a gradient-boosted decision tree model calibrated to user data, with softmax output for two classes (>50K, <=50K). Ensure the marginal distribution of Income matches the user data within 1% by adjusting the decision threshold after calibration.
+
+3. **Post-generation realism checks**:
+   - Verify that no logical inconsistencies exist: e.g., relationship='Husband' with sex='Female', or marital-status='Married-civ-spouse' with relationship='Unmarried'.
+   - Check that marginal proportions of each variable match user data within ±2% relative error.
+   - If any check fails, reject the entire dataset and regenerate from scratch, increasing smoothing parameters by 10% for subsequent attempts.
+</Task>"
+Score: 30.0%
+
+"<Causal structure>
+Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'hours-per-week'), 
+ ('age', 'occupation'), 
+ ('education-num', 'education'), 
+ ('education', 'occupation'),
+ ('education-num', 'Income'),
+ ('marital-status', 'relationship'), 
+ ('sex', 'relationship'), 
+ ('relationship', 'marital-status'),
+ ('relationship', 'Income'), 
+ ('native-country', 'race'), 
+ ('race', 'sex'), 
+ ('workclass', 'Income'), 
+ ('capital-loss', 'capital-gain'),
+ ('capital-loss', 'Income'),
+ ('hours-per-week', 'Income'),
+ ('occupation', 'Income')]
+</Causal structure>
+
+<Task>
+The ultimate goal is to produce accurate and convincing synthetic data that strictly adheres to the directed acyclic graph (DAG) defined above. Each feature must be generated conditioning only on its direct causes, following a valid topological order. Below are precise steps to ensure causal consistency:
+
+1. **Exogenous variables** (no incoming causes): 'age', 'education-num', 'marital-status', 'native-country', 'workclass', 'capital-loss'  
+   - Sample these independently from the user-provided data distribution (e.g., using empirical marginal distributions or kernel density estimates for continuous variables). For 'capital-loss', sample from the empirical distribution, which may contain many zeros.
+
+2. **Generate causes before effects**:
+   - From 'age', generate 'hours-per-week' using a conditional gamma regression (since hours are positive and right-skewed) with age as the sole predictor, adding noise from the residual distribution of the user data.
+   - From 'age', generate 'occupation' using a multinomial logistic regression conditioned on age, fitted on the user data.
+   - From 'education-num', generate 'education' using a categorical model that maps education-num to education levels, with a small amount of noise (0.5% of samples) to reflect real-world mismatches.
+   - From 'education' and 'age', generate 'occupation' by conditioning on both, using a random forest classifier (with max_depth=5) fitted on user data to capture non-linear interactions.
+   - From 'native-country', generate 'race' using a conditional probability table from user data, with Laplace smoothing (alpha=1) to handle rare combinations, and cap at 5% maximum deviation from empirical proportions.
+   - From 'race', generate 'sex' using a conditional probability table, again with Laplace smoothing and logical constraints: sex must be either Male or Female.
+   - From 'marital-status' and 'sex', generate 'relationship' with strict logical enforcement: 'Husband' only if sex=Male, 'Wife' only if sex=Female, 'Never-married' only if marital-status='Never-married', 'Divorced' or 'Separated' only if marital-status in ('Divorced','Separated'), 'Married-civ-spouse' only if marital-status='Married-civ-spouse', etc. If a generated combination violates this, resample from the exact conditional distribution (not marginal) until valid.
+   - Then, from 'relationship', refine 'marital-status' by correcting any inconsistencies: if relationship='Husband' or 'Wife', force marital-status='Married-civ-spouse'; if relationship='Never-married', force marital-status='Never-married'; if relationship='Divorced', force marital-status='Divorced'; if relationship='Separated', force marital-status='Separated'; otherwise, keep original marital-status. This ensures mutual consistency.
+   - From 'capital-loss', generate 'capital-gain' using a conditional Poisson regression (with log link) because capital-gain is count-like and zero-inflated, fitted on user data with cap at 5% of extreme values to avoid outliers.
+   - From 'capital-loss' and 'capital-gain', add a constraint: capital-loss and capital-gain cannot both be non-zero for the same individual (enforce mutually exclusive). If both are non-zero, resample capital-gain from the conditional distribution given capital-loss=0.
+   - From 'occupation', 'relationship', 'education-num', 'workclass', 'capital-loss', 'capital-gain', and 'hours-per-week', generate 'Income' using a gradient-boosted classifier (e.g., XGBoost with max_depth=3, n_estimators=100) calibrated to predict log-odds of Income >50K. Use Platt scaling to calibrate probabilities and threshold at the empirical prevalence to assign binary Income labels. Ensure that the feature importance in the synthetic generative process mirrors the user data (within 10% relative difference).
+
+3. **Realism checks after generation**:
+   - Validate that conditional distributions (e.g., P(Income | occupation, relationship)) match the user-provided samples within ±1.5% tolerance for marginal proportions (e.g., overall Income proportion within 1.5% of original).
+   - Check that no invalid combinations exist (e.g., relationship='Husband' with sex='Female', or marital-status='Never-married' with relationship='Spouse', or capital-loss>0 and capital-gain>0 for same person).
+   - For continuous variables (age, hours-per-week, education-num), ensure the synthetic distribution matches the empirical distribution using Kolmogorov-Smirnov test with p > 0.10. For capital-loss and capital-gain, ensure zero-inflation proportion matches within 2%.
+   - If any check fails, regenerate the entire dataset (at most 3 attempts). After 3 failures, adjust conditional models by reducing variance (e.g., increasing regularization) and retry.
+   - Optionally, use rejection sampling: generate 10% extra samples and reject those that violate logical or distributional constraints, keeping only valid ones.
+
+Generate synthetic data strictly adhering to this DAG and guidance. The generative process must be reproducible (set random seed=42 for all models) and logically consistent. Output the synthetic data as a comma-separated file with headers matching the original user-provided samples.
+</Task>"
+Score: 33.33%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'native-country'), ('sex', 'race'), ('Income', 'relationship'), ('Income', 'education-num'), ('Income', 'capital-gain'), ('Income', 'hours-per-week'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 38.1%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 1 <<<<<<<<<<<<<<<< 
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.56
+
+"<Causal structure>
+Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'hours-per-week'),
+ ('age', 'occupation'),
+ ('education-num', 'education'),
+ ('education-num', 'Income'),
+ ('education', 'occupation'),
+ ('occupation', 'Income'),
+ ('marital-status', 'relationship'),
+ ('sex', 'relationship'),
+ ('relationship', 'Income'),
+ ('native-country', 'race'),
+ ('race', 'sex'),
+ ('workclass', 'Income'),
+ ('capital-gain', 'Income'),
+ ('hours-per-week', 'Income')]
+</Causal structure>
+
+<Task>
+The ultimate goal is to produce accurate and convincing synthetic data that faithfully represents these causal relationships. Each feature must be generated conditioning only on its direct causes as listed, following a valid topological order. Below are the specific steps to ensure causal consistency:
+
+1. **Exogenous variables** (no incoming causes): 'age', 'education-num', 'marital-status', 'native-country', 'workclass', 'capital-gain' – sample these independently from the user-provided data distribution using empirical marginal distributions (e.g., sample directly from the categorical distribution for discrete variables and from kernel density estimates for continuous variables).
+
+2. **Generate causes before effects**:
+   - From 'age', generate 'hours-per-week' (use a linear regression model with age, then add Gaussian noise with variance matched to the empirical residual distribution) and 'occupation' (use a multinomial logistic regression with age as predictor, applying Laplace smoothing for rare categories).
+   - From 'education-num', generate 'education' (use a deterministic mapping table derived from user data, with 2% random noise to simulate real-world inconsistencies).
+   - From 'native-country', generate 'race' (use a conditional probability table from user data with Laplace smoothing for unseen combinations).
+   - From 'race', generate 'sex' (use a conditional probability table; for example, from user data, if race = 'White' the sex distribution might be 50.5% Male; for 'Black' it might be 46.3% Male – apply Laplace smoothing for rare race categories).
+   - From 'marital-status' and 'sex', generate 'relationship' (use a conditional probability table but enforce deterministic rules: 'Husband' only if sex = Male, 'Wife' only if sex = Female, 'Unmarried' only if marital-status = 'Never-married', 'Own-child' only if sex and age indicate child status; apply Laplace smoothing).
+   - From 'occupation', 'relationship', 'education-num', 'workclass', 'capital-gain', and 'hours-per-week', generate 'Income' using a gradient-boosted decision tree model calibrated to user data, with softmax output for two classes (>50K, <=50K). Ensure the marginal distribution of Income matches the user data within 1% by adjusting the decision threshold after calibration.
+
+3. **Post-generation realism checks**:
+   - Verify that no logical inconsistencies exist: e.g., relationship='Husband' with sex='Female', or marital-status='Married-civ-spouse' with relationship='Unmarried'.
+   - Check that marginal proportions of each variable match user data within ±2% relative error.
+   - If any check fails, reject the entire dataset and regenerate from scratch, increasing smoothing parameters by 10% for subsequent attempts.
+</Task>"
+Score: 30.0%
+
+"<Causal structure>
+Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'hours-per-week'), 
+ ('age', 'occupation'), 
+ ('education-num', 'education'), 
+ ('education', 'occupation'),
+ ('education-num', 'Income'),
+ ('marital-status', 'relationship'), 
+ ('sex', 'relationship'), 
+ ('relationship', 'marital-status'),
+ ('relationship', 'Income'), 
+ ('native-country', 'race'), 
+ ('race', 'sex'), 
+ ('workclass', 'Income'), 
+ ('capital-loss', 'capital-gain'),
+ ('capital-loss', 'Income'),
+ ('hours-per-week', 'Income'),
+ ('occupation', 'Income')]
+</Causal structure>
+
+<Task>
+The ultimate goal is to produce accurate and convincing synthetic data that strictly adheres to the directed acyclic graph (DAG) defined above. Each feature must be generated conditioning only on its direct causes, following a valid topological order. Below are precise steps to ensure causal consistency:
+
+1. **Exogenous variables** (no incoming causes): 'age', 'education-num', 'marital-status', 'native-country', 'workclass', 'capital-loss'  
+   - Sample these independently from the user-provided data distribution (e.g., using empirical marginal distributions or kernel density estimates for continuous variables). For 'capital-loss', sample from the empirical distribution, which may contain many zeros.
+
+2. **Generate causes before effects**:
+   - From 'age', generate 'hours-per-week' using a conditional gamma regression (since hours are positive and right-skewed) with age as the sole predictor, adding noise from the residual distribution of the user data.
+   - From 'age', generate 'occupation' using a multinomial logistic regression conditioned on age, fitted on the user data.
+   - From 'education-num', generate 'education' using a categorical model that maps education-num to education levels, with a small amount of noise (0.5% of samples) to reflect real-world mismatches.
+   - From 'education' and 'age', generate 'occupation' by conditioning on both, using a random forest classifier (with max_depth=5) fitted on user data to capture non-linear interactions.
+   - From 'native-country', generate 'race' using a conditional probability table from user data, with Laplace smoothing (alpha=1) to handle rare combinations, and cap at 5% maximum deviation from empirical proportions.
+   - From 'race', generate 'sex' using a conditional probability table, again with Laplace smoothing and logical constraints: sex must be either Male or Female.
+   - From 'marital-status' and 'sex', generate 'relationship' with strict logical enforcement: 'Husband' only if sex=Male, 'Wife' only if sex=Female, 'Never-married' only if marital-status='Never-married', 'Divorced' or 'Separated' only if marital-status in ('Divorced','Separated'), 'Married-civ-spouse' only if marital-status='Married-civ-spouse', etc. If a generated combination violates this, resample from the exact conditional distribution (not marginal) until valid.
+   - Then, from 'relationship', refine 'marital-status' by correcting any inconsistencies: if relationship='Husband' or 'Wife', force marital-status='Married-civ-spouse'; if relationship='Never-married', force marital-status='Never-married'; if relationship='Divorced', force marital-status='Divorced'; if relationship='Separated', force marital-status='Separated'; otherwise, keep original marital-status. This ensures mutual consistency.
+   - From 'capital-loss', generate 'capital-gain' using a conditional Poisson regression (with log link) because capital-gain is count-like and zero-inflated, fitted on user data with cap at 5% of extreme values to avoid outliers.
+   - From 'capital-loss' and 'capital-gain', add a constraint: capital-loss and capital-gain cannot both be non-zero for the same individual (enforce mutually exclusive). If both are non-zero, resample capital-gain from the conditional distribution given capital-loss=0.
+   - From 'occupation', 'relationship', 'education-num', 'workclass', 'capital-loss', 'capital-gain', and 'hours-per-week', generate 'Income' using a gradient-boosted classifier (e.g., XGBoost with max_depth=3, n_estimators=100) calibrated to predict log-odds of Income >50K. Use Platt scaling to calibrate probabilities and threshold at the empirical prevalence to assign binary Income labels. Ensure that the feature importance in the synthetic generative process mirrors the user data (within 10% relative difference).
+
+3. **Realism checks after generation**:
+   - Validate that conditional distributions (e.g., P(Income | occupation, relationship)) match the user-provided samples within ±1.5% tolerance for marginal proportions (e.g., overall Income proportion within 1.5% of original).
+   - Check that no invalid combinations exist (e.g., relationship='Husband' with sex='Female', or marital-status='Never-married' with relationship='Spouse', or capital-loss>0 and capital-gain>0 for same person).
+   - For continuous variables (age, hours-per-week, education-num), ensure the synthetic distribution matches the empirical distribution using Kolmogorov-Smirnov test with p > 0.10. For capital-loss and capital-gain, ensure zero-inflation proportion matches within 2%.
+   - If any check fails, regenerate the entire dataset (at most 3 attempts). After 3 failures, adjust conditional models by reducing variance (e.g., increasing regularization) and retry.
+   - Optionally, use rejection sampling: generate 10% extra samples and reject those that violate logical or distributional constraints, keeping only valid ones.
+
+Generate synthetic data strictly adhering to this DAG and guidance. The generative process must be reproducible (set random seed=42 for all models) and logically consistent. Output the synthetic data as a comma-separated file with headers matching the original user-provided samples.
+</Task>"
+Score: 33.33%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'native-country'), ('sex', 'race'), ('Income', 'relationship'), ('Income', 'education-num'), ('Income', 'capital-gain'), ('Income', 'hours-per-week'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 38.1%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+

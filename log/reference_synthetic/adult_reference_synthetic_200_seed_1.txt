@@ -1,0 +1,956 @@
+>>>>>>>>>>>>>>> Epoch: 0, batch: 1 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('Income', 'occupation'), ('Income', 'education-num'), ('Income', 'hours-per-week'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.38095238095238093
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('Income', 'occupation'), ('Income', 'education-num'), ('Income', 'hours-per-week'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 38.1%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 2 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('Income', 'occupation'), ('Income', 'education-num'), ('Income', 'hours-per-week'), ('Income', 'workclass'), ('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('sex', 'occupation')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data reflects that age influences both marital status and income, education affects occupation, and sex influences occupation, in addition to the original causal links. Generate data where the causal directions are strictly followed, and the values are coherent with real-world patterns (e.g., higher education-num leads to higher education level, married individuals are more likely to have higher income, and income causally determines occupation, workclass, etc.).</Task>
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.6190476190476191
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('Income', 'occupation'), ('Income', 'education-num'), ('Income', 'hours-per-week'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 61.9%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('Income', 'occupation'), ('Income', 'education-num'), ('Income', 'hours-per-week'), ('Income', 'workclass'), ('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('sex', 'occupation')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data reflects that age influences both marital status and income, education affects occupation, and sex influences occupation, in addition to the original causal links. Generate data where the causal directions are strictly followed, and the values are coherent with real-world patterns (e.g., higher education-num leads to higher education level, married individuals are more likely to have higher income, and income causally determines occupation, workclass, etc.).</Task>"
+Score: 61.9%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 3 <<<<<<<<<<<<<<<< 
+Instruction: "<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('Income', 'occupation'), ('Income', 'hours-per-week'), ('Income', 'workclass'), ('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('sex', 'occupation'), ('education', 'income'), ('age', 'hours-per-week'), ('sex', 'hours-per-week'), ('race', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data reflects that age influences both marital status and income, education affects occupation and income, sex influences occupation and hours-per-week, and race influences income, in addition to all original causal links. Generate data where the causal directions are strictly followed, and the values are coherent with real-world patterns (e.g., older age increases likelihood of being married and having higher income; higher education corresponds to higher income; certain races have income disparities; sex influences both occupation type and hours worked; income causally determines occupation, workclass, and hours-per-week). Avoid generating conflicting causal patterns (e.g., do not let occupation or hours-per-week cause income, as income is the cause).</Task>"
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.3333333333333333
+
+""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('Income', 'occupation'), ('Income', 'hours-per-week'), ('Income', 'workclass'), ('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('sex', 'occupation'), ('education', 'income'), ('age', 'hours-per-week'), ('sex', 'hours-per-week'), ('race', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data reflects that age influences both marital status and income, education affects occupation and income, sex influences occupation and hours-per-week, and race influences income, in addition to all original causal links. Generate data where the causal directions are strictly followed, and the values are coherent with real-world patterns (e.g., older age increases likelihood of being married and having higher income; higher education corresponds to higher income; certain races have income disparities; sex influences both occupation type and hours worked; income causally determines occupation, workclass, and hours-per-week). Avoid generating conflicting causal patterns (e.g., do not let occupation or hours-per-week cause income, as income is the cause).</Task>""
+Score: 33.33%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('Income', 'occupation'), ('Income', 'education-num'), ('Income', 'hours-per-week'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 38.1%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('Income', 'occupation'), ('Income', 'education-num'), ('Income', 'hours-per-week'), ('Income', 'workclass'), ('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('sex', 'occupation')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data reflects that age influences both marital status and income, education affects occupation, and sex influences occupation, in addition to the original causal links. Generate data where the causal directions are strictly followed, and the values are coherent with real-world patterns (e.g., higher education-num leads to higher education level, married individuals are more likely to have higher income, and income causally determines occupation, workclass, etc.).</Task>"
+Score: 52.38%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 4 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('education', 'Income'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('age', 'marital-status'), ('age', 'Income'), ('age', 'hours-per-week'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('race', 'Income'), ('Income', 'occupation'), ('Income', 'workclass'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data strictly follows the causal directions as specified. Specifically, age should influence marital status, income, and hours-per-week. Education-num determines education level, which in turn causes income. Marital-status and race are direct causes of income. Sex causally influences both occupation and hours-per-week. Capital-gain and capital-loss directly affect income. Income itself then causally determines occupation and workclass. There should be no reverse causal links (e.g., occupation or workclass should not cause income). Generate values that reflect real-world coherence: higher education leads to higher income; older age increases likelihood of being married (but not deterministically), higher income, and fewer hours per week (in professional roles); certain races have income disparities; sex influences occupational choices and hours worked; and capital gains or losses have a positive or negative impact respectively on income. The synthetic data must be logically and statistically plausible, avoiding contradictions and ensuring all variables align with the given causal structure.</Task>
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.7
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('Income', 'occupation'), ('Income', 'education-num'), ('Income', 'hours-per-week'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 33.33%
+
+""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('Income', 'occupation'), ('Income', 'hours-per-week'), ('Income', 'workclass'), ('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('sex', 'occupation'), ('education', 'income'), ('age', 'hours-per-week'), ('sex', 'hours-per-week'), ('race', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data reflects that age influences both marital status and income, education affects occupation and income, sex influences occupation and hours-per-week, and race influences income, in addition to all original causal links. Generate data where the causal directions are strictly followed, and the values are coherent with real-world patterns (e.g., older age increases likelihood of being married and having higher income; higher education corresponds to higher income; certain races have income disparities; sex influences both occupation type and hours worked; income causally determines occupation, workclass, and hours-per-week). Avoid generating conflicting causal patterns (e.g., do not let occupation or hours-per-week cause income, as income is the cause).</Task>""
+Score: 38.1%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('Income', 'occupation'), ('Income', 'education-num'), ('Income', 'hours-per-week'), ('Income', 'workclass'), ('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('sex', 'occupation')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data reflects that age influences both marital status and income, education affects occupation, and sex influences occupation, in addition to the original causal links. Generate data where the causal directions are strictly followed, and the values are coherent with real-world patterns (e.g., higher education-num leads to higher education level, married individuals are more likely to have higher income, and income causally determines occupation, workclass, etc.).</Task>"
+Score: 61.9%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 1, batch: 1 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'Income'), ('education-num', 'education'), ('education', 'occupation'), ('marital-status', 'Income'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'Income'), ('Income', 'occupation'), ('Income', 'education-num'), ('Income', 'hours-per-week'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that all causal directions are strictly followed and no reverse or conflicting causal paths exist (e.g., occupation must never cause income; hours-per-week must never cause income). The data should be coherent with real-world patterns: age positively influences both marital status (older more likely married) and income; higher education-num and education level lead to higher-skilled occupations and higher income; marital status (married) increases income; sex causally determines occupation type (e.g., males more likely in certain blue-collar roles) and hours-per-week (males often work more hours); relationship determines sex and marital status (e.g., husband implies male and married); race influences income (e.g., income disparities); and income itself then causally determines occupation, education-num, hours-per-week, and workclass (e.g., high income leads to professional occupations, higher education-num, longer hours, and private workclass). Generate data that strictly obeys these causal chains, avoiding any feature that causes income from its descendants.</Task>
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.5714285714285714
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('Income', 'occupation'), ('Income', 'education-num'), ('Income', 'hours-per-week'), ('Income', 'workclass'), ('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('sex', 'occupation')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data reflects that age influences both marital status and income, education affects occupation, and sex influences occupation, in addition to the original causal links. Generate data where the causal directions are strictly followed, and the values are coherent with real-world patterns (e.g., higher education-num leads to higher education level, married individuals are more likely to have higher income, and income causally determines occupation, workclass, etc.).</Task>"
+Score: 47.62%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('education', 'Income'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('age', 'marital-status'), ('age', 'Income'), ('age', 'hours-per-week'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('race', 'Income'), ('Income', 'occupation'), ('Income', 'workclass'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data strictly follows the causal directions as specified. Specifically, age should influence marital status, income, and hours-per-week. Education-num determines education level, which in turn causes income. Marital-status and race are direct causes of income. Sex causally influences both occupation and hours-per-week. Capital-gain and capital-loss directly affect income. Income itself then causally determines occupation and workclass. There should be no reverse causal links (e.g., occupation or workclass should not cause income). Generate values that reflect real-world coherence: higher education leads to higher income; older age increases likelihood of being married (but not deterministically), higher income, and fewer hours per week (in professional roles); certain races have income disparities; sex influences occupational choices and hours worked; and capital gains or losses have a positive or negative impact respectively on income. The synthetic data must be logically and statistically plausible, avoiding contradictions and ensuring all variables align with the given causal structure.</Task>"
+Score: 50.0%
+
+""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('Income', 'occupation'), ('Income', 'hours-per-week'), ('Income', 'workclass'), ('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('sex', 'occupation'), ('education', 'income'), ('age', 'hours-per-week'), ('sex', 'hours-per-week'), ('race', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data reflects that age influences both marital status and income, education affects occupation and income, sex influences occupation and hours-per-week, and race influences income, in addition to all original causal links. Generate data where the causal directions are strictly followed, and the values are coherent with real-world patterns (e.g., older age increases likelihood of being married and having higher income; higher education corresponds to higher income; certain races have income disparities; sex influences both occupation type and hours worked; income causally determines occupation, workclass, and hours-per-week). Avoid generating conflicting causal patterns (e.g., do not let occupation or hours-per-week cause income, as income is the cause).</Task>""
+Score: 52.38%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 1, batch: 2 <<<<<<<<<<<<<<<< 
+Instruction: "<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('education', 'Income'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('age', 'marital-status'), ('age', 'Income'), ('age', 'hours-per-week'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('race', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data strictly follows the causal directions as specified. Specifically: education-num determines education level (higher education-num → higher education). Education positively causes Income (e.g., higher education → higher income). Marital-status causes Income (e.g., married individuals tend to have higher income). Relationship causes marital-status and sex (e.g., 'Husband' implies male and married). Age causes marital-status (older → more likely married), Income (older → higher income, up to a point), and hours-per-week (older → slightly fewer hours in professional roles). Sex causes occupation (e.g., males more likely in manual labor, females in admin) and hours-per-week (e.g., males tend to work more hours). Race causes Income (e.g., White individuals have higher income on average). Capital-gain positively causes Income. Capital-loss negatively causes Income (i.e., higher capital loss → lower income). Income then causally determines occupation (e.g., high income → executive/manager roles), workclass (e.g., high income → Self-emp or Private), and hours-per-week (e.g., high income may correlate with more hours but not deterministically). There must be no reverse causal links: occupation, workclass, and hours-per-week should not cause Income. Generate values that are logically and statistically plausible: higher education leads to higher income; older age increases marriage likelihood and income but may decrease hours in high-skill jobs; sex shapes occupational and hours patterns; race introduces income disparities; capital gains boost income, capital losses reduce it. All variables must align with the causal structure, avoiding contradictions and ensuring synthetic data reflects real-world distributions.</Task>"
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.5714285714285714
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('Income', 'occupation'), ('Income', 'education-num'), ('Income', 'hours-per-week'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 57.14%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('Income', 'occupation'), ('Income', 'education-num'), ('Income', 'hours-per-week'), ('Income', 'workclass'), ('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('sex', 'occupation')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data reflects that age influences both marital status and income, education affects occupation, and sex influences occupation, in addition to the original causal links. Generate data where the causal directions are strictly followed, and the values are coherent with real-world patterns (e.g., higher education-num leads to higher education level, married individuals are more likely to have higher income, and income causally determines occupation, workclass, etc.).</Task>"
+Score: 57.14%
+
+""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('Income', 'occupation'), ('Income', 'hours-per-week'), ('Income', 'workclass'), ('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('sex', 'occupation'), ('education', 'income'), ('age', 'hours-per-week'), ('sex', 'hours-per-week'), ('race', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data reflects that age influences both marital status and income, education affects occupation and income, sex influences occupation and hours-per-week, and race influences income, in addition to all original causal links. Generate data where the causal directions are strictly followed, and the values are coherent with real-world patterns (e.g., older age increases likelihood of being married and having higher income; higher education corresponds to higher income; certain races have income disparities; sex influences both occupation type and hours worked; income causally determines occupation, workclass, and hours-per-week). Avoid generating conflicting causal patterns (e.g., do not let occupation or hours-per-week cause income, as income is the cause).</Task>""
+Score: 57.14%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 1, batch: 3 <<<<<<<<<<<<<<<< 
+Instruction: Based on the analysis of the existing prompt-score pairs, I will modify the causal structure to reduce ambiguity, eliminate redundant or unrealistic causal loops, and focus on a more coherent and simplified set of relationships. The key issue is that several causal directions (e.g., Income causing hours-per-week, occupation, etc.) introduce confusion in real-world patterns. A more realistic structure aligns with typical social science models where demographics and socio-economic factors influence income, and income influences lifestyle choices.
+
+**Updated Prompt:**
+
+<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'hours-per-week'), ('education-num', 'education'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('race', 'Income'), ('occupation', 'Income'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data reflects that age influences marital status and hours worked per week; education level (indicated by education-num) directly affects education category, which in turn influences occupation and income; marital status impacts income; sex influences both occupation and hours worked; race influences income; occupation directly causes income; and income determines workclass. All causal directions must be strictly followed without contradictions. Generate values that are coherent with real-world patterns (e.g., older individuals are more likely to be married and work fewer hours; higher education leads to higher-paying occupations; certain occupations and races correlate with income differences; income level predicts workclass type). Avoid any reverse causation (e.g., do not let income cause occupation, hours-per-week, or education).</Task>
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.47619047619047616
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('Income', 'occupation'), ('Income', 'education-num'), ('Income', 'hours-per-week'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 33.33%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'Income'), ('education-num', 'education'), ('education', 'occupation'), ('marital-status', 'Income'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'Income'), ('Income', 'occupation'), ('Income', 'education-num'), ('Income', 'hours-per-week'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that all causal directions are strictly followed and no reverse or conflicting causal paths exist (e.g., occupation must never cause income; hours-per-week must never cause income). The data should be coherent with real-world patterns: age positively influences both marital status (older more likely married) and income; higher education-num and education level lead to higher-skilled occupations and higher income; marital status (married) increases income; sex causally determines occupation type (e.g., males more likely in certain blue-collar roles) and hours-per-week (males often work more hours); relationship determines sex and marital status (e.g., husband implies male and married); race influences income (e.g., income disparities); and income itself then causally determines occupation, education-num, hours-per-week, and workclass (e.g., high income leads to professional occupations, higher education-num, longer hours, and private workclass). Generate data that strictly obeys these causal chains, avoiding any feature that causes income from its descendants.</Task>"
+Score: 42.86%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('Income', 'occupation'), ('Income', 'education-num'), ('Income', 'hours-per-week'), ('Income', 'workclass'), ('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('sex', 'occupation')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data reflects that age influences both marital status and income, education affects occupation, and sex influences occupation, in addition to the original causal links. Generate data where the causal directions are strictly followed, and the values are coherent with real-world patterns (e.g., higher education-num leads to higher education level, married individuals are more likely to have higher income, and income causally determines occupation, workclass, etc.).</Task>"
+Score: 47.62%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 1, batch: 4 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'Income'), ('education-num', 'education'), ('education', 'occupation'), ('marital-status', 'Income'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'Income'), ('Income', 'occupation'), ('Income', 'education-num'), ('Income', 'hours-per-week'), ('Income', 'workclass')]
+Note: The causal structure is a directed acyclic graph. Ensure no reverse or conflicting causal paths (e.g., occupation must never cause income; hours-per-week must never cause income). All edges represent direct causation.</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that strictly and coherently represents these causal relationships given the user-provided samples. Follow these priorities for data generation:
+
+1. **Root causes**: age, education-num (as a numeric proxy for education, but education itself is a child of education-num), sex, relationship, race. These features must be generated first and independently of any causes.
+
+2. **Mediating and child features**: Generate in order:
+   - From age: generate marital-status and Income (direct causes).
+   - From education-num: generate education.
+   - From education: generate occupation.
+   - From sex: generate occupation and hours-per-week.
+   - From relationship: generate marital-status and sex (ensure consistency: e.g., 'Husband' implies sex='Male' and marital-status='Married').
+   - From race: generate Income (disparities applied).
+   - From marital-status (already generated): influence Income (e.g., married increases income).
+   - From Income (already partially generated from age, marital-status, race): then Income itself must cause occupation, education-num, hours-per-week, and workclass. This means that after initial Income is generated from its causes, you must adjust occupation, education-num, hours-per-week, and workclass to reflect that Income is a cause—i.e., higher income leads to higher-skilled occupations, higher education-num (e.g., more years of schooling), longer hours-per-week (e.g., professionals work more), and specific workclass (e.g., private or self-employed for high income). However, ensure no feedback loops: occupation, education-num, hours-per-week, workclass must never alter Income.
+
+3. **Consistency and coherence**:
+   - Age positively influences marital-status (e.g., age > 30 more likely to be married) and Income (e.g., positive correlation).
+   - Higher education-num (e.g., 12+) leads to higher education level (e.g., 'Bachelors', 'Masters').
+   - Higher education leads to higher-skilled occupations (e.g., 'Prof-specialty').
+   - Sex causally determines occupation (e.g., 'Male' more likely in 'Craft-repair', 'Female' more likely in 'Adm-clerical') and hours-per-week (e.g., males average 40+ hours, females 35+).
+   - Relationship determines sex and marital-status (e.g., 'Husband' → sex='Male', marital='Married'; 'Wife' → sex='Female', marital='Married'; 'Not-in-family' → marital='Never-married', sex balanced).
+   - Race influences Income (e.g., white vs. non-white income disparity).
+   - Marital-status (married) increases Income.
+   - Income then causally determines occupation (high income → 'Exec-managerial' or 'Prof-specialty'), education-num (high income →13+ years), hours-per-week (high income →45+ hours), and workclass (high income → 'Private' or 'Self-emp-inc').
+
+4. **Avoid contradictions**: For instance, if income is high, the generated occupation must be high-skilled; if income is low, occupation must be low-skilled (e.g., 'Handlers-cleaners'). Never assign a feature that would reverse causation.
+
+Generate synthetic data rows that strictly follow this causal DAG and the specified generation order. The output should be a list of rows with features exactly as named above, matching real-world correlations and avoiding any statistically impossible combinations.</Task>
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.6
+
+""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('education', 'Income'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('age', 'marital-status'), ('age', 'Income'), ('age', 'hours-per-week'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('race', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data strictly follows the causal directions as specified. Specifically: education-num determines education level (higher education-num → higher education). Education positively causes Income (e.g., higher education → higher income). Marital-status causes Income (e.g., married individuals tend to have higher income). Relationship causes marital-status and sex (e.g., 'Husband' implies male and married). Age causes marital-status (older → more likely married), Income (older → higher income, up to a point), and hours-per-week (older → slightly fewer hours in professional roles). Sex causes occupation (e.g., males more likely in manual labor, females in admin) and hours-per-week (e.g., males tend to work more hours). Race causes Income (e.g., White individuals have higher income on average). Capital-gain positively causes Income. Capital-loss negatively causes Income (i.e., higher capital loss → lower income). Income then causally determines occupation (e.g., high income → executive/manager roles), workclass (e.g., high income → Self-emp or Private), and hours-per-week (e.g., high income may correlate with more hours but not deterministically). There must be no reverse causal links: occupation, workclass, and hours-per-week should not cause Income. Generate values that are logically and statistically plausible: higher education leads to higher income; older age increases marriage likelihood and income but may decrease hours in high-skill jobs; sex shapes occupational and hours patterns; race introduces income disparities; capital gains boost income, capital losses reduce it. All variables must align with the causal structure, avoiding contradictions and ensuring synthetic data reflects real-world distributions.</Task>""
+Score: 38.1%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('Income', 'occupation'), ('Income', 'education-num'), ('Income', 'hours-per-week'), ('Income', 'workclass'), ('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('sex', 'occupation')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data reflects that age influences both marital status and income, education affects occupation, and sex influences occupation, in addition to the original causal links. Generate data where the causal directions are strictly followed, and the values are coherent with real-world patterns (e.g., higher education-num leads to higher education level, married individuals are more likely to have higher income, and income causally determines occupation, workclass, etc.).</Task>"
+Score: 47.62%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('education', 'Income'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('age', 'marital-status'), ('age', 'Income'), ('age', 'hours-per-week'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('race', 'Income'), ('Income', 'occupation'), ('Income', 'workclass'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data strictly follows the causal directions as specified. Specifically, age should influence marital status, income, and hours-per-week. Education-num determines education level, which in turn causes income. Marital-status and race are direct causes of income. Sex causally influences both occupation and hours-per-week. Capital-gain and capital-loss directly affect income. Income itself then causally determines occupation and workclass. There should be no reverse causal links (e.g., occupation or workclass should not cause income). Generate values that reflect real-world coherence: higher education leads to higher income; older age increases likelihood of being married (but not deterministically), higher income, and fewer hours per week (in professional roles); certain races have income disparities; sex influences occupational choices and hours worked; and capital gains or losses have a positive or negative impact respectively on income. The synthetic data must be logically and statistically plausible, avoiding contradictions and ensuring all variables align with the given causal structure.</Task>"
+Score: 50.0%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 2, batch: 1 <<<<<<<<<<<<<<<< 
+Instruction: Based on analyzing the scores and causal structures, I notice the lowest score (38.1%) comes from a structure with fewer feedback loops and clearer causal chains. However, the middle prompt (47.62%) introduces contradictions (Income causing education-num, which should be the opposite). The best approach is to refine the first structure by removing problematic edges that create cycles and adding realistic connections.
+
+Here is the optimized prompt:
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('education', 'Income'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('age', 'age'), ('age', 'marital-status'), ('age', 'Income'), ('age', 'hours-per-week'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('race', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data strictly follows the causal directions as specified.
+
+Critical causal rules:
+- education-num → education: higher education-num means higher education level (e.g., 1=Preschool, 16=Doctorate).
+- education → Income: positive causal effect (higher education leads to higher income).
+- marital-status → Income: married individuals tend to have higher income than never-married.
+- relationship → marital-status: 'Husband'/'Wife' implies married; 'Unmarried' implies never-married.
+- relationship → sex: 'Husband' implies male, 'Wife' implies female.
+- age → age: age is simply generated (no cause, just uniform/realistic distribution, given as a feature).
+- age → marital-status: older age increases probability of being married (but not deterministic).
+- age → Income: income generally increases with age up to ~50, then plateaus or slightly declines.
+- age → hours-per-week: older individuals (55+) tend to work fewer hours; middle-aged (25-54) work the most.
+- sex → occupation: males more common in 'Exec-managerial', 'Craft-repair', 'Farming-fishing'; females more in 'Adm-clerical', 'Other-service', 'Priv-house-serv'.
+- sex → hours-per-week: males average ~42 hours, females ~36 hours.
+- race → Income: 'White' and 'Asian-Pac-Islander' have higher average income; 'Black' and 'Other' have lower.
+- capital-gain → Income: positive effect (capital gain increases income).
+- capital-loss → Income: negative effect (capital loss decreases income).
+
+IMPORTANT: There are NO reverse causal links. Specifically, Income does NOT cause occupation, workclass, or hours-per-week. Occupation does NOT cause Income. Hours-per-week does NOT cause Income. Workclass does NOT cause Income. Education level does NOT cause marital-status or relationship.
+
+The synthetic data must generate values that are logically, statistically, and causally coherent. All variables must align with the given directed graph. Avoid any contradictions (e.g., a 20-year-old should not have a 'Doctorate' education level; a 'Husband' should not be female; capital loss should not increase income). The data should reflect realistic distributions from the UCI Adult dataset wherever possible.</Task>"
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.6666666666666666
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('Income', 'occupation'), ('Income', 'education-num'), ('Income', 'hours-per-week'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 33.33%
+
+"Based on the analysis of the existing prompt-score pairs, I will modify the causal structure to reduce ambiguity, eliminate redundant or unrealistic causal loops, and focus on a more coherent and simplified set of relationships. The key issue is that several causal directions (e.g., Income causing hours-per-week, occupation, etc.) introduce confusion in real-world patterns. A more realistic structure aligns with typical social science models where demographics and socio-economic factors influence income, and income influences lifestyle choices.
+
+**Updated Prompt:**
+
+<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'hours-per-week'), ('education-num', 'education'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('race', 'Income'), ('occupation', 'Income'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data reflects that age influences marital status and hours worked per week; education level (indicated by education-num) directly affects education category, which in turn influences occupation and income; marital status impacts income; sex influences both occupation and hours worked; race influences income; occupation directly causes income; and income determines workclass. All causal directions must be strictly followed without contradictions. Generate values that are coherent with real-world patterns (e.g., older individuals are more likely to be married and work fewer hours; higher education leads to higher-paying occupations; certain occupations and races correlate with income differences; income level predicts workclass type). Avoid any reverse causation (e.g., do not let income cause occupation, hours-per-week, or education).</Task>"
+Score: 33.33%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'Income'), ('education-num', 'education'), ('education', 'occupation'), ('marital-status', 'Income'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'Income'), ('Income', 'occupation'), ('Income', 'education-num'), ('Income', 'hours-per-week'), ('Income', 'workclass')]
+Note: The causal structure is a directed acyclic graph. Ensure no reverse or conflicting causal paths (e.g., occupation must never cause income; hours-per-week must never cause income). All edges represent direct causation.</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that strictly and coherently represents these causal relationships given the user-provided samples. Follow these priorities for data generation:
+
+1. **Root causes**: age, education-num (as a numeric proxy for education, but education itself is a child of education-num), sex, relationship, race. These features must be generated first and independently of any causes.
+
+2. **Mediating and child features**: Generate in order:
+   - From age: generate marital-status and Income (direct causes).
+   - From education-num: generate education.
+   - From education: generate occupation.
+   - From sex: generate occupation and hours-per-week.
+   - From relationship: generate marital-status and sex (ensure consistency: e.g., 'Husband' implies sex='Male' and marital-status='Married').
+   - From race: generate Income (disparities applied).
+   - From marital-status (already generated): influence Income (e.g., married increases income).
+   - From Income (already partially generated from age, marital-status, race): then Income itself must cause occupation, education-num, hours-per-week, and workclass. This means that after initial Income is generated from its causes, you must adjust occupation, education-num, hours-per-week, and workclass to reflect that Income is a cause—i.e., higher income leads to higher-skilled occupations, higher education-num (e.g., more years of schooling), longer hours-per-week (e.g., professionals work more), and specific workclass (e.g., private or self-employed for high income). However, ensure no feedback loops: occupation, education-num, hours-per-week, workclass must never alter Income.
+
+3. **Consistency and coherence**:
+   - Age positively influences marital-status (e.g., age > 30 more likely to be married) and Income (e.g., positive correlation).
+   - Higher education-num (e.g., 12+) leads to higher education level (e.g., 'Bachelors', 'Masters').
+   - Higher education leads to higher-skilled occupations (e.g., 'Prof-specialty').
+   - Sex causally determines occupation (e.g., 'Male' more likely in 'Craft-repair', 'Female' more likely in 'Adm-clerical') and hours-per-week (e.g., males average 40+ hours, females 35+).
+   - Relationship determines sex and marital-status (e.g., 'Husband' → sex='Male', marital='Married'; 'Wife' → sex='Female', marital='Married'; 'Not-in-family' → marital='Never-married', sex balanced).
+   - Race influences Income (e.g., white vs. non-white income disparity).
+   - Marital-status (married) increases Income.
+   - Income then causally determines occupation (high income → 'Exec-managerial' or 'Prof-specialty'), education-num (high income →13+ years), hours-per-week (high income →45+ hours), and workclass (high income → 'Private' or 'Self-emp-inc').
+
+4. **Avoid contradictions**: For instance, if income is high, the generated occupation must be high-skilled; if income is low, occupation must be low-skilled (e.g., 'Handlers-cleaners'). Never assign a feature that would reverse causation.
+
+Generate synthetic data rows that strictly follow this causal DAG and the specified generation order. The output should be a list of rows with features exactly as named above, matching real-world correlations and avoiding any statistically impossible combinations.</Task>"
+Score: 35.0%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 2, batch: 2 <<<<<<<<<<<<<<<< 
+Instruction: Based on the analysis of the existing prompt-score pairs, I will simplify the causal structure to remove redundant or unrealistic causal loops, focus on a more coherent and realistic set of relationships, and provide clearer, more specific guidance to reduce ambiguity and improve synthetic data quality.
+
+**Updated Prompt:**
+
+<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'hours-per-week'), ('age', 'Income'), ('education-num', 'education'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('race', 'Income'), ('occupation', 'Income'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that strictly and coherently represents these causal relationships given the user-provided samples. Follow these generation rules:
+
+1. **Root causes (generate first, independently):** age, education-num, sex, race.
+2. **Generation order:**
+   - `age` → `marital-status` (e.g., older → more likely married).
+   - `age` → `hours-per-week` (e.g., older → works fewer hours).
+   - `age` → `Income` (e.g., older → higher income, with diminishing returns after a peak).
+   - `education-num` → `education` (e.g., 12+ years → 'Bachelors', 16+ → 'Masters').
+   - `education` → `occupation` (e.g., high education → 'Prof-specialty' or 'Exec-managerial').
+   - `education` → `Income` (e.g., higher education → higher income).
+   - `marital-status` → `Income` (e.g., married → higher income).
+   - `sex` → `occupation` (e.g., male → more likely 'Craft-repair' or 'Machine-op-inspct'; female → more likely 'Adm-clerical' or 'Other-service').
+   - `sex` → `hours-per-week` (e.g., male → average 40+ hours; female → average 35+ hours).
+   - `race` → `Income` (e.g., white → higher income on average).
+   - `occupation` → `Income` (e.g., high-skill occupation → higher income).
+   - `Income` → `workclass` (e.g., high income → 'Private' or 'Self-emp-inc'; low income → 'State-gov' or 'Local-gov').
+
+3. **Critical constraints:**
+   - **Avoid reverse causation**: `Income` must never cause `occupation`, `hours-per-week`, or `education`. The DAG is strictly acyclic.
+   - **Consistency**: Ensure all features align with real-world patterns. For example, 'Husband' must imply sex='Male' and marital-status='Married'; 'Prof-specialty' typically requires high education.
+   - **Realistic values**: Use plausible ranges (e.g., age 18-90, hours-per-week 1-80, education-num 1-16). Income should be between 10,000 and 200,000.
+
+Generate synthetic data rows that strictly follow this causal DAG and the specified generation order. The output should be a list of rows with features exactly as named, matching real-world correlations and avoiding contradictory or statistically impossible combinations.</Task>
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.5238095238095238
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('Income', 'occupation'), ('Income', 'education-num'), ('Income', 'hours-per-week'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 38.1%
+
+""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('Income', 'occupation'), ('Income', 'hours-per-week'), ('Income', 'workclass'), ('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('sex', 'occupation'), ('education', 'income'), ('age', 'hours-per-week'), ('sex', 'hours-per-week'), ('race', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data reflects that age influences both marital status and income, education affects occupation and income, sex influences occupation and hours-per-week, and race influences income, in addition to all original causal links. Generate data where the causal directions are strictly followed, and the values are coherent with real-world patterns (e.g., older age increases likelihood of being married and having higher income; higher education corresponds to higher income; certain races have income disparities; sex influences both occupation type and hours worked; income causally determines occupation, workclass, and hours-per-week). Avoid generating conflicting causal patterns (e.g., do not let occupation or hours-per-week cause income, as income is the cause).</Task>""
+Score: 42.86%
+
+"Based on the analysis of the existing prompt-score pairs, I will modify the causal structure to reduce ambiguity, eliminate redundant or unrealistic causal loops, and focus on a more coherent and simplified set of relationships. The key issue is that several causal directions (e.g., Income causing hours-per-week, occupation, etc.) introduce confusion in real-world patterns. A more realistic structure aligns with typical social science models where demographics and socio-economic factors influence income, and income influences lifestyle choices.
+
+**Updated Prompt:**
+
+<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'hours-per-week'), ('education-num', 'education'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('race', 'Income'), ('occupation', 'Income'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data reflects that age influences marital status and hours worked per week; education level (indicated by education-num) directly affects education category, which in turn influences occupation and income; marital status impacts income; sex influences both occupation and hours worked; race influences income; occupation directly causes income; and income determines workclass. All causal directions must be strictly followed without contradictions. Generate values that are coherent with real-world patterns (e.g., older individuals are more likely to be married and work fewer hours; higher education leads to higher-paying occupations; certain occupations and races correlate with income differences; income level predicts workclass type). Avoid any reverse causation (e.g., do not let income cause occupation, hours-per-week, or education).</Task>"
+Score: 42.86%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 2, batch: 3 <<<<<<<<<<<<<<<< 
+Instruction: Based on the analysis of the provided prompt-score pairs and the goal of lowering the score, the key insight is that the score increased when the causal structure was made more complex and included "Income" as a cause of other variables. This introduces a conflict with common real-world understanding, where income is typically an outcome of factors like occupation, education, and hours worked. The highest-scoring prompt (lowest score) was the simplest and most aligned with conventional wisdom, where income is an effect, not a root cause.
+
+My strategy for optimization is to further simplify the causal structure to remove any counterintuitive causal flows that force the model to generate unnatural patterns. I will also refine the task guidance to explicitly prohibit common real-world causal directions that are not present in the structure, preventing the model from defaulting to them and creating inconsistencies.
+
+**Updated Prompt:**
+
+<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'hours-per-week'), ('education-num', 'education'), ('education', 'occupation'), ('marital-status', 'Income'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('race', 'Income'), ('occupation', 'Income'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. The causal graph is strictly enforced. This means:
+- **Age** causes `marital-status` and `hours-per-week`.
+- **Education-num** causes `education`. **Education** causes `occupation`.
+- **Marital-status** causes `Income`.
+- **Sex** causes `occupation` and `hours-per-week`.
+- **Race** causes `Income`.
+- **Occupation** causes `Income`.
+- **Income** causes `workclass`.
+
+Crucially, **Income is an effect, not a cause** of `occupation`, `hours-per-week`, or `education`. Do not sample `Income` first and then use it to determine these variables. Instead, use `Income` strictly as the last step in the causal chain leading to `workclass`. Generate values coherent with real-world patterns (e.g., older individuals are more likely to be married; higher education leads to higher-paying occupations; certain races correlate with income differences; income level predicts workclass type). Avoid generating any reverse causation or cycles not specified in the structure. The synthetic data must be believable but perfectly reflect these directed relationships without contradiction. If a feature is not listed as a cause of another, they must not be statistically dependent in a way that implies a causal relationship.</Task>
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.6190476190476191
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('Income', 'occupation'), ('Income', 'education-num'), ('Income', 'hours-per-week'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 33.33%
+
+""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('Income', 'occupation'), ('Income', 'hours-per-week'), ('Income', 'workclass'), ('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('sex', 'occupation'), ('education', 'income'), ('age', 'hours-per-week'), ('sex', 'hours-per-week'), ('race', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data reflects that age influences both marital status and income, education affects occupation and income, sex influences occupation and hours-per-week, and race influences income, in addition to all original causal links. Generate data where the causal directions are strictly followed, and the values are coherent with real-world patterns (e.g., older age increases likelihood of being married and having higher income; higher education corresponds to higher income; certain races have income disparities; sex influences both occupation type and hours worked; income causally determines occupation, workclass, and hours-per-week). Avoid generating conflicting causal patterns (e.g., do not let occupation or hours-per-week cause income, as income is the cause).</Task>""
+Score: 38.1%
+
+"Based on the analysis of the existing prompt-score pairs, I will modify the causal structure to reduce ambiguity, eliminate redundant or unrealistic causal loops, and focus on a more coherent and simplified set of relationships. The key issue is that several causal directions (e.g., Income causing hours-per-week, occupation, etc.) introduce confusion in real-world patterns. A more realistic structure aligns with typical social science models where demographics and socio-economic factors influence income, and income influences lifestyle choices.
+
+**Updated Prompt:**
+
+<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'hours-per-week'), ('education-num', 'education'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('race', 'Income'), ('occupation', 'Income'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data reflects that age influences marital status and hours worked per week; education level (indicated by education-num) directly affects education category, which in turn influences occupation and income; marital status impacts income; sex influences both occupation and hours worked; race influences income; occupation directly causes income; and income determines workclass. All causal directions must be strictly followed without contradictions. Generate values that are coherent with real-world patterns (e.g., older individuals are more likely to be married and work fewer hours; higher education leads to higher-paying occupations; certain occupations and races correlate with income differences; income level predicts workclass type). Avoid any reverse causation (e.g., do not let income cause occupation, hours-per-week, or education).</Task>"
+Score: 42.86%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 2, batch: 4 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'hours-per-week'), ('education-num', 'education'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('race', 'Income'), ('occupation', 'Income'), ('workclass', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data reflects:
+- Age influences marital status and hours worked per week (older age increases likelihood of being married and reduces work hours).
+- Education-num determines education category, which then influences both occupation and income (higher education = higher-paying occupation and income).
+- Marital status affects income (married individuals tend to have higher income).
+- Sex influences occupation and hours-per-week (e.g., certain occupations are sex-dominated; hours differ).
+- Race influences income (reflect known disparities).
+- Occupation causes income (different occupations have different income levels).
+- Workclass causes income (employment type, e.g., self-employed vs. government, affects income).
+
+All causal directions must be strictly followed. Generate values coherent with real-world patterns. Avoid reverse causation (e.g., income should not cause occupation, hours-per-week, marital status, or workclass). Ensure no conflicting patterns and that all causal links are realized in the data.</Task>
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.65
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('Income', 'occupation'), ('Income', 'education-num'), ('Income', 'hours-per-week'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 38.1%
+
+""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('Income', 'occupation'), ('Income', 'hours-per-week'), ('Income', 'workclass'), ('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('sex', 'occupation'), ('education', 'income'), ('age', 'hours-per-week'), ('sex', 'hours-per-week'), ('race', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data reflects that age influences both marital status and income, education affects occupation and income, sex influences occupation and hours-per-week, and race influences income, in addition to all original causal links. Generate data where the causal directions are strictly followed, and the values are coherent with real-world patterns (e.g., older age increases likelihood of being married and having higher income; higher education corresponds to higher income; certain races have income disparities; sex influences both occupation type and hours worked; income causally determines occupation, workclass, and hours-per-week). Avoid generating conflicting causal patterns (e.g., do not let occupation or hours-per-week cause income, as income is the cause).</Task>""
+Score: 38.1%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'Income'), ('education-num', 'education'), ('education', 'occupation'), ('marital-status', 'Income'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'Income'), ('Income', 'occupation'), ('Income', 'education-num'), ('Income', 'hours-per-week'), ('Income', 'workclass')]
+Note: The causal structure is a directed acyclic graph. Ensure no reverse or conflicting causal paths (e.g., occupation must never cause income; hours-per-week must never cause income). All edges represent direct causation.</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that strictly and coherently represents these causal relationships given the user-provided samples. Follow these priorities for data generation:
+
+1. **Root causes**: age, education-num (as a numeric proxy for education, but education itself is a child of education-num), sex, relationship, race. These features must be generated first and independently of any causes.
+
+2. **Mediating and child features**: Generate in order:
+   - From age: generate marital-status and Income (direct causes).
+   - From education-num: generate education.
+   - From education: generate occupation.
+   - From sex: generate occupation and hours-per-week.
+   - From relationship: generate marital-status and sex (ensure consistency: e.g., 'Husband' implies sex='Male' and marital-status='Married').
+   - From race: generate Income (disparities applied).
+   - From marital-status (already generated): influence Income (e.g., married increases income).
+   - From Income (already partially generated from age, marital-status, race): then Income itself must cause occupation, education-num, hours-per-week, and workclass. This means that after initial Income is generated from its causes, you must adjust occupation, education-num, hours-per-week, and workclass to reflect that Income is a cause—i.e., higher income leads to higher-skilled occupations, higher education-num (e.g., more years of schooling), longer hours-per-week (e.g., professionals work more), and specific workclass (e.g., private or self-employed for high income). However, ensure no feedback loops: occupation, education-num, hours-per-week, workclass must never alter Income.
+
+3. **Consistency and coherence**:
+   - Age positively influences marital-status (e.g., age > 30 more likely to be married) and Income (e.g., positive correlation).
+   - Higher education-num (e.g., 12+) leads to higher education level (e.g., 'Bachelors', 'Masters').
+   - Higher education leads to higher-skilled occupations (e.g., 'Prof-specialty').
+   - Sex causally determines occupation (e.g., 'Male' more likely in 'Craft-repair', 'Female' more likely in 'Adm-clerical') and hours-per-week (e.g., males average 40+ hours, females 35+).
+   - Relationship determines sex and marital-status (e.g., 'Husband' → sex='Male', marital='Married'; 'Wife' → sex='Female', marital='Married'; 'Not-in-family' → marital='Never-married', sex balanced).
+   - Race influences Income (e.g., white vs. non-white income disparity).
+   - Marital-status (married) increases Income.
+   - Income then causally determines occupation (high income → 'Exec-managerial' or 'Prof-specialty'), education-num (high income →13+ years), hours-per-week (high income →45+ hours), and workclass (high income → 'Private' or 'Self-emp-inc').
+
+4. **Avoid contradictions**: For instance, if income is high, the generated occupation must be high-skilled; if income is low, occupation must be low-skilled (e.g., 'Handlers-cleaners'). Never assign a feature that would reverse causation.
+
+Generate synthetic data rows that strictly follow this causal DAG and the specified generation order. The output should be a list of rows with features exactly as named above, matching real-world correlations and avoiding any statistically impossible combinations.</Task>"
+Score: 40.0%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 3, batch: 1 <<<<<<<<<<<<<<<< 
+Instruction: Looking at the scores, the current prompt achieves 40.0%, which is worse than the original 38.1%. The issue appears to be that adding too many causal relationships creates contradictions. The key problem is having both `education -> occupation` AND `Income -> occupation`, and both `education -> Income` AND `Income -> education-num`, creating circular dependencies.
+
+Let me optimize by simplifying the causal structure to avoid contradictions while maintaining critical real-world patterns:
+
+```
+<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'Income'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'Income'), ('sex', 'hours-per-week'), ('education-num', 'education'), ('education', 'occupation'), ('education', 'Income'), ('Income', 'workclass')]
+Note: This is a directed acyclic graph with no cycles. Features should be generated in topological order: root causes first (age, relationship, race, sex, education-num), then their children, then Income, then workclass.</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that faithfully represents these causal relationships given the user-provided samples. Generate data following this exact generation order and constraints:
+
+1. **Root cause generation** (independent, generated first):
+   - age: integer 17-90
+   - relationship: categorical (e.g., 'Husband', 'Wife', 'Own-child', 'Not-in-family')
+   - race: categorical ('White', 'Black', 'Asian', 'Other')
+   - sex: categorical (but note: sex is BOTH a child of relationship AND a root cause - handle carefully)
+   - education-num: integer 1-16 (years of education)
+
+2. **Second level** (dependent on roots only):
+   - marital-status: from age (older→married), relationship (Husband/Wife→married, Own-child/Not-in-family→never-married)
+   - sex: from relationship (Husband→Male, Wife→Female, others balanced)
+   - education: from education-num (1-8→'Some-hs', 9→'HS-grad', 10-12→'Some-college', 13→'Assoc', 14→'Bachelors', 15→'Masters', 16→'Doctorate')
+
+3. **Third level**:
+   - occupation: from education only (Doctorate→'Prof-specialty', Bachelors→'Exec-managerial', HS-grad→'Craft-repair', etc.)
+   - hours-per-week: from sex (Male: 30-50, Female: 25-45)
+
+4. **Fourth level** - Income: from age (positive correlation), marital-status (married→higher), education (higher education→higher probability >50K), race (White→higher probability >50K)
+   - Use a probabilistic model: probability of >50K = base + age_effect + married_effect + education_effect + race_effect
+
+5. **Final level** - workclass: from Income (If >50K: more likely 'Self-emp-inc' or 'Private', if ≤50K: more likely 'State-gov' or 'Local-gov')
+
+**Critical constraints to avoid contradictions**:
+- Income does NOT cause occupation, education-num, or hours-per-week (to prevent cycles)
+- Occupation is determined solely by education, not by sex or Income
+- This simplification ensures no causal conflicts while maintaining realistic patterns
+- All numeric features should show realistic distributions (no negatives, reasonable ranges)
+
+Generate a list of synthetic data rows with these features in order: age, workclass, education, education-num, marital-status, occupation, relationship, race, sex, hours-per-week, Income. Ensure all causal directions are strictly followed and no reverse causation occurs.</Task>
+```
+Number of samples: 40
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 10
+Score: 0.47368421052631576
+
+""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('education', 'Income'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('age', 'marital-status'), ('age', 'Income'), ('age', 'hours-per-week'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('race', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data strictly follows the causal directions as specified. Specifically: education-num determines education level (higher education-num → higher education). Education positively causes Income (e.g., higher education → higher income). Marital-status causes Income (e.g., married individuals tend to have higher income). Relationship causes marital-status and sex (e.g., 'Husband' implies male and married). Age causes marital-status (older → more likely married), Income (older → higher income, up to a point), and hours-per-week (older → slightly fewer hours in professional roles). Sex causes occupation (e.g., males more likely in manual labor, females in admin) and hours-per-week (e.g., males tend to work more hours). Race causes Income (e.g., White individuals have higher income on average). Capital-gain positively causes Income. Capital-loss negatively causes Income (i.e., higher capital loss → lower income). Income then causally determines occupation (e.g., high income → executive/manager roles), workclass (e.g., high income → Self-emp or Private), and hours-per-week (e.g., high income may correlate with more hours but not deterministically). There must be no reverse causal links: occupation, workclass, and hours-per-week should not cause Income. Generate values that are logically and statistically plausible: higher education leads to higher income; older age increases marriage likelihood and income but may decrease hours in high-skill jobs; sex shapes occupational and hours patterns; race introduces income disparities; capital gains boost income, capital losses reduce it. All variables must align with the causal structure, avoiding contradictions and ensuring synthetic data reflects real-world distributions.</Task>""
+Score: 19.05%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('education', 'Income'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('age', 'marital-status'), ('age', 'Income'), ('age', 'hours-per-week'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('race', 'Income'), ('Income', 'occupation'), ('Income', 'workclass'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data strictly follows the causal directions as specified. Specifically, age should influence marital status, income, and hours-per-week. Education-num determines education level, which in turn causes income. Marital-status and race are direct causes of income. Sex causally influences both occupation and hours-per-week. Capital-gain and capital-loss directly affect income. Income itself then causally determines occupation and workclass. There should be no reverse causal links (e.g., occupation or workclass should not cause income). Generate values that reflect real-world coherence: higher education leads to higher income; older age increases likelihood of being married (but not deterministically), higher income, and fewer hours per week (in professional roles); certain races have income disparities; sex influences occupational choices and hours worked; and capital gains or losses have a positive or negative impact respectively on income. The synthetic data must be logically and statistically plausible, avoiding contradictions and ensuring all variables align with the given causal structure.</Task>"
+Score: 30.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'Income'), ('education-num', 'education'), ('education', 'occupation'), ('marital-status', 'Income'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'Income'), ('Income', 'occupation'), ('Income', 'education-num'), ('Income', 'hours-per-week'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that all causal directions are strictly followed and no reverse or conflicting causal paths exist (e.g., occupation must never cause income; hours-per-week must never cause income). The data should be coherent with real-world patterns: age positively influences both marital status (older more likely married) and income; higher education-num and education level lead to higher-skilled occupations and higher income; marital status (married) increases income; sex causally determines occupation type (e.g., males more likely in certain blue-collar roles) and hours-per-week (males often work more hours); relationship determines sex and marital status (e.g., husband implies male and married); race influences income (e.g., income disparities); and income itself then causally determines occupation, education-num, hours-per-week, and workclass (e.g., high income leads to professional occupations, higher education-num, longer hours, and private workclass). Generate data that strictly obeys these causal chains, avoiding any feature that causes income from its descendants.</Task>"
+Score: 33.33%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 3, batch: 2 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('education', 'Income'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('age', 'marital-status'), ('age', 'Income'), ('age', 'hours-per-week'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('race', 'Income'), ('capital-gain', 'Income'), ('capital-loss', 'Income'), ('Income', 'occupation'), ('Income', 'workclass'), ('Income', 'hours-per-week')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that faithfully represents these causal relationships given the user-provided samples. Ensure that the synthetic data strictly follows the causal directions as specified without contradictions or reverse causation. Specifically, education-num determines education level (higher education-num → higher education). Education positively causes Income (e.g., higher education → higher income). Marital-status causes Income (e.g., married individuals tend to have higher income). Relationship causes marital-status and sex (e.g., 'Husband' implies male and married). Age causes marital-status (older → more likely married), Income (older → higher income, up to a peak then decline), and hours-per-week (older → slightly fewer hours in professional roles). Sex causes occupation (e.g., males more likely in manual labor, females in admin) and hours-per-week (e.g., males tend to work more hours). Race causes Income (e.g., White individuals have higher income on average). Capital-gain positively causes Income. Capital-loss negatively causes Income (i.e., higher capital loss → lower income). Income then causally determines occupation (e.g., high income → executive/manager roles), workclass (e.g., high income → Self-emp or Private), and hours-per-week (e.g., high income may correlate with more hours, but with a plateau). There must be no reverse causal links: occupation, workclass, and hours-per-week must never cause Income. Generate values that are logically and statistically plausible: higher education leads to higher income; older age increases marriage likelihood and income until mid-career then declines slightly; sex shapes occupational and hours patterns; race introduces income disparities; capital gains boost income, capital losses reduce it. All variables must align with the causal structure, avoiding contradictions and ensuring synthetic data reflects real-world distributions, with smooth monotonic relationships where specified.</Task>
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.47619047619047616
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('Income', 'occupation'), ('Income', 'education-num'), ('Income', 'hours-per-week'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 38.1%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'Income'), ('education-num', 'education'), ('education', 'occupation'), ('marital-status', 'Income'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'Income'), ('Income', 'occupation'), ('Income', 'education-num'), ('Income', 'hours-per-week'), ('Income', 'workclass')]
+Note: The causal structure is a directed acyclic graph. Ensure no reverse or conflicting causal paths (e.g., occupation must never cause income; hours-per-week must never cause income). All edges represent direct causation.</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that strictly and coherently represents these causal relationships given the user-provided samples. Follow these priorities for data generation:
+
+1. **Root causes**: age, education-num (as a numeric proxy for education, but education itself is a child of education-num), sex, relationship, race. These features must be generated first and independently of any causes.
+
+2. **Mediating and child features**: Generate in order:
+   - From age: generate marital-status and Income (direct causes).
+   - From education-num: generate education.
+   - From education: generate occupation.
+   - From sex: generate occupation and hours-per-week.
+   - From relationship: generate marital-status and sex (ensure consistency: e.g., 'Husband' implies sex='Male' and marital-status='Married').
+   - From race: generate Income (disparities applied).
+   - From marital-status (already generated): influence Income (e.g., married increases income).
+   - From Income (already partially generated from age, marital-status, race): then Income itself must cause occupation, education-num, hours-per-week, and workclass. This means that after initial Income is generated from its causes, you must adjust occupation, education-num, hours-per-week, and workclass to reflect that Income is a cause—i.e., higher income leads to higher-skilled occupations, higher education-num (e.g., more years of schooling), longer hours-per-week (e.g., professionals work more), and specific workclass (e.g., private or self-employed for high income). However, ensure no feedback loops: occupation, education-num, hours-per-week, workclass must never alter Income.
+
+3. **Consistency and coherence**:
+   - Age positively influences marital-status (e.g., age > 30 more likely to be married) and Income (e.g., positive correlation).
+   - Higher education-num (e.g., 12+) leads to higher education level (e.g., 'Bachelors', 'Masters').
+   - Higher education leads to higher-skilled occupations (e.g., 'Prof-specialty').
+   - Sex causally determines occupation (e.g., 'Male' more likely in 'Craft-repair', 'Female' more likely in 'Adm-clerical') and hours-per-week (e.g., males average 40+ hours, females 35+).
+   - Relationship determines sex and marital-status (e.g., 'Husband' → sex='Male', marital='Married'; 'Wife' → sex='Female', marital='Married'; 'Not-in-family' → marital='Never-married', sex balanced).
+   - Race influences Income (e.g., white vs. non-white income disparity).
+   - Marital-status (married) increases Income.
+   - Income then causally determines occupation (high income → 'Exec-managerial' or 'Prof-specialty'), education-num (high income →13+ years), hours-per-week (high income →45+ hours), and workclass (high income → 'Private' or 'Self-emp-inc').
+
+4. **Avoid contradictions**: For instance, if income is high, the generated occupation must be high-skilled; if income is low, occupation must be low-skilled (e.g., 'Handlers-cleaners'). Never assign a feature that would reverse causation.
+
+Generate synthetic data rows that strictly follow this causal DAG and the specified generation order. The output should be a list of rows with features exactly as named above, matching real-world correlations and avoiding any statistically impossible combinations.</Task>"
+Score: 40.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'Income'), ('education-num', 'education'), ('education', 'occupation'), ('marital-status', 'Income'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'Income'), ('Income', 'occupation'), ('Income', 'education-num'), ('Income', 'hours-per-week'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that all causal directions are strictly followed and no reverse or conflicting causal paths exist (e.g., occupation must never cause income; hours-per-week must never cause income). The data should be coherent with real-world patterns: age positively influences both marital status (older more likely married) and income; higher education-num and education level lead to higher-skilled occupations and higher income; marital status (married) increases income; sex causally determines occupation type (e.g., males more likely in certain blue-collar roles) and hours-per-week (males often work more hours); relationship determines sex and marital status (e.g., husband implies male and married); race influences income (e.g., income disparities); and income itself then causally determines occupation, education-num, hours-per-week, and workclass (e.g., high income leads to professional occupations, higher education-num, longer hours, and private workclass). Generate data that strictly obeys these causal chains, avoiding any feature that causes income from its descendants.</Task>"
+Score: 42.86%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 3, batch: 3 <<<<<<<<<<<<<<<< 
+Instruction: Looking at the scores, the second prompt (40.0%) performed better than the first (38.1%) but worse than the third (42.86%). I need to identify what's causing higher scores and adjust accordingly.
+
+The first prompt had simple causal structure and vague guidance - score 38.1%
+The second had more complex structure with detailed generation order - score 40.0% (worse)
+The third was more concise but still detailed - score 42.86% (worst)
+
+This suggests that overly complex or confining guidance might harm performance. I'll simplify the causal structure and provide clearer, more flexible guidance.
+
+Here is the optimized prompt:
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'Income'), ('education-num', 'education'), ('education', 'occupation'), ('marital-status', 'Income'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'Income'), ('Income', 'occupation'), ('Income', 'education-num'), ('Income', 'hours-per-week'), ('Income', 'workclass'), ('age', 'hours-per-week')]
+Note: The causal structure is a directed acyclic graph. All edges represent direct causation. Ensure no reverse or conflicting causal paths.</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that faithfully represents these causal relationships given the user-provided samples. 
+
+Generate data rows following this causal direction:
+
+1. **Independent root features** (generate first, no parents): age, education-num, sex, relationship, race
+
+2. **Dependent features** (generate in causal order):
+   - education depends on education-num
+   - marital-status depends on age + relationship
+   - sex also depends on relationship (ensure consistency: husband→male, wife→female)
+   - Income depends on age + marital-status + race
+   - hours-per-week depends on age + sex + Income
+   - occupation depends on education + sex + Income
+   - workclass depends on Income
+
+3. **Key causal effects to capture**:
+   - Age increases with marital probability and income
+   - Married people tend to have higher income
+   - Higher education leads to higher-skilled jobs
+   - Income positively influences work hours, education years, professional occupations, and private sector work
+   - Race-based income disparities exist
+   - Sex influences occupation type and work hours
+
+Generate synthetic data that exhibits these causal patterns naturally without over-constraining the distributions. The output should be a formatted list of data rows.</Task>"
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.47619047619047616
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('Income', 'occupation'), ('Income', 'education-num'), ('Income', 'hours-per-week'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 33.33%
+
+""<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('Income', 'occupation'), ('Income', 'hours-per-week'), ('Income', 'workclass'), ('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('sex', 'occupation'), ('education', 'income'), ('age', 'hours-per-week'), ('sex', 'hours-per-week'), ('race', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data reflects that age influences both marital status and income, education affects occupation and income, sex influences occupation and hours-per-week, and race influences income, in addition to all original causal links. Generate data where the causal directions are strictly followed, and the values are coherent with real-world patterns (e.g., older age increases likelihood of being married and having higher income; higher education corresponds to higher income; certain races have income disparities; sex influences both occupation type and hours worked; income causally determines occupation, workclass, and hours-per-week). Avoid generating conflicting causal patterns (e.g., do not let occupation or hours-per-week cause income, as income is the cause).</Task>""
+Score: 38.1%
+
+"Based on the analysis of the existing prompt-score pairs, I will modify the causal structure to reduce ambiguity, eliminate redundant or unrealistic causal loops, and focus on a more coherent and simplified set of relationships. The key issue is that several causal directions (e.g., Income causing hours-per-week, occupation, etc.) introduce confusion in real-world patterns. A more realistic structure aligns with typical social science models where demographics and socio-economic factors influence income, and income influences lifestyle choices.
+
+**Updated Prompt:**
+
+<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'hours-per-week'), ('education-num', 'education'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('race', 'Income'), ('occupation', 'Income'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data reflects that age influences marital status and hours worked per week; education level (indicated by education-num) directly affects education category, which in turn influences occupation and income; marital status impacts income; sex influences both occupation and hours worked; race influences income; occupation directly causes income; and income determines workclass. All causal directions must be strictly followed without contradictions. Generate values that are coherent with real-world patterns (e.g., older individuals are more likely to be married and work fewer hours; higher education leads to higher-paying occupations; certain occupations and races correlate with income differences; income level predicts workclass type). Avoid any reverse causation (e.g., do not let income cause occupation, hours-per-week, or education).</Task>"
+Score: 42.86%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 3, batch: 4 <<<<<<<<<<<<<<<< 
+Instruction: Based on the analysis of the existing prompt-score pairs, the scores are inversely related to the quality of the generated synthetic data. The initial simpler structure (33.33%) performed better than the more complex, contradictory second structure (38.1%), while the third prompt, despite being more realistic, scored the worst (42.86%).
+
+The core problem is that a causal structure where Income causes variables like occupation, hours-per-week, and workclass is counter-intuitive and contradicts real-world patterns, leading to confusing synthetic data. To lower the score, the best approach is to drastically simplify the structure, removing all ambiguous or reverse-causal links and focusing on a highly coherent, deterministic, and non-contradictory set of relationships. This reduces the likelihood of the model generating conflicting patterns.
+
+**Updated Prompt:**
+
+<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'Income'), ('education', 'Income'), ('education', 'occupation'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('race', 'Income'), ('marital-status', 'Income'), ('occupation', 'hours-per-week'), ('hours-per-week', 'Income'), ('Income', 'workclass')]
+</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure the synthetic data strictly adheres to a forward-causal flow, where demographics (age, sex, race, marital-status) and human capital (education) determine occupational choices and economic outcomes. Specifically: sex influences occupation type and hours-per-week; education influences both income and occupation; occupation subsequently determines hours-per-week; hours-per-week causally contributes to income; and income level causally determines workclass (e.g., self-employed vs. government employee). Race, age, and marital-status are direct causes of income. Generate all values to be coherent with real-world patterns: for example, higher education leads to both higher-paying occupations and higher income; working more hours per week positively affects income; income levels logically lead to corresponding workclass types; and demographic factors (age, race, sex, marital-status) reflect known societal income disparities. **Crucially, avoid any reverse causation:** do not allow income to cause occupation, education, hours-per-week, or marital-status. The causal arrow always points forward from background/demographic features towards income and work-related outcomes.</Task>
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.5
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('education', 'Income'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('age', 'marital-status'), ('age', 'Income'), ('age', 'hours-per-week'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('race', 'Income'), ('Income', 'occupation'), ('Income', 'workclass'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data strictly follows the causal directions as specified. Specifically, age should influence marital status, income, and hours-per-week. Education-num determines education level, which in turn causes income. Marital-status and race are direct causes of income. Sex causally influences both occupation and hours-per-week. Capital-gain and capital-loss directly affect income. Income itself then causally determines occupation and workclass. There should be no reverse causal links (e.g., occupation or workclass should not cause income). Generate values that reflect real-world coherence: higher education leads to higher income; older age increases likelihood of being married (but not deterministically), higher income, and fewer hours per week (in professional roles); certain races have income disparities; sex influences occupational choices and hours worked; and capital gains or losses have a positive or negative impact respectively on income. The synthetic data must be logically and statistically plausible, avoiding contradictions and ensuring all variables align with the given causal structure.</Task>"
+Score: 35.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'hours-per-week'), ('education-num', 'education'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('race', 'Income'), ('occupation', 'Income'), ('workclass', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data reflects:
+- Age influences marital status and hours worked per week (older age increases likelihood of being married and reduces work hours).
+- Education-num determines education category, which then influences both occupation and income (higher education = higher-paying occupation and income).
+- Marital status affects income (married individuals tend to have higher income).
+- Sex influences occupation and hours-per-week (e.g., certain occupations are sex-dominated; hours differ).
+- Race influences income (reflect known disparities).
+- Occupation causes income (different occupations have different income levels).
+- Workclass causes income (employment type, e.g., self-employed vs. government, affects income).
+
+All causal directions must be strictly followed. Generate values coherent with real-world patterns. Avoid reverse causation (e.g., income should not cause occupation, hours-per-week, marital status, or workclass). Ensure no conflicting patterns and that all causal links are realized in the data.</Task>"
+Score: 35.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('Income', 'occupation'), ('Income', 'education-num'), ('Income', 'hours-per-week'), ('Income', 'workclass'), ('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('sex', 'occupation')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data reflects that age influences both marital status and income, education affects occupation, and sex influences occupation, in addition to the original causal links. Generate data where the causal directions are strictly followed, and the values are coherent with real-world patterns (e.g., higher education-num leads to higher education level, married individuals are more likely to have higher income, and income causally determines occupation, workclass, etc.).</Task>"
+Score: 38.1%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 0 <<<<<<<<<<<<<<<< 
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.5346534653465347
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('education', 'Income'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('age', 'marital-status'), ('age', 'Income'), ('age', 'hours-per-week'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('race', 'Income'), ('Income', 'occupation'), ('Income', 'workclass'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data strictly follows the causal directions as specified. Specifically, age should influence marital status, income, and hours-per-week. Education-num determines education level, which in turn causes income. Marital-status and race are direct causes of income. Sex causally influences both occupation and hours-per-week. Capital-gain and capital-loss directly affect income. Income itself then causally determines occupation and workclass. There should be no reverse causal links (e.g., occupation or workclass should not cause income). Generate values that reflect real-world coherence: higher education leads to higher income; older age increases likelihood of being married (but not deterministically), higher income, and fewer hours per week (in professional roles); certain races have income disparities; sex influences occupational choices and hours worked; and capital gains or losses have a positive or negative impact respectively on income. The synthetic data must be logically and statistically plausible, avoiding contradictions and ensuring all variables align with the given causal structure.</Task>"
+Score: 35.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'hours-per-week'), ('education-num', 'education'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('race', 'Income'), ('occupation', 'Income'), ('workclass', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data reflects:
+- Age influences marital status and hours worked per week (older age increases likelihood of being married and reduces work hours).
+- Education-num determines education category, which then influences both occupation and income (higher education = higher-paying occupation and income).
+- Marital status affects income (married individuals tend to have higher income).
+- Sex influences occupation and hours-per-week (e.g., certain occupations are sex-dominated; hours differ).
+- Race influences income (reflect known disparities).
+- Occupation causes income (different occupations have different income levels).
+- Workclass causes income (employment type, e.g., self-employed vs. government, affects income).
+
+All causal directions must be strictly followed. Generate values coherent with real-world patterns. Avoid reverse causation (e.g., income should not cause occupation, hours-per-week, marital status, or workclass). Ensure no conflicting patterns and that all causal links are realized in the data.</Task>"
+Score: 35.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('Income', 'occupation'), ('Income', 'education-num'), ('Income', 'hours-per-week'), ('Income', 'workclass'), ('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('sex', 'occupation')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data reflects that age influences both marital status and income, education affects occupation, and sex influences occupation, in addition to the original causal links. Generate data where the causal directions are strictly followed, and the values are coherent with real-world patterns (e.g., higher education-num leads to higher education level, married individuals are more likely to have higher income, and income causally determines occupation, workclass, etc.).</Task>"
+Score: 38.1%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 1 <<<<<<<<<<<<<<<< 
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.49504950495049505
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('education', 'Income'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('age', 'marital-status'), ('age', 'Income'), ('age', 'hours-per-week'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('race', 'Income'), ('Income', 'occupation'), ('Income', 'workclass'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data strictly follows the causal directions as specified. Specifically, age should influence marital status, income, and hours-per-week. Education-num determines education level, which in turn causes income. Marital-status and race are direct causes of income. Sex causally influences both occupation and hours-per-week. Capital-gain and capital-loss directly affect income. Income itself then causally determines occupation and workclass. There should be no reverse causal links (e.g., occupation or workclass should not cause income). Generate values that reflect real-world coherence: higher education leads to higher income; older age increases likelihood of being married (but not deterministically), higher income, and fewer hours per week (in professional roles); certain races have income disparities; sex influences occupational choices and hours worked; and capital gains or losses have a positive or negative impact respectively on income. The synthetic data must be logically and statistically plausible, avoiding contradictions and ensuring all variables align with the given causal structure.</Task>"
+Score: 35.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'hours-per-week'), ('education-num', 'education'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('race', 'Income'), ('occupation', 'Income'), ('workclass', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data reflects:
+- Age influences marital status and hours worked per week (older age increases likelihood of being married and reduces work hours).
+- Education-num determines education category, which then influences both occupation and income (higher education = higher-paying occupation and income).
+- Marital status affects income (married individuals tend to have higher income).
+- Sex influences occupation and hours-per-week (e.g., certain occupations are sex-dominated; hours differ).
+- Race influences income (reflect known disparities).
+- Occupation causes income (different occupations have different income levels).
+- Workclass causes income (employment type, e.g., self-employed vs. government, affects income).
+
+All causal directions must be strictly followed. Generate values coherent with real-world patterns. Avoid reverse causation (e.g., income should not cause occupation, hours-per-week, marital status, or workclass). Ensure no conflicting patterns and that all causal links are realized in the data.</Task>"
+Score: 35.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('Income', 'occupation'), ('Income', 'education-num'), ('Income', 'hours-per-week'), ('Income', 'workclass'), ('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('sex', 'occupation')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data reflects that age influences both marital status and income, education affects occupation, and sex influences occupation, in addition to the original causal links. Generate data where the causal directions are strictly followed, and the values are coherent with real-world patterns (e.g., higher education-num leads to higher education level, married individuals are more likely to have higher income, and income causally determines occupation, workclass, etc.).</Task>"
+Score: 38.1%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 2 <<<<<<<<<<<<<<<< 
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.5643564356435643
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('education', 'Income'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('age', 'marital-status'), ('age', 'Income'), ('age', 'hours-per-week'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('race', 'Income'), ('Income', 'occupation'), ('Income', 'workclass'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data strictly follows the causal directions as specified. Specifically, age should influence marital status, income, and hours-per-week. Education-num determines education level, which in turn causes income. Marital-status and race are direct causes of income. Sex causally influences both occupation and hours-per-week. Capital-gain and capital-loss directly affect income. Income itself then causally determines occupation and workclass. There should be no reverse causal links (e.g., occupation or workclass should not cause income). Generate values that reflect real-world coherence: higher education leads to higher income; older age increases likelihood of being married (but not deterministically), higher income, and fewer hours per week (in professional roles); certain races have income disparities; sex influences occupational choices and hours worked; and capital gains or losses have a positive or negative impact respectively on income. The synthetic data must be logically and statistically plausible, avoiding contradictions and ensuring all variables align with the given causal structure.</Task>"
+Score: 35.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'hours-per-week'), ('education-num', 'education'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('race', 'Income'), ('occupation', 'Income'), ('workclass', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data reflects:
+- Age influences marital status and hours worked per week (older age increases likelihood of being married and reduces work hours).
+- Education-num determines education category, which then influences both occupation and income (higher education = higher-paying occupation and income).
+- Marital status affects income (married individuals tend to have higher income).
+- Sex influences occupation and hours-per-week (e.g., certain occupations are sex-dominated; hours differ).
+- Race influences income (reflect known disparities).
+- Occupation causes income (different occupations have different income levels).
+- Workclass causes income (employment type, e.g., self-employed vs. government, affects income).
+
+All causal directions must be strictly followed. Generate values coherent with real-world patterns. Avoid reverse causation (e.g., income should not cause occupation, hours-per-week, marital status, or workclass). Ensure no conflicting patterns and that all causal links are realized in the data.</Task>"
+Score: 35.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('Income', 'occupation'), ('Income', 'education-num'), ('Income', 'hours-per-week'), ('Income', 'workclass'), ('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('sex', 'occupation')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data reflects that age influences both marital status and income, education affects occupation, and sex influences occupation, in addition to the original causal links. Generate data where the causal directions are strictly followed, and the values are coherent with real-world patterns (e.g., higher education-num leads to higher education level, married individuals are more likely to have higher income, and income causally determines occupation, workclass, etc.).</Task>"
+Score: 38.1%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 3 <<<<<<<<<<<<<<<< 
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.56
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('education', 'Income'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('age', 'marital-status'), ('age', 'Income'), ('age', 'hours-per-week'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('race', 'Income'), ('Income', 'occupation'), ('Income', 'workclass'), ('capital-gain', 'Income'), ('capital-loss', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data strictly follows the causal directions as specified. Specifically, age should influence marital status, income, and hours-per-week. Education-num determines education level, which in turn causes income. Marital-status and race are direct causes of income. Sex causally influences both occupation and hours-per-week. Capital-gain and capital-loss directly affect income. Income itself then causally determines occupation and workclass. There should be no reverse causal links (e.g., occupation or workclass should not cause income). Generate values that reflect real-world coherence: higher education leads to higher income; older age increases likelihood of being married (but not deterministically), higher income, and fewer hours per week (in professional roles); certain races have income disparities; sex influences occupational choices and hours worked; and capital gains or losses have a positive or negative impact respectively on income. The synthetic data must be logically and statistically plausible, avoiding contradictions and ensuring all variables align with the given causal structure.</Task>"
+Score: 35.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'marital-status'), ('age', 'hours-per-week'), ('education-num', 'education'), ('education', 'occupation'), ('education', 'Income'), ('marital-status', 'Income'), ('sex', 'occupation'), ('sex', 'hours-per-week'), ('race', 'Income'), ('occupation', 'Income'), ('workclass', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data reflects:
+- Age influences marital status and hours worked per week (older age increases likelihood of being married and reduces work hours).
+- Education-num determines education category, which then influences both occupation and income (higher education = higher-paying occupation and income).
+- Marital status affects income (married individuals tend to have higher income).
+- Sex influences occupation and hours-per-week (e.g., certain occupations are sex-dominated; hours differ).
+- Race influences income (reflect known disparities).
+- Occupation causes income (different occupations have different income levels).
+- Workclass causes income (employment type, e.g., self-employed vs. government, affects income).
+
+All causal directions must be strictly followed. Generate values coherent with real-world patterns. Avoid reverse causation (e.g., income should not cause occupation, hours-per-week, marital status, or workclass). Ensure no conflicting patterns and that all causal links are realized in the data.</Task>"
+Score: 35.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('marital-status', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('Income', 'occupation'), ('Income', 'education-num'), ('Income', 'hours-per-week'), ('Income', 'workclass'), ('age', 'marital-status'), ('age', 'Income'), ('education', 'occupation'), ('sex', 'occupation')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic data that dutifully represents these causal relationships given the user-provided samples. Ensure that the synthetic data reflects that age influences both marital status and income, education affects occupation, and sex influences occupation, in addition to the original causal links. Generate data where the causal directions are strictly followed, and the values are coherent with real-world patterns (e.g., higher education-num leads to higher education level, married individuals are more likely to have higher income, and income causally determines occupation, workclass, etc.).</Task>"
+Score: 38.1%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+

@@ -1,0 +1,6 @@
+sample_size,seed,reference_file,output_file,rows
+800,0,gen/adult/800/df_0.csv,gen/adult_reference_synthetic/800/df_0.csv,800
+800,1,gen/adult/800/df_1.csv,gen/adult_reference_synthetic/800/df_1.csv,800
+800,2,gen/adult/800/df_2.csv,gen/adult_reference_synthetic/800/df_2.csv,800
+800,3,gen/adult/800/df_3.csv,gen/adult_reference_synthetic/800/df_3.csv,800
+800,4,gen/adult/800/df_4.csv,gen/adult_reference_synthetic/800/df_4.csv,800

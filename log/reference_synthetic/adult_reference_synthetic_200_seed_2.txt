@@ -1,0 +1,730 @@
+>>>>>>>>>>>>>>> Epoch: 0, batch: 1 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'native-country'), ('Income', 'education-num'), ('Income', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'workclass'), ('Income', 'race')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.5238095238095238
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'native-country'), ('Income', 'education-num'), ('Income', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'workclass'), ('Income', 'race')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 52.38%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 2 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'relationship'), ('age', 'occupation'), ('education', 'education-num'), ('occupation', 'Income'), ('sex', 'occupation'), ('race', 'native-country'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'workclass'), ('Income', 'education-num'), ('Income', 'marital-status')]</Causal structure>
+
+<Task> The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, marital-status influences relationship, not vice versa; education causes education-num; and Income causes hours-per-week, capital-gain, workclass, education-num, and marital-status. Use the provided samples as a reference to maintain realistic distributions, but prioritize causal consistency to produce high-fidelity synthetic data.</Task>
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.7142857142857143
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'native-country'), ('Income', 'education-num'), ('Income', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'workclass'), ('Income', 'race')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 42.86%
+
+"<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'relationship'), ('age', 'occupation'), ('education', 'education-num'), ('occupation', 'Income'), ('sex', 'occupation'), ('race', 'native-country'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'workclass'), ('Income', 'education-num'), ('Income', 'marital-status')]</Causal structure>
+
+<Task> The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, marital-status influences relationship, not vice versa; education causes education-num; and Income causes hours-per-week, capital-gain, workclass, education-num, and marital-status. Use the provided samples as a reference to maintain realistic distributions, but prioritize causal consistency to produce high-fidelity synthetic data.</Task>"
+Score: 71.43%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 3 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('sex', 'occupation'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, age and sex influence occupation; education-num determines education; occupation causes Income; native-country influences race; marital-status determines relationship; and Income causes hours-per-week, capital-gain, capital-loss, and workclass. Note that Income does NOT cause education-num, marital-status, race, or relationship—ensure these variables are independent of Income in the causal sense. Use the provided samples to approximate realistic marginal distributions, but prioritize strict causal consistency to produce high-fidelity synthetic data. Avoid any reverse or spurious relationships that inflate score.</Task>
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.7142857142857143
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'native-country'), ('Income', 'education-num'), ('Income', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'workclass'), ('Income', 'race')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 47.62%
+
+"<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'relationship'), ('age', 'occupation'), ('education', 'education-num'), ('occupation', 'Income'), ('sex', 'occupation'), ('race', 'native-country'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'workclass'), ('Income', 'education-num'), ('Income', 'marital-status')]</Causal structure>
+
+<Task> The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, marital-status influences relationship, not vice versa; education causes education-num; and Income causes hours-per-week, capital-gain, workclass, education-num, and marital-status. Use the provided samples as a reference to maintain realistic distributions, but prioritize causal consistency to produce high-fidelity synthetic data.</Task>"
+Score: 52.38%
+
+"<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('sex', 'occupation'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, age and sex influence occupation; education-num determines education; occupation causes Income; native-country influences race; marital-status determines relationship; and Income causes hours-per-week, capital-gain, capital-loss, and workclass. Note that Income does NOT cause education-num, marital-status, race, or relationship—ensure these variables are independent of Income in the causal sense. Use the provided samples to approximate realistic marginal distributions, but prioritize strict causal consistency to produce high-fidelity synthetic data. Avoid any reverse or spurious relationships that inflate score.</Task>"
+Score: 71.43%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 4 <<<<<<<<<<<<<<<< 
+Instruction: "<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('sex', 'occupation'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass'), ('race', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, age and sex influence occupation; education-num determines education; occupation and race cause Income; native-country influences race; marital-status determines relationship; and Income causes hours-per-week, capital-gain, capital-loss, and workclass. Note that Income does NOT cause education-num, marital-status, race, or relationship; equally, avoid any reverse causality like Income causing education-num or relationship. Use the provided samples to approximate realistic marginal distributions, but prioritize strict causal consistency—especially the bidirectional edge where both race and Income influence each other—to produce high-fidelity synthetic data. Carefully ensure each causal link is reflected in the generated data without introducing spurious correlations that inflate the score.</Task>"
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.6
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'native-country'), ('Income', 'education-num'), ('Income', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'workclass'), ('Income', 'race')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 47.62%
+
+"<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'relationship'), ('age', 'occupation'), ('education', 'education-num'), ('occupation', 'Income'), ('sex', 'occupation'), ('race', 'native-country'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'workclass'), ('Income', 'education-num'), ('Income', 'marital-status')]</Causal structure>
+
+<Task> The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, marital-status influences relationship, not vice versa; education causes education-num; and Income causes hours-per-week, capital-gain, workclass, education-num, and marital-status. Use the provided samples as a reference to maintain realistic distributions, but prioritize causal consistency to produce high-fidelity synthetic data.</Task>"
+Score: 52.38%
+
+""<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('sex', 'occupation'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass'), ('race', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, age and sex influence occupation; education-num determines education; occupation and race cause Income; native-country influences race; marital-status determines relationship; and Income causes hours-per-week, capital-gain, capital-loss, and workclass. Note that Income does NOT cause education-num, marital-status, race, or relationship; equally, avoid any reverse causality like Income causing education-num or relationship. Use the provided samples to approximate realistic marginal distributions, but prioritize strict causal consistency—especially the bidirectional edge where both race and Income influence each other—to produce high-fidelity synthetic data. Carefully ensure each causal link is reflected in the generated data without introducing spurious correlations that inflate the score.</Task>""
+Score: 60.0%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 1, batch: 1 <<<<<<<<<<<<<<<< 
+Instruction: "<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('sex', 'occupation'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass'), ('race', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, age and sex influence occupation; education-num determines education; occupation and race cause Income; native-country influences race; marital-status determines relationship; and Income causes hours-per-week, capital-gain, capital-loss, and workclass. Note that Income does NOT cause education-num, marital-status, race, or relationship; equally, avoid any reverse causality like Income causing education-num or relationship. Use the provided samples to approximate realistic marginal distributions, but prioritize strict causal consistency—especially the bidirectional edge where both race and Income influence each other—to produce high-fidelity synthetic data. Carefully ensure each causal link is reflected in the generated data without introducing spurious correlations that inflate the score. To further reduce the score, ensure that the conditional distributions for each variable given its parents are modeled accurately, avoiding any hidden confounding or reverse direction that may increase the score. Incorporate the features 'age', 'sex', 'marital-status', 'native-country' as exogenous variables (no parents) to anchor the data generation process.</Task>"
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.5238095238095238
+
+"<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'relationship'), ('age', 'occupation'), ('education', 'education-num'), ('occupation', 'Income'), ('sex', 'occupation'), ('race', 'native-country'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'workclass'), ('Income', 'education-num'), ('Income', 'marital-status')]</Causal structure>
+
+<Task> The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, marital-status influences relationship, not vice versa; education causes education-num; and Income causes hours-per-week, capital-gain, workclass, education-num, and marital-status. Use the provided samples as a reference to maintain realistic distributions, but prioritize causal consistency to produce high-fidelity synthetic data.</Task>"
+Score: 38.1%
+
+"<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('sex', 'occupation'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, age and sex influence occupation; education-num determines education; occupation causes Income; native-country influences race; marital-status determines relationship; and Income causes hours-per-week, capital-gain, capital-loss, and workclass. Note that Income does NOT cause education-num, marital-status, race, or relationship—ensure these variables are independent of Income in the causal sense. Use the provided samples to approximate realistic marginal distributions, but prioritize strict causal consistency to produce high-fidelity synthetic data. Avoid any reverse or spurious relationships that inflate score.</Task>"
+Score: 52.38%
+
+""<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('sex', 'occupation'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass'), ('race', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, age and sex influence occupation; education-num determines education; occupation and race cause Income; native-country influences race; marital-status determines relationship; and Income causes hours-per-week, capital-gain, capital-loss, and workclass. Note that Income does NOT cause education-num, marital-status, race, or relationship; equally, avoid any reverse causality like Income causing education-num or relationship. Use the provided samples to approximate realistic marginal distributions, but prioritize strict causal consistency—especially the bidirectional edge where both race and Income influence each other—to produce high-fidelity synthetic data. Carefully ensure each causal link is reflected in the generated data without introducing spurious correlations that inflate the score. To further reduce the score, ensure that the conditional distributions for each variable given its parents are modeled accurately, avoiding any hidden confounding or reverse direction that may increase the score. Incorporate the features 'age', 'sex', 'marital-status', 'native-country' as exogenous variables (no parents) to anchor the data generation process.</Task>""
+Score: 52.38%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 1, batch: 2 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('sex', 'occupation'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass')]</Causal structure>
+
+<Task>The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, age and sex influence occupation; education-num determines education; occupation causes Income; native-country influences race; marital-status determines relationship; and Income causes hours-per-week, capital-gain, capital-loss, and workclass. Note that Income does NOT cause education-num, marital-status, race, race, or relationship—these variables must be independent of Income in the causal sense. Specifically, education-num is a parent of education, not an effect of Income; marital-status is a parent of relationship, not an effect of Income; race is an effect of native-country, not an effect of Income; and relationship is an effect of marital-status, not an effect of Income. Use the provided samples to approximate realistic marginal distributions for exogenous variables: age, sex, native-country, education-num, marital-status—these have no parents and can be sampled from their marginal distributions. Then, for each endogenous variable, generate values conditioned on its parents in the causal order, ensuring that the conditional distributions are accurate and that no reverse or spurious relationships are introduced. To lower the score, strictly avoid any hidden confounding or reverse direction, especially ensuring that for any variable not caused by Income (e.g., education-num, marital-status), its distribution is independent of Income after conditioning on its own parents. Additionally, ensure that the data generation process respects the topological ordering: first generate exogenous variables, then occupation, education, race, relationship, then Income, then hours-per-week, capital-gain, capital-loss, workclass. This will produce high-fidelity synthetic data with minimal score.</Task>
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.47619047619047616
+
+"<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('sex', 'occupation'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, age and sex influence occupation; education-num determines education; occupation causes Income; native-country influences race; marital-status determines relationship; and Income causes hours-per-week, capital-gain, capital-loss, and workclass. Note that Income does NOT cause education-num, marital-status, race, or relationship—ensure these variables are independent of Income in the causal sense. Use the provided samples to approximate realistic marginal distributions, but prioritize strict causal consistency to produce high-fidelity synthetic data. Avoid any reverse or spurious relationships that inflate score.</Task>"
+Score: 23.81%
+
+""<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('sex', 'occupation'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass'), ('race', 'Income')]</Causal structure>
+
+<Task>The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, age and sex influence occupation; education-num determines education; occupation and race cause Income; native-country influences race; marital-status determines relationship; and Income causes hours-per-week, capital-gain, capital-loss, and workclass. Note that Income does NOT cause education-num, marital-status, race, or relationship; equally, avoid any reverse causality like Income causing education-num or relationship. Use the provided samples to approximate realistic marginal distributions, but prioritize strict causal consistency—especially the bidirectional edge where both race and Income influence each other—to produce high-fidelity synthetic data. Carefully ensure each causal link is reflected in the generated data without introducing spurious correlations that inflate the score. To further reduce the score, ensure that the conditional distributions for each variable given its parents are modeled accurately, avoiding any hidden confounding or reverse direction that may increase the score. Incorporate the features 'age', 'sex', 'marital-status', 'native-country' as exogenous variables (no parents) to anchor the data generation process.</Task>""
+Score: 23.81%
+
+"<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'relationship'), ('age', 'occupation'), ('education', 'education-num'), ('occupation', 'Income'), ('sex', 'occupation'), ('race', 'native-country'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'workclass'), ('Income', 'education-num'), ('Income', 'marital-status')]</Causal structure>
+
+<Task> The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, marital-status influences relationship, not vice versa; education causes education-num; and Income causes hours-per-week, capital-gain, workclass, education-num, and marital-status. Use the provided samples as a reference to maintain realistic distributions, but prioritize causal consistency to produce high-fidelity synthetic data.</Task>"
+Score: 28.57%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 1, batch: 3 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('sex', 'occupation'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass')]</Causal structure>
+
+<Task>The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, age and sex influence occupation; education-num determines education; occupation causes Income; native-country influences race; marital-status determines relationship; and Income causes hours-per-week, capital-gain, capital-loss, and workclass. Note that Income does NOT cause education-num, marital-status, race, or relationship—these variables must be independent of Income in the causal sense. Also, race, native-country, age, sex, marital-status, education-num, and relationship should have no parent nodes—they are exogenous or determined solely by their specified parents (e.g., relationship only by marital-status). Use the provided samples to approximate realistic marginal distributions, but prioritize strict causal consistency to produce high-fidelity synthetic data. To achieve a lower score, ensure that when generating each variable, its value is sampled conditioned only on its direct causes (parents) as per the graph, avoiding any hidden dependence or correlation with non-causal variables. Specifically, do not introduce any spurious edges or reverse causality; model each conditional distribution (e.g., P(occupation | age, sex), P(Income | occupation), P(race | native-country), etc.) independently and accurately from the provided samples. This will minimize the score by ensuring the synthetic data perfectly reflects the intended causal structure with no unintended associations.</Task>
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.47619047619047616
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'native-country'), ('Income', 'education-num'), ('Income', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'workclass'), ('Income', 'race')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 38.1%
+
+""<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('sex', 'occupation'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass'), ('race', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, age and sex influence occupation; education-num determines education; occupation and race cause Income; native-country influences race; marital-status determines relationship; and Income causes hours-per-week, capital-gain, capital-loss, and workclass. Note that Income does NOT cause education-num, marital-status, race, or relationship; equally, avoid any reverse causality like Income causing education-num or relationship. Use the provided samples to approximate realistic marginal distributions, but prioritize strict causal consistency—especially the bidirectional edge where both race and Income influence each other—to produce high-fidelity synthetic data. Carefully ensure each causal link is reflected in the generated data without introducing spurious correlations that inflate the score.</Task>""
+Score: 45.0%
+
+"<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('sex', 'occupation'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, age and sex influence occupation; education-num determines education; occupation causes Income; native-country influences race; marital-status determines relationship; and Income causes hours-per-week, capital-gain, capital-loss, and workclass. Note that Income does NOT cause education-num, marital-status, race, or relationship—ensure these variables are independent of Income in the causal sense. Use the provided samples to approximate realistic marginal distributions, but prioritize strict causal consistency to produce high-fidelity synthetic data. Avoid any reverse or spurious relationships that inflate score.</Task>"
+Score: 47.62%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 1, batch: 4 <<<<<<<<<<<<<<<< 
+Instruction: "<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('sex', 'occupation'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass'), ('age', 'marital-status'), ('education', 'occupation'), ('race', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: age, sex, and education influence occupation; occupation and race cause Income; native-country influences race; age and marital-status determine relationship (since older individuals are more likely married, which influences relationship type); education-num determines education; and Income causes hours-per-week, capital-gain, capital-loss, and workclass. Note that Income does NOT cause education-num, marital-status, race, or relationship—these variables are causally upstream or independent. Also, do not include any bidirectional edge between race and Income; instead, only race causes Income, not the reverse. Use the provided samples to approximate realistic marginal distributions, but prioritize strict causal consistency to produce high-fidelity synthetic data. Avoid any spurious correlations that would inflate score by ensuring that each variable's value is generated according to its direct causes only.</Task>"
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.55
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'native-country'), ('Income', 'education-num'), ('Income', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'workclass'), ('Income', 'race')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 42.86%
+
+"<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('sex', 'occupation'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass')]</Causal structure>
+
+<Task>The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, age and sex influence occupation; education-num determines education; occupation causes Income; native-country influences race; marital-status determines relationship; and Income causes hours-per-week, capital-gain, capital-loss, and workclass. Note that Income does NOT cause education-num, marital-status, race, race, or relationship—these variables must be independent of Income in the causal sense. Specifically, education-num is a parent of education, not an effect of Income; marital-status is a parent of relationship, not an effect of Income; race is an effect of native-country, not an effect of Income; and relationship is an effect of marital-status, not an effect of Income. Use the provided samples to approximate realistic marginal distributions for exogenous variables: age, sex, native-country, education-num, marital-status—these have no parents and can be sampled from their marginal distributions. Then, for each endogenous variable, generate values conditioned on its parents in the causal order, ensuring that the conditional distributions are accurate and that no reverse or spurious relationships are introduced. To lower the score, strictly avoid any hidden confounding or reverse direction, especially ensuring that for any variable not caused by Income (e.g., education-num, marital-status), its distribution is independent of Income after conditioning on its own parents. Additionally, ensure that the data generation process respects the topological ordering: first generate exogenous variables, then occupation, education, race, relationship, then Income, then hours-per-week, capital-gain, capital-loss, workclass. This will produce high-fidelity synthetic data with minimal score.</Task>"
+Score: 52.38%
+
+"<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('sex', 'occupation'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass')]</Causal structure>
+
+<Task>The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, age and sex influence occupation; education-num determines education; occupation causes Income; native-country influences race; marital-status determines relationship; and Income causes hours-per-week, capital-gain, capital-loss, and workclass. Note that Income does NOT cause education-num, marital-status, race, or relationship—these variables must be independent of Income in the causal sense. Also, race, native-country, age, sex, marital-status, education-num, and relationship should have no parent nodes—they are exogenous or determined solely by their specified parents (e.g., relationship only by marital-status). Use the provided samples to approximate realistic marginal distributions, but prioritize strict causal consistency to produce high-fidelity synthetic data. To achieve a lower score, ensure that when generating each variable, its value is sampled conditioned only on its direct causes (parents) as per the graph, avoiding any hidden dependence or correlation with non-causal variables. Specifically, do not introduce any spurious edges or reverse causality; model each conditional distribution (e.g., P(occupation | age, sex), P(Income | occupation), P(race | native-country), etc.) independently and accurately from the provided samples. This will minimize the score by ensuring the synthetic data perfectly reflects the intended causal structure with no unintended associations.</Task>"
+Score: 52.38%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 2, batch: 1 <<<<<<<<<<<<<<<< 
+Instruction: Based on the analysis of the previous prompts and their scores, the causal structure needs further refinement to better capture real-world relationships and reduce score. A key issue is the inclusion of implausible edges (e.g., `native-country` causing `race`, `marital-status` causing `relationship`) and the omission of important, well-known causal links (e.g., `age` and `education` directly affecting `Income`). The score improved from 42.86% to 52.38% but then stalled, suggesting the structure is still suboptimal.
+
+I will adjust the causal structure to be more realistic and logically consistent, incorporating proven causal directions from the available features. The revised structure removes implausible edges and adds critical ones like `education` causing `occupation` and `Income`, and `age` directly causing `Income`. This should lower the score by producing synthetic data that better mimics real-world patterns.
+
+Here is the optimized prompt:
+
+<Causal structure>
+Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('age', 'Income'), ('education', 'occupation'), ('education', 'Income'), ('sex', 'occupation'), ('occupation', 'Income'), ('marital-status', 'relationship'), ('race', 'native-country'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass')]
+</Causal structure>
+
+<Task>
+The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, age and education directly and independently influence both occupation and Income; sex influences occupation; occupation influences Income; marital-status determines relationship; race influences native-country; and Income causes hours-per-week, capital-gain, capital-loss, and workclass.
+
+Note: The following variables have no parents in the graph and are exogenous: age, education, sex, marital-status, race. These should be sampled from their marginal distributions based on the provided samples. All other variables are endogenous and must be generated conditioned on their direct parents in the specified causal order.
+
+To achieve a lower score, follow these critical steps:
+1. **Topological order**: First generate exogenous variables (age, education, sex, marital-status, race) from their marginal distributions. Then generate relationship (conditioned on marital-status), native-country (conditioned on race), occupation (conditioned on age, education, sex), and then Income (conditioned on age, education, occupation). Finally, generate hours-per-week, capital-gain, capital-loss, and workclass (each conditioned on Income).
+2. **Strict conditional generation**: For each endogenous variable, model the conditional distribution from the provided samples accurately (e.g., P(occupation | age, education, sex), P(Income | age, education, occupation)). Do not introduce any spurious correlations or reverse causality.
+3. **Avoid hidden confounders**: Ensure that the dependencies in the synthetic data only reflect the directed edges in the graph. For example, Income should not be directly influenced by sex, marital-status, race, or relationship; any correlation should only appear through the specified causal paths.
+4. **Realistic marginal distributions**: When sampling exogenous variables, preserve the marginal distributions observed in the provided samples (e.g., age distribution, education levels, etc.) to maintain fidelity.
+
+By following this structure precisely, you will produce high-fidelity synthetic data that minimizes the score by being both realistic and causally consistent.
+</Task>
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.5714285714285714
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'native-country'), ('Income', 'education-num'), ('Income', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'workclass'), ('Income', 'race')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 47.62%
+
+"<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('sex', 'occupation'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass')]</Causal structure>
+
+<Task>The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, age and sex influence occupation; education-num determines education; occupation causes Income; native-country influences race; marital-status determines relationship; and Income causes hours-per-week, capital-gain, capital-loss, and workclass. Note that Income does NOT cause education-num, marital-status, race, race, or relationship—these variables must be independent of Income in the causal sense. Specifically, education-num is a parent of education, not an effect of Income; marital-status is a parent of relationship, not an effect of Income; race is an effect of native-country, not an effect of Income; and relationship is an effect of marital-status, not an effect of Income. Use the provided samples to approximate realistic marginal distributions for exogenous variables: age, sex, native-country, education-num, marital-status—these have no parents and can be sampled from their marginal distributions. Then, for each endogenous variable, generate values conditioned on its parents in the causal order, ensuring that the conditional distributions are accurate and that no reverse or spurious relationships are introduced. To lower the score, strictly avoid any hidden confounding or reverse direction, especially ensuring that for any variable not caused by Income (e.g., education-num, marital-status), its distribution is independent of Income after conditioning on its own parents. Additionally, ensure that the data generation process respects the topological ordering: first generate exogenous variables, then occupation, education, race, relationship, then Income, then hours-per-week, capital-gain, capital-loss, workclass. This will produce high-fidelity synthetic data with minimal score.</Task>"
+Score: 47.62%
+
+"<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('sex', 'occupation'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass')]</Causal structure>
+
+<Task>The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, age and sex influence occupation; education-num determines education; occupation causes Income; native-country influences race; marital-status determines relationship; and Income causes hours-per-week, capital-gain, capital-loss, and workclass. Note that Income does NOT cause education-num, marital-status, race, or relationship—these variables must be independent of Income in the causal sense. Also, race, native-country, age, sex, marital-status, education-num, and relationship should have no parent nodes—they are exogenous or determined solely by their specified parents (e.g., relationship only by marital-status). Use the provided samples to approximate realistic marginal distributions, but prioritize strict causal consistency to produce high-fidelity synthetic data. To achieve a lower score, ensure that when generating each variable, its value is sampled conditioned only on its direct causes (parents) as per the graph, avoiding any hidden dependence or correlation with non-causal variables. Specifically, do not introduce any spurious edges or reverse causality; model each conditional distribution (e.g., P(occupation | age, sex), P(Income | occupation), P(race | native-country), etc.) independently and accurately from the provided samples. This will minimize the score by ensuring the synthetic data perfectly reflects the intended causal structure with no unintended associations.</Task>"
+Score: 47.62%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 2, batch: 2 <<<<<<<<<<<<<<<< 
+Instruction: Based on the observed patterns and scores, I recognize that the causal structure needs both simplification and strict topological clarity to reduce spurious correlations. The previous prompts had connections that could introduce unintended feedback or symmetric relationships. I will adjust the causal graph to be a clean, hierarchical DAG (Directed Acyclic Graph) with no cycles, and refine the task guidance to enforce a strict generation order and conditional independence.
+
+Here is the optimized prompt:
+
+<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('sex', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass')]</Causal structure>
+
+<Task>The goal is to generate synthetic data that perfectly respects the causal graph above, with a strict topological order: first, all exogenous variables (age, sex, education-num, native-country, marital-status) are independently sampled from their empirical marginal distributions in the provided samples. Next, occupation is generated conditional on (age, sex); education conditional on (education-num); race conditional on (native-country); and relationship conditional on (marital-status). Then, Income is generated conditional only on occupation. Finally, hours-per-week, capital-gain, capital-loss, and workclass are each generated conditional on Income. Crucially, to lower the score, enforce the following constraints: (1) No variable that is not in the parent set of Income (i.e., only occupation) should show any correlation with Income, either directly or through hidden backdoor paths. This means that education-num, education, age, sex, native-country, race, marital-status, and relationship must all be independent of Income, conditional on occupation (if applicable) or fully independent (if they share no common causes). (2) The generation order must be strictly followed: never sample a parent after its child. (3) For each conditional distribution (e.g., P(occupation | age, sex)), use the provided samples to learn a probability table or a simple model that captures only the parent-child relationship, ignoring any spurious associations. (4) Avoid any bidirectional or symmetric causal assumptions—the graph is acyclic. By enforcing these rules, the synthetic data will have minimal deviations from the intended causal structure, resulting in a lower score.</Task>
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.5714285714285714
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'native-country'), ('Income', 'education-num'), ('Income', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'workclass'), ('Income', 'race')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 57.14%
+
+"<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'relationship'), ('age', 'occupation'), ('education', 'education-num'), ('occupation', 'Income'), ('sex', 'occupation'), ('race', 'native-country'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'workclass'), ('Income', 'education-num'), ('Income', 'marital-status')]</Causal structure>
+
+<Task> The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, marital-status influences relationship, not vice versa; education causes education-num; and Income causes hours-per-week, capital-gain, workclass, education-num, and marital-status. Use the provided samples as a reference to maintain realistic distributions, but prioritize causal consistency to produce high-fidelity synthetic data.</Task>"
+Score: 57.14%
+
+"<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('sex', 'occupation'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, age and sex influence occupation; education-num determines education; occupation causes Income; native-country influences race; marital-status determines relationship; and Income causes hours-per-week, capital-gain, capital-loss, and workclass. Note that Income does NOT cause education-num, marital-status, race, or relationship—ensure these variables are independent of Income in the causal sense. Use the provided samples to approximate realistic marginal distributions, but prioritize strict causal consistency to produce high-fidelity synthetic data. Avoid any reverse or spurious relationships that inflate score.</Task>"
+Score: 57.14%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 2, batch: 3 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education', 'education-num'), ('sex', 'occupation'), ('race', 'native-country'), ('marital-status', 'relationship'), ('occupation', 'Income'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, age and sex influence occupation; education determines education-num; race influences native-country; marital-status determines relationship; occupation causes Income; and Income causes hours-per-week, capital-gain, capital-loss, and workclass. Note that Income does NOT cause other variables like education-num, marital-status, race, relationship, or sex—these variables are exogenous or caused by other features only. Use the provided samples to approximate realistic marginal distributions, but prioritize strict causal consistency. Avoid any reverse or spurious relationships that would inflate the score. Generate data such that the conditional dependencies implied by the causal graph are accurately reflected, and any statistical associations in the original data that contradict this structure (e.g., correlations between Income and education-num) are minimized or eliminated in the synthetic data.</Task>
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.5714285714285714
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'native-country'), ('Income', 'education-num'), ('Income', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'workclass'), ('Income', 'race')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 57.14%
+
+"<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'relationship'), ('age', 'occupation'), ('education', 'education-num'), ('occupation', 'Income'), ('sex', 'occupation'), ('race', 'native-country'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'workclass'), ('Income', 'education-num'), ('Income', 'marital-status')]</Causal structure>
+
+<Task> The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, marital-status influences relationship, not vice versa; education causes education-num; and Income causes hours-per-week, capital-gain, workclass, education-num, and marital-status. Use the provided samples as a reference to maintain realistic distributions, but prioritize causal consistency to produce high-fidelity synthetic data.</Task>"
+Score: 57.14%
+
+"<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('sex', 'occupation'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, age and sex influence occupation; education-num determines education; occupation causes Income; native-country influences race; marital-status determines relationship; and Income causes hours-per-week, capital-gain, capital-loss, and workclass. Note that Income does NOT cause education-num, marital-status, race, or relationship—ensure these variables are independent of Income in the causal sense. Use the provided samples to approximate realistic marginal distributions, but prioritize strict causal consistency to produce high-fidelity synthetic data. Avoid any reverse or spurious relationships that inflate score.</Task>"
+Score: 57.14%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 2, batch: 4 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('sex', 'occupation'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, age and sex influence occupation; education-num determines education; occupation causes Income; native-country influences race; marital-status determines relationship; and Income causes hours-per-week, capital-gain, capital-loss, and workclass. Note that Income does NOT cause education-num, marital-status, race, relationship, or sex—these variables should be causally independent of Income. Use the provided samples to calibrate marginal and conditional distributions, but strictly enforce the causal structure. Avoid any reverse causality, spurious correlations, or implicit dependencies that could inflate the score. To lower the score, pay special attention to ensuring that variables like education-num, marital-status, race, relationship, and sex are not erroneously influenced by Income in the synthetic data. Focus on realistic joint distributions that respect only the specified edges, and validate that simulated data matches sample statistics while adhering to the graph.</Task>
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.35
+
+"<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('sex', 'occupation'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, age and sex influence occupation; education-num determines education; occupation causes Income; native-country influences race; marital-status determines relationship; and Income causes hours-per-week, capital-gain, capital-loss, and workclass. Note that Income does NOT cause education-num, marital-status, race, relationship, or sex—these variables should be causally independent of Income. Use the provided samples to calibrate marginal and conditional distributions, but strictly enforce the causal structure. Avoid any reverse causality, spurious correlations, or implicit dependencies that could inflate the score. To lower the score, pay special attention to ensuring that variables like education-num, marital-status, race, relationship, and sex are not erroneously influenced by Income in the synthetic data. Focus on realistic joint distributions that respect only the specified edges, and validate that simulated data matches sample statistics while adhering to the graph.</Task>"
+Score: 35.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'native-country'), ('Income', 'education-num'), ('Income', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'workclass'), ('Income', 'race')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 47.62%
+
+"<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('sex', 'occupation'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass')]</Causal structure>
+
+<Task>The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, age and sex influence occupation; education-num determines education; occupation causes Income; native-country influences race; marital-status determines relationship; and Income causes hours-per-week, capital-gain, capital-loss, and workclass. Note that Income does NOT cause education-num, marital-status, race, race, or relationship—these variables must be independent of Income in the causal sense. Specifically, education-num is a parent of education, not an effect of Income; marital-status is a parent of relationship, not an effect of Income; race is an effect of native-country, not an effect of Income; and relationship is an effect of marital-status, not an effect of Income. Use the provided samples to approximate realistic marginal distributions for exogenous variables: age, sex, native-country, education-num, marital-status—these have no parents and can be sampled from their marginal distributions. Then, for each endogenous variable, generate values conditioned on its parents in the causal order, ensuring that the conditional distributions are accurate and that no reverse or spurious relationships are introduced. To lower the score, strictly avoid any hidden confounding or reverse direction, especially ensuring that for any variable not caused by Income (e.g., education-num, marital-status), its distribution is independent of Income after conditioning on its own parents. Additionally, ensure that the data generation process respects the topological ordering: first generate exogenous variables, then occupation, education, race, relationship, then Income, then hours-per-week, capital-gain, capital-loss, workclass. This will produce high-fidelity synthetic data with minimal score.</Task>"
+Score: 47.62%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 3, batch: 1 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('sex', 'occupation'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass')]</Causal structure>
+
+<Task>The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, age and sex influence occupation; education-num determines education; occupation causes Income; native-country influences race; marital-status determines relationship; and Income causes hours-per-week, capital-gain, capital-loss, and workclass. 
+
+**Critical constraints to minimize score:**
+- **Income does NOT cause** education-num, marital-status, race, relationship, or sex. These variables must be causally independent of Income. In the synthetic data, their distributions should show no correlation with Income except through the specified causal paths. For example, education-num should be generated from its marginal distribution independently of Income.
+- **Exogenous variables (age, sex, native-country, education-num, marital-status)** have no parents. Sample them directly from their marginal distributions, ensuring no dependence on Income or its descendants.
+- **Endogenous variables must be generated in topological order:**
+  1. age, sex, native-country, education-num, marital-status (exogenous)
+  2. occupation (caused by age and sex)
+  3. education (caused by education-num)
+  4. race (caused by native-country)
+  5. relationship (caused by marital-status)
+  6. Income (caused by occupation)
+  7. hours-per-week, capital-gain, capital-loss, workclass (caused by Income)
+- **Strictly enforce independence:** After generating Income, do not allow it to influence any variable it is not connected to. When calibrating conditional distributions, use only the specified parent-child pairs. Any observed correlation between Income and variables like race or marital-status in the original samples must be treated as spurious and NOT replicated in synthetic data.
+- **Validation check:** After generation, verify that for any variable not caused by Income, its value does not correlate with Income in a statistically significant way. This is key to lowering the score.
+
+Use the provided samples only to calibrate marginal distributions for exogenous variables and conditional distributions for each endogenous variable given its parents. Avoid learning or reproducing any dependencies that violate the graph.</Task>
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.42857142857142855
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'native-country'), ('Income', 'education-num'), ('Income', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'workclass'), ('Income', 'race')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 38.1%
+
+"Based on the observed patterns and scores, I recognize that the causal structure needs both simplification and strict topological clarity to reduce spurious correlations. The previous prompts had connections that could introduce unintended feedback or symmetric relationships. I will adjust the causal graph to be a clean, hierarchical DAG (Directed Acyclic Graph) with no cycles, and refine the task guidance to enforce a strict generation order and conditional independence.
+
+Here is the optimized prompt:
+
+<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('sex', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass')]</Causal structure>
+
+<Task>The goal is to generate synthetic data that perfectly respects the causal graph above, with a strict topological order: first, all exogenous variables (age, sex, education-num, native-country, marital-status) are independently sampled from their empirical marginal distributions in the provided samples. Next, occupation is generated conditional on (age, sex); education conditional on (education-num); race conditional on (native-country); and relationship conditional on (marital-status). Then, Income is generated conditional only on occupation. Finally, hours-per-week, capital-gain, capital-loss, and workclass are each generated conditional on Income. Crucially, to lower the score, enforce the following constraints: (1) No variable that is not in the parent set of Income (i.e., only occupation) should show any correlation with Income, either directly or through hidden backdoor paths. This means that education-num, education, age, sex, native-country, race, marital-status, and relationship must all be independent of Income, conditional on occupation (if applicable) or fully independent (if they share no common causes). (2) The generation order must be strictly followed: never sample a parent after its child. (3) For each conditional distribution (e.g., P(occupation | age, sex)), use the provided samples to learn a probability table or a simple model that captures only the parent-child relationship, ignoring any spurious associations. (4) Avoid any bidirectional or symmetric causal assumptions—the graph is acyclic. By enforcing these rules, the synthetic data will have minimal deviations from the intended causal structure, resulting in a lower score.</Task>"
+Score: 38.1%
+
+""<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('sex', 'occupation'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass'), ('age', 'marital-status'), ('education', 'occupation'), ('race', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: age, sex, and education influence occupation; occupation and race cause Income; native-country influences race; age and marital-status determine relationship (since older individuals are more likely married, which influences relationship type); education-num determines education; and Income causes hours-per-week, capital-gain, capital-loss, and workclass. Note that Income does NOT cause education-num, marital-status, race, or relationship—these variables are causally upstream or independent. Also, do not include any bidirectional edge between race and Income; instead, only race causes Income, not the reverse. Use the provided samples to approximate realistic marginal distributions, but prioritize strict causal consistency to produce high-fidelity synthetic data. Avoid any spurious correlations that would inflate score by ensuring that each variable's value is generated according to its direct causes only.</Task>""
+Score: 40.0%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 3, batch: 2 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('sex', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('marital-status', 'relationship'), ('native-country', 'race'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass'), ('age', 'marital-status')]</Causal structure>
+
+<Task>The ultimate goal is to generate synthetic data that perfectly respects the causal graph above as a strict Directed Acyclic Graph (DAG). Follow this topological generation order: First, independently sample all exogenous variables (age, sex, education-num, native-country) from their empirical marginal distributions in the provided samples, ensuring no correlations among them. Next, generate marital-status conditional only on age; occupation conditional on age and sex; education conditional on education-num; and race conditional on native-country. Then, generate relationship conditional only on marital-status. After that, generate Income conditional only on occupation. Finally, generate hours-per-week, capital-gain, capital-loss, and workclass each conditional only on Income.
+
+Crucially, enforce these constraints to lower the score: (1) No variable outside the parent set of Income (i.e., only occupation) should show any correlation with Income, directly or indirectly. This means age, sex, education-num, education, marital-status, relationship, native-country, and race must be independent of Income, conditional on occupation. (2) Strictly follow the generation order: never sample a parent after its child. (3) For each conditional distribution (e.g., P(occupation | age, sex)), use only the parent-child relationship from the provided samples, ignoring any spurious associations with non-parent variables. (4) Avoid any bidirectional or cyclic causal assumptions—the graph is strictly acyclic. By adhering to these rules, the synthetic data will minimize deviations from the intended causal structure, achieving a lower score.</Task>
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.42857142857142855
+
+""<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('sex', 'occupation'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass'), ('race', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, age and sex influence occupation; education-num determines education; occupation and race cause Income; native-country influences race; marital-status determines relationship; and Income causes hours-per-week, capital-gain, capital-loss, and workclass. Note that Income does NOT cause education-num, marital-status, race, or relationship; equally, avoid any reverse causality like Income causing education-num or relationship. Use the provided samples to approximate realistic marginal distributions, but prioritize strict causal consistency—especially the bidirectional edge where both race and Income influence each other—to produce high-fidelity synthetic data. Carefully ensure each causal link is reflected in the generated data without introducing spurious correlations that inflate the score.</Task>""
+Score: 40.0%
+
+""<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('sex', 'occupation'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass'), ('age', 'marital-status'), ('education', 'occupation'), ('race', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: age, sex, and education influence occupation; occupation and race cause Income; native-country influences race; age and marital-status determine relationship (since older individuals are more likely married, which influences relationship type); education-num determines education; and Income causes hours-per-week, capital-gain, capital-loss, and workclass. Note that Income does NOT cause education-num, marital-status, race, or relationship—these variables are causally upstream or independent. Also, do not include any bidirectional edge between race and Income; instead, only race causes Income, not the reverse. Use the provided samples to approximate realistic marginal distributions, but prioritize strict causal consistency to produce high-fidelity synthetic data. Avoid any spurious correlations that would inflate score by ensuring that each variable's value is generated according to its direct causes only.</Task>""
+Score: 40.0%
+
+"<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('sex', 'occupation'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, age and sex influence occupation; education-num determines education; occupation causes Income; native-country influences race; marital-status determines relationship; and Income causes hours-per-week, capital-gain, capital-loss, and workclass. Note that Income does NOT cause education-num, marital-status, race, relationship, or sex—these variables should be causally independent of Income. Use the provided samples to calibrate marginal and conditional distributions, but strictly enforce the causal structure. Avoid any reverse causality, spurious correlations, or implicit dependencies that could inflate the score. To lower the score, pay special attention to ensuring that variables like education-num, marital-status, race, relationship, and sex are not erroneously influenced by Income in the synthetic data. Focus on realistic joint distributions that respect only the specified edges, and validate that simulated data matches sample statistics while adhering to the graph.</Task>"
+Score: 40.0%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 3, batch: 3 <<<<<<<<<<<<<<<< 
+Instruction: Here is the optimized prompt, designed to lower the score by clarifying the causal structure, removing ambiguities, and strengthening task guidance for generating high-fidelity synthetic data:
+
+```
+<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('sex', 'occupation'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass'), ('race', 'Income'), ('workclass', 'occupation'), ('hours-per-week', 'Income')]</Causal structure>
+
+<Task> The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure no other causal connections exist between any pair of variables. For each variable, simulate its value using only its direct causes as listed in the graph, in the order that respects topological dependencies (i.e., generate cause variables before their effects). Specifically:
+
+- **Root nodes (no causes):** Generate 'age', 'education-num', 'sex', 'native-country', 'marital-status' independently from realistic marginal distributions provided in samples.
+- **Intermediate nodes:**
+  - 'education' is caused only by 'education-num'.
+  - 'race' is caused only by 'native-country'.
+  - 'relationship' is caused only by 'marital-status'.
+  - 'occupation' is caused by 'age', 'sex', and 'workclass'.
+  - 'workclass' is caused only by 'Income' (so generate Income before workclass; see below).
+  - 'hours-per-week' is caused only by 'Income'.
+  - 'capital-gain' and 'capital-loss' are caused only by 'Income'.
+- **Dependency order:** Since 'Income' is influenced by 'occupation' and 'race', but also causes 'hours-per-week', 'capital-gain', 'capital-loss', 'workclass', and indirectly 'occupation' via workclass, you must generate in this sequence: (1) root nodes (age, education-num, sex, native-country, marital-status); (2) race, education, relationship; (3) occupation (requires workclass not yet known); to resolve this circular dependency, first generate a provisional 'income' from occupation and race using a conditional model, then use that to generate workclass, hours-per-week, capital-gain, capital-loss. Then regenerate occupation with workclass included, and update income if necessary. This ensures the bidirectional feedback between occupation and Income is captured without violating the directed acyclic nature of the graph.
+- **Critical constraints:**
+  - Income must **not** be influenced by education-num, marital-status, race (except via occupation), relationship, sex, age (except via occupation), native-country, hours-per-week, capital-gain, capital-loss, or workclass directly.
+  - Variables like education-num, marital-status, race, relationship, and sex must be independent of Income in the final data, except through the allowed causal paths.
+  - The bidirectional edge between race and Income: only race causes Income (not vice versa); ensure Income does not alter race distribution.
+- **Validation:** Before outputting, check that the conditional distributions (e.g., P(Income | occupation, race)) match realistic patterns from the sample, and that all correlations not in the graph (e.g., Income vs. education-num) are close to zero. Any spurious correlation will inflate the score, so use statistical tests (chi-square for categorical, mutual information for mixed) to verify independence where required.
+
+Generate exactly one sample per row, with all 14 features: age, workclass, education, education-num, marital-status, occupation, relationship, race, sex, capital-gain, capital-loss, hours-per-week, native-country, Income. Ensure no feature is missing.</Task>
+```
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.5714285714285714
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'native-country'), ('Income', 'education-num'), ('Income', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'workclass'), ('Income', 'race')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 57.14%
+
+"<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('marital-status', 'relationship'), ('age', 'occupation'), ('education', 'education-num'), ('occupation', 'Income'), ('sex', 'occupation'), ('race', 'native-country'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'workclass'), ('Income', 'education-num'), ('Income', 'marital-status')]</Causal structure>
+
+<Task> The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, marital-status influences relationship, not vice versa; education causes education-num; and Income causes hours-per-week, capital-gain, workclass, education-num, and marital-status. Use the provided samples as a reference to maintain realistic distributions, but prioritize causal consistency to produce high-fidelity synthetic data.</Task>"
+Score: 57.14%
+
+"<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('sex', 'occupation'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, age and sex influence occupation; education-num determines education; occupation causes Income; native-country influences race; marital-status determines relationship; and Income causes hours-per-week, capital-gain, capital-loss, and workclass. Note that Income does NOT cause education-num, marital-status, race, or relationship—ensure these variables are independent of Income in the causal sense. Use the provided samples to approximate realistic marginal distributions, but prioritize strict causal consistency to produce high-fidelity synthetic data. Avoid any reverse or spurious relationships that inflate score.</Task>"
+Score: 57.14%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 3, batch: 4 <<<<<<<<<<<<<<<< 
+Instruction: <Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education-num', 'education'), ('education-num', 'occupation'), ('education-num', 'Income'), ('occupation', 'Income'), ('sex', 'occupation'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, age and sex influence occupation; education-num directly causes both education and occupation, and also influences Income; occupation directly causes Income; native-country determines race; marital-status determines relationship; and Income causes hours-per-week, capital-gain, capital-loss, and workclass. Importantly, education is caused solely by education-num (not the reverse), and Income does NOT cause education-num, marital-status, race, or relationship—ensure these variables are causally independent of Income. Use the provided samples to approximate realistic marginal distributions, but prioritize strict causal consistency to produce high-fidelity synthetic data. Avoid any reverse or spurious relationships that inflate score. Ensure that within the synthetic data, the conditional dependencies (e.g., income level affecting hours-per-week distribution) are faithfully represented without introducing extraneous correlations.</Task>
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.35
+
+"<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education-num', 'education'), ('education-num', 'occupation'), ('education-num', 'Income'), ('occupation', 'Income'), ('sex', 'occupation'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, age and sex influence occupation; education-num directly causes both education and occupation, and also influences Income; occupation directly causes Income; native-country determines race; marital-status determines relationship; and Income causes hours-per-week, capital-gain, capital-loss, and workclass. Importantly, education is caused solely by education-num (not the reverse), and Income does NOT cause education-num, marital-status, race, or relationship—ensure these variables are causally independent of Income. Use the provided samples to approximate realistic marginal distributions, but prioritize strict causal consistency to produce high-fidelity synthetic data. Avoid any reverse or spurious relationships that inflate score. Ensure that within the synthetic data, the conditional dependencies (e.g., income level affecting hours-per-week distribution) are faithfully represented without introducing extraneous correlations.</Task>"
+Score: 35.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'native-country'), ('Income', 'education-num'), ('Income', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'workclass'), ('Income', 'race')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 38.1%
+
+"Based on the observed patterns and scores, I recognize that the causal structure needs both simplification and strict topological clarity to reduce spurious correlations. The previous prompts had connections that could introduce unintended feedback or symmetric relationships. I will adjust the causal graph to be a clean, hierarchical DAG (Directed Acyclic Graph) with no cycles, and refine the task guidance to enforce a strict generation order and conditional independence.
+
+Here is the optimized prompt:
+
+<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('sex', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass')]</Causal structure>
+
+<Task>The goal is to generate synthetic data that perfectly respects the causal graph above, with a strict topological order: first, all exogenous variables (age, sex, education-num, native-country, marital-status) are independently sampled from their empirical marginal distributions in the provided samples. Next, occupation is generated conditional on (age, sex); education conditional on (education-num); race conditional on (native-country); and relationship conditional on (marital-status). Then, Income is generated conditional only on occupation. Finally, hours-per-week, capital-gain, capital-loss, and workclass are each generated conditional on Income. Crucially, to lower the score, enforce the following constraints: (1) No variable that is not in the parent set of Income (i.e., only occupation) should show any correlation with Income, either directly or through hidden backdoor paths. This means that education-num, education, age, sex, native-country, race, marital-status, and relationship must all be independent of Income, conditional on occupation (if applicable) or fully independent (if they share no common causes). (2) The generation order must be strictly followed: never sample a parent after its child. (3) For each conditional distribution (e.g., P(occupation | age, sex)), use the provided samples to learn a probability table or a simple model that captures only the parent-child relationship, ignoring any spurious associations. (4) Avoid any bidirectional or symmetric causal assumptions—the graph is acyclic. By enforcing these rules, the synthetic data will have minimal deviations from the intended causal structure, resulting in a lower score.</Task>"
+Score: 38.1%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 0 <<<<<<<<<<<<<<<< 
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.5346534653465347
+
+"<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education-num', 'education'), ('education-num', 'occupation'), ('education-num', 'Income'), ('occupation', 'Income'), ('sex', 'occupation'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, age and sex influence occupation; education-num directly causes both education and occupation, and also influences Income; occupation directly causes Income; native-country determines race; marital-status determines relationship; and Income causes hours-per-week, capital-gain, capital-loss, and workclass. Importantly, education is caused solely by education-num (not the reverse), and Income does NOT cause education-num, marital-status, race, or relationship—ensure these variables are causally independent of Income. Use the provided samples to approximate realistic marginal distributions, but prioritize strict causal consistency to produce high-fidelity synthetic data. Avoid any reverse or spurious relationships that inflate score. Ensure that within the synthetic data, the conditional dependencies (e.g., income level affecting hours-per-week distribution) are faithfully represented without introducing extraneous correlations.</Task>"
+Score: 35.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'native-country'), ('Income', 'education-num'), ('Income', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'workclass'), ('Income', 'race')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 38.1%
+
+"Based on the observed patterns and scores, I recognize that the causal structure needs both simplification and strict topological clarity to reduce spurious correlations. The previous prompts had connections that could introduce unintended feedback or symmetric relationships. I will adjust the causal graph to be a clean, hierarchical DAG (Directed Acyclic Graph) with no cycles, and refine the task guidance to enforce a strict generation order and conditional independence.
+
+Here is the optimized prompt:
+
+<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('sex', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass')]</Causal structure>
+
+<Task>The goal is to generate synthetic data that perfectly respects the causal graph above, with a strict topological order: first, all exogenous variables (age, sex, education-num, native-country, marital-status) are independently sampled from their empirical marginal distributions in the provided samples. Next, occupation is generated conditional on (age, sex); education conditional on (education-num); race conditional on (native-country); and relationship conditional on (marital-status). Then, Income is generated conditional only on occupation. Finally, hours-per-week, capital-gain, capital-loss, and workclass are each generated conditional on Income. Crucially, to lower the score, enforce the following constraints: (1) No variable that is not in the parent set of Income (i.e., only occupation) should show any correlation with Income, either directly or through hidden backdoor paths. This means that education-num, education, age, sex, native-country, race, marital-status, and relationship must all be independent of Income, conditional on occupation (if applicable) or fully independent (if they share no common causes). (2) The generation order must be strictly followed: never sample a parent after its child. (3) For each conditional distribution (e.g., P(occupation | age, sex)), use the provided samples to learn a probability table or a simple model that captures only the parent-child relationship, ignoring any spurious associations. (4) Avoid any bidirectional or symmetric causal assumptions—the graph is acyclic. By enforcing these rules, the synthetic data will have minimal deviations from the intended causal structure, resulting in a lower score.</Task>"
+Score: 38.1%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 1 <<<<<<<<<<<<<<<< 
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.49504950495049505
+
+"<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education-num', 'education'), ('education-num', 'occupation'), ('education-num', 'Income'), ('occupation', 'Income'), ('sex', 'occupation'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, age and sex influence occupation; education-num directly causes both education and occupation, and also influences Income; occupation directly causes Income; native-country determines race; marital-status determines relationship; and Income causes hours-per-week, capital-gain, capital-loss, and workclass. Importantly, education is caused solely by education-num (not the reverse), and Income does NOT cause education-num, marital-status, race, or relationship—ensure these variables are causally independent of Income. Use the provided samples to approximate realistic marginal distributions, but prioritize strict causal consistency to produce high-fidelity synthetic data. Avoid any reverse or spurious relationships that inflate score. Ensure that within the synthetic data, the conditional dependencies (e.g., income level affecting hours-per-week distribution) are faithfully represented without introducing extraneous correlations.</Task>"
+Score: 35.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'native-country'), ('Income', 'education-num'), ('Income', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'workclass'), ('Income', 'race')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 38.1%
+
+"Based on the observed patterns and scores, I recognize that the causal structure needs both simplification and strict topological clarity to reduce spurious correlations. The previous prompts had connections that could introduce unintended feedback or symmetric relationships. I will adjust the causal graph to be a clean, hierarchical DAG (Directed Acyclic Graph) with no cycles, and refine the task guidance to enforce a strict generation order and conditional independence.
+
+Here is the optimized prompt:
+
+<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('sex', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass')]</Causal structure>
+
+<Task>The goal is to generate synthetic data that perfectly respects the causal graph above, with a strict topological order: first, all exogenous variables (age, sex, education-num, native-country, marital-status) are independently sampled from their empirical marginal distributions in the provided samples. Next, occupation is generated conditional on (age, sex); education conditional on (education-num); race conditional on (native-country); and relationship conditional on (marital-status). Then, Income is generated conditional only on occupation. Finally, hours-per-week, capital-gain, capital-loss, and workclass are each generated conditional on Income. Crucially, to lower the score, enforce the following constraints: (1) No variable that is not in the parent set of Income (i.e., only occupation) should show any correlation with Income, either directly or through hidden backdoor paths. This means that education-num, education, age, sex, native-country, race, marital-status, and relationship must all be independent of Income, conditional on occupation (if applicable) or fully independent (if they share no common causes). (2) The generation order must be strictly followed: never sample a parent after its child. (3) For each conditional distribution (e.g., P(occupation | age, sex)), use the provided samples to learn a probability table or a simple model that captures only the parent-child relationship, ignoring any spurious associations. (4) Avoid any bidirectional or symmetric causal assumptions—the graph is acyclic. By enforcing these rules, the synthetic data will have minimal deviations from the intended causal structure, resulting in a lower score.</Task>"
+Score: 38.1%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 2 <<<<<<<<<<<<<<<< 
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.5148514851485149
+
+"<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education-num', 'education'), ('education-num', 'occupation'), ('education-num', 'Income'), ('occupation', 'Income'), ('sex', 'occupation'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, age and sex influence occupation; education-num directly causes both education and occupation, and also influences Income; occupation directly causes Income; native-country determines race; marital-status determines relationship; and Income causes hours-per-week, capital-gain, capital-loss, and workclass. Importantly, education is caused solely by education-num (not the reverse), and Income does NOT cause education-num, marital-status, race, or relationship—ensure these variables are causally independent of Income. Use the provided samples to approximate realistic marginal distributions, but prioritize strict causal consistency to produce high-fidelity synthetic data. Avoid any reverse or spurious relationships that inflate score. Ensure that within the synthetic data, the conditional dependencies (e.g., income level affecting hours-per-week distribution) are faithfully represented without introducing extraneous correlations.</Task>"
+Score: 35.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'native-country'), ('Income', 'education-num'), ('Income', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'workclass'), ('Income', 'race')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 38.1%
+
+"Based on the observed patterns and scores, I recognize that the causal structure needs both simplification and strict topological clarity to reduce spurious correlations. The previous prompts had connections that could introduce unintended feedback or symmetric relationships. I will adjust the causal graph to be a clean, hierarchical DAG (Directed Acyclic Graph) with no cycles, and refine the task guidance to enforce a strict generation order and conditional independence.
+
+Here is the optimized prompt:
+
+<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('sex', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass')]</Causal structure>
+
+<Task>The goal is to generate synthetic data that perfectly respects the causal graph above, with a strict topological order: first, all exogenous variables (age, sex, education-num, native-country, marital-status) are independently sampled from their empirical marginal distributions in the provided samples. Next, occupation is generated conditional on (age, sex); education conditional on (education-num); race conditional on (native-country); and relationship conditional on (marital-status). Then, Income is generated conditional only on occupation. Finally, hours-per-week, capital-gain, capital-loss, and workclass are each generated conditional on Income. Crucially, to lower the score, enforce the following constraints: (1) No variable that is not in the parent set of Income (i.e., only occupation) should show any correlation with Income, either directly or through hidden backdoor paths. This means that education-num, education, age, sex, native-country, race, marital-status, and relationship must all be independent of Income, conditional on occupation (if applicable) or fully independent (if they share no common causes). (2) The generation order must be strictly followed: never sample a parent after its child. (3) For each conditional distribution (e.g., P(occupation | age, sex)), use the provided samples to learn a probability table or a simple model that captures only the parent-child relationship, ignoring any spurious associations. (4) Avoid any bidirectional or symmetric causal assumptions—the graph is acyclic. By enforcing these rules, the synthetic data will have minimal deviations from the intended causal structure, resulting in a lower score.</Task>"
+Score: 38.1%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+
+>>>>>>>>>>>>>>> Epoch: 0, batch: 3 <<<<<<<<<<<<<<<< 
+Number of samples: 50
+Number of JSON extraction errors: 0
+Number of group variable missing: 0
+Number of dictionary error: 0
+Number of variable not matach: 0
+Score: 0.49
+
+"<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('education-num', 'education'), ('education-num', 'occupation'), ('education-num', 'Income'), ('occupation', 'Income'), ('sex', 'occupation'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass')]</Causal structure>
+
+<Task> The ultimate goal is to generate accurate and convincing synthetic data that strictly adheres to the causal graph above. Ensure the generated data precisely mirrors the causal directions: for instance, age and sex influence occupation; education-num directly causes both education and occupation, and also influences Income; occupation directly causes Income; native-country determines race; marital-status determines relationship; and Income causes hours-per-week, capital-gain, capital-loss, and workclass. Importantly, education is caused solely by education-num (not the reverse), and Income does NOT cause education-num, marital-status, race, or relationship—ensure these variables are causally independent of Income. Use the provided samples to approximate realistic marginal distributions, but prioritize strict causal consistency to produce high-fidelity synthetic data. Avoid any reverse or spurious relationships that inflate score. Ensure that within the synthetic data, the conditional dependencies (e.g., income level affecting hours-per-week distribution) are faithfully represented without introducing extraneous correlations.</Task>"
+Score: 35.0%
+
+"<Causal structure>Here is the causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('education-num', 'education'), ('occupation', 'Income'), ('relationship', 'marital-status'), ('relationship', 'sex'), ('race', 'native-country'), ('Income', 'education-num'), ('Income', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'workclass'), ('Income', 'race')]</Causal structure>
+
+<Task> The ultimate goal is to produce accurate and convincing synthetic
+data that dutifully represents these causal relationships given the user provided samples. </Task>
+"
+Score: 38.1%
+
+"Based on the observed patterns and scores, I recognize that the causal structure needs both simplification and strict topological clarity to reduce spurious correlations. The previous prompts had connections that could introduce unintended feedback or symmetric relationships. I will adjust the causal graph to be a clean, hierarchical DAG (Directed Acyclic Graph) with no cycles, and refine the task guidance to enforce a strict generation order and conditional independence.
+
+Here is the optimized prompt:
+
+<Causal structure>Here is the refined causal structure of the data, where a tuple (A, B) indicates A causes B:
+[('age', 'occupation'), ('sex', 'occupation'), ('education-num', 'education'), ('occupation', 'Income'), ('native-country', 'race'), ('marital-status', 'relationship'), ('Income', 'hours-per-week'), ('Income', 'capital-gain'), ('Income', 'capital-loss'), ('Income', 'workclass')]</Causal structure>
+
+<Task>The goal is to generate synthetic data that perfectly respects the causal graph above, with a strict topological order: first, all exogenous variables (age, sex, education-num, native-country, marital-status) are independently sampled from their empirical marginal distributions in the provided samples. Next, occupation is generated conditional on (age, sex); education conditional on (education-num); race conditional on (native-country); and relationship conditional on (marital-status). Then, Income is generated conditional only on occupation. Finally, hours-per-week, capital-gain, capital-loss, and workclass are each generated conditional on Income. Crucially, to lower the score, enforce the following constraints: (1) No variable that is not in the parent set of Income (i.e., only occupation) should show any correlation with Income, either directly or through hidden backdoor paths. This means that education-num, education, age, sex, native-country, race, marital-status, and relationship must all be independent of Income, conditional on occupation (if applicable) or fully independent (if they share no common causes). (2) The generation order must be strictly followed: never sample a parent after its child. (3) For each conditional distribution (e.g., P(occupation | age, sex)), use the provided samples to learn a probability table or a simple model that captures only the parent-child relationship, ignoring any spurious associations. (4) Avoid any bidirectional or symmetric causal assumptions—the graph is acyclic. By enforcing these rules, the synthetic data will have minimal deviations from the intended causal structure, resulting in a lower score.</Task>"
+Score: 38.1%
+
+Your updated prompt should explicitly include any modifications to the causal graph and guidance.  The aim is to lower the score. The updated prompt:
+

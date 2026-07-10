@@ -1,0 +1,522 @@
+[
+  {
+    "sample_size": 100,
+    "synthetic_file": "gen\\adult_reference_synthetic\\100\\df_0.csv",
+    "n_synthetic": 100,
+    "paper_mle_model": "Logistic Regression",
+    "paper_mle_f1": 0.8048260813759466,
+    "paper_mle_model_accuracy": 0.8,
+    "model_results": {
+      "Logistic Regression": {
+        "f1": 0.8048260813759466,
+        "accuracy": 0.8
+      },
+      "Random Forest": {
+        "f1": 0.8022494172494173,
+        "accuracy": 0.81
+      },
+      "SVC": {
+        "f1": 0.75163242330425,
+        "accuracy": 0.775
+      },
+      "XGB": {
+        "f1": 0.7970518703935475,
+        "accuracy": 0.8
+      }
+    }
+  },
+  {
+    "sample_size": 100,
+    "synthetic_file": "gen\\adult_reference_synthetic\\100\\df_1.csv",
+    "n_synthetic": 100,
+    "paper_mle_model": "Random Forest",
+    "paper_mle_f1": 0.8274940898345154,
+    "paper_mle_model_accuracy": 0.83,
+    "model_results": {
+      "Logistic Regression": {
+        "f1": 0.7821006336895867,
+        "accuracy": 0.775
+      },
+      "Random Forest": {
+        "f1": 0.8274940898345154,
+        "accuracy": 0.83
+      },
+      "SVC": {
+        "f1": 0.7414103472714387,
+        "accuracy": 0.78
+      },
+      "XGB": {
+        "f1": 0.7831151220424576,
+        "accuracy": 0.775
+      }
+    }
+  },
+  {
+    "sample_size": 100,
+    "synthetic_file": "gen\\adult_reference_synthetic\\100\\df_2.csv",
+    "n_synthetic": 100,
+    "paper_mle_model": "Random Forest",
+    "paper_mle_f1": 0.8277745088424701,
+    "paper_mle_model_accuracy": 0.825,
+    "model_results": {
+      "Logistic Regression": {
+        "f1": 0.7605508526561158,
+        "accuracy": 0.75
+      },
+      "Random Forest": {
+        "f1": 0.8277745088424701,
+        "accuracy": 0.825
+      },
+      "SVC": {
+        "f1": 0.7546019164793565,
+        "accuracy": 0.775
+      },
+      "XGB": {
+        "f1": 0.7742114933142799,
+        "accuracy": 0.775
+      }
+    }
+  },
+  {
+    "sample_size": 100,
+    "synthetic_file": "gen\\adult_reference_synthetic\\100\\df_3.csv",
+    "n_synthetic": 100,
+    "paper_mle_model": "Random Forest",
+    "paper_mle_f1": 0.8056609282190678,
+    "paper_mle_model_accuracy": 0.805,
+    "model_results": {
+      "Logistic Regression": {
+        "f1": 0.7360658012395548,
+        "accuracy": 0.725
+      },
+      "Random Forest": {
+        "f1": 0.8056609282190678,
+        "accuracy": 0.805
+      },
+      "SVC": {
+        "f1": 0.7414103472714387,
+        "accuracy": 0.78
+      },
+      "XGB": {
+        "f1": 0.7725539257981018,
+        "accuracy": 0.775
+      }
+    }
+  },
+  {
+    "sample_size": 100,
+    "synthetic_file": "gen\\adult_reference_synthetic\\100\\df_4.csv",
+    "n_synthetic": 100,
+    "paper_mle_model": "Random Forest",
+    "paper_mle_f1": 0.8244561235865584,
+    "paper_mle_model_accuracy": 0.84,
+    "model_results": {
+      "Logistic Regression": {
+        "f1": 0.8028800690250216,
+        "accuracy": 0.805
+      },
+      "Random Forest": {
+        "f1": 0.8244561235865584,
+        "accuracy": 0.84
+      },
+      "SVC": {
+        "f1": 0.7414103472714387,
+        "accuracy": 0.78
+      },
+      "XGB": {
+        "f1": 0.8220817369093232,
+        "accuracy": 0.835
+      }
+    }
+  },
+  {
+    "sample_size": 200,
+    "synthetic_file": "gen\\adult_reference_synthetic\\200\\df_0.csv",
+    "n_synthetic": 200,
+    "paper_mle_model": "Random Forest",
+    "paper_mle_f1": 0.7897329618019273,
+    "paper_mle_model_accuracy": 0.805,
+    "model_results": {
+      "Logistic Regression": {
+        "f1": 0.7323418710726931,
+        "accuracy": 0.725
+      },
+      "Random Forest": {
+        "f1": 0.7897329618019273,
+        "accuracy": 0.805
+      },
+      "SVC": {
+        "f1": 0.7414103472714387,
+        "accuracy": 0.78
+      },
+      "XGB": {
+        "f1": 0.77065903994527,
+        "accuracy": 0.785
+      }
+    }
+  },
+  {
+    "sample_size": 200,
+    "synthetic_file": "gen\\adult_reference_synthetic\\200\\df_1.csv",
+    "n_synthetic": 115,
+    "paper_mle_model": "XGB",
+    "paper_mle_f1": 0.7876010694027964,
+    "paper_mle_model_accuracy": 0.795,
+    "model_results": {
+      "Logistic Regression": {
+        "f1": 0.774456230150165,
+        "accuracy": 0.765
+      },
+      "Random Forest": {
+        "f1": 0.7769541553276115,
+        "accuracy": 0.765
+      },
+      "SVC": {
+        "f1": 0.7375738867726258,
+        "accuracy": 0.775
+      },
+      "XGB": {
+        "f1": 0.7876010694027964,
+        "accuracy": 0.795
+      }
+    }
+  },
+  {
+    "sample_size": 200,
+    "synthetic_file": "gen\\adult_reference_synthetic\\200\\df_2.csv",
+    "n_synthetic": 200,
+    "paper_mle_model": "Random Forest",
+    "paper_mle_f1": 0.7873216609487755,
+    "paper_mle_model_accuracy": 0.805,
+    "model_results": {
+      "Logistic Regression": {
+        "f1": 0.7504745762711863,
+        "accuracy": 0.745
+      },
+      "Random Forest": {
+        "f1": 0.7873216609487755,
+        "accuracy": 0.805
+      },
+      "SVC": {
+        "f1": 0.7414103472714387,
+        "accuracy": 0.78
+      },
+      "XGB": {
+        "f1": 0.7586271699315178,
+        "accuracy": 0.78
+      }
+    }
+  },
+  {
+    "sample_size": 200,
+    "synthetic_file": "gen\\adult_reference_synthetic\\200\\df_3.csv",
+    "n_synthetic": 200,
+    "paper_mle_model": "Random Forest",
+    "paper_mle_f1": 0.8408227848101266,
+    "paper_mle_model_accuracy": 0.85,
+    "model_results": {
+      "Logistic Regression": {
+        "f1": 0.7950673854447439,
+        "accuracy": 0.79
+      },
+      "Random Forest": {
+        "f1": 0.8408227848101266,
+        "accuracy": 0.85
+      },
+      "SVC": {
+        "f1": 0.7375738867726258,
+        "accuracy": 0.775
+      },
+      "XGB": {
+        "f1": 0.7851976284584979,
+        "accuracy": 0.79
+      }
+    }
+  },
+  {
+    "sample_size": 200,
+    "synthetic_file": "gen\\adult_reference_synthetic\\200\\df_4.csv",
+    "n_synthetic": 200,
+    "paper_mle_model": "Random Forest",
+    "paper_mle_f1": 0.8145847773071493,
+    "paper_mle_model_accuracy": 0.81,
+    "model_results": {
+      "Logistic Regression": {
+        "f1": 0.7562425629290618,
+        "accuracy": 0.745
+      },
+      "Random Forest": {
+        "f1": 0.8145847773071493,
+        "accuracy": 0.81
+      },
+      "SVC": {
+        "f1": 0.7491507893304301,
+        "accuracy": 0.79
+      },
+      "XGB": {
+        "f1": 0.7939293139293139,
+        "accuracy": 0.79
+      }
+    }
+  },
+  {
+    "sample_size": 400,
+    "synthetic_file": "gen\\adult_reference_synthetic\\400\\df_0.csv",
+    "n_synthetic": 400,
+    "paper_mle_model": "Random Forest",
+    "paper_mle_f1": 0.8179330522048969,
+    "paper_mle_model_accuracy": 0.815,
+    "model_results": {
+      "Logistic Regression": {
+        "f1": 0.7147854309412189,
+        "accuracy": 0.7
+      },
+      "Random Forest": {
+        "f1": 0.8179330522048969,
+        "accuracy": 0.815
+      },
+      "SVC": {
+        "f1": 0.7414508326555075,
+        "accuracy": 0.775
+      },
+      "XGB": {
+        "f1": 0.8124503224108435,
+        "accuracy": 0.81
+      }
+    }
+  },
+  {
+    "sample_size": 400,
+    "synthetic_file": "gen\\adult_reference_synthetic\\400\\df_1.csv",
+    "n_synthetic": 400,
+    "paper_mle_model": "Random Forest",
+    "paper_mle_f1": 0.8069673262770364,
+    "paper_mle_model_accuracy": 0.82,
+    "model_results": {
+      "Logistic Regression": {
+        "f1": 0.77,
+        "accuracy": 0.77
+      },
+      "Random Forest": {
+        "f1": 0.8069673262770364,
+        "accuracy": 0.82
+      },
+      "SVC": {
+        "f1": 0.7375738867726258,
+        "accuracy": 0.775
+      },
+      "XGB": {
+        "f1": 0.7759240549681065,
+        "accuracy": 0.805
+      }
+    }
+  },
+  {
+    "sample_size": 400,
+    "synthetic_file": "gen\\adult_reference_synthetic\\400\\df_2.csv",
+    "n_synthetic": 400,
+    "paper_mle_model": "XGB",
+    "paper_mle_f1": 0.8195991561181434,
+    "paper_mle_model_accuracy": 0.83,
+    "model_results": {
+      "Logistic Regression": {
+        "f1": 0.7615409396829448,
+        "accuracy": 0.755
+      },
+      "Random Forest": {
+        "f1": 0.8003747592949193,
+        "accuracy": 0.81
+      },
+      "SVC": {
+        "f1": 0.7375738867726258,
+        "accuracy": 0.775
+      },
+      "XGB": {
+        "f1": 0.8195991561181434,
+        "accuracy": 0.83
+      }
+    }
+  },
+  {
+    "sample_size": 400,
+    "synthetic_file": "gen\\adult_reference_synthetic\\400\\df_3.csv",
+    "n_synthetic": 400,
+    "paper_mle_model": "Random Forest",
+    "paper_mle_f1": 0.8112666666666667,
+    "paper_mle_model_accuracy": 0.81,
+    "model_results": {
+      "Logistic Regression": {
+        "f1": 0.787448275862069,
+        "accuracy": 0.78
+      },
+      "Random Forest": {
+        "f1": 0.8112666666666667,
+        "accuracy": 0.81
+      },
+      "SVC": {
+        "f1": 0.7491507893304301,
+        "accuracy": 0.79
+      },
+      "XGB": {
+        "f1": 0.8083229162903284,
+        "accuracy": 0.815
+      }
+    }
+  },
+  {
+    "sample_size": 400,
+    "synthetic_file": "gen\\adult_reference_synthetic\\400\\df_4.csv",
+    "n_synthetic": 400,
+    "paper_mle_model": "Random Forest",
+    "paper_mle_f1": 0.8099800846402787,
+    "paper_mle_model_accuracy": 0.815,
+    "model_results": {
+      "Logistic Regression": {
+        "f1": 0.7701288185498713,
+        "accuracy": 0.76
+      },
+      "Random Forest": {
+        "f1": 0.8099800846402787,
+        "accuracy": 0.815
+      },
+      "SVC": {
+        "f1": 0.746601261658733,
+        "accuracy": 0.765
+      },
+      "XGB": {
+        "f1": 0.7725539257981018,
+        "accuracy": 0.775
+      }
+    }
+  },
+  {
+    "sample_size": 800,
+    "synthetic_file": "gen\\adult_reference_synthetic\\800\\df_0.csv",
+    "n_synthetic": 800,
+    "paper_mle_model": "Random Forest",
+    "paper_mle_f1": 0.8158836815358554,
+    "paper_mle_model_accuracy": 0.82,
+    "model_results": {
+      "Logistic Regression": {
+        "f1": 0.7712739625530286,
+        "accuracy": 0.765
+      },
+      "Random Forest": {
+        "f1": 0.8158836815358554,
+        "accuracy": 0.82
+      },
+      "SVC": {
+        "f1": 0.7375738867726258,
+        "accuracy": 0.775
+      },
+      "XGB": {
+        "f1": 0.7913999999999999,
+        "accuracy": 0.79
+      }
+    }
+  },
+  {
+    "sample_size": 800,
+    "synthetic_file": "gen\\adult_reference_synthetic\\800\\df_1.csv",
+    "n_synthetic": 800,
+    "paper_mle_model": "Random Forest",
+    "paper_mle_f1": 0.8265,
+    "paper_mle_model_accuracy": 0.84,
+    "model_results": {
+      "Logistic Regression": {
+        "f1": 0.7777868338557994,
+        "accuracy": 0.77
+      },
+      "Random Forest": {
+        "f1": 0.8265,
+        "accuracy": 0.84
+      },
+      "SVC": {
+        "f1": 0.7426231017027152,
+        "accuracy": 0.76
+      },
+      "XGB": {
+        "f1": 0.7877637130801688,
+        "accuracy": 0.8
+      }
+    }
+  },
+  {
+    "sample_size": 800,
+    "synthetic_file": "gen\\adult_reference_synthetic\\800\\df_2.csv",
+    "n_synthetic": 800,
+    "paper_mle_model": "XGB",
+    "paper_mle_f1": 0.8168194311069903,
+    "paper_mle_model_accuracy": 0.815,
+    "model_results": {
+      "Logistic Regression": {
+        "f1": 0.7820476190476191,
+        "accuracy": 0.77
+      },
+      "Random Forest": {
+        "f1": 0.8135550935550936,
+        "accuracy": 0.81
+      },
+      "SVC": {
+        "f1": 0.7426231017027152,
+        "accuracy": 0.76
+      },
+      "XGB": {
+        "f1": 0.8168194311069903,
+        "accuracy": 0.815
+      }
+    }
+  },
+  {
+    "sample_size": 800,
+    "synthetic_file": "gen\\adult_reference_synthetic\\800\\df_3.csv",
+    "n_synthetic": 800,
+    "paper_mle_model": "XGB",
+    "paper_mle_f1": 0.8056609282190678,
+    "paper_mle_model_accuracy": 0.805,
+    "model_results": {
+      "Logistic Regression": {
+        "f1": 0.787448275862069,
+        "accuracy": 0.78
+      },
+      "Random Forest": {
+        "f1": 0.79365144460547,
+        "accuracy": 0.785
+      },
+      "SVC": {
+        "f1": 0.7375738867726258,
+        "accuracy": 0.775
+      },
+      "XGB": {
+        "f1": 0.8056609282190678,
+        "accuracy": 0.805
+      }
+    }
+  },
+  {
+    "sample_size": 800,
+    "synthetic_file": "gen\\adult_reference_synthetic\\800\\df_4.csv",
+    "n_synthetic": 800,
+    "paper_mle_model": "Random Forest",
+    "paper_mle_f1": 0.8112666666666667,
+    "paper_mle_model_accuracy": 0.81,
+    "model_results": {
+      "Logistic Regression": {
+        "f1": 0.7595486111111112,
+        "accuracy": 0.75
+      },
+      "Random Forest": {
+        "f1": 0.8112666666666667,
+        "accuracy": 0.81
+      },
+      "SVC": {
+        "f1": 0.7375738867726258,
+        "accuracy": 0.775
+      },
+      "XGB": {
+        "f1": 0.7939293139293139,
+        "accuracy": 0.79
+      }
+    }
+  }
+]
